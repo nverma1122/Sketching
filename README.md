@@ -4,7 +4,7 @@
 
 A calm, mobile-first web app for an urban sketcher. Open it, say how long you have and what you feel like, and it gives you **one** specific idea. Each idea comes with a composition guide, a drawing plan sized to your time, advice for your medium, one useful constraint and a reference. It then keeps a quiet record of what you drew.
 
-Everything runs in the browser. There is no account, no server, no analytics and no paid API.
+Everything runs in the browser. There is no account, no server, no analytics and no paid API. The only outside requests are searches for real reference photos on Wikimedia Commons, which you can switch off in Settings.
 
 ## Open it
 
@@ -41,7 +41,9 @@ Your data stays in the browser where you created it. A phone and a laptop each k
 
 | Area | Where |
 | --- | --- |
-| Prompt library (135 ideas, plain typed data) | `src/data/prompts/*.ts` |
+| Prompt library (167 ideas, including 32 advanced compositions; plain typed data) | `src/data/prompts/*.ts` |
+| Reference-photo search words for each idea | `src/data/photoQueries.ts` |
+| Wikimedia Commons photo search, with credits and caching | `src/lib/commons.ts` |
 | Subjects, media, times, guidance text, closing lines | `src/data/taxonomy.ts` |
 | Prompt selection and anti-repetition | `src/lib/selector.ts` |
 | Time-boxed plans, simplification, medium guidance | `src/lib/plan.ts` |
@@ -57,7 +59,9 @@ Your data stays in the browser where you created it. A phone and a laptop each k
 Open any file in `src/data/prompts/` and add an entry with `definePrompt({...})`. Every field is typed. Your editor will tell you if something is missing, and `npm test` checks that IDs are unique, every field is filled in, the reference illustration exists, and every time/medium pair still has ideas. You don't need to touch any component.
 
 - `media`: the media the idea suits. The first one is the suggested medium.
-- `time`: the suitable range, e.g. `['10', '20']`. `'40'` means 30–45 minutes.
+- `time`: the suitable range, e.g. `['10', '20']`. `'40'` means 30–45 minutes, `'60'` one hour, `'120'` two hours or more.
+- `difficulty`: 1 Gentle, 2 Moderate, 3 Involved, 4 Advanced.
+- Add a line to `src/data/photoQueries.ts` with title words for its reference photos, e.g. `'tea stall'` (every word must appear in a photo's title on Wikimedia Commons).
 - `steps`: subject-specific actions from biggest to smallest. The plan builder spreads them across 5, 10, 20 or 30–45 minutes and adds medium-specific stages.
 - `simpler`: one sentence used by *Make it simpler*.
 - `reference`: one of the illustration IDs in `src/data/referenceIds.ts`.
@@ -70,6 +74,14 @@ Open any file in `src/data/prompts/` and add an entry with `definePrompt({...})`
 4. Before dropping your subject or medium altogether, it will re-show ideas you saw a while ago (oldest first, never the last six). Only after that does it widen to any subject, and finally any medium.
 
 Selection is synchronous, so there is no loading state.
+
+### Reference photos
+
+Each idea searches Wikimedia Commons for freely licensed photos whose titles contain its search words, e.g. `intitle:tea intitle:stall`. It tries the more specific words first and falls back to broader ones. Maps, logos, drawings and small images are filtered out. Each photo shows the photographer, the license and a link to its Commons page. Results are cached in the browser for a week. Photos need a connection; the composition diagram and your own photos work offline.
+
+### Your level
+
+*Settings → My level* (Developing, Experienced or Advanced; the default is Advanced) changes how ideas are weighted. Advanced favours Involved and Advanced compositions. Plans and guidance then add construction-first openings, value thumbnails, edge control and multi-pass medium strategies.
 
 ### Image generation (future)
 

@@ -39,7 +39,7 @@ export function SuggestionView() {
     );
   }
 
-  const built = buildSuggestion(prompt, current);
+  const built = buildSuggestion(prompt, current, store.prefs.level);
   const saved = store.isSaved(prompt.id);
   const sessionHere = store.active?.suggestion.promptId === prompt.id;
 

@@ -39,8 +39,10 @@ export function Home() {
   const preferred = usePreferredMedium();
   const [quickOpen, setQuickOpen] = useState(false);
 
-  const today = useMemo(() => todaysPrompt(PROMPTS, todayKey(), hashString), []);
-  const todayTime: TimeKey = fitsTime(today, '10', 'exact') ? '10' : today.time[0];
+  const level = store.prefs.level;
+  const today = useMemo(() => todaysPrompt(PROMPTS, todayKey(), hashString, level), [level]);
+  const preferredTime: TimeKey = level === 'advanced' ? '60' : '10';
+  const todayTime: TimeKey = fitsTime(today, preferredTime, 'exact') ? preferredTime : today.time[level === 'advanced' ? 1 : 0];
 
   const go = (criteria: Criteria) => {
     const s = store.find(criteria);
@@ -52,7 +54,7 @@ export function Home() {
 
   const quick = (kind: 'easy' | 'interesting' | 'surprise') => {
     if (kind === 'easy') go({ time: Math.random() < 0.5 ? '5' : '10', energy: 'low', medium: preferred });
-    else if (kind === 'interesting') go({ time: '20', energy: 'explore', medium: Math.random() < 0.5 ? preferred : undefined });
+    else if (kind === 'interesting') go({ time: level === 'advanced' ? '60' : '20', energy: level === 'advanced' ? 'focus' : 'explore', medium: Math.random() < 0.5 ? preferred : undefined });
     else go({ time: TIME_ORDER[Math.floor(Math.random() * TIME_ORDER.length)] });
   };
 
@@ -83,7 +85,7 @@ export function Home() {
                 </button>
                 <button className="quick-option" onClick={() => quick('interesting')}>
                   <strong>Give me something interesting.</strong>
-                  <span>About twenty minutes, an achievable challenge.</span>
+                  <span>{level === 'advanced' ? 'About an hour, a demanding composition.' : 'About twenty minutes, an achievable challenge.'}</span>
                 </button>
                 <button className="quick-option" onClick={() => quick('surprise')}>
                   <strong>Surprise me completely.</strong>

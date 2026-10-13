@@ -196,7 +196,7 @@ export const inkPrompts = [
       'A street at night where lamps and shop windows make islands of light. In ink, you work in reverse — build up darkness and save the lights as bare paper.',
     categories: ['urban', 'shopfronts'],
     media: ['hatching', 'ink'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Place the brightest light source off centre.',
@@ -289,7 +289,7 @@ export const inkPrompts = [
       'Draw a deep archway or colonnade, building the darkness inside it with layers of cross-hatching. The arch is light at its face, dark in its depth.',
     categories: ['architecture'],
     media: ['hatching'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'View the archway slightly from the side to see its depth.',

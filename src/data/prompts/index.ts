@@ -6,6 +6,7 @@ import { naturePrompts } from './nature';
 import { inkPrompts } from './inkStudies';
 import { colourPrompts } from './colour';
 import { experimentalPrompts } from './experimental';
+import { advancedPrompts } from './advanced';
 
 /**
  * The complete prompt library. To add ideas, append entries to any of the
@@ -20,6 +21,7 @@ export const PROMPTS: SketchPrompt[] = [
   ...inkPrompts,
   ...colourPrompts,
   ...experimentalPrompts,
+  ...advancedPrompts,
 ];
 
 const BY_ID = new Map(PROMPTS.map((p) => [p.id, p]));

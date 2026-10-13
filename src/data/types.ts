@@ -3,7 +3,7 @@
 // selection logic only depend on these types, so ideas can be added or edited
 // without touching any component.
 
-export type TimeKey = '5' | '10' | '20' | '40';
+export type TimeKey = '5' | '10' | '20' | '40' | '60' | '120';
 
 export type Medium = 'ink' | 'ink-wash' | 'watercolour' | 'pencil' | 'hatching';
 
@@ -18,7 +18,10 @@ export type Category =
 
 export type Energy = 'low' | 'explore' | 'focus';
 
-export type Difficulty = 1 | 2 | 3;
+export type Difficulty = 1 | 2 | 3 | 4;
+
+/** The artist's own level, set in Settings. Biases which ideas are suggested. */
+export type Level = 'developing' | 'experienced' | 'advanced';
 
 /** Identifier of an original schematic illustration in src/components/references. */
 export type ReferenceId =

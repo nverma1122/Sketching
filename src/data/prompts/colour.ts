@@ -169,7 +169,7 @@ export const colourPrompts = [
       'A street in the rain: grey sky, glistening road, green trees heavy with water, an umbrella or two. A restrained palette of greys with one accent of colour.',
     categories: ['urban', 'nature'],
     media: ['watercolour', 'ink-wash'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Put the horizon low and let the wet road take up the foreground.',
@@ -361,7 +361,7 @@ export const colourPrompts = [
       'Paint a shopfront entirely in shapes of colour, without a single line. Doors, signs and awnings are just areas of colour placed next to one another.',
     categories: ['shopfronts', 'cafes'],
     media: ['watercolour'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'View the shopfront frontally.',

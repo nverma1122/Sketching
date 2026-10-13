@@ -74,7 +74,7 @@ export const urbanPrompts = [
       'Look down over a jumble of rooftops: water tanks, parapets, a stair hut, a line of washing. From above, the city becomes a patchwork of flat shapes and sudden edges.',
     categories: ['urban', 'architecture'],
     media: ['ink', 'ink-wash', 'watercolour', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Use a high horizon, or none at all, so rooftops fill the page.',
@@ -112,7 +112,7 @@ export const urbanPrompts = [
       'Late in the day, one old façade catches the sun while the street around it has already gone into shadow. The upper floors glow; the ground floor is cool and dim. Draw the light, not the bricks.',
     categories: ['architecture', 'urban'],
     media: ['ink-wash', 'watercolour', 'hatching', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Put the lit band of the building high on the page.',
@@ -307,7 +307,7 @@ export const urbanPrompts = [
       'A narrow lane where the buildings almost touch. Balconies lean in overhead and a slice of bright sky runs down the middle. The walls close in, which makes the perspective feel dramatic even with simple lines.',
     categories: ['urban', 'architecture'],
     media: ['ink', 'hatching', 'ink-wash', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Use a tall, narrow page orientation.',
@@ -403,7 +403,7 @@ export const urbanPrompts = [
       'A small junction where roads meet around an island with a tree or a statue. It is busy, but you only need its skeleton: the curve of the island, the mouths of the roads and the corners of the buildings.',
     categories: ['urban'],
     media: ['ink', 'ink-wash', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Choose a slightly raised viewpoint if you can — a step or a bench.',
@@ -466,7 +466,7 @@ export const urbanPrompts = [
       'A clock tower rising above lower market buildings. It is vertical, symmetrical and proud; everything around it is low and busy. Draw the tower carefully and the market loosely.',
     categories: ['architecture', 'urban'],
     media: ['ink-wash', 'ink', 'pencil', 'hatching'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Place the tower off centre, rising into the upper part of the page.',
@@ -592,7 +592,7 @@ export const urbanPrompts = [
       'A building under construction: bamboo or steel scaffolding, bare brick, an unfinished top floor. It is full of straight lines and crossing diagonals, and nobody minds if a line is slightly crooked.',
     categories: ['architecture', 'urban'],
     media: ['ink', 'pencil', 'ink-wash'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Let the scaffolding overlap the building and reach into the sky.',
@@ -719,7 +719,7 @@ export const urbanPrompts = [
       'An old house with a carved wooden door below and an overhanging window bay above. The ornament can be dizzying; the task is to find the big shapes first and let the carving be suggested.',
     categories: ['architecture', 'windows'],
     media: ['ink', 'hatching', 'ink-wash', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Frame the doorway and the window bay above as one vertical composition.',
@@ -783,7 +783,7 @@ export const urbanPrompts = [
       'Find a dome — on a mosque, a temple, a church or a civic building — rising among flat rooftops. Curves and flat planes side by side make a lovely contrast.',
     categories: ['architecture', 'urban'],
     media: ['ink-wash', 'watercolour', 'ink', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Put the dome in the upper third, against open sky.',

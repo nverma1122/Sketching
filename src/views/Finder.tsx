@@ -10,7 +10,7 @@ type CategoryChoice = Category | 'any';
 type MediumChoice = Medium | 'any';
 type EnergyChoice = Energy | 'skip';
 
-const TIME_ACCENTS = ['var(--sage)', 'var(--dusty-blue)', 'var(--ochre)', 'var(--terracotta)'];
+const TIME_ACCENTS = ['var(--sage)', 'var(--dusty-blue)', 'var(--ochre)', 'var(--terracotta)', 'var(--ink-soft)', 'var(--ink)'];
 
 export function Finder() {
   const store = useStore();
@@ -46,7 +46,7 @@ export function Finder() {
       <ChoiceGroup
         name="time"
         legend="How much time do you have?"
-        columns={4}
+        columns={3}
         value={time}
         onChange={setTime}
         options={TIMES.map((t, i) => ({ value: t.key, label: t.label, hint: t.hint, accent: TIME_ACCENTS[i] }))}

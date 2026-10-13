@@ -19,7 +19,7 @@ export function Explore({ initialMedium }: { initialMedium: string | null }) {
   const [category, setCategory] = useState<Category | ''>('');
   const [medium, setMedium] = useState<Medium | ''>(isMedium(initialMedium) ? initialMedium : '');
   const [time, setTime] = useState<TimeKey | ''>('');
-  const [difficulty, setDifficulty] = useState<'' | '1' | '2' | '3'>('');
+  const [difficulty, setDifficulty] = useState<'' | '1' | '2' | '3' | '4'>('');
   const [limit, setLimit] = useState(PAGE);
 
   const results = useMemo(() => {
@@ -116,11 +116,12 @@ export function Explore({ initialMedium }: { initialMedium: string | null }) {
           </label>
           <label className="filter">
             <span>Difficulty</span>
-            <select value={difficulty} onChange={(e) => { setDifficulty(e.target.value as '' | '1' | '2' | '3'); setLimit(PAGE); }}>
+            <select value={difficulty} onChange={(e) => { setDifficulty(e.target.value as '' | '1' | '2' | '3' | '4'); setLimit(PAGE); }}>
               <option value="">Any</option>
               <option value="1">Gentle</option>
               <option value="2">Moderate</option>
               <option value="3">Involved</option>
+              <option value="4">Advanced</option>
             </select>
           </label>
         </div>

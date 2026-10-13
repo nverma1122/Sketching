@@ -169,7 +169,7 @@ export const naturePrompts = [
       'A small paved courtyard with a single tree in the middle, perhaps with a raised platform around its trunk. Walls on three sides, the tree in the centre: an outdoor room.',
     categories: ['nature', 'architecture'],
     media: ['ink-wash', 'pencil', 'watercolour', 'ink'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Stand at one end, so the courtyard recedes in one-point perspective.',
@@ -360,7 +360,7 @@ export const naturePrompts = [
       'A small pond, tank or lake edge with trees or steps reflected in its still water. The reflection is a softer, upside-down repeat of what is above.',
     categories: ['nature', 'architecture'],
     media: ['watercolour', 'ink-wash', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Place the waterline slightly above or below the middle, never exactly on it.',
@@ -520,7 +520,7 @@ export const naturePrompts = [
       'A banyan tree with aerial roots hanging like curtains from its branches. Verticals, curves and deep shade — a whole forest in one tree.',
     categories: ['nature'],
     media: ['ink', 'hatching', 'ink-wash', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Crop so the trunk and the hanging roots fill the page.',

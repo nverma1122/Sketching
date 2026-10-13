@@ -1,13 +1,15 @@
-import type { Category, Energy, Medium, TimeKey } from './types';
+import type { Category, Energy, Level, Medium, TimeKey } from './types';
 
 export const TIMES: { key: TimeKey; label: string; hint: string; minutes: number }[] = [
   { key: '5', label: '5 minutes', hint: 'Just a little sketch.', minutes: 5 },
   { key: '10', label: '10 minutes', hint: 'A quick drawing session.', minutes: 10 },
   { key: '20', label: '20 minutes', hint: 'Time to explore.', minutes: 20 },
   { key: '40', label: '30–45 minutes', hint: 'Settle into a longer sketch.', minutes: 40 },
+  { key: '60', label: '1 hour', hint: 'A full, unhurried drawing.', minutes: 60 },
+  { key: '120', label: '2 hours or more', hint: 'A finished piece, over one or more sittings.', minutes: 120 },
 ];
 
-export const TIME_ORDER: TimeKey[] = ['5', '10', '20', '40'];
+export const TIME_ORDER: TimeKey[] = ['5', '10', '20', '40', '60', '120'];
 
 export const timeLabel = (t: TimeKey) => TIMES.find((x) => x.key === t)!.label;
 export const timeMinutes = (t: TimeKey) => TIMES.find((x) => x.key === t)!.minutes;
@@ -145,11 +147,18 @@ export const ENERGIES: { key: Energy; label: string; hint: string }[] = [
 
 export const energyLabel = (e: Energy) => ENERGIES.find((x) => x.key === e)!.label;
 
-export const DIFFICULTY_LABEL: Record<1 | 2 | 3, string> = {
+export const DIFFICULTY_LABEL: Record<1 | 2 | 3 | 4, string> = {
   1: 'Gentle',
   2: 'Moderate',
   3: 'Involved',
+  4: 'Advanced',
 };
+
+export const LEVELS: { key: Level; label: string; hint: string }[] = [
+  { key: 'developing', label: 'Developing', hint: 'Favour gentle, confidence-building ideas.' },
+  { key: 'experienced', label: 'Experienced', hint: 'A balanced mix of quick studies and fuller scenes.' },
+  { key: 'advanced', label: 'Advanced', hint: 'Favour complex compositions, perspective and long sittings.' },
+];
 
 export const CLOSING_LINES: string[] = [
   'You are making a sketch, not a blueprint.',
@@ -166,9 +175,9 @@ export const CLOSING_LINES: string[] = [
   'One quiet corner, one page. Nothing more is asked.',
 ];
 
-const LOW: Record<TimeKey, string> = { '5': '5', '10': '10', '20': '20', '40': '30' };
-const HIGH: Record<TimeKey, string> = { '5': '5', '10': '10', '20': '20', '40': '45' };
+const LOW: Record<TimeKey, string> = { '5': '5 min', '10': '10 min', '20': '20 min', '40': '30 min', '60': '1 h', '120': '2 h' };
+const HIGH: Record<TimeKey, string> = { '5': '5 min', '10': '10 min', '20': '20 min', '40': '45 min', '60': '1 h', '120': '2 h+' };
 
-/** Compact label for a prompt's suitable time range, e.g. "10–20 min". */
+/** Compact label for a prompt's suitable time range, e.g. "10 min–20 min". */
 export const rangeLabel = ([a, b]: [TimeKey, TimeKey]) =>
-  a === b ? (a === '40' ? '30–45 min' : `${a} min`) : `${LOW[a]}–${HIGH[b]} min`;
+  a === b ? (a === '40' ? '30–45 min' : HIGH[a]) : `${LOW[a]} – ${HIGH[b]}`;

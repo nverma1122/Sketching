@@ -225,7 +225,7 @@ export const experimentalPrompts = [
       'Use a brown or grey page (or tint a white page with a wash first). Draw the darks in ink or pencil and add highlights with white gel pen or gouache. Mid-tones come free.',
     categories: ['architecture', 'still-life'],
     media: ['pencil', 'ink-wash', 'ink'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Choose a subject with strong highlights — metal, glass, sunlit edges.',
@@ -320,7 +320,7 @@ export const experimentalPrompts = [
       'Draw the left half of a building from life, then complete the right half from imagination. Where does observation stop and invention begin? Nobody needs to know.',
     categories: ['architecture', 'urban'],
     media: ['ink', 'pencil', 'ink-wash'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Choose a symmetrical-ish building.',

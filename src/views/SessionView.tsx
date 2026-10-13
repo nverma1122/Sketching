@@ -56,7 +56,7 @@ export function SessionView() {
     );
   }
 
-  const built = buildSuggestion(prompt, active.suggestion);
+  const built = buildSuggestion(prompt, active.suggestion, store.prefs.level);
   const plannedMs = timeMinutes(built.time) * 60_000;
   const elapsed = active.elapsedMs + (active.runningSince ? now - active.runningSince : 0);
   const started = elapsed > 0 || running;

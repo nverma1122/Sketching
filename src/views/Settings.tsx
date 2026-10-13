@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { ChoiceGroup, ConfirmDialog, useToast } from '../components/ui';
 import { Icon } from '../components/Icons';
 import { useStore, type Theme } from '../lib/store';
+import { LEVELS } from '../data/taxonomy';
+import type { Level } from '../data/types';
 import { exportJson, exportZip } from '../lib/exportData';
 
 const fmtBytes = (n: number) => (n < 1024 * 1024 ? `${Math.max(1, Math.round(n / 1024))} KB` : `${(n / 1024 / 1024).toFixed(1)} MB`);
@@ -52,6 +54,28 @@ export function Settings() {
       </header>
 
       <section className="card settings-section">
+        <h2>Your drawing</h2>
+        <ChoiceGroup<Level>
+          name="level"
+          legend="My level"
+          columns={3}
+          value={store.prefs.level}
+          onChange={(level) => store.setPrefs({ level })}
+          options={LEVELS.map((l) => ({ value: l.key, label: l.label, hint: l.hint }))}
+        />
+        <label className="toggle-row" style={{ marginTop: 'var(--s-4)' }}>
+          <input type="checkbox" checked={store.prefs.onlinePhotos} onChange={(e) => store.setPrefs({ onlinePhotos: e.target.checked })} />
+          <span>
+            <strong>Reference photos from Wikimedia Commons</strong>
+            <span className="small muted" style={{ display: 'block' }}>
+              Shows real, freely licensed photos for each idea, with the photographer credited. Only the idea’s search words are sent to Wikimedia; your notes
+              and your own photos never leave this device. Needs an internet connection.
+            </span>
+          </span>
+        </label>
+      </section>
+
+      <section className="card settings-section">
         <h2>Appearance</h2>
         <ChoiceGroup<Theme>
           name="theme"
@@ -71,7 +95,8 @@ export function Settings() {
         <h2>Where your sketchbook lives</h2>
         <p>
           Everything — saved ideas, sessions, notes and artwork photos — is stored only in this browser on this device. Nothing is uploaded, there is no account,
-          and there are no analytics, adverts or trackers.
+          and there are no analytics, adverts or trackers. The only outside requests are reference-photo searches to Wikimedia Commons, which you can switch
+          off above.
         </p>
         <p className="muted">
           Browser storage does not sync between devices, and it can be lost if you clear your browser’s site data or if the browser frees up space. Export a copy

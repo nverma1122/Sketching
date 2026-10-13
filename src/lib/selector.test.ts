@@ -3,6 +3,8 @@ import { PROMPTS, getPrompt } from '../data/prompts';
 import { CATEGORIES, MEDIA, TIMES } from '../data/taxonomy';
 import type { Criteria, Medium, SketchPrompt } from '../data/types';
 import { REFERENCE_IDS } from '../data/referenceIds';
+import { PHOTO_QUERIES } from '../data/photoQueries';
+import { toSearch } from './commons';
 import { fitsTime, pushRecent, selectPrompt, todaysPrompt } from './selector';
 import { buildSuggestion } from './plan';
 import { hashString, seededRng } from './random';
@@ -49,6 +51,20 @@ describe('prompt library', () => {
       expect(REFERENCE_IDS, p.id).toContain(p.reference);
       expect(TIMES.map((t) => t.key).indexOf(p.time[0]), p.id).toBeLessThanOrEqual(TIMES.map((t) => t.key).indexOf(p.time[1]));
     }
+  });
+
+  it('has a photo search for every prompt', () => {
+    for (const p of PROMPTS) {
+      expect(PHOTO_QUERIES[p.id]?.length, p.id).toBeGreaterThan(0);
+    }
+    expect(Object.keys(PHOTO_QUERIES).every((id) => getPrompt(id)), 'no orphan photo queries').toBe(true);
+    expect(toSearch('tea stall')).toBe('intitle:tea intitle:stall filetype:bitmap');
+  });
+
+  it('has a substantial set of advanced ideas', () => {
+    const adv = PROMPTS.filter((p) => p.difficulty === 4);
+    expect(adv.length).toBeGreaterThanOrEqual(25);
+    expect(PROMPTS.filter((p) => p.time[1] === '120').length).toBeGreaterThanOrEqual(25);
   });
 
   it('offers something for every time × medium combination', () => {
@@ -161,6 +177,25 @@ describe('selectPrompt', () => {
     expect(r.prompt.media).toContain(r.medium);
   });
 
+  it('advanced level favours demanding ideas', () => {
+    const avg = (level: 'developing' | 'advanced') => {
+      let sum = 0;
+      for (let seed = 0; seed < 300; seed++) sum += selectPrompt(PROMPTS, { time: '40' }, ctx({ level, rng: seededRng(seed) }))!.prompt.difficulty;
+      return sum / 300;
+    };
+    expect(avg('advanced')).toBeGreaterThan(avg('developing') + 0.8);
+    expect(avg('advanced')).toBeGreaterThan(2.8);
+  });
+
+  it('two hours with watercolour finds an exact advanced match', () => {
+    const r = selectPrompt(PROMPTS, { time: '120', medium: 'watercolour' }, ctx({ level: 'advanced' }))!;
+    expect(r.exact).toBe(true);
+    expect(r.prompt.difficulty).toBeGreaterThanOrEqual(3);
+    const b = buildSuggestion(r.prompt, { time: '120', medium: 'watercolour', simplified: 0, createdAt: 1 }, 'advanced');
+    expect(b.plan[0].text).toMatch(/thumbnail/i);
+    expect(b.mediumGuidance.join(' ')).toMatch(/three passes/);
+  });
+
   it('gives a stable idea for a given day', () => {
     const a = todaysPrompt(PROMPTS, '2026-10-13', hashString);
     const b = todaysPrompt(PROMPTS, '2026-10-13', hashString);
@@ -177,11 +212,13 @@ describe('buildSuggestion', () => {
   });
 
   it('builds plans of the right shape for each time', () => {
-    const labels = (t: '5' | '10' | '20' | '40') => buildSuggestion(p, { time: t, medium: 'ink', simplified: 0, createdAt: 1 }).plan.length;
+    const labels = (t: '5' | '10' | '20' | '40' | '60' | '120') => buildSuggestion(p, { time: t, medium: 'ink', simplified: 0, createdAt: 1 }).plan.length;
     expect(labels('5')).toBe(4);
     expect(labels('10')).toBe(4);
     expect(labels('20')).toBe(5);
     expect(labels('40')).toBe(6);
+    expect(labels('60')).toBe(6);
+    expect(labels('120')).toBe(6);
   });
 
   it('makes a simpler version shorter and easier', () => {
@@ -195,7 +232,7 @@ describe('buildSuggestion', () => {
 
   it('never produces empty plan steps', () => {
     for (const prompt of PROMPTS) {
-      for (const t of ['5', '10', '20', '40'] as const) {
+      for (const t of ['5', '10', '20', '40', '60', '120'] as const) {
         for (const s of [0, 1, 2]) {
           const b = buildSuggestion(prompt, { time: t, medium: prompt.media[0], simplified: s, createdAt: 1 });
           for (const step of b.plan) expect(step.text.trim().length, `${prompt.id} ${t} ${s}`).toBeGreaterThan(5);

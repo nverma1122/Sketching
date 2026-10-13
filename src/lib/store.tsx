@@ -3,6 +3,7 @@ import type {
   ArtworkRecord,
   ArtworkWithImage,
   Criteria,
+  Level,
   Medium,
   SessionRecord,
   Suggestion,
@@ -20,6 +21,9 @@ export type Theme = 'system' | 'light' | 'dark';
 export interface Prefs {
   theme: Theme;
   lastCriteria: Criteria;
+  level: Level;
+  /** Load reference photos from Wikimedia Commons. */
+  onlinePhotos: boolean;
 }
 
 export interface SavedIdea {
@@ -47,7 +51,7 @@ export interface ReferencePhoto {
 
 export type NewArtwork = Omit<ArtworkRecord, 'id' | 'createdAt' | 'fileName' | 'mimeType'>;
 
-const DEFAULT_PREFS: Prefs = { theme: 'system', lastCriteria: { time: '10' } };
+const DEFAULT_PREFS: Prefs = { theme: 'system', lastCriteria: { time: '10' }, level: 'advanced', onlinePhotos: true };
 
 const uid = () =>
   typeof crypto !== 'undefined' && 'randomUUID' in crypto
@@ -68,7 +72,9 @@ function useLocalState<T>(key: string, fallback: T) {
 }
 
 function useStoreValue() {
-  const [prefs, setPrefsState] = useLocalState<Prefs>('prefs', DEFAULT_PREFS);
+  const [storedPrefs, setPrefsState] = useLocalState<Prefs>('prefs', DEFAULT_PREFS);
+  // Older saved preferences may lack newer fields.
+  const prefs = useMemo(() => ({ ...DEFAULT_PREFS, ...storedPrefs }), [storedPrefs]);
   const [recent, setRecent] = useLocalState<string[]>('recent', []);
   const [saved, setSaved] = useLocalState<SavedIdea[]>('saved', []);
   const [attempted, setAttempted] = useLocalState<Record<string, number>>('attempted', {});
@@ -104,7 +110,7 @@ function useStoreValue() {
     };
   }, []);
 
-  const setPrefs = useCallback((p: Partial<Prefs>) => setPrefsState((old) => ({ ...old, ...p })), [setPrefsState]);
+  const setPrefs = useCallback((p: Partial<Prefs>) => setPrefsState((old) => ({ ...DEFAULT_PREFS, ...old, ...p })), [setPrefsState]);
 
   // ----- Suggestions -----------------------------------------------------
 
@@ -126,6 +132,7 @@ function useStoreValue() {
         attempted,
         saved: savedIds,
         exclude: opts.exclude,
+        level: prefs.level,
         rng: Math.random,
       });
       if (!res) return null;
@@ -142,7 +149,7 @@ function useStoreValue() {
       show(s);
       return s;
     },
-    [recent, attempted, savedIds, show, setPrefs],
+    [recent, attempted, savedIds, show, setPrefs, prefs.level],
   );
 
   const another = useCallback(() => {

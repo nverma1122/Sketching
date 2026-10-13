@@ -36,6 +36,7 @@ const PIGMENTS: Record<string, string> = {
   'rose madder': '#c96a7c',
   'opera pink': '#e0569a',
   'perylene maroon': '#6e2d2f',
+  'alizarin crimson': '#a3243a',
   'dioxazine violet': '#4e3a78',
   'cobalt violet': '#8f6aa8',
   'cobalt teal': '#3c9a96',

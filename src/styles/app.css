@@ -1930,3 +1930,50 @@ textarea::placeholder {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Reference photos */
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  padding: var(--s-5);
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  background: var(--paper-deep);
+  border-radius: 2px;
+}
+.photo-placeholder.is-loading {
+  background: linear-gradient(100deg, var(--paper-deep) 30%, var(--card) 50%, var(--paper-deep) 70%);
+  background-size: 300% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+@keyframes shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+.photo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+}
+.credit a {
+  color: inherit;
+}
+.toggle-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  cursor: pointer;
+  min-height: 44px;
+}
+.toggle-row input {
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  accent-color: var(--ink);
+  flex-shrink: 0;
+}

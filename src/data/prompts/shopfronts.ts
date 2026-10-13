@@ -304,7 +304,7 @@ export const shopfrontPrompts = [
       'A small general store with goods stacked up to the ceiling behind the counter — jars, packets, sacks. The shopkeeper might be sitting cross-legged in the middle. It is dense, but you only need to suggest the abundance.',
     categories: ['shopfronts', 'cafes'],
     media: ['ink', 'ink-wash', 'pencil', 'watercolour'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Frame the shop opening tightly so the goods fill the page.',
@@ -401,7 +401,7 @@ export const shopfrontPrompts = [
       'A small barber’s shop seen from the pavement: one chair, a big mirror, bottles on a shelf, maybe a customer. Reflections and glass make it intriguing, but keep to the main shapes.',
     categories: ['shopfronts', 'cafes'],
     media: ['ink-wash', 'ink', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Frame the doorway or window so the chair sits in the centre.',
@@ -657,7 +657,7 @@ export const shopfrontPrompts = [
       'A small iron spiral staircase climbing to a rooftop door. It is a tricky object, but a good one: a central post, a helix of steps and a railing that turns as it rises.',
     categories: ['windows', 'architecture'],
     media: ['ink', 'pencil', 'hatching'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Place the staircase off centre, rising towards the top of the page.',
@@ -721,7 +721,7 @@ export const shopfrontPrompts = [
       'A shop at dusk with its interior lights just switched on. The window glows warm against the cooling blue of the street. A simple subject made atmospheric by contrast.',
     categories: ['shopfronts', 'urban'],
     media: ['watercolour', 'ink-wash', 'pencil'],
-    time: ['20', '40'],
+    time: ['20', '60'],
     difficulty: 3,
     composition: [
       'Place the lit window slightly off centre.',

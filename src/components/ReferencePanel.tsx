@@ -1,44 +1,92 @@
 import { useEffect, useRef, useState } from 'react';
 import type { SketchPrompt } from '../data/types';
 import { useStore, type ReferencePhoto } from '../lib/store';
+import { findPhotos, getPhotoIndex, setPhotoIndex, type CommonsPhoto } from '../lib/commons';
 import { Illustration, illustrationLabel } from './Illustration';
 import { Icon } from './Icons';
 import { Lightbox, useObjectUrl, useToast } from './ui';
 
+type View = 'mine' | 'photo' | 'diagram';
+type PhotoState = { status: 'idle' | 'loading' | 'ready' | 'empty' | 'error' | 'offline'; photos: CommonsPhoto[] };
+
 export function ReferencePanel({ prompt, compact = false }: { prompt: SketchPrompt; compact?: boolean }) {
   const store = useStore();
   const toast = useToast();
-  const [photo, setPhoto] = useState<ReferencePhoto | undefined>();
-  const [view, setView] = useState<'photo' | 'sketch'>('sketch');
+  const online = store.prefs.onlinePhotos;
+  const [mine, setMine] = useState<ReferencePhoto | undefined>();
+  const [view, setView] = useState<View>(online ? 'photo' : 'diagram');
+  const [photoState, setPhotoState] = useState<PhotoState>({ status: 'idle', photos: [] });
+  const [index, setIndex] = useState(0);
   const [enlarged, setEnlarged] = useState(false);
   const [busy, setBusy] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
-  const photoUrl = useObjectUrl(photo?.image);
+  const mineUrl = useObjectUrl(mine?.image);
 
+  // The user's own photo for this idea.
   useEffect(() => {
     let cancelled = false;
-    setPhoto(undefined);
-    setView('sketch');
+    setMine(undefined);
     store
       .getReference(prompt.id)
       .then((p) => {
-        if (cancelled || !p) return;
-        setPhoto(p);
-        setView('photo');
+        if (cancelled) return;
+        setMine(p);
+        setView(p ? 'mine' : online ? 'photo' : 'diagram');
       })
       .catch(() => {});
     return () => {
       cancelled = true;
     };
-  }, [prompt.id]);
+  }, [prompt.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Photos from Wikimedia Commons.
+  useEffect(() => {
+    if (!online) {
+      setPhotoState({ status: 'idle', photos: [] });
+      return;
+    }
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+      setPhotoState({ status: 'offline', photos: [] });
+      return;
+    }
+    const ctrl = new AbortController();
+    setPhotoState({ status: 'loading', photos: [] });
+    findPhotos(prompt, ctrl.signal)
+      .then((photos) => {
+        setPhotoState({ status: photos.length ? 'ready' : 'empty', photos });
+        setIndex(Math.min(getPhotoIndex(prompt.id), Math.max(0, photos.length - 1)));
+      })
+      .catch((e) => {
+        if ((e as Error).name !== 'AbortError') setPhotoState({ status: 'error', photos: [] });
+      });
+    return () => ctrl.abort();
+  }, [prompt, online]);
+
+  const photo = photoState.photos[index];
+
+  const nextPhoto = () => {
+    if (!photoState.photos.length) return;
+    const i = (index + 1) % photoState.photos.length;
+    setIndex(i);
+    setPhotoIndex(prompt.id, i);
+  };
+
+  const skipBroken = () => {
+    // A photo failed to load: drop it and show the next one.
+    setPhotoState((s) => {
+      const photos = s.photos.filter((_, i) => i !== index);
+      return { status: photos.length ? 'ready' : 'empty', photos };
+    });
+    setIndex((i) => Math.max(0, Math.min(i, photoState.photos.length - 2)));
+  };
 
   const onFile = async (file: File | undefined) => {
     if (!file) return;
     setBusy(true);
     try {
       const rec = await store.setReference(prompt.id, file);
-      setPhoto(rec);
-      setView('photo');
+      setMine(rec);
+      setView('mine');
       toast({ message: 'Your photo is saved with this idea, on this device only.', tone: 'info' });
     } catch (e) {
       toast({ message: (e as Error).message || 'That photo could not be added.', tone: 'error' });
@@ -48,51 +96,107 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
     }
   };
 
-  const remove = async () => {
+  const removeMine = async () => {
     try {
       await store.removeReference(prompt.id);
-      setPhoto(undefined);
-      setView('sketch');
+      setMine(undefined);
+      setView(online ? 'photo' : 'diagram');
       toast({ message: 'Photo removed.', tone: 'info' });
     } catch {
       toast({ message: 'The photo could not be removed.', tone: 'error' });
     }
   };
 
-  const showingPhoto = view === 'photo' && photoUrl;
+  const tabs: { key: View; label: string }[] = [
+    ...(mine ? [{ key: 'mine' as const, label: 'My photo' }] : []),
+    ...(online ? [{ key: 'photo' as const, label: 'Photo' }] : []),
+    { key: 'diagram', label: 'Diagram' },
+  ];
+  const current: View = tabs.some((t) => t.key === view) ? view : tabs[0].key;
+
+  let frame;
+  if (current === 'mine' && mineUrl) {
+    frame = <img src={mineUrl} alt="Your reference photograph" />;
+  } else if (current === 'photo') {
+    if (photoState.status === 'ready' && photo) {
+      frame = <img key={photo.id} src={photo.src} alt={`Reference photo: ${photo.title}`} onError={skipBroken} referrerPolicy="no-referrer" />;
+    } else {
+      const msg =
+        photoState.status === 'loading' || photoState.status === 'idle'
+          ? 'Finding reference photos…'
+          : photoState.status === 'offline'
+            ? 'You’re offline — reference photos need a connection. The diagram and your own photos still work.'
+            : photoState.status === 'empty'
+              ? 'No suitable photos found for this idea. Try the diagram, or use your own photo.'
+              : 'Photos couldn’t be loaded right now. The diagram and your own photos still work.';
+      frame = (
+        <div className={`photo-placeholder ${photoState.status === 'loading' ? 'is-loading' : ''}`} role="status">
+          <span>{msg}</span>
+        </div>
+      );
+    }
+  } else {
+    frame = <Illustration id={prompt.reference} />;
+  }
+
+  const canEnlarge = current !== 'photo' || (photoState.status === 'ready' && !!photo);
 
   return (
     <section className={`reference ${compact ? 'reference-compact' : ''}`} aria-label="Reference">
-      {photo && (
+      {tabs.length > 1 && (
         <div className="ref-tabs" role="tablist" aria-label="Reference type">
-          <button role="tab" aria-selected={view === 'photo'} className={view === 'photo' ? 'active' : ''} onClick={() => setView('photo')}>
-            My photo
-          </button>
-          <button role="tab" aria-selected={view === 'sketch'} className={view === 'sketch' ? 'active' : ''} onClick={() => setView('sketch')}>
-            Sketch reference
-          </button>
+          {tabs.map((t) => (
+            <button key={t.key} role="tab" aria-selected={current === t.key} className={current === t.key ? 'active' : ''} onClick={() => setView(t.key)}>
+              {t.label}
+            </button>
+          ))}
         </div>
       )}
-      <button className="ref-frame" onClick={() => setEnlarged(true)} aria-label="Enlarge reference">
-        {showingPhoto ? (
-          <img src={photoUrl} alt="Your reference photograph" />
-        ) : (
-          <Illustration id={prompt.reference} />
-        )}
-        <span className="ref-enlarge" aria-hidden="true">
-          <Icon name="expand" size={16} />
-        </span>
-      </button>
-      {!showingPhoto && <p className="ref-caption">An original schematic sketch to show the idea’s main shapes — not a photograph of a real place.</p>}
+
+      {canEnlarge ? (
+        <button className="ref-frame" onClick={() => setEnlarged(true)} aria-label="Enlarge reference">
+          {frame}
+          <span className="ref-enlarge" aria-hidden="true">
+            <Icon name="expand" size={16} />
+          </span>
+        </button>
+      ) : (
+        <div className="ref-frame">{frame}</div>
+      )}
+
+      {current === 'photo' && photo && photoState.status === 'ready' && (
+        <div className="photo-meta">
+          <p className="ref-caption credit">
+            Photo: {photo.artist} ·{' '}
+            {photo.licenseUrl ? (
+              <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer">
+                {photo.license}
+              </a>
+            ) : (
+              photo.license
+            )}{' '}
+            ·{' '}
+            <a href={photo.page} target="_blank" rel="noopener noreferrer">
+              Wikimedia Commons
+            </a>
+          </p>
+          {photoState.photos.length > 1 && (
+            <button className="btn btn-small btn-quiet" onClick={nextPhoto}>
+              <Icon name="shuffle" size={16} /> Another photo <span className="muted small">({index + 1}/{photoState.photos.length})</span>
+            </button>
+          )}
+        </div>
+      )}
+      {current === 'diagram' && <p className="ref-caption">Composition diagram — the idea’s main shapes and structure, not a finished reference.</p>}
 
       {!compact && (
         <div className="ref-actions">
           <input ref={fileRef} type="file" accept="image/*" className="visually-hidden" id={`ref-file-${prompt.id}`} onChange={(e) => onFile(e.target.files?.[0])} />
           <label htmlFor={`ref-file-${prompt.id}`} className={`btn btn-small btn-quiet ${busy ? 'is-busy' : ''}`}>
-            <Icon name="upload" size={16} /> {photo ? 'Replace my photo' : 'Use my own photo'}
+            <Icon name="upload" size={16} /> {mine ? 'Replace my photo' : 'Use my own photo'}
           </label>
-          {photo && (
-            <button className="btn btn-small btn-quiet" onClick={remove}>
+          {mine && (
+            <button className="btn btn-small btn-quiet" onClick={removeMine}>
               <Icon name="trash" size={16} /> Remove photo
             </button>
           )}
@@ -117,9 +221,25 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
         </dl>
       </div>
 
-      <Lightbox open={enlarged} onClose={() => setEnlarged(false)} title={showingPhoto ? 'Your reference photo' : prompt.title}>
-        {showingPhoto ? <img src={photoUrl} alt="Your reference photograph, enlarged" /> : <Illustration id={prompt.reference} />}
-        {!showingPhoto && <p className="ref-caption">{illustrationLabel(prompt.reference)}</p>}
+      <Lightbox open={enlarged} onClose={() => setEnlarged(false)} title={current === 'mine' ? 'Your reference photo' : current === 'photo' && photo ? photo.title : prompt.title}>
+        {current === 'mine' && mineUrl ? (
+          <img src={mineUrl} alt="Your reference photograph, enlarged" />
+        ) : current === 'photo' && photo ? (
+          <>
+            <img src={photo.large} alt={`Reference photo: ${photo.title}, enlarged`} referrerPolicy="no-referrer" />
+            <p className="ref-caption">
+              Photo: {photo.artist} · {photo.license} ·{' '}
+              <a href={photo.page} target="_blank" rel="noopener noreferrer">
+                Wikimedia Commons
+              </a>
+            </p>
+          </>
+        ) : (
+          <>
+            <Illustration id={prompt.reference} />
+            <p className="ref-caption">{illustrationLabel(prompt.reference)}</p>
+          </>
+        )}
       </Lightbox>
     </section>
   );

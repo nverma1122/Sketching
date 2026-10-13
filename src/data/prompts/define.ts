@@ -2,7 +2,7 @@ import type { Energy, SketchPrompt } from '../types';
 
 type PromptInput = Omit<SketchPrompt, 'energy'> & { energy?: Energy };
 
-const ENERGY_FOR_DIFFICULTY: Record<1 | 2 | 3, Energy> = { 1: 'low', 2: 'explore', 3: 'focus' };
+const ENERGY_FOR_DIFFICULTY: Record<1 | 2 | 3 | 4, Energy> = { 1: 'low', 2: 'explore', 3: 'focus', 4: 'focus' };
 
 /**
  * Small helper so library entries stay terse. Energy defaults from difficulty,
