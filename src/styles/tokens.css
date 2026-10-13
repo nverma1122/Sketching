@@ -1,0 +1,129 @@
+/* Design tokens — Quiet Corners Studio.
+   Warm paper, charcoal ink and four restrained accents. */
+
+:root {
+  color-scheme: light;
+
+  /* Paper & ink */
+  --paper: #f6f1e7;
+  --paper-deep: #eee6d6;
+  --card: #fbf8f1;
+  --card-raised: #fffdf8;
+  --ink: #2b2925;
+  --ink-soft: #57524a;
+  --ink-faint: #8a8377;
+  --line: #ddd3c1;
+  --line-strong: #c4b8a2;
+
+  /* Accents */
+  --sage: #74866c;
+  --dusty-blue: #667f93;
+  --terracotta: #b1623f;
+  --ochre: #bf9440;
+
+  /* Washes used in illustrations */
+  --wash-ochre: #d9b46a;
+  --wash-sage: #9fb197;
+  --wash-blue: #92a8bb;
+  --wash-terra: #d08b6c;
+  --wash-grey: #9d978c;
+
+  --primary-bg: #2b2925;
+  --primary-fg: #f8f4ea;
+  --danger: #a24a2e;
+  --focus: #667f93;
+
+  /* Typography */
+  --font-serif: 'Fraunces Variable', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-sans: 'Source Sans 3 Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-hand: 'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.6rem;
+  --text-2xl: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+  --text-hero: clamp(2.3rem, 1.6rem + 3.4vw, 3.8rem);
+
+  /* Spacing (4px base) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --border: 1px solid var(--line);
+  --shadow-sm: 0 1px 2px rgba(60, 48, 30, 0.06), 0 1px 1px rgba(60, 48, 30, 0.04);
+  --shadow: 0 2px 6px rgba(60, 48, 30, 0.07), 0 10px 24px -12px rgba(60, 48, 30, 0.18);
+
+  --header-h: 64px;
+  --bottomnav-h: 0px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Low-light theme: still paper-like, just at dusk. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --paper: #1f1d1a;
+    --paper-deep: #181614;
+    --card: #282521;
+    --card-raised: #2e2b26;
+    --ink: #ece5d6;
+    --ink-soft: #c3baa9;
+    --ink-faint: #8f8778;
+    --line: #3d3832;
+    --line-strong: #565047;
+    --sage: #97a98e;
+    --dusty-blue: #93a9bb;
+    --terracotta: #d48a68;
+    --ochre: #d6ae5e;
+    --wash-ochre: #a8864a;
+    --wash-sage: #6f8268;
+    --wash-blue: #627a8e;
+    --wash-terra: #9c6149;
+    --wash-grey: #6b665e;
+    --primary-bg: #ece5d6;
+    --primary-fg: #1f1d1a;
+    --danger: #e08a6a;
+    --focus: #93a9bb;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 10px 24px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #1f1d1a;
+  --paper-deep: #181614;
+  --card: #282521;
+  --card-raised: #2e2b26;
+  --ink: #ece5d6;
+  --ink-soft: #c3baa9;
+  --ink-faint: #8f8778;
+  --line: #3d3832;
+  --line-strong: #565047;
+  --sage: #97a98e;
+  --dusty-blue: #93a9bb;
+  --terracotta: #d48a68;
+  --ochre: #d6ae5e;
+  --wash-ochre: #a8864a;
+  --wash-sage: #6f8268;
+  --wash-blue: #627a8e;
+  --wash-terra: #9c6149;
+  --wash-grey: #6b665e;
+  --primary-bg: #ece5d6;
+  --primary-fg: #1f1d1a;
+  --danger: #e08a6a;
+  --focus: #93a9bb;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 10px 24px -12px rgba(0, 0, 0, 0.5);
+}
