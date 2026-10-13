@@ -8,7 +8,7 @@ Everything runs in the browser. There is no account, no server, no analytics and
 
 ## Open it
 
-Online (once GitHub Pages is switched on): **https://nverma1122.github.io/sketching/**
+Online (once GitHub Pages is switched on): **https://nverma1122.github.io/Sketching/**
 
 Every push to `main` or `claude/quiet-corners-studio-k40mvg` runs the tests, builds the app and redeploys it (`.github/workflows/deploy-pages.yml`). To switch it on the first time, go to *Settings → Pages → Build and deployment → Source* and choose **GitHub Actions**.
 
