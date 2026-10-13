@@ -6,6 +6,12 @@ A calm, mobile-first web app for an urban sketcher. Open it, say how long you ha
 
 Everything runs in the browser. There is no account, no server, no analytics and no paid API.
 
+## Open it
+
+Online (once GitHub Pages is switched on): **https://nverma1122.github.io/sketching/**
+
+Every push to `main` or `claude/quiet-corners-studio-k40mvg` runs the tests, builds the app and redeploys it (`.github/workflows/deploy-pages.yml`). To switch it on the first time, go to *Settings → Pages → Build and deployment → Source* and choose **GitHub Actions**.
+
 ## Run it locally
 
 Requires Node.js 18+ (tested with Node 22).
