@@ -2,7 +2,7 @@ import { useMemo, useState, type FormEvent } from 'react';
 import { PROMPTS, getPrompt } from '../data/prompts';
 import { CATEGORIES, MEDIA, mediumShort, timeLabel } from '../data/taxonomy';
 import type { ArtworkWithImage, Medium, Outcome } from '../data/types';
-import { Illustration } from '../components/Illustration';
+import { SceneGuide } from '../components/SceneGuide';
 import { Icon } from '../components/Icons';
 import { ConfirmDialog, Dialog, EmptyState, useObjectUrl, useToast } from '../components/ui';
 import { useStore, type NewArtwork, type SavedIdea } from '../lib/store';
@@ -71,7 +71,7 @@ function SavedTab() {
         return (
           <li key={s.promptId} className="saved-item card">
             <div className="saved-art">
-              <Illustration id={p.reference} decorative />
+              <SceneGuide spec={p.guide} seed={p.id} decorative />
             </div>
             <div className="saved-body">
               <h2 className="card-title">{p.title}</h2>
@@ -263,7 +263,7 @@ function ArtworkDetail({ art, onClose, onEdit }: { art: ArtworkWithImage | null;
                   <button
                     className="btn-link"
                     onClick={() => {
-                      store.open(prompt.id, prompt.time[0], art.medium ?? prompt.media[0]);
+                      store.open(prompt.id, '20', art.medium ?? prompt.media[0]);
                       onClose();
                       navigate('/idea');
                     }}

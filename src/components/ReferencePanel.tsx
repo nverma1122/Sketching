@@ -2,19 +2,27 @@ import { useEffect, useRef, useState } from 'react';
 import type { SketchPrompt } from '../data/types';
 import { useStore, type ReferencePhoto } from '../lib/store';
 import { findPhotos, getPhotoIndex, setPhotoIndex, type CommonsPhoto } from '../lib/commons';
-import { Illustration, illustrationLabel } from './Illustration';
+import { SceneGuide } from './SceneGuide';
+import { regionLabel } from '../data/regions';
 import { Icon } from './Icons';
 import { Lightbox, useObjectUrl, useToast } from './ui';
 
-type View = 'mine' | 'photo' | 'diagram';
+type View = 'mine' | 'photo' | 'guide';
 type PhotoState = { status: 'idle' | 'loading' | 'ready' | 'empty' | 'error' | 'offline'; photos: CommonsPhoto[] };
 
-export function ReferencePanel({ prompt, compact = false }: { prompt: SketchPrompt; compact?: boolean }) {
+/**
+ * Reference for a scene: the user's own photo, freely licensed photos from
+ * Wikimedia Commons, and a schematic composition guide. When `focus` is set
+ * (a focused study), the guide highlights that part of the full scene.
+ */
+export function ReferencePanel({ prompt, focus, compact = false }: { prompt: SketchPrompt; focus?: string; compact?: boolean }) {
   const store = useStore();
   const toast = useToast();
   const online = store.prefs.onlinePhotos;
   const [mine, setMine] = useState<ReferencePhoto | undefined>();
-  const [view, setView] = useState<View>(online ? 'photo' : 'diagram');
+  const preferred: View = focus || !online ? 'guide' : 'photo';
+  const [view, setView] = useState<View>(preferred);
+  const focusLabel = focus ? regionLabel(prompt.guide.t, focus) : undefined;
   const [photoState, setPhotoState] = useState<PhotoState>({ status: 'idle', photos: [] });
   const [index, setIndex] = useState(0);
   const [enlarged, setEnlarged] = useState(false);
@@ -31,13 +39,13 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
       .then((p) => {
         if (cancelled) return;
         setMine(p);
-        setView(p ? 'mine' : online ? 'photo' : 'diagram');
+        setView(p ? 'mine' : preferred);
       })
       .catch(() => {});
     return () => {
       cancelled = true;
     };
-  }, [prompt.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [prompt.id, focus]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Photos from Wikimedia Commons.
   useEffect(() => {
@@ -100,7 +108,7 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
     try {
       await store.removeReference(prompt.id);
       setMine(undefined);
-      setView(online ? 'photo' : 'diagram');
+      setView(preferred);
       toast({ message: 'Photo removed.', tone: 'info' });
     } catch {
       toast({ message: 'The photo could not be removed.', tone: 'error' });
@@ -109,8 +117,8 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
 
   const tabs: { key: View; label: string }[] = [
     ...(mine ? [{ key: 'mine' as const, label: 'My photo' }] : []),
-    ...(online ? [{ key: 'photo' as const, label: 'Photo' }] : []),
-    { key: 'diagram', label: 'Diagram' },
+    ...(online ? [{ key: 'photo' as const, label: 'Photos' }] : []),
+    { key: 'guide', label: 'Composition guide' },
   ];
   const current: View = tabs.some((t) => t.key === view) ? view : tabs[0].key;
 
@@ -125,10 +133,10 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
         photoState.status === 'loading' || photoState.status === 'idle'
           ? 'Finding reference photos…'
           : photoState.status === 'offline'
-            ? 'You’re offline — reference photos need a connection. The diagram and your own photos still work.'
+            ? 'You’re offline — reference photos need a connection. The composition guide and your own photos still work.'
             : photoState.status === 'empty'
-              ? 'No suitable photos found for this idea. Try the diagram, or use your own photo.'
-              : 'Photos couldn’t be loaded right now. The diagram and your own photos still work.';
+              ? 'No matching photo was found on Wikimedia Commons for this scene. Use the composition guide (schematic), or add your own photo.'
+              : 'Photos couldn’t be loaded right now. The composition guide and your own photos still work.';
       frame = (
         <div className={`photo-placeholder ${photoState.status === 'loading' ? 'is-loading' : ''}`} role="status">
           <span>{msg}</span>
@@ -136,7 +144,7 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
       );
     }
   } else {
-    frame = <Illustration id={prompt.reference} />;
+    frame = <SceneGuide spec={prompt.guide} seed={prompt.id} focus={focus} title={prompt.title} />;
   }
 
   const canEnlarge = current !== 'photo' || (photoState.status === 'ready' && !!photo);
@@ -187,7 +195,17 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
           )}
         </div>
       )}
-      {current === 'diagram' && <p className="ref-caption">Composition diagram — the idea’s main shapes and structure, not a finished reference.</p>}
+      {current === 'guide' && (
+        <p className="ref-caption">
+          <strong>Composition guide (schematic).</strong> Drawn from the scene description to show structure and how the elements relate — it is not a photograph of a real place.
+          {focusLabel && <> The dashed frame marks your study: {focusLabel}.</>}
+        </p>
+      )}
+      {current !== 'guide' && focusLabel && (
+        <p className="ref-caption focus-note">
+          This is the full scene — your study is only <strong>{focusLabel}</strong>. The composition guide tab shows where it sits.
+        </p>
+      )}
 
       {!compact && (
         <div className="ref-actions">
@@ -202,24 +220,6 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
           )}
         </div>
       )}
-
-      <div className="brief">
-        <h3 className="brief-title">Drawing brief</h3>
-        <dl>
-          <dt>Main shapes</dt>
-          <dd>{prompt.brief.shapes}</dd>
-          <dt>Perspective</dt>
-          <dd>{prompt.brief.perspective}</dd>
-          <dt>Shadows</dt>
-          <dd>{prompt.brief.shadows}</dd>
-          {!compact && (
-            <>
-              <dt>Optional details</dt>
-              <dd>{prompt.brief.optional}</dd>
-            </>
-          )}
-        </dl>
-      </div>
 
       <Lightbox open={enlarged} onClose={() => setEnlarged(false)} title={current === 'mine' ? 'Your reference photo' : current === 'photo' && photo ? photo.title : prompt.title}>
         {current === 'mine' && mineUrl ? (
@@ -236,8 +236,8 @@ export function ReferencePanel({ prompt, compact = false }: { prompt: SketchProm
           </>
         ) : (
           <>
-            <Illustration id={prompt.reference} />
-            <p className="ref-caption">{illustrationLabel(prompt.reference)}</p>
+            <SceneGuide spec={prompt.guide} seed={prompt.id} focus={focus} title={prompt.title} />
+            <p className="ref-caption">Composition guide (schematic){focusLabel ? ` — focus: ${focusLabel}` : ''}</p>
           </>
         )}
       </Lightbox>

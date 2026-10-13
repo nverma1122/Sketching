@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react';
 import { PROMPTS, getPrompt } from '../data/prompts';
-import { MEDIA, TIME_ORDER, mediumShort, timeLabel } from '../data/taxonomy';
+import { MEDIA, TIME_ORDER, levelLabel, mediumShort, timeLabel } from '../data/taxonomy';
 import type { Criteria, Medium, TimeKey } from '../data/types';
-import { Illustration } from '../components/Illustration';
+import { SceneGuide } from '../components/SceneGuide';
 import { Icon } from '../components/Icons';
 import { useObjectUrl, useToast } from '../components/ui';
 import { useStore } from '../lib/store';
 import { href, navigate } from '../lib/router';
-import { todaysPrompt, fitsTime } from '../lib/selector';
+import { todaysPrompt } from '../lib/selector';
 import { hashString } from '../lib/random';
 
 const todayKey = () => {
@@ -41,8 +41,9 @@ export function Home() {
 
   const level = store.prefs.level;
   const today = useMemo(() => todaysPrompt(PROMPTS, todayKey(), hashString, level), [level]);
-  const preferredTime: TimeKey = level === 'advanced' ? '60' : '10';
-  const todayTime: TimeKey = fitsTime(today, preferredTime, 'exact') ? preferredTime : today.time[level === 'advanced' ? 1 : 0];
+  // Today's scene keeps its richness; the time only changes the approach.
+  const todayTime: TimeKey = store.prefs.lastCriteria.time ?? '20';
+  const hero = getPrompt('bk-02') ?? PROMPTS[0];
 
   const go = (criteria: Criteria) => {
     const s = store.find(criteria);
@@ -53,8 +54,8 @@ export function Home() {
   const surprise = () => go({ time: store.prefs.lastCriteria.time ?? '10' });
 
   const quick = (kind: 'easy' | 'interesting' | 'surprise') => {
-    if (kind === 'easy') go({ time: Math.random() < 0.5 ? '5' : '10', energy: 'low', medium: preferred });
-    else if (kind === 'interesting') go({ time: level === 'advanced' ? '60' : '20', energy: level === 'advanced' ? 'focus' : 'explore', medium: Math.random() < 0.5 ? preferred : undefined });
+    if (kind === 'easy') go({ time: '10', energy: 'low', level: 'relaxed', medium: preferred });
+    else if (kind === 'interesting') go({ time: '40', energy: 'focus', level: level === 'relaxed' ? 'intermediate' : 'detailed', medium: Math.random() < 0.5 ? preferred : undefined });
     else go({ time: TIME_ORDER[Math.floor(Math.random() * TIME_ORDER.length)] });
   };
 
@@ -81,11 +82,11 @@ export function Home() {
               <div id="quick-chooser" className="quick-chooser" role="group" aria-label="Choose how adventurous">
                 <button className="quick-option" onClick={() => quick('easy')}>
                   <strong>Give me something easy.</strong>
-                  <span>Five or ten minutes, simple and comforting.</span>
+                  <span>Ten minutes, a relaxed study — still a real street scene.</span>
                 </button>
                 <button className="quick-option" onClick={() => quick('interesting')}>
                   <strong>Give me something interesting.</strong>
-                  <span>{level === 'advanced' ? 'About an hour, a demanding composition.' : 'About twenty minutes, an achievable challenge.'}</span>
+                  <span>30–45 minutes, a richer, more detailed scene.</span>
                 </button>
                 <button className="quick-option" onClick={() => quick('surprise')}>
                   <strong>Surprise me completely.</strong>
@@ -96,8 +97,8 @@ export function Home() {
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">
-          <Illustration id="shopfront" decorative />
-          <span className="hand hero-art-note">the little shop at the corner</span>
+          <SceneGuide spec={hero.guide} seed={hero.id} decorative />
+          <span className="hand hero-art-note">the bookshop on the corner</span>
         </div>
       </section>
 
@@ -106,12 +107,12 @@ export function Home() {
           <p className="eyebrow" id="today-h">Today’s sketch idea</p>
           <button className="today-body" onClick={() => { store.open(today.id, todayTime, today.media[0]); navigate('/idea'); }}>
             <div className="today-art">
-              <Illustration id={today.reference} decorative />
+              <SceneGuide spec={today.guide} seed={today.id} decorative />
             </div>
             <div>
               <h2 className="card-title">{today.title}</h2>
               <p className="meta">
-                {timeLabel(todayTime)} · {mediumShort(today.media[0])}
+                {timeLabel(todayTime)} · {mediumShort(today.media[0])} · {levelLabel(today.level)}
               </p>
               <span className="link-arrow">
                 Open this idea <Icon name="arrowRight" size={16} />

@@ -1,9 +1,9 @@
 // Quiet Corners Studio — offline app shell.
 // Caches the app's own files (HTML, JS, CSS, fonts, icons) as they are fetched,
 // so after one visit the app opens without a connection. Personal data lives in
-// IndexedDB/localStorage and never passes through this worker. No third-party
-// requests are cached because the app makes none.
-const CACHE = 'qcs-shell-v1';
+// IndexedDB/localStorage and never passes through this worker. Requests to other
+// origins (Wikimedia Commons photos) are never intercepted or cached here.
+const CACHE = 'qcs-shell-v2';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (event) => {

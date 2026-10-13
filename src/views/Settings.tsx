@@ -57,12 +57,16 @@ export function Settings() {
         <h2>Your drawing</h2>
         <ChoiceGroup<Level>
           name="level"
-          legend="My level"
+          legend="Sketching level"
           columns={3}
           value={store.prefs.level}
           onChange={(level) => store.setPrefs({ level })}
           options={LEVELS.map((l) => ({ value: l.key, label: l.label, hint: l.hint }))}
         />
+        <p className="small muted">
+          Chooses which scenes you are offered and how much guidance each plan carries. It is independent of session length: a five-minute session at any
+          level becomes a focused study of a rich scene.
+        </p>
         <label className="toggle-row" style={{ marginTop: 'var(--s-4)' }}>
           <input type="checkbox" checked={store.prefs.onlinePhotos} onChange={(e) => store.setPrefs({ onlinePhotos: e.target.checked })} />
           <span>
@@ -153,8 +157,8 @@ export function Settings() {
       <section className="settings-section about">
         <h2>About</h2>
         <p className="muted small">
-          Quiet Corners Studio · {`v${__APP_VERSION__}`}. The reference illustrations are original schematic drawings made for this app. Your own photos are never
-          altered or analysed.
+          Quiet Corners Studio · {`v${__APP_VERSION__}`}. The composition guides are schematic drawings generated for this app from each scene’s description — they are not photographs. Reference
+          photos come from Wikimedia Commons with the photographer and licence credited. Your own photos are never altered or analysed.
         </p>
       </section>
 

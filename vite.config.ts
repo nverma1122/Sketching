@@ -8,6 +8,8 @@ const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 
 export default defineConfig({
   base: './',
   plugins: [react()],
+  // The scene library (150+ scenes with full guidance) is bundled on purpose so the app works offline.
+  build: { chunkSizeWarningLimit: 900 },
   define: { __APP_VERSION__: JSON.stringify(pkg.version) },
   server: { host: true },
   preview: { host: true },

@@ -1,36 +1,44 @@
-import type { Category, Criteria, Energy, Level, Medium, SketchPrompt, TimeKey } from '../data/types';
-import { RELATED_CATEGORIES, TIME_ORDER, categoryShort, mediumShort, timeLabel } from '../data/taxonomy';
+import type { Category, Criteria, Level, Medium, SketchPrompt, TimeKey } from '../data/types';
+import { RELATED_CATEGORIES, categoryShort, levelLabel, mediumShort } from '../data/taxonomy';
+import { richnessTotal } from '../data/prompts/define';
 import { type Rng, weightedPick } from './random';
 
 /**
- * Prompt selection with anti-repetition.
+ * Scene selection with anti-repetition.
+ *
+ * Session length is deliberately *not* a filter: every scene in the library
+ * has an approach for every length (a 5-minute session becomes a focused
+ * study of one part of the scene). That way a short session never pushes you
+ * towards a simpler subject.
  *
  * Order of operations:
- *  1. Always exclude the current prompt (and anything in `exclude`).
- *  2. Try the user's exact choices, skipping recently viewed prompts.
- *  3. If nothing is left, relax the least important filter first:
- *       energy → time (neighbouring lengths) → subject (related subjects)
- *  4. If every idea that still fits has been seen recently, allow older views
- *     again (least recently seen first) rather than dropping subject or medium.
- *  5. Only then drop the subject entirely, and finally the medium.
- * Each relaxation is reported back as a plain-language note.
+ *  1. Always exclude the current scene (and anything in `exclude`).
+ *  2. Try the requested sketching level, medium and subject, skipping recently
+ *     viewed scenes.
+ *  3. If nothing is left, relax the subject (related subjects, then any) —
+ *     the level matters more than the subject.
+ *  4. If every scene at the level has been seen recently, allow older views
+ *     (least recently seen first) rather than changing level.
+ *  5. Only then move to a neighbouring level, then any level, and finally
+ *     ignore the medium.
+ * Each relaxation is reported as a plain-language note.
  */
 
 export const RECENT_LIMIT = 40;
-/** Never re-show these many most recent prompts, even after history is relaxed. */
+/** Never re-show these many most recent scenes, even after history is relaxed. */
 const HARD_RECENT = 6;
 const ATTEMPT_COOLDOWN_MS = 21 * 24 * 60 * 60 * 1000;
 
 export interface SelectionContext {
-  /** Recently shown prompt IDs, most recent first. */
+  /** Recently shown scene IDs, most recent first. */
   recent: string[];
-  /** promptId → timestamp of the last session that used it. */
+  /** sceneId → timestamp of the last session that used it. */
   attempted: Record<string, number>;
-  /** Saved prompt IDs. */
+  /** Saved scene IDs. */
   saved: string[];
-  /** IDs that must not be returned (e.g. the prompt currently on screen). */
+  /** IDs that must not be returned (e.g. the scene currently on screen). */
   exclude?: string[];
-  /** The artist's level; biases towards suitable difficulty. */
+  /** The saved sketching level. `criteria.level` overrides it. */
   level?: Level;
   now?: number;
   rng: Rng;
@@ -40,130 +48,124 @@ export interface SelectionResult {
   prompt: SketchPrompt;
   time: TimeKey;
   medium: Medium;
+  level: Level;
   broadened: string[];
   exact: boolean;
 }
 
-interface RelaxLevel {
-  energy: boolean;
-  time: 'exact' | 'near' | 'any';
+interface Relax {
   category: 'exact' | 'related' | 'any';
+  level: 'exact' | 'near' | 'any';
   medium: boolean;
 }
 
-const LEVELS: RelaxLevel[] = [
-  { energy: true, time: 'exact', category: 'exact', medium: true },
-  { energy: false, time: 'exact', category: 'exact', medium: true },
-  { energy: false, time: 'near', category: 'exact', medium: true },
-  { energy: false, time: 'near', category: 'related', medium: true },
+const PRIMARY: Relax[] = [
+  { category: 'exact', level: 'exact', medium: true },
+  { category: 'related', level: 'exact', medium: true },
+  { category: 'any', level: 'exact', medium: true },
 ];
-const DRASTIC_LEVELS: RelaxLevel[] = [
-  { energy: false, time: 'near', category: 'any', medium: true },
-  { energy: false, time: 'any', category: 'any', medium: false },
+const LAST_RESORT: Relax[] = [
+  { category: 'related', level: 'near', medium: true },
+  { category: 'any', level: 'near', medium: true },
+  { category: 'any', level: 'any', medium: true },
+  { category: 'any', level: 'any', medium: false },
 ];
 
-const timeIndex = (t: TimeKey) => TIME_ORDER.indexOf(t);
+/** Neighbouring levels, the preferred one first. */
+export const NEAR_LEVELS: Record<Level, Level[]> = {
+  relaxed: ['intermediate'],
+  intermediate: ['detailed', 'relaxed'],
+  detailed: ['intermediate'],
+};
 
-export function fitsTime(p: SketchPrompt, t: TimeKey, mode: RelaxLevel['time']): boolean {
-  if (mode === 'any') return true;
-  const lo = timeIndex(p.time[0]);
-  const hi = timeIndex(p.time[1]);
-  const i = timeIndex(t);
-  return mode === 'exact' ? i >= lo && i <= hi : i >= lo - 1 && i <= hi + 1;
-}
+export const DEFAULT_LEVEL: Level = 'intermediate';
+export const DEFAULT_TIME: TimeKey = '10';
 
-function fitsCategory(p: SketchPrompt, c: Category, mode: RelaxLevel['category']): boolean {
+function fitsCategory(p: SketchPrompt, c: Category, mode: Relax['category']): boolean {
   if (mode === 'any') return true;
   if (p.categories.includes(c)) return true;
   return mode === 'related' && RELATED_CATEGORIES[c].some((r) => p.categories.includes(r));
 }
 
-function matches(p: SketchPrompt, c: Criteria, lvl: RelaxLevel): boolean {
-  if (c.time && !fitsTime(p, c.time, lvl.time)) return false;
-  if (c.category && !fitsCategory(p, c.category, lvl.category)) return false;
-  if (c.medium && lvl.medium && !p.media.includes(c.medium)) return false;
-  if (c.energy && lvl.energy && p.energy !== c.energy) return false;
+function fitsLevel(p: SketchPrompt, l: Level, mode: Relax['level']): boolean {
+  if (mode === 'any' || p.level === l) return true;
+  return mode === 'near' && NEAR_LEVELS[l].includes(p.level);
+}
+
+function matches(p: SketchPrompt, c: Criteria, level: Level, r: Relax): boolean {
+  if (c.category && !fitsCategory(p, c.category, r.category)) return false;
+  if (!fitsLevel(p, level, r.level)) return false;
+  if (c.medium && r.medium && !p.media.includes(c.medium)) return false;
   return true;
 }
 
-const ENERGY_ORDER: Energy[] = ['low', 'explore', 'focus'];
-
-/** How strongly each level favours each difficulty (1–4). */
-export const LEVEL_WEIGHTS: Record<Level, [number, number, number, number]> = {
-  developing: [1.6, 1.2, 0.5, 0.15],
-  experienced: [0.7, 1.2, 1.2, 0.8],
-  advanced: [0.15, 0.6, 1.6, 2.4],
-};
-
-function baseWeight(p: SketchPrompt, c: Criteria, ctx: SelectionContext): number {
+function baseWeight(p: SketchPrompt, c: Criteria, level: Level, ctx: SelectionContext): number {
   const now = ctx.now ?? Date.now();
-  let w = ctx.level ? LEVEL_WEIGHTS[ctx.level][p.difficulty - 1] : 1;
-  if (c.medium && p.media[0] === c.medium) w *= 1.4;
-  if (c.energy) {
-    const d = Math.abs(ENERGY_ORDER.indexOf(p.energy) - ENERGY_ORDER.indexOf(c.energy));
-    w *= d === 0 ? 2 : d === 1 ? 1 : 0.4;
-  }
+  const total = richnessTotal(p.richness);
+  let w = 1;
+  if (p.level === level) w *= 1.5;
+  else if (NEAR_LEVELS[level][0] === p.level) w *= 1.1;
+  if (c.medium && p.media[0] === c.medium) w *= 1.3;
+  // Energy shades the choice within the level; it never filters.
+  if (c.energy === 'low') w *= (16 - total) / 8;
+  if (c.energy === 'focus') w *= total / 9;
   const last = ctx.attempted[p.id];
   if (last && now - last < ATTEMPT_COOLDOWN_MS) w *= 0.3;
   if (ctx.saved.includes(p.id)) w *= 0.6;
   return w;
 }
 
-function describeBroadening(c: Criteria, lvl: RelaxLevel, viaRecent: boolean): string[] {
+function describe(c: Criteria, level: Level, picked: SketchPrompt, r: Relax, viaRecent: boolean): string[] {
   const notes: string[] = [];
-  if (c.energy && !lvl.energy) notes.push('your energy level — this one may be a little easier or harder than you asked');
-  if (c.time && lvl.time === 'near') notes.push(`the time — this idea usually suits a neighbouring length, so the plan is adapted to ${timeLabel(c.time)}`);
-  if (c.time && lvl.time === 'any') notes.push('the time — the plan is still adapted to your chosen length');
-  if (c.category && lvl.category === 'related') notes.push(`the subject, to something close to ${categoryShort(c.category).toLowerCase()}`);
-  if (c.category && lvl.category === 'any') notes.push(`the subject — there were no fresh ${categoryShort(c.category).toLowerCase()} ideas left`);
-  if (c.medium && !lvl.medium) notes.push(`the medium — nothing fresh suited ${mediumShort(c.medium).toLowerCase()}, so this uses the idea's own medium`);
-  if (viaRecent) notes.push('your recent history — you have seen every matching idea lately, so this one is from a little while ago');
+  if (c.category && r.category === 'related' && !picked.categories.includes(c.category))
+    notes.push(`the subject, to something close to ${categoryShort(c.category).toLowerCase()}`);
+  if (c.category && r.category === 'any' && !picked.categories.includes(c.category))
+    notes.push(`the subject — there were no fresh ${categoryShort(c.category).toLowerCase()} scenes left at this level`);
+  if (picked.level !== level)
+    notes.push(
+      `the sketching level — this scene is rated ${levelLabel(picked.level).toLowerCase()} rather than ${levelLabel(level).toLowerCase()}`,
+    );
+  if (c.medium && !r.medium && !picked.media.includes(c.medium))
+    notes.push(`the medium — nothing fresh suited ${mediumShort(c.medium).toLowerCase()}, so this uses the scene's own medium`);
+  if (viaRecent) notes.push('your recent history — you have seen every matching scene lately, so this one is from a little while ago');
   return notes;
 }
 
-function resolveMedium(p: SketchPrompt, c: Criteria, lvl: RelaxLevel, rng: Rng): Medium {
-  if (c.medium && (lvl.medium ? true : p.media.includes(c.medium))) return c.medium;
+function resolveMedium(p: SketchPrompt, c: Criteria, rng: Rng): Medium {
+  if (c.medium && p.media.includes(c.medium)) return c.medium;
+  if (c.medium && p.media.length === 0) return c.medium;
   return weightedPick(p.media, (m) => (m === p.media[0] ? 2 : 1), rng) ?? p.media[0];
 }
 
-function resolveTime(p: SketchPrompt, c: Criteria, rng: Rng): TimeKey {
-  if (c.time) return c.time;
-  const lo = timeIndex(p.time[0]);
-  const hi = timeIndex(p.time[1]);
-  return TIME_ORDER[lo + Math.floor(rng() * (hi - lo + 1))];
-}
-
-export function selectPrompt(
-  library: SketchPrompt[],
-  criteria: Criteria,
-  ctx: SelectionContext,
-): SelectionResult | null {
+export function selectPrompt(library: SketchPrompt[], criteria: Criteria, ctx: SelectionContext): SelectionResult | null {
+  const level = criteria.level ?? ctx.level ?? DEFAULT_LEVEL;
   const excluded = new Set(ctx.exclude ?? []);
   const recentSet = new Set(ctx.recent.slice(0, RECENT_LIMIT));
   const hardRecent = new Set(ctx.recent.slice(0, HARD_RECENT));
   const pool = library.filter((p) => !excluded.has(p.id));
 
-  const finish = (prompt: SketchPrompt, lvl: RelaxLevel, viaRecent: boolean): SelectionResult => {
-    const broadened = describeBroadening(criteria, lvl, viaRecent);
+  const finish = (prompt: SketchPrompt, r: Relax, viaRecent: boolean): SelectionResult => {
+    const broadened = describe(criteria, level, prompt, r, viaRecent);
     return {
       prompt,
-      time: resolveTime(prompt, criteria, ctx.rng),
-      medium: resolveMedium(prompt, criteria, lvl, ctx.rng),
+      time: criteria.time ?? DEFAULT_TIME,
+      medium: resolveMedium(prompt, criteria, ctx.rng),
+      level,
       broadened,
       exact: broadened.length === 0,
     };
   };
 
-  const tryLevels = (levels: RelaxLevel[], allowRecent: boolean) => {
-    for (const lvl of levels) {
+  const tryAll = (steps: Relax[], allowRecent: boolean) => {
+    for (const r of steps) {
       const candidates = pool.filter(
-        (p) => matches(p, criteria, lvl) && (allowRecent ? !hardRecent.has(p.id) : !recentSet.has(p.id)),
+        (p) => matches(p, criteria, level, r) && (allowRecent ? !hardRecent.has(p.id) : !recentSet.has(p.id)),
       );
       if (candidates.length === 0) continue;
       const pick = weightedPick(
         candidates,
         (p) => {
-          let w = baseWeight(p, criteria, ctx);
+          let w = baseWeight(p, criteria, level, ctx);
           if (allowRecent) {
             // Prefer the ones seen longest ago.
             const idx = ctx.recent.indexOf(p.id);
@@ -173,30 +175,28 @@ export function selectPrompt(
         },
         ctx.rng,
       );
-      if (pick) return finish(pick, lvl, allowRecent && recentSet.has(pick.id));
+      if (pick) return finish(pick, r, allowRecent && recentSet.has(pick.id));
     }
     return null;
   };
 
   return (
-    tryLevels(LEVELS, false) ??
-    tryLevels(LEVELS, true) ??
-    tryLevels(DRASTIC_LEVELS, false) ??
-    tryLevels(DRASTIC_LEVELS, true) ??
-    (pool.length ? finish(pool[Math.floor(ctx.rng() * pool.length)], DRASTIC_LEVELS[1], false) : null)
+    tryAll(PRIMARY, false) ??
+    tryAll(PRIMARY, true) ??
+    tryAll(LAST_RESORT, false) ??
+    tryAll(LAST_RESORT, true) ??
+    (pool.length ? finish(pool[Math.floor(ctx.rng() * pool.length)], LAST_RESORT[3], false) : null)
   );
 }
 
-/** Add a prompt to the front of the rolling history. */
+/** Add a scene to the front of the rolling history. */
 export function pushRecent(recent: string[], id: string): string[] {
   return [id, ...recent.filter((r) => r !== id)].slice(0, RECENT_LIMIT);
 }
 
-/** Deterministic "today's idea": the same idea all day, a different one tomorrow. */
-export function todaysPrompt(library: SketchPrompt[], dateKey: string, hash: (s: string) => number, level: Level = 'experienced') {
-  const pool =
-    level === 'advanced'
-      ? library.filter((p) => p.difficulty >= 3)
-      : library.filter((p) => p.difficulty <= (level === 'developing' ? 1 : 2) && timeIndex(p.time[0]) <= 2);
-  return pool[hash(dateKey) % pool.length];
+/** Deterministic "today's scene": the same all day, a different one tomorrow, at your level. */
+export function todaysPrompt(library: SketchPrompt[], dateKey: string, hash: (s: string) => number, level: Level = DEFAULT_LEVEL) {
+  const pool = library.filter((p) => p.level === level);
+  const from = pool.length ? pool : library;
+  return from[hash(dateKey) % from.length];
 }

@@ -1,7 +1,9 @@
 // Core domain types for Quiet Corners Studio.
-// The prompt library (src/data/prompts) is plain typed data; the UI and the
-// selection logic only depend on these types, so ideas can be added or edited
-// without touching any component.
+//
+// The library is made of *scenes*: rich, specific urban subjects. Session
+// length never decides how rich a scene is — instead every scene carries
+// approaches for different amounts of time (a focused 5-minute study, a
+// 10-minute structure, a 20-minute composition, a longer exploration).
 
 export type TimeKey = '5' | '10' | '20' | '40' | '60' | '120';
 
@@ -18,76 +20,108 @@ export type Category =
 
 export type Energy = 'low' | 'explore' | 'focus';
 
-export type Difficulty = 1 | 2 | 3 | 4;
+/** The persistent "Sketching level" preference. Independent of session length. */
+export type Level = 'relaxed' | 'intermediate' | 'detailed';
 
-/** The artist's own level, set in Settings. Biases which ideas are suggested. */
-export type Level = 'developing' | 'experienced' | 'advanced';
-
-/** Identifier of an original schematic illustration in src/components/references. */
-export type ReferenceId =
-  | 'shopfront'
-  | 'street-corner'
-  | 'balcony'
-  | 'door'
-  | 'tea-stall'
-  | 'cafe-table'
-  | 'tree-bench'
-  | 'tree-wall'
-  | 'cup'
-  | 'books'
-  | 'bottles'
-  | 'plant-window'
-  | 'rooftops'
-  | 'arch'
-  | 'stairs'
-  | 'lamp-post'
-  | 'bicycle'
-  | 'kettle'
-  | 'chair'
-  | 'grille-shadow'
-  | 'old-building'
-  | 'colour-masses';
-
-export interface DrawingBrief {
-  /** Main geometric shapes to look for. */
-  shapes: string;
-  /** Dominant perspective / viewpoint. */
-  perspective: string;
-  /** Where the major shadow areas fall. */
-  shadows: string;
-  /** Details that can be added or skipped. */
-  optional: string;
+/** Each dimension is scored 1 (light) to 3 (demanding). */
+export interface Richness {
+  /** Number and relationship of meaningful visual elements. */
+  composition: 1 | 2 | 3;
+  /** Doors, windows, signs, awnings, façade pattern, plants, textures. */
+  detail: 1 | 2 | 3;
+  /** 1 frontal · 2 angled · 3 street corner / lane. */
+  perspective: 1 | 2 | 3;
+  /** Number and arrangement of important light and shadow shapes. */
+  tone: 1 | 2 | 3;
+  /** Palette, layering, temperature variation, washes. */
+  colour: 1 | 2 | 3;
 }
+
+// ---------------------------------------------------------------------------
+// Composition guides: schematic drawings generated from a small spec.
+
+export type GuideTemplate = 'shopfront' | 'corner' | 'lane' | 'facade' | 'stall' | 'doorway' | 'street' | 'cafe';
+
+export interface GuideSpec {
+  t: GuideTemplate;
+  /** Upper floors above the ground floor (0–4). */
+  floors?: number;
+  /** Window bays across the façade (2–5). */
+  bays?: number;
+  awning?: 'striped' | 'plain' | 'corrugated' | 'noren' | 'none';
+  sign?: 'fascia' | 'projecting' | 'both' | 'layered' | 'none';
+  door?: 'left' | 'centre' | 'right';
+  recessed?: boolean;
+  plants?: number;
+  shutters?: boolean;
+  balcony?: boolean;
+  cables?: boolean;
+  tree?: 'left' | 'right';
+  wet?: boolean;
+  roof?: 'flat' | 'pitched' | 'tiled';
+  brick?: boolean;
+  books?: boolean;
+  chairs?: boolean;
+  bench?: boolean;
+  lamp?: boolean;
+  arch?: boolean;
+  tiles?: boolean;
+  figure?: boolean;
+}
+
+// ---------------------------------------------------------------------------
 
 export interface SketchPrompt {
   id: string;
   title: string;
-  /** A few inviting sentences describing the scene. */
-  description: string;
+  /** Two or three sentences describing the scene. */
+  scene: string;
+  /** The specific reason this scene is worth drawing. */
+  why: string;
   categories: Category[];
-  /** Media this idea suits. The first entry is the suggested medium. */
+  /** Media this scene suits. The first is the suggested medium. */
   media: Medium[];
-  /** Suitable time range, inclusive: [shortest, longest]. */
-  time: [TimeKey, TimeKey];
-  difficulty: Difficulty;
-  energy: Energy;
-  /** Composition guidance specific to this subject. */
-  composition: string[];
-  /**
-   * Subject-specific drawing actions, ordered from biggest to smallest.
-   * The plan builder spreads these across the chosen session length.
-   */
-  steps: string[];
-  /** Optional notes that only apply to a particular medium. */
-  mediumNotes?: Partial<Record<Medium, string>>;
-  /** One artistic constraint that makes the exercise easier or more interesting. */
+  richness: Richness;
+  /** Derived from richness (see levelOf). */
+  level: Level;
+  /** Roughly how long the complete scene takes for an intermediate sketcher. */
+  fullTime: TimeKey;
+
+  // Composition
+  view: string;
+  structure: string;
+  focal: string;
+  secondary: string[];
+  perspective: string;
+  negative: string;
+
+  // Line and tone
+  lines: string;
+  /** Three or four places where selective hatching adds depth. */
+  hatch: string[];
+  shadows: string;
+
+  // Colour
+  palette: string[];
+  washes: string;
+
+  /** What can deliberately stay unfinished. */
+  unfinished: string;
+
+  // Time-based approaches (all of the same scene)
+  /** 5 minutes: one meaningful part of the scene. */
+  study: { region: string; text: string };
+  /** 10 minutes: main structure plus these identifying details. */
+  ten: string;
+  /** 20 minutes: what the full composition adds. */
+  twenty: string;
+  /** 30–45 minutes and longer: materials, layering, tonal depth, colour. */
+  long: string;
+
   constraint: string;
-  /** A short instruction used when the user asks to make the idea simpler. */
-  simpler: string;
-  /** Optional restrained colour palette (pigment names). */
-  palette?: string[];
-  reference: ReferenceId;
-  brief: DrawingBrief;
+  guide: GuideSpec;
+  /** Title words for Wikimedia Commons reference photos, most specific first. */
+  photo: string[];
   tags: string[];
 }
 
@@ -97,6 +131,8 @@ export interface Criteria {
   category?: Category;
   medium?: Medium;
   energy?: Energy;
+  /** Overrides the saved sketching level for this request (e.g. "something easy"). */
+  level?: Level;
 }
 
 /** A concrete suggestion as shown on the suggestion screen. */
@@ -104,7 +140,7 @@ export interface Suggestion {
   promptId: string;
   time: TimeKey;
   medium: Medium;
-  /** 0 = as written, 1+ = progressively simpler. */
+  /** 0 = full approach for the time, 1 = structure only, 2 = the focused study. */
   simplified: number;
   criteria: Criteria;
   /** Human-readable notes about which filters were broadened, if any. */

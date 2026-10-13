@@ -2,7 +2,6 @@
 // Only the idea's search words are sent to Wikimedia — never personal data.
 // Results are cached in localStorage for a week so revisiting an idea is instant.
 
-import { PHOTO_QUERIES, REFERENCE_PHOTO_FALLBACK } from '../data/photoQueries';
 import type { SketchPrompt } from '../data/types';
 import { readLocal, writeLocal } from './storage/local';
 
@@ -30,7 +29,7 @@ const SKIP_TITLE = /\b(map|logo|diagram|plan|poster|flag|coat of arms|stamp|docu
 
 type Cache = Record<string, { at: number; photos: CommonsPhoto[] }>;
 
-export const queriesFor = (p: SketchPrompt): string[] => PHOTO_QUERIES[p.id] ?? REFERENCE_PHOTO_FALLBACK[p.reference];
+export const queriesFor = (p: SketchPrompt): string[] => p.photo;
 
 /** "tea stall" → "intitle:tea intitle:stall filetype:bitmap" */
 export const toSearch = (q: string) =>

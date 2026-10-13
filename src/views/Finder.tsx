@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
-import { CATEGORIES, ENERGIES, MEDIA, TIMES } from '../data/taxonomy';
-import type { Category, Energy, Medium, TimeKey } from '../data/types';
+import { CATEGORIES, ENERGIES, LEVELS, MEDIA, TIMES } from '../data/taxonomy';
+import type { Category, Energy, Level, Medium, TimeKey } from '../data/types';
 import { ChoiceGroup, useToast } from '../components/ui';
 import { Icon } from '../components/Icons';
 import { useStore } from '../lib/store';
@@ -20,15 +20,18 @@ export function Finder() {
   const [category, setCategory] = useState<CategoryChoice>(last.category ?? 'any');
   const [medium, setMedium] = useState<MediumChoice>(last.medium ?? 'any');
   const [energy, setEnergy] = useState<EnergyChoice>(last.energy ?? 'skip');
+  const [level, setLevel] = useState<Level>(store.prefs.level);
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
+    if (level !== store.prefs.level) store.setPrefs({ level });
     const s = store.find(
       {
         time,
         category: category === 'any' ? undefined : category,
         medium: medium === 'any' ? undefined : medium,
         energy: energy === 'skip' ? undefined : energy,
+        level,
       },
       { remember: true },
     );
@@ -40,7 +43,7 @@ export function Finder() {
     <form className="finder page-narrow" onSubmit={submit}>
       <header className="page-head">
         <h1>Find me something to sketch</h1>
-        <p className="muted">Four quick choices. Skip anything you don’t mind about.</p>
+        <p className="muted">A few quick choices. The time changes how you approach the scene, never how rich the scene is.</p>
       </header>
 
       <ChoiceGroup
@@ -50,6 +53,15 @@ export function Finder() {
         value={time}
         onChange={setTime}
         options={TIMES.map((t, i) => ({ value: t.key, label: t.label, hint: t.hint, accent: TIME_ACCENTS[i] }))}
+      />
+
+      <ChoiceGroup<Level>
+        name="level"
+        legend="Sketching level"
+        columns={3}
+        value={level}
+        onChange={setLevel}
+        options={LEVELS.map((l) => ({ value: l.key, label: l.label, hint: l.hint }))}
       />
 
       <ChoiceGroup<CategoryChoice>
@@ -76,7 +88,7 @@ export function Finder() {
         columns={2}
         value={energy}
         onChange={setEnergy}
-        options={[...ENERGIES.map((e) => ({ value: e.key as EnergyChoice, label: e.label, hint: e.hint })), { value: 'skip', label: 'Skip this question', hint: 'Any level is fine.' }]}
+        options={[...ENERGIES.map((e) => ({ value: e.key as EnergyChoice, label: e.label, hint: e.hint })), { value: 'skip', label: 'Skip this question', hint: 'No preference.' }]}
       />
 
       <div className="finder-submit">

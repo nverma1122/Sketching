@@ -1977,3 +1977,116 @@ textarea::placeholder {
   accent-color: var(--ink);
   flex-shrink: 0;
 }
+
+/* ---- Scene guidance (why, richness, approach, labelled guidance) ---- */
+.sug-why {
+  margin: var(--s-3) 0 0;
+  color: var(--ink-soft);
+}
+.sug-why .hand {
+  color: var(--terracotta);
+  font-size: 1.25em;
+  margin-right: 4px;
+}
+.richness-box {
+  margin-top: var(--s-3);
+  font-size: var(--text-sm);
+}
+.richness-box summary {
+  cursor: pointer;
+  color: var(--ink-soft);
+  padding: var(--s-1) 0;
+}
+.richness {
+  display: grid;
+  gap: 4px;
+  margin: var(--s-2) 0 0;
+  max-width: 22rem;
+}
+.richness-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-3);
+}
+.richness dt {
+  color: var(--ink-soft);
+}
+.richness dd {
+  margin: 0;
+  display: flex;
+  gap: 4px;
+}
+.richness .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-strong);
+}
+.richness .dot.on {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.approach-note {
+  margin-top: var(--s-4);
+  padding: var(--s-3) var(--s-4);
+  border-left: 3px solid var(--dusty-blue);
+  background: color-mix(in srgb, var(--dusty-blue) 9%, transparent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.approach-note[data-approach='study'] {
+  border-left-color: var(--terracotta);
+  background: color-mix(in srgb, var(--terracotta) 8%, transparent);
+}
+.approach-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.approach-note p {
+  margin: var(--s-1) 0 0;
+}
+.guide-dl {
+  margin: 0;
+  display: grid;
+  gap: var(--s-3);
+}
+.guide-dl > div {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: var(--s-3);
+}
+.guide-dl dt {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--dusty-blue);
+  padding-top: 2px;
+}
+.guide-dl dd {
+  margin: 0;
+}
+.hatch-list {
+  margin: 0;
+  padding-left: 1.1em;
+}
+.hatch-list li::marker {
+  color: var(--terracotta);
+}
+.wash-plan {
+  margin: var(--s-3) 0 0;
+}
+.ref-caption.focus-note {
+  font-size: var(--text-xs);
+  margin: 0;
+  padding: var(--s-2) var(--s-3);
+}
+@media (max-width: 560px) {
+  .guide-dl > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .plan li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

@@ -1,27 +1,23 @@
 import type { SketchPrompt } from '../types';
-import { urbanPrompts } from './urban';
-import { shopfrontPrompts } from './shopfronts';
-import { stillLifePrompts } from './stillLife';
-import { naturePrompts } from './nature';
-import { inkPrompts } from './inkStudies';
-import { colourPrompts } from './colour';
-import { experimentalPrompts } from './experimental';
-import { advancedPrompts } from './advanced';
+import { bookshopScenes } from './bookshops';
+import { shopfrontScenes } from './shopfronts';
+import { cornerScenes } from './corners';
+import { facadeScenes } from './facades';
+import { laneScenes } from './lanes';
+import { stallScenes } from './stalls';
 
 /**
- * The complete prompt library. To add ideas, append entries to any of the
- * files above (or create a new file and include it here). IDs must be unique;
- * the library test checks this.
+ * The complete scene library. To add a scene, append an entry to any of the
+ * files above (or add a new file and include it here). IDs must be unique;
+ * the library tests check this and the quality of every field.
  */
 export const PROMPTS: SketchPrompt[] = [
-  ...urbanPrompts,
-  ...shopfrontPrompts,
-  ...stillLifePrompts,
-  ...naturePrompts,
-  ...inkPrompts,
-  ...colourPrompts,
-  ...experimentalPrompts,
-  ...advancedPrompts,
+  ...bookshopScenes,
+  ...shopfrontScenes,
+  ...cornerScenes,
+  ...facadeScenes,
+  ...laneScenes,
+  ...stallScenes,
 ];
 
 const BY_ID = new Map(PROMPTS.map((p) => [p.id, p]));

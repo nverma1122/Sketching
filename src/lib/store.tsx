@@ -11,7 +11,7 @@ import type {
 } from '../data/types';
 import { PROMPTS } from '../data/prompts';
 import { pushRecent, selectPrompt } from './selector';
-import { MAX_SIMPLIFY } from './plan';
+import { MAX_SIMPLIFY, approachFor } from './plan';
 import { readLocal, writeLocal, clearLocal, localStorageAvailable } from './storage/local';
 import { idbDelete, idbGetAll, idbPut, idbClearAll, initIdb, idbIsPersistent, idbGet } from './storage/idb';
 import { createThumbnail, validateImage } from './images';
@@ -51,7 +51,16 @@ export interface ReferencePhoto {
 
 export type NewArtwork = Omit<ArtworkRecord, 'id' | 'createdAt' | 'fileName' | 'mimeType'>;
 
-const DEFAULT_PREFS: Prefs = { theme: 'system', lastCriteria: { time: '10' }, level: 'advanced', onlinePhotos: true };
+const DEFAULT_PREFS: Prefs = { theme: 'system', lastCriteria: { time: '10' }, level: 'intermediate', onlinePhotos: true };
+
+/** Levels from earlier versions of the app. */
+const OLD_LEVELS: Record<string, Level> = { developing: 'relaxed', experienced: 'intermediate', advanced: 'intermediate' };
+
+function migratePrefs(p: Prefs): Prefs {
+  const level = (OLD_LEVELS[p.level] ?? p.level) as Level;
+  const ok = level === 'relaxed' || level === 'intermediate' || level === 'detailed';
+  return { ...p, level: ok ? level : DEFAULT_PREFS.level };
+}
 
 const uid = () =>
   typeof crypto !== 'undefined' && 'randomUUID' in crypto
@@ -74,7 +83,7 @@ function useLocalState<T>(key: string, fallback: T) {
 function useStoreValue() {
   const [storedPrefs, setPrefsState] = useLocalState<Prefs>('prefs', DEFAULT_PREFS);
   // Older saved preferences may lack newer fields.
-  const prefs = useMemo(() => ({ ...DEFAULT_PREFS, ...storedPrefs }), [storedPrefs]);
+  const prefs = useMemo(() => migratePrefs({ ...DEFAULT_PREFS, ...storedPrefs }), [storedPrefs]);
   const [recent, setRecent] = useLocalState<string[]>('recent', []);
   const [saved, setSaved] = useLocalState<SavedIdea[]>('saved', []);
   const [attempted, setAttempted] = useLocalState<Record<string, number>>('attempted', {});
@@ -158,7 +167,8 @@ function useStoreValue() {
   }, [current, find]);
 
   const simplify = useCallback(() => {
-    if (!current || current.simplified >= MAX_SIMPLIFY) return false;
+    // Already a focused study: there is nothing lighter that keeps the scene.
+    if (!current || current.simplified >= MAX_SIMPLIFY || approachFor(current.time, current.simplified) === 'study') return false;
     setCurrent({ ...current, simplified: current.simplified + 1 });
     return true;
   }, [current, setCurrent]);

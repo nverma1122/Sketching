@@ -2,7 +2,7 @@
 
 *Your personal sketching companion.* Less time deciding, more time drawing.
 
-A calm, mobile-first web app for an urban sketcher. Open it, say how long you have and what you feel like, and it gives you **one** specific idea. Each idea comes with a composition guide, a drawing plan sized to your time, advice for your medium, one useful constraint and a reference. It then keeps a quiet record of what you drew.
+A calm, mobile-first web app for an urban sketcher. Open it, say how long you have and what you feel like, and it gives you **one** rich urban scene. Each scene comes with composition, line, hatching, shadow and colour guidance, a plan that adapts the approach to your time, advice for your medium, one useful constraint and a reference. It then keeps a quiet record of what you drew.
 
 Everything runs in the browser. There is no account, no server, no analytics and no paid API. The only outside requests are searches for real reference photos on Wikimedia Commons, which you can switch off in Settings.
 
@@ -24,7 +24,8 @@ npm run dev        # development server on http://localhost:5173
 Other scripts:
 
 ```bash
-npm test           # unit tests: prompt library integrity + selection logic + plans
+npm test           # unit tests: scene library integrity + selection logic + plans
+npm run examples   # regenerate docs/examples.md from the real library
 npm run build      # type-check and production build into dist/
 npm run preview    # serve the production build on http://localhost:4173
 ```
@@ -41,47 +42,61 @@ Your data stays in the browser where you created it. A phone and a laptop each k
 
 | Area | Where |
 | --- | --- |
-| Prompt library (167 ideas, including 32 advanced compositions; plain typed data) | `src/data/prompts/*.ts` |
-| Reference-photo search words for each idea | `src/data/photoQueries.ts` |
+| Scene library: 152 intermediate urban-sketching scenes with full per-scene guidance (plain typed data) | `src/data/prompts/*.ts` |
+| Worked examples generated from the real library (`npm run examples`) | `docs/examples.md` |
 | Wikimedia Commons photo search, with credits and caching | `src/lib/commons.ts` |
-| Subjects, media, times, guidance text, closing lines | `src/data/taxonomy.ts` |
-| Prompt selection and anti-repetition | `src/lib/selector.ts` |
-| Time-boxed plans, simplification, medium guidance | `src/lib/plan.ts` |
+| Subjects, media, times, sketching levels, medium guidance, closing lines | `src/data/taxonomy.ts` |
+| Scene selection and anti-repetition | `src/lib/selector.ts` |
+| Time-based approaches (study → structure → composition → complete scene) | `src/lib/plan.ts` |
+| Schematic composition guides generated per scene, with focus regions | `src/components/SceneGuide.tsx`, `src/data/regions.ts` |
 | Storage: localStorage (small state) and IndexedDB (sessions, images) | `src/lib/storage/` |
 | App state and actions | `src/lib/store.tsx` |
 | Export (JSON, or ZIP with photos; dependency-free ZIP writer) | `src/lib/exportData.ts`, `src/lib/zip.ts` |
-| Original schematic reference illustrations (inline SVG) | `src/components/Illustration.tsx` |
 | Views | `src/views/` |
 | Design tokens (colours, type, spacing, light and low-light themes) | `src/styles/tokens.css` |
 
-### Adding or editing ideas
+### The scene model
 
-Open any file in `src/data/prompts/` and add an entry with `definePrompt({...})`. Every field is typed. Your editor will tell you if something is missing, and `npm test` checks that IDs are unique, every field is filled in, the reference illustration exists, and every time/medium pair still has ideas. You don't need to touch any component.
+Every entry is a rich, specific scene — shopfronts, cafés, bookshops, old façades, windows and balconies, lanes, tea stalls, quiet corners — with several meaningful elements. Instead of a single difficulty, each scene is scored 1–3 on five dimensions:
 
-- `media`: the media the idea suits. The first one is the suggested medium.
-- `time`: the suitable range, e.g. `['10', '20']`. `'40'` means 30–45 minutes, `'60'` one hour, `'120'` two hours or more.
-- `difficulty`: 1 Gentle, 2 Moderate, 3 Involved, 4 Advanced.
-- Add a line to `src/data/photoQueries.ts` with title words for its reference photos, e.g. `'tea stall'` (every word must appear in a photo's title on Wikimedia Commons).
-- `steps`: subject-specific actions from biggest to smallest. The plan builder spreads them across 5, 10, 20 or 30–45 minutes and adds medium-specific stages.
-- `simpler`: one sentence used by *Make it simpler*.
-- `reference`: one of the illustration IDs in `src/data/referenceIds.ts`.
+- **composition** (number and relationship of elements), **detail** (doors, windows, signs, awnings, textures), **perspective** (1 frontal, 2 angled, 3 corner or lane), **tone** (light and shadow shapes) and **colour** (palette, layering, temperature).
+
+The sketching level is derived from the total (≤8 relaxed study, 9–11 intermediate urban sketch, ≥12 detailed exploration), and `fullTime` says roughly how long the complete scene takes.
+
+Each scene carries: `scene`, `why`, viewpoint (`view`), geometric `structure`, `focal` point and `secondary` elements, `perspective` cues, `negative` space, line-weight hierarchy (`lines`), three or four places to `hatch`, main `shadows`, an optional `palette` and where the `washes` go, what to leave `unfinished`, and the time-based approaches: `study` (5-minute focused study of one guide region), `ten`, `twenty` and `long`. It also has a `guide` spec for its schematic composition guide and `photo` title words for Wikimedia Commons.
+
+### Adding or editing scenes
+
+Add an entry with `scene({...})` (imported as `s`) in any file in `src/data/prompts/`. Write `rich: [composition, detail, perspective, tone, colour]`; the level is computed. `study.region` must be one of the regions of the guide template (see `src/data/regions.ts`). `npm test` checks unique IDs and titles, that every guidance field is substantial, that there are 3–4 hatch places and at least three secondary elements, that study regions are valid, and that every scene has photo search words.
+
+### Time never lowers the ambition
+
+Session length is not used to pick the scene. It changes the approach to the same scene:
+
+| Time | Approach |
+| --- | --- |
+| 5 minutes | **Focused study** of one meaningful part (the guide shows the full scene with that part framed) |
+| 10 minutes | **Main structure** plus the details that identify the scene |
+| 20 minutes | **Full composition** with secondary details, selective hatching and the main light and shadow |
+| 30–45 minutes and longer | **Complete scene** with materials, tonal depth and colour, and deliberate unfinished areas |
+
+*Make it simpler* keeps the scene and the time and steps the approach down (e.g. 20 min → structure → focused study).
+
+### Sketching level
+
+*Settings → Sketching level* (also on the finder) is saved on the device: **Relaxed study**, **Intermediate urban sketch** (default) or **Detailed exploration**. It chooses which scenes you are offered and how much guidance each plan carries (two hatch places for relaxed, all of them and extra medium strategy for detailed). It is independent of session length. Older saved levels are migrated (Advanced/Experienced → Intermediate, Developing → Relaxed).
 
 ### How suggestions are chosen
 
-1. The idea on screen is always excluded, and so are the last 40 ideas you saw. This history is kept in localStorage, so a refresh doesn't bring them back.
-2. Among the ideas that match, one is picked at random, weighted. Ideas you attempted in the last three weeks or have saved are less likely. Ideas whose main medium and energy level fit yours are more likely.
-3. If nothing fresh matches, filters are relaxed one at a time, least important first: **energy → time (neighbouring lengths) → subject (related subjects)**. The suggestion screen says exactly what was broadened.
-4. Before dropping your subject or medium altogether, it will re-show ideas you saw a while ago (oldest first, never the last six). Only after that does it widen to any subject, and finally any medium.
+1. The scene on screen is always excluded, and so are the last 40 scenes you saw (kept in localStorage).
+2. Among matching scenes, one is picked at random, weighted. Scenes you attempted in the last three weeks or have saved are less likely; scenes whose suggested medium is yours are more likely. Energy only shades the choice within your level.
+3. Level is the most important filter, then medium, then subject. If nothing fresh matches, the subject is relaxed first (related subjects, then any), then older history is allowed (oldest first, never the last six), and only then a neighbouring level, any level and finally any medium. The suggestion screen says exactly what was relaxed.
 
-Selection is synchronous, so there is no loading state.
+### Reference photos and composition guides
 
-### Reference photos
+Each scene searches Wikimedia Commons for freely licensed photos whose titles contain its search words, e.g. `intitle:tea intitle:stall`, trying the most specific words first. Maps, logos, drawings and small images are filtered out; each photo shows the photographer, the licence and a link to its Commons page. Results are cached for a week. When nothing suitable is found the app says so — it never pretends a reference exists.
 
-Each idea searches Wikimedia Commons for freely licensed photos whose titles contain its search words, e.g. `intitle:tea intitle:stall`. It tries the more specific words first and falls back to broader ones. Maps, logos, drawings and small images are filtered out. Each photo shows the photographer, the license and a link to its Commons page. Results are cached in the browser for a week. Photos need a connection; the composition diagram and your own photos work offline.
-
-### Your level
-
-*Settings → My level* (Developing, Experienced or Advanced; the default is Advanced) changes how ideas are weighted. Advanced favours Involved and Advanced compositions. Plans and guidance then add construction-first openings, value thumbnails, edge control and multi-pass medium strategies.
+The **composition guide** is a schematic drawing generated from the scene's `guide` spec (floors, bays, awning, signs, balconies, cables, plants, trees, wet pavement…). It is always labelled *Composition guide (schematic)* and is not a photograph. For a focused study it frames the part of the scene to draw. Your own photos can be added per scene and always take priority.
 
 ### Image generation (future)
 
@@ -90,7 +105,7 @@ The core app never needs an image API. To add generated references later, put a 
 ## Privacy
 
 - Data lives only in this browser: preferences and history in localStorage; sessions, artwork and photos in IndexedDB.
-- No network requests are made apart from loading the app itself. Fonts are bundled.
+- No network requests are made apart from loading the app itself and (if enabled) Wikimedia Commons photo searches, which send only the scene's search words. Fonts are bundled.
 - Export: *Settings → Export everything (.zip)*. The ZIP contains `data.json`, your artwork files and your reference photos.
 - Erase: *Settings → Erase all my data* (asks you to confirm first).
 - Browser storage doesn't sync between devices and can be lost if site data is cleared. The app can ask the browser to protect it from automatic clean-up.

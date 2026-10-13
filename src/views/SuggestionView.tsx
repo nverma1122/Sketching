@@ -1,12 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { getPrompt } from '../data/prompts';
-import { DIFFICULTY_LABEL, categoryShort, mediumLabel, timeLabel } from '../data/taxonomy';
+import { categoryShort, levelLabel, mediumLabel, timeLabel } from '../data/taxonomy';
+import { RichnessMeter } from '../components/Richness';
 import { pigmentColour } from '../data/pigments';
 import { ReferencePanel } from '../components/ReferencePanel';
 import { Icon } from '../components/Icons';
 import { EmptyState, useToast } from '../components/ui';
 import { useStore } from '../lib/store';
-import { buildSuggestion } from '../lib/plan';
+import { APPROACH_LABEL, buildSuggestion } from '../lib/plan';
 import { href, navigate } from '../lib/router';
 
 export function SuggestionView() {
@@ -49,7 +50,7 @@ export function SuggestionView() {
   };
 
   const simpler = () => {
-    if (!store.simplify()) toast({ message: 'This is already as simple as it gets — try just the first step.', tone: 'info' });
+    if (!store.simplify()) toast({ message: 'This is already a focused study of one part of the scene — try just its first step.', tone: 'info' });
   };
 
   const toggleSave = () => {
@@ -71,7 +72,7 @@ export function SuggestionView() {
     <article className="suggestion">
       <div className="suggestion-grid">
         <header className="sug-head">
-          <p className="eyebrow">{built.simplified ? 'A simpler version' : 'Your sketch idea'}</p>
+          <p className="eyebrow">{built.simplified ? `A lighter approach · same scene` : 'Your sketch idea'}</p>
           <h1 ref={headingRef} tabIndex={-1} className="sug-title">
             {prompt.title}
           </h1>
@@ -80,14 +81,23 @@ export function SuggestionView() {
               <Icon name="clock" size={14} /> {timeLabel(built.time)}
             </li>
             <li className="chip chip-medium">{mediumLabel(built.medium)}</li>
-            <li className="chip">{DIFFICULTY_LABEL[prompt.difficulty]}</li>
+            <li className="chip">{levelLabel(prompt.level)}</li>
             {prompt.categories.slice(0, 2).map((c) => (
               <li key={c} className="chip chip-soft">
                 {categoryShort(c)}
               </li>
             ))}
           </ul>
-          <p className="sug-description">{prompt.description}</p>
+          <p className="sug-description">{prompt.scene}</p>
+          <p className="sug-why">
+            <span className="hand">Why this scene:</span> {prompt.why}
+          </p>
+          <details className="richness-box">
+            <summary>
+              Scene richness · full scene about {timeLabel(prompt.fullTime).toLowerCase()}
+            </summary>
+            <RichnessMeter richness={prompt.richness} />
+          </details>
 
           {current.broadened.length > 0 && (
             <div className="notice notice-soft" role="note">
@@ -103,29 +113,35 @@ export function SuggestionView() {
             </div>
           )}
 
-          {built.focus && (
-            <div className="focus-note">
-              <span className="hand">Just this:</span> {built.focus}
-            </div>
-          )}
+          <div className="approach-note" data-approach={built.approach}>
+            <span className="approach-label">
+              {APPROACH_LABEL[built.approach]} · {timeLabel(built.time)}
+            </span>
+            <p>{built.approachSummary}</p>
+          </div>
         </header>
 
         <div className="sug-ref">
-          <ReferencePanel prompt={prompt} />
+          <ReferencePanel prompt={prompt} focus={built.focusRegion} />
         </div>
 
         <div className="sug-body">
           <section className="sug-section">
             <h2>Composition</h2>
-            <ul className="guide-list">
+            <dl className="guide-dl">
               {built.composition.map((c) => (
-                <li key={c}>{c}</li>
+                <div key={c.label}>
+                  <dt>{c.label}</dt>
+                  <dd>{c.text}</dd>
+                </div>
               ))}
-            </ul>
+            </dl>
           </section>
 
           <section className="sug-section">
-            <h2>A gentle plan for {timeLabel(built.time).toLowerCase()}</h2>
+            <h2>
+              {APPROACH_LABEL[built.approach]} — a plan for {timeLabel(built.time).toLowerCase()}
+            </h2>
             <ol className="plan">
               {built.plan.map((s) => (
                 <li key={s.label}>
@@ -138,16 +154,43 @@ export function SuggestionView() {
           </section>
 
           <section className="sug-section">
+            <h2>Line, hatching and shadow</h2>
+            <dl className="guide-dl">
+              <div>
+                <dt>Line weight</dt>
+                <dd>{built.lineTone.lines}</dd>
+              </div>
+              <div>
+                <dt>Hatch only here</dt>
+                <dd>
+                  <ul className="hatch-list">
+                    {built.lineTone.hatch.map((h) => (
+                      <li key={h}>{h}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt>Main shadows</dt>
+                <dd>{built.lineTone.shadows}</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section className="sug-section">
             <h2>{mediumLabel(built.medium)}</h2>
-            {built.mediumNote && <p className="medium-note">{built.mediumNote}</p>}
             <ul className="guide-list">
               {built.mediumGuidance.map((g) => (
                 <li key={g}>{g}</li>
               ))}
             </ul>
-            {prompt.palette && (built.medium === 'watercolour' || built.medium === 'ink-wash') && (
+            <p className="wash-plan">
+              <strong>{built.colour.optional ? 'If you add colour later: ' : 'Where the washes go: '}</strong>
+              {built.colour.washes}
+            </p>
+            {built.colour.palette.length > 0 && (
               <div className="palette">
-                <span className="small muted">A restrained palette:</span>
+                <span className="small muted">{built.colour.optional ? 'Optional palette:' : 'A restrained palette:'}</span>
                 <ul>
                   {prompt.palette.map((p) => (
                     <li key={p}>
@@ -158,6 +201,11 @@ export function SuggestionView() {
                 </ul>
               </div>
             )}
+          </section>
+
+          <section className="sug-section">
+            <h2>Leave unfinished</h2>
+            <p>{built.unfinished}</p>
           </section>
 
           <section className="constraint-card">

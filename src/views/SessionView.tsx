@@ -6,7 +6,7 @@ import { ReferencePanel } from '../components/ReferencePanel';
 import { Icon } from '../components/Icons';
 import { ChoiceGroup, ConfirmDialog, Dialog, EmptyState, useToast } from '../components/ui';
 import { useStore } from '../lib/store';
-import { buildSuggestion } from '../lib/plan';
+import { APPROACH_LABEL, buildSuggestion } from '../lib/plan';
 import { href, navigate } from '../lib/router';
 
 const fmt = (ms: number) => {
@@ -133,11 +133,9 @@ export function SessionView() {
 
           {!hideInstructions && (
             <section className="session-plan">
-              {built.focus && (
-                <p className="focus-note">
-                  <span className="hand">Just this:</span> {built.focus}
-                </p>
-              )}
+              <p className="focus-note">
+                <span className="hand">{APPROACH_LABEL[built.approach]}:</span> {built.approachSummary}
+              </p>
               <ol className="plan plan-compact">
                 {built.plan.map((s) => (
                   <li key={s.label}>
@@ -163,7 +161,7 @@ export function SessionView() {
         </div>
 
         <div className="session-ref">
-          <ReferencePanel prompt={prompt} compact />
+          <ReferencePanel prompt={prompt} focus={built.focusRegion} compact />
         </div>
       </div>
 
