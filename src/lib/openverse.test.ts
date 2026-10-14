@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseOpenverse } from './openverse';
+import { PAGE_SIZE, parseOpenverse, searchUrl } from './openverse';
 
 const r = (id: string, extra: Record<string, unknown> = {}) => ({
   id,
@@ -42,5 +42,13 @@ describe('openverse', () => {
   it('tolerates empty or odd responses', () => {
     expect(parseOpenverse({}, 'quick')).toEqual([]);
     expect(parseOpenverse(null, 'quick')).toEqual([]);
+  });
+
+  it('stays within the anonymous page-size limit', () => {
+    expect(PAGE_SIZE).toBeLessThanOrEqual(20);
+    const u = new URL(searchUrl('tea stall'));
+    expect(u.origin + u.pathname).toBe('https://api.openverse.org/v1/images/');
+    expect(Number(u.searchParams.get('page_size'))).toBeLessThanOrEqual(20);
+    expect(u.searchParams.get('q')).toBe('tea stall');
   });
 });

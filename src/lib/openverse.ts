@@ -7,6 +7,10 @@ import type { Item, Level } from '../data/pictures';
 import { cached, remember } from './photoCache';
 
 const API = 'https://api.openverse.org/v1/images/';
+/** Openverse rejects anonymous requests asking for more than 20 results. */
+export const PAGE_SIZE = 20;
+
+export const searchUrl = (query: string) => `${API}?${new URLSearchParams({ q: query, page_size: String(PAGE_SIZE), mature: 'false' })}`;
 const SKIP_TITLE = /\b(map|logo|diagram|poster|flag|screenshot|chart|text|meme|selfie|portrait)\b/i;
 
 interface Result {
@@ -71,8 +75,7 @@ export async function searchOpenverse(query: string, level: Level, signal?: Abor
   const key = `openverse:${level}:${query}`;
   const hit = cached(key);
   if (hit) return hit;
-  const params = new URLSearchParams({ q: query, page_size: '30', mature: 'false' });
-  const res = await fetch(`${API}?${params}`, { signal });
+  const res = await fetch(searchUrl(query), { signal });
   if (!res.ok) throw new Error(`Openverse responded ${res.status}`);
   const items = parseOpenverse(await res.json(), level);
   remember(key, items);
