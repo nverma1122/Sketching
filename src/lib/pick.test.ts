@@ -67,16 +67,22 @@ describe('pickPicture', () => {
     }
   });
 
-  it('keeps the length and explains when the medium is missing', () => {
+  it('keeps the medium and tries the nearest length first', () => {
+    const r = pickPicture(LIB, { level: 'quick', medium: 'watercolour' }, [], seq([0]))!;
+    expect(r.picture.id).toBe('l1');
+    expect(r.note).toMatch(/No quick watercolour pictures available right now — here is a long one/);
+  });
+
+  it('changes the medium only when no length has it', () => {
     const r = pickPicture(LIB, { level: 'quick', medium: 'gouache' }, [], seq([0]))!;
     expect(r.picture.level).toBe('quick');
-    expect(r.note).toMatch(/No gouache pictures at this length right now/);
+    expect(r.note).toMatch(/No gouache pictures available right now — here is one in/);
   });
 
   it('falls back to the nearest length and explains', () => {
     const r = pickPicture(LIB, { level: 'deep', medium: 'watercolour' }, [], seq([0]))!;
     expect(r.picture.id).toBe('l1');
-    expect(r.note).toMatch(/No deep pictures available right now/);
+    expect(r.note).toMatch(/No deep watercolour pictures available right now/);
   });
 
   it('returns the only match even if it was just shown', () => {
@@ -84,11 +90,15 @@ describe('pickPicture', () => {
     expect(r.picture.id).toBe('l1');
   });
 
-  it('treats photos as matching any medium', () => {
-    const lib = [...LIB, PH('d1', 'deep')];
-    const r = pickPicture(lib, { level: 'deep', medium: 'gouache' }, [], seq([0]))!;
-    expect(r.picture.id).toBe('d1');
-    expect(r.note).toBeUndefined();
+  it('shows photos only when the medium is Any', () => {
+    const lib = [...LIB, PH('d1', 'deep'), { ...P('d2', 'deep', 'gouache'), kind: 'art' as const }];
+    for (let i = 0; i < 10; i++) {
+      const r = pickPicture(lib, { level: 'deep', medium: 'gouache' }, [])!;
+      expect(r.picture.id).toBe('d2');
+      expect(r.note).toBeUndefined();
+    }
+    const any = new Set(Array.from({ length: 40 }, () => pickPicture(lib, { level: 'deep' }, [])!.picture.id));
+    expect(any).toEqual(new Set(['d1', 'd2']));
   });
 
   it('mixes Canva pictures and photos evenly even when photos outnumber them', () => {
@@ -118,7 +128,7 @@ describe('own pictures', () => {
     h: 1,
   });
 
-  it('respects a saved medium and treats "any" like a photo', () => {
+  it('respects a saved medium; own pictures saved for any medium suit every medium', () => {
     const lib = [M('m-ink', 'short', 'ink'), M('m-any', 'short')];
     for (let i = 0; i < 10; i++) {
       const r = pickPicture(lib, { level: 'short', medium: 'gouache' }, [])!;
@@ -128,7 +138,7 @@ describe('own pictures', () => {
 
   it('gives Canva pictures, photos and own pictures a fair share', () => {
     const lib = [P('q1', 'quick', 'ink'), M('m1', 'quick'), ...Array.from({ length: 30 }, (_, i) => PH(`p${i}`, 'quick'))];
-    const count = { canva: 0, photo: 0, mine: 0 };
+    const count = { canva: 0, art: 0, photo: 0, mine: 0 };
     let recent: string[] = [];
     for (let i = 0; i < 600; i++) {
       const r = pickPicture(lib, { level: 'quick' }, recent)!;

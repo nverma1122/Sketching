@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { CANVA, LEVELS, MEDIA, levelInfo, mediumLabel, type Item, type Level, type Medium } from './data/pictures';
+import { ART_SUBJECTS } from './data/artQueries';
 import { PHOTO_QUERIES } from './data/photoQueries';
+import { searchArtworks, type ArtPlace } from './lib/artworks';
 import { searchPhotos } from './lib/commons';
 import { searchOpenverse } from './lib/openverse';
 import { deleteMine, listMine, prepareImage, putMine, toItem, type MineRecord } from './lib/mine';
@@ -58,19 +60,35 @@ const emptyPools = (): Record<Level, Item[]> => ({
   deep: [],
 });
 
-interface Search {
-  source: 'commons' | 'openverse';
-  query: string;
-}
-/** Each length's phrases in random order, alternating between the two libraries. */
-const searchesFor = (level: Level): Search[] => {
-  const a = shuffle(PHOTO_QUERIES[level]);
-  const b = shuffle(PHOTO_QUERIES[level]);
-  return a.flatMap((q, i): Search[] => [
-    { source: i % 2 ? 'openverse' : 'commons', query: q },
-    { source: i % 2 ? 'commons' : 'openverse', query: b[i] },
-  ]);
+type Search = { kind: 'photo'; source: 'commons' | 'openverse'; query: string } | { kind: 'art'; place: ArtPlace; medium: Medium; subject: string };
+
+const MEDIUM_KEYS = MEDIA.map((m) => m.key);
+
+/**
+ * What to search next for a length and medium. A chosen medium searches only
+ * artworks in that medium (museum collections first, then sketchbooks). "Any"
+ * mixes artworks in every medium with photos, two artworks to each photo.
+ */
+const searchesFor = (level: Level, medium: Medium | 'any'): Search[] => {
+  const subjects = shuffle(ART_SUBJECTS[level]);
+  if (medium !== 'any') {
+    return subjects.flatMap((subject): Search[] => [
+      { kind: 'art', place: 'museum', medium, subject },
+      { kind: 'art', place: 'sketchbook', medium, subject },
+    ]);
+  }
+  const photos = shuffle(PHOTO_QUERIES[level]);
+  const out: Search[] = [];
+  subjects.forEach((subject, i) => {
+    const m = MEDIUM_KEYS[Math.floor(Math.random() * MEDIUM_KEYS.length)];
+    out.push({ kind: 'art', place: i % 2 ? 'sketchbook' : 'museum', medium: m, subject });
+    if (i % 2 && photos.length) out.push({ kind: 'photo', source: i % 4 === 1 ? 'commons' : 'openverse', query: photos.pop()! });
+  });
+  return [...out, ...photos.map((query, i): Search => ({ kind: 'photo', source: i % 2 ? 'commons' : 'openverse', query }))];
 };
+
+const runSearch = (q: Search, level: Level) =>
+  q.kind === 'art' ? searchArtworks(q.place, q.medium, q.subject, level) : (q.source === 'commons' ? searchPhotos : searchOpenverse)(q.query, level);
 
 // ---------------------------------------------------------------------------
 
@@ -84,37 +102,35 @@ export function App() {
   const [adding, setAdding] = useState(false);
   const [ready, setReady] = useState(false);
 
-  // Photos found so far, per length, from Wikimedia Commons and Openverse.
-  // Each "Another one" searches one more phrase (cached for a week), taking
-  // the two libraries in turn, so the pool keeps growing.
-  const photos = useRef(emptyPools());
-  const queue = useRef<Record<Level, Search[]>>({
-    quick: searchesFor('quick'),
-    short: searchesFor('short'),
-    long: searchesFor('long'),
-    deep: searchesFor('deep'),
-  });
+  // Artworks and photos found so far, per length. Each "Another one" makes
+  // one more search (cached for a week) for the current length and medium,
+  // so the pool keeps growing.
+  const found = useRef(emptyPools());
+  const queues = useRef(new Map<string, Search[]>());
   const mineRef = useRef<Item[]>([]);
   const broken = useRef(new Set<string>());
   const request = useRef(0);
 
   useEffect(() => save(state), [state]);
 
-  const loadMore = useCallback(async (level: Level) => {
-    const q = queue.current[level].shift();
+  const loadMore = useCallback(async (level: Level, medium: Medium | 'any') => {
+    const key = `${level}|${medium}`;
+    if (!queues.current.has(key)) queues.current.set(key, searchesFor(level, medium));
+    const queue = queues.current.get(key)!;
+    const q = queue.shift();
     if (!q) return false;
     try {
-      const found = await (q.source === 'commons' ? searchPhotos : searchOpenverse)(q.query, level);
-      const have = new Set(photos.current[level].map((p) => p.id));
-      photos.current[level] = [...photos.current[level], ...found.filter((p) => !have.has(p.id))];
+      const items = await runSearch(q, level);
+      const have = new Set(found.current[level].map((p) => p.id));
+      found.current[level] = [...found.current[level], ...items.filter((p) => !have.has(p.id))];
       return true;
     } catch (e) {
-      queue.current[level].push(q); // try this phrase again later
+      queue.push(q); // try this search again later
       throw e;
     }
   }, []);
 
-  const pool = () => [...CANVA, ...mineRef.current, ...Object.values(photos.current).flat()].filter((p) => !broken.current.has(p.id));
+  const pool = () => [...CANVA, ...mineRef.current, ...Object.values(found.current).flat()].filter((p) => !broken.current.has(p.id));
 
   const choose = useCallback(
     async (level: Level, medium: Medium | 'any', recent: string[]) => {
@@ -130,7 +146,7 @@ export function App() {
         let errors = 0;
         for (let tries = 0; tries < 4 && (!res || res.note); tries++) {
           try {
-            if (!(await loadMore(level))) break;
+            if (!(await loadMore(level, medium))) break;
           } catch {
             errors++;
           }
@@ -141,7 +157,7 @@ export function App() {
         setLoading(false);
       } else {
         // Grow the photo pool quietly in the background.
-        loadMore(level).catch(() => {});
+        loadMore(level, medium).catch(() => {});
       }
       if (id !== request.current) return;
       setNote(res?.note && failed ? `Couldn’t reach the photo libraries. ${res.note}` : res?.note);
@@ -187,7 +203,7 @@ export function App() {
       .finally(() => {
         setReady(true);
         if (first) void choose(state.level, state.medium, state.recent);
-        else loadMore(state.level).catch(() => {});
+        else loadMore(state.level, state.medium).catch(() => {});
       });
     const map = urls.current;
     return () => map.forEach((u) => URL.revokeObjectURL(u));
@@ -225,7 +241,7 @@ export function App() {
   };
 
   const kindLabel = (p: Item) => {
-    const what = p.kind === 'mine' ? 'My picture' : p.kind === 'photo' ? 'Photo' : '';
+    const what = p.kind === 'mine' ? 'My picture' : p.kind === 'photo' ? 'Photo' : p.kind === 'art' ? 'Artwork' : '';
     if (p.medium) return what ? `${what} · ${mediumLabel(p.medium)}` : mediumLabel(p.medium);
     return state.medium === 'any' ? `${what} · any medium` : `${what} · sketch it in ${mediumLabel(state.medium).toLowerCase()}`;
   };
@@ -276,7 +292,15 @@ export function App() {
       {picture ? (
         <main className={`card ${loading ? 'busy' : ''}`} aria-busy={loading}>
           <button className="pic" onClick={() => setZoom(true)} aria-label="View picture full screen">
-            <img key={picture.id} src={picture.src} alt={picture.title} width={picture.w} height={picture.h} onError={onBroken} referrerPolicy="no-referrer" />
+            <img
+              key={picture.id}
+              src={picture.src}
+              alt={picture.title}
+              width={picture.w || undefined}
+              height={picture.h || undefined}
+              onError={onBroken}
+              referrerPolicy="no-referrer"
+            />
           </button>
           <div className="meta">
             <h2>{picture.title}</h2>
@@ -285,7 +309,7 @@ export function App() {
             </p>
             {picture.credit && (
               <p className="credit">
-                Photo: {picture.credit.artist} ·{' '}
+                {picture.kind === 'art' ? 'By' : 'Photo:'} {picture.credit.artist} ·{' '}
                 {picture.credit.licenseUrl ? (
                   <a href={picture.credit.licenseUrl} target="_blank" rel="noreferrer">
                     {picture.credit.license}
@@ -346,7 +370,9 @@ export function App() {
 
       {adding && <AddPicture level={state.level} medium={state.medium} onSave={saveMine} onCancel={() => setAdding(false)} />}
 
-      <footer className="foot">Pictures generated in Canva for this app · photos from Wikimedia Commons and Openverse, credited under each photo.</footer>
+      <footer className="foot">
+        Pictures generated in Canva for this app · artworks and photos from Openverse and Wikimedia Commons, credited under each one.
+      </footer>
     </div>
   );
 }

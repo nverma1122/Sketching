@@ -6,14 +6,14 @@
 import type { Item, Level } from '../data/pictures';
 import { cached, remember } from './photoCache';
 
-const API = 'https://api.openverse.org/v1/images/';
+export const API = 'https://api.openverse.org/v1/images/';
 /** Openverse rejects anonymous requests asking for more than 20 results. */
 export const PAGE_SIZE = 20;
 
 export const searchUrl = (query: string) => `${API}?${new URLSearchParams({ q: query, page_size: String(PAGE_SIZE), mature: 'false' })}`;
 const SKIP_TITLE = /\b(map|logo|diagram|poster|flag|screenshot|chart|text|meme|selfie|portrait)\b/i;
 
-interface Result {
+export interface Result {
   id: string;
   title?: string | null;
   url: string;
@@ -30,13 +30,13 @@ interface Result {
   unstable__sensitivity?: string[];
 }
 
-const licenseName = (r: Result) => {
+export const licenseName = (r: Result) => {
   const l = r.license.toLowerCase();
   const name = l === 'cc0' ? 'CC0' : l === 'pdm' ? 'Public domain' : `CC ${l.toUpperCase()}`;
   return r.license_version && l !== 'pdm' && l !== 'cc0' ? `${name} ${r.license_version}` : name;
 };
 
-const providerName = (p?: string) => (p ? p.replace(/(^|[_\s])(\w)/g, (_, s: string, c: string) => (s ? ' ' : '') + c.toUpperCase()) : 'Openverse');
+export const providerName = (p?: string) => (p ? p.replace(/(^|[_\s])(\w)/g, (_, s: string, c: string) => (s ? ' ' : '') + c.toUpperCase()) : 'Openverse');
 
 /** Parse an Openverse response into photo items (exported for tests). */
 export function parseOpenverse(data: unknown, level: Level): Item[] {

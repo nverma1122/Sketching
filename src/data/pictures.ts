@@ -67,7 +67,7 @@ export const PICTURES = data as Picture[];
 /** Anything the app can show: a bundled Canva picture, a found photo, or one of the user's own pictures. */
 export interface Item {
   id: string;
-  kind: 'canva' | 'photo' | 'mine';
+  kind: 'canva' | 'art' | 'photo' | 'mine';
   level: Level;
   /** Canva pictures have a medium; photos (and own pictures saved for any medium) suit every medium. */
   medium?: Medium;

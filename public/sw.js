@@ -3,7 +3,7 @@
 // so after one visit the app opens without a connection. Personal data lives in
 // IndexedDB/localStorage and never passes through this worker. Requests to other
 // origins (Wikimedia Commons and Openverse photos) are never intercepted or cached here.
-const CACHE = 'qcs-shell-v7';
+const CACHE = 'qcs-shell-v8';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (event) => {

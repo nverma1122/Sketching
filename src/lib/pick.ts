@@ -15,14 +15,17 @@ export interface Pick {
 
 const LEVEL_ORDER = LEVELS.map((l) => l.key);
 
-/** Pictures without a medium (photos, own pictures saved for any medium) suit every medium. */
-const fitsMedium = (p: Item, medium?: Medium) => !medium || !p.medium || p.medium === medium;
+/**
+ * A chosen medium shows only pictures in that medium (and own pictures saved
+ * for any medium); photos, which have no medium, appear only for "Any".
+ */
+const fitsMedium = (p: Item, medium?: Medium) => !medium || p.medium === medium || (p.kind === 'mine' && !p.medium);
 
 /**
  * Pick a picture for the choice, avoiding the current one and recent ones.
- * Canva pictures, photos and own pictures are equally likely when all match,
+ * Canva pictures, artworks, photos and own pictures are equally likely when they match,
  * so a large photo pool doesn't crowd out the others. If nothing matches,
- * keep the length and change the medium; then try the nearest length.
+ * keep the medium and try the nearest length; then change the medium.
  */
 export function pickPicture(all: Item[], choice: Choice, recent: string[], rng: () => number = Math.random): Pick | null {
   if (all.length === 0) return null;
@@ -34,7 +37,7 @@ export function pickPicture(all: Item[], choice: Choice, recent: string[], rng: 
     return out.length ? out : list;
   };
   const choose = (list: Item[]) => {
-    // Each kind (Canva, photo, own) is equally likely, whatever its size;
+    // Each kind (Canva, artwork, photo, own) is equally likely, whatever its size;
     // skip a kind whose only fresh option is the picture just shown.
     const kinds = [...new Set(list.map((p) => p.kind))];
     const usable = kinds.filter((k) => fresh(list.filter((p) => p.kind === k)).some((p) => p.id !== recent[0]));
@@ -47,27 +50,29 @@ export function pickPicture(all: Item[], choice: Choice, recent: string[], rng: 
   const exact = all.filter((p) => p.level === choice.level && fitsMedium(p, choice.medium));
   if (exact.length) return { picture: choose(exact) };
 
-  const sameLevel = all.filter((p) => p.level === choice.level);
-  if (sameLevel.length) {
-    const picture = choose(sameLevel);
-    const m = picture.medium ? mediumLabel(picture.medium).toLowerCase() : 'another medium';
-    return {
-      picture,
-      note: `No ${mediumLabel(choice.medium!).toLowerCase()} pictures at this length right now — here is one in ${m}.`,
-    };
-  }
-
+  // Keep the medium and try the nearest length; only then change the medium.
   const i = LEVEL_ORDER.indexOf(choice.level);
   const byDistance = [...LEVEL_ORDER].sort((a, b) => Math.abs(LEVEL_ORDER.indexOf(a) - i) - Math.abs(LEVEL_ORDER.indexOf(b) - i));
   for (const l of byDistance) {
     const list = all.filter((p) => p.level === l && fitsMedium(p, choice.medium));
     if (list.length) {
       const picture = choose(list);
+      const what = choice.medium ? `${mediumLabel(choice.medium).toLowerCase()} pictures` : 'pictures';
       return {
         picture,
-        note: `No ${levelInfo(choice.level).label.toLowerCase()} pictures available right now — here is a ${levelInfo(picture.level).label.toLowerCase()} one (${levelInfo(picture.level).time}).`,
+        note: `No ${levelInfo(choice.level).label.toLowerCase()} ${what} available right now — here is a ${levelInfo(picture.level).label.toLowerCase()} one (${levelInfo(picture.level).time}).`,
       };
     }
+  }
+
+  const sameLevel = all.filter((p) => p.level === choice.level);
+  if (sameLevel.length) {
+    const picture = choose(sameLevel);
+    const m = picture.medium ? `one in ${mediumLabel(picture.medium).toLowerCase()}` : 'a photo';
+    return {
+      picture,
+      note: `No ${mediumLabel(choice.medium!).toLowerCase()} pictures available right now — here is ${m}.`,
+    };
   }
   return null;
 }
