@@ -1,7 +1,7 @@
 {
   "name": "quiet-corners-studio",
   "private": true,
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Quiet Corners Studio \u2014 your personal sketching companion.",
   "type": "module",
   "scripts": {
@@ -9,8 +9,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "test": "vitest run",
-    "examples": "GEN_EXAMPLES=1 vitest run src/examples.gen.test.ts"
+    "test": "vitest run"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.2.0",

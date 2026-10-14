@@ -1,0 +1,154 @@
+[
+ {
+  "id": "quick-01",
+  "level": "quick",
+  "medium": "ink",
+  "title": "Paper lantern with a kanji character hanging from a wooden eave",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-02",
+  "level": "quick",
+  "medium": "pencil",
+  "title": "Glass of masala chai with steam beside a biscuit",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-03",
+  "level": "quick",
+  "medium": "ink-wash",
+  "title": "Dented brass kettle on a small stove",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-04",
+  "level": "quick",
+  "medium": "watercolour",
+  "title": "Potted fern on a stone step",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-05",
+  "level": "quick",
+  "medium": "gouache",
+  "title": "Bicycle with a front basket leaning on a wall",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-06",
+  "level": "quick",
+  "medium": "ink",
+  "title": "Single shuttered window with a flower box",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-07",
+  "level": "quick",
+  "medium": "pencil",
+  "title": "Blue wooden door with a house-number plate",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-08",
+  "level": "quick",
+  "medium": "ink-wash",
+  "title": "Old cast-iron street lamp",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-09",
+  "level": "quick",
+  "medium": "watercolour",
+  "title": "Red post box",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-10",
+  "level": "quick",
+  "medium": "gouache",
+  "title": "Coffee cup and saucer on a small café table",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-11",
+  "level": "quick",
+  "medium": "ink",
+  "title": "Stack of old books with a reading glasses on top",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-12",
+  "level": "quick",
+  "medium": "pencil",
+  "title": "Wicker bistro chair",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-14",
+  "level": "quick",
+  "medium": "watercolour",
+  "title": "Chalkboard A-frame sign",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-15",
+  "level": "quick",
+  "medium": "gouache",
+  "title": "Terracotta water pot (matka) on a stand",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-17",
+  "level": "quick",
+  "medium": "pencil",
+  "title": "Letterbox on a garden gate",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-18",
+  "level": "quick",
+  "medium": "ink-wash",
+  "title": "Croissant and a cup of coffee",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "x-boats",
+  "level": "long",
+  "medium": "watercolour",
+  "title": "Lakeside village with moored boats",
+  "w": 1100,
+  "h": 733
+ },
+ {
+  "id": "x-kirana",
+  "level": "long",
+  "medium": "ink-wash",
+  "title": "Kirana store under a tin awning",
+  "w": 887,
+  "h": 1100
+ },
+ {
+  "id": "x-teashop",
+  "level": "long",
+  "medium": "ink-wash",
+  "title": "Japanese tea shop with a noren",
+  "w": 1100,
+  "h": 1100
+ }
+]
