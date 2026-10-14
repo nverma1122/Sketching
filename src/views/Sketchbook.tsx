@@ -6,13 +6,16 @@ import { SceneGuide } from '../components/SceneGuide';
 import { Icon } from '../components/Icons';
 import { ConfirmDialog, Dialog, EmptyState, useObjectUrl, useToast } from '../components/ui';
 import { useStore, type NewArtwork, type SavedIdea } from '../lib/store';
+import { libraryScore, parseTags, type LibraryItem } from '../lib/library';
+import { ILLUSTRATED, illustratedLabel, illustratedSrc } from '../data/illustrated';
 import { href, navigate } from '../lib/router';
 
-type Tab = 'saved' | 'sessions' | 'artwork';
+type Tab = 'saved' | 'sessions' | 'artwork' | 'references';
 const TABS: { key: Tab; label: string }[] = [
   { key: 'saved', label: 'Saved ideas' },
   { key: 'sessions', label: 'My sessions' },
   { key: 'artwork', label: 'My artwork' },
+  { key: 'references', label: 'Reference library' },
 ];
 
 const OUTCOME_LABEL: Record<Outcome, string> = {
@@ -26,8 +29,8 @@ const fmtDate = (d: number | string) => dateFmt.format(typeof d === 'string' ? n
 
 export function Sketchbook({ tab }: { tab?: string }) {
   const active: Tab = TABS.some((t) => t.key === tab) ? (tab as Tab) : 'saved';
-  const { saved, sessions, artworks, ready } = useStore();
-  const counts: Record<Tab, number> = { saved: saved.length, sessions: sessions.length, artwork: artworks.length };
+  const { saved, sessions, artworks, library, ready } = useStore();
+  const counts: Record<Tab, number> = { saved: saved.length, sessions: sessions.length, artwork: artworks.length, references: library.length };
 
   return (
     <div className="sketchbook page">
@@ -42,7 +45,7 @@ export function Sketchbook({ tab }: { tab?: string }) {
           </a>
         ))}
       </nav>
-      {!ready ? <p className="muted">Opening your sketchbook…</p> : active === 'saved' ? <SavedTab /> : active === 'sessions' ? <SessionsTab /> : <ArtworkTab />}
+      {!ready ? <p className="muted">Opening your sketchbook…</p> : active === 'saved' ? <SavedTab /> : active === 'sessions' ? <SessionsTab /> : active === 'artwork' ? <ArtworkTab /> : <ReferencesTab />}
     </div>
   );
 }
@@ -479,5 +482,167 @@ function ArtworkFormBody({ onClose, existing }: { onClose: () => void; existing?
         </button>
       </div>
     </form>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Reference library: the user's own inspiration images, kept on this device.
+
+function ReferencesTab() {
+  const store = useStore();
+  const toast = useToast();
+  const [files, setFiles] = useState<File[]>([]);
+  const [tags, setTags] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [removing, setRemoving] = useState<LibraryItem | null>(null);
+
+  const add = async (e: FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    if (files.length === 0) {
+      setError('Choose one or more images to add.');
+      return;
+    }
+    setBusy(true);
+    try {
+      const n = await store.addLibraryItems(files, { tags: parseTags(tags) });
+      toast({ message: `Added ${n} ${n === 1 ? 'image' : 'images'} to your reference library.`, tone: 'info' });
+      setFiles([]);
+      setTags('');
+      const input = document.getElementById('lib-files') as HTMLInputElement | null;
+      if (input) input.value = '';
+    } catch (err) {
+      setError((err as Error).message || 'That image could not be added.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="references-tab">
+      <form className="card lib-add" onSubmit={add}>
+        <h2 className="card-title">Add inspiration images</h2>
+        <p className="small muted">
+          Sketches you admire, illustrations, photos of places. Tag them (e.g. “noren, kanji, shopfront” or “kirana, devanagari”) and they’ll appear as references on
+          matching scenes. They stay on this device.
+        </p>
+        <input id="lib-files" type="file" accept="image/*" multiple className="visually-hidden" onChange={(e) => setFiles([...(e.target.files ?? [])])} />
+        <div className="lib-add-row">
+          <label htmlFor="lib-files" className="btn btn-quiet">
+            <Icon name="upload" size={18} /> {files.length ? `${files.length} selected` : 'Choose images'}
+          </label>
+          <label className="field lib-tags">
+            <span className="field-label">Tags</span>
+            <input type="text" value={tags} onChange={(e) => setTags(e.target.value)} placeholder="shopfront, noren, kanji" />
+          </label>
+          <button type="submit" className={`btn btn-primary ${busy ? 'is-busy' : ''}`} disabled={busy}>
+            Add to library
+          </button>
+        </div>
+        {error && (
+          <p className="form-error" role="alert">
+            {error}
+          </p>
+        )}
+      </form>
+
+      {store.library.length === 0 ? (
+        <EmptyState title="Your reference library is empty">Add a few images you’d love to sketch from — they’ll be matched to scenes by their tags.</EmptyState>
+      ) : (
+        <ul className="lib-grid">
+          {store.library.map((l) => (
+            <li key={l.id}>
+              <LibraryCard item={l} onRemove={() => setRemoving(l)} />
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <section className="bundled">
+        <h2>Illustrated references in the app</h2>
+        <p className="small muted">Your own sketches and the illustrations from your collection, each paired with the scenes it suits.</p>
+        <ul className="lib-grid">
+          {ILLUSTRATED.map((r) => (
+            <li key={r.id} className="lib-card">
+              <img src={illustratedSrc(r)} alt={`${illustratedLabel(r.kind)}: ${r.title}`} loading="lazy" />
+              <div className="lib-card-body">
+                <strong>{r.title}</strong>
+                <span className="small muted">{illustratedLabel(r.kind)}</span>
+                <ul className="lib-scenes">
+                  {r.scenes.map((id) => {
+                    const p = getPrompt(id);
+                    return (
+                      p && (
+                        <li key={id}>
+                          <button className="btn-link" onClick={() => { store.open(id, '20', p.media[0]); navigate('/idea'); }}>
+                            {p.title}
+                          </button>
+                        </li>
+                      )
+                    );
+                  })}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <ConfirmDialog
+        open={!!removing}
+        title="Remove this image?"
+        message="It will be removed from this device."
+        confirmLabel="Remove"
+        danger
+        onCancel={() => setRemoving(null)}
+        onConfirm={async () => {
+          if (removing) await store.deleteLibraryItem(removing.id);
+          setRemoving(null);
+          toast({ message: 'Removed from your reference library.', tone: 'info' });
+        }}
+      />
+    </div>
+  );
+}
+
+function LibraryCard({ item, onRemove }: { item: LibraryItem; onRemove: () => void }) {
+  const store = useStore();
+  const url = useObjectUrl(item.thumb ?? item.image);
+  const [title, setTitle] = useState(item.title);
+  const [tags, setTags] = useState(item.tags.join(', '));
+  const matches = useMemo(
+    () =>
+      PROMPTS.map((p) => ({ p, s: libraryScore(item, p) }))
+        .filter((x) => x.s > 0)
+        .sort((a, b) => b.s - a.s)
+        .slice(0, 4)
+        .map((x) => x.p),
+    [item],
+  );
+  const save = () => {
+    const t = parseTags(tags);
+    if (title.trim() !== item.title || t.join(',') !== item.tags.join(',')) store.updateLibraryItem(item.id, { title: title.trim() || item.title, tags: t });
+  };
+  return (
+    <div className="lib-card">
+      {url && <img src={url} alt={item.title} />}
+      <div className="lib-card-body">
+        <label className="field">
+          <span className="field-label visually-hidden">Title</span>
+          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} onBlur={save} aria-label={`Title for ${item.title}`} />
+        </label>
+        <label className="field">
+          <span className="field-label visually-hidden">Tags</span>
+          <input type="text" value={tags} onChange={(e) => setTags(e.target.value)} onBlur={save} placeholder="tags, comma separated" aria-label={`Tags for ${item.title}`} />
+        </label>
+        <span className="small muted">
+          {matches.length ? `Shows on: ${matches.map((p) => p.title).join(' · ')}${matches.length === 4 ? ' …' : ''}` : 'No matching scenes yet — add tags or link it from a scene.'}
+        </span>
+        <button className="btn btn-small btn-quiet" onClick={onRemove}>
+          <Icon name="trash" size={16} /> Remove
+        </button>
+      </div>
+    </div>
   );
 }

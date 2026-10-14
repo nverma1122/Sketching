@@ -1,4 +1,4 @@
-import type { Level, Medium, SketchPrompt, Suggestion, TimeKey } from '../data/types';
+import type { GuideTemplate, Level, Medium, SketchPrompt, Suggestion, TimeKey } from '../data/types';
 import { CLOSING_LINES, mediumInfo } from '../data/taxonomy';
 import { regionLabel } from '../data/regions';
 import { hashString } from './random';
@@ -58,6 +58,32 @@ export interface BuiltSuggestion {
 }
 
 export const MAX_SIMPLIFY = 2;
+
+/**
+ * Vignette framing for each kind of scene: one clear subject, neighbours drawn
+ * lighter, and edges that fade into the paper instead of filling the page.
+ */
+export const VIGNETTE: Record<GuideTemplate, string> = {
+  shopfront: 'Keep the shop as the hero in the middle of the page; draw the neighbouring buildings as a few light verticals and let the pavement end in a ragged edge.',
+  corner: 'Let the corner building stand alone: neighbours as faint outlines, washes stopping short of the page edges, the pavement fading after a few joints.',
+  lane: 'Fade the walls toward the page edges and keep detail near the middle; the far end can be a few light lines.',
+  facade: 'Crop the façade loosely: finish the middle bays, let the outer windows dissolve into outline, and stop the washes before the edges.',
+  stall: 'Make the stall and tree one island on the page; the ground fades out irregularly and the background stays as paper.',
+  doorway: 'Frame the door with plants and stonework that thin out toward the edges; leave the corners of the page empty.',
+  street: 'Keep the bench, tree and shop together as one group; let the street and sky fade into white around them.',
+  cafe: 'Hold the café front in the middle; the outer edges of the façade and pavement fade into paper.',
+  waterfront: 'Let the water fade out at the bottom and sides, and the far shore stop in a few strokes — the boats and village carry the page.',
+  riverside: 'Run the washes to an irregular edge: the far buildings fade at the left, the paving and water stop short of the page edges.',
+  vista: 'Fade the nearest façades toward the page edges and stop the road before the bottom; the view at the end of the street stays crisp.',
+  house: 'Draw the house as an island: paving and plants thin out at the edges, the sky stays as paper.',
+  steps: 'Let both walls fade toward the edges of the page; only the steps and the top landing need full drawing.',
+};
+
+const SCRIPT_ADVICE: Record<'kanji' | 'devanagari' | 'latin', string> = {
+  kanji: 'Letter the kanji signs carefully — square each character in a light box first; they identify the place more than any other detail.',
+  devanagari: 'Letter the Devanagari sign carefully: draw the top line (shirorekha) first, then hang the letters from it.',
+  latin: 'Letter the main sign carefully and keep any other text as rhythm.',
+};
 
 /** Minutes each time choice spans; 30–45 is planned to 45. */
 const SPAN: Record<TimeKey, number> = { '5': 5, '10': 10, '20': 20, '40': 45, '60': 60, '120': 120 };
@@ -170,7 +196,7 @@ export function buildPlan(p: SketchPrompt, time: TimeKey, medium: Medium, simpli
 
   if (approach === 'composition') {
     return steps(total, [
-      [0.15, `${sentence(p.view)} ${sentence(p.structure)} ${sentence(p.perspective)}`],
+      [0.15, `${sentence(p.view)} ${sentence(p.structure)} ${sentence(p.perspective)} Vignette: ${VIGNETTE[p.guide.t]}`],
       [0.4, `${colourFirst ? 'First wash over the large masses, then block in ' : 'Block in '}${p.ten}.`],
       [0.65, `Now add ${p.twenty}. Keep the focus on ${p.focal.replace(/\.$/, '').toLowerCase()}; ${list(secondary)} stay lighter.`],
       [0.85, `${wash ? colourStep(p, medium, level) : `Selective hatching: ${list(hatch)}.`} ${sentence(firstSentence(p.shadows))}`],
@@ -182,7 +208,7 @@ export function buildPlan(p: SketchPrompt, time: TimeKey, medium: Medium, simpli
   const parts: [number, string][] = [
     [
       0.1,
-      `${sentence(p.view)} ${total >= 60 ? 'Make two thumb-sized value sketches and choose one.' : 'If it helps, make one small value thumbnail.'} Negative space: ${sentence(p.negative)}`,
+      `${sentence(p.view)} ${total >= 60 ? 'Make two thumb-sized value sketches and choose one.' : 'If it helps, make one small value thumbnail.'} Negative space: ${sentence(p.negative)} Vignette: ${VIGNETTE[p.guide.t]}`,
     ],
     [0.25, `${sentence(p.structure)} ${sentence(p.perspective)} Then block in ${p.ten}.`],
     [0.45, `Add ${p.twenty}. Focal point: ${sentence(p.focal)} Secondary: ${list(secondary)}.`],
@@ -249,7 +275,10 @@ export function buildSuggestion(
     { label: 'Secondary', text: cap(list(secondary)) + '.' },
     { label: 'Perspective', text: prompt.perspective },
     { label: 'Negative space', text: prompt.negative },
+    { label: 'Vignette', text: VIGNETTE[prompt.guide.t] },
   ];
+  const script = prompt.guide.script;
+  if (script || (prompt.guide.sign && prompt.guide.sign !== 'none')) composition.push({ label: 'Signs', text: SCRIPT_ADVICE[script ?? 'latin'] });
 
   return {
     prompt,

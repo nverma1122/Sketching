@@ -42,13 +42,15 @@ Your data stays in the browser where you created it. A phone and a laptop each k
 
 | Area | Where |
 | --- | --- |
-| Scene library: 152 intermediate urban-sketching scenes with full per-scene guidance (plain typed data) | `src/data/prompts/*.ts` |
+| Scene library: 162 urban-sketching scenes with full per-scene guidance (plain typed data) | `src/data/prompts/*.ts` |
+| Illustrated references (the artist's sketches and collection) and the scenes they suit | `public/refs/`, `src/data/illustrated.ts` |
+| Personal reference library: matching and storage | `src/lib/library.ts`, `src/lib/store.tsx` |
 | Worked examples generated from the real library (`npm run examples`) | `docs/examples.md` |
 | Wikimedia Commons photo search, with credits and caching | `src/lib/commons.ts` |
 | Subjects, media, times, sketching levels, medium guidance, closing lines | `src/data/taxonomy.ts` |
 | Scene selection and anti-repetition | `src/lib/selector.ts` |
 | Time-based approaches (study → structure → composition → complete scene) | `src/lib/plan.ts` |
-| Schematic composition guides generated per scene, with focus regions | `src/components/SceneGuide.tsx`, `src/data/regions.ts` |
+| Composition guides in an ink-sketch style (13 templates), with focus regions | `src/components/SceneGuide.tsx`, `src/data/regions.ts` |
 | Storage: localStorage (small state) and IndexedDB (sessions, images) | `src/lib/storage/` |
 | App state and actions | `src/lib/store.tsx` |
 | Export (JSON, or ZIP with photos; dependency-free ZIP writer) | `src/lib/exportData.ts`, `src/lib/zip.ts` |
@@ -92,11 +94,23 @@ Session length is not used to pick the scene. It changes the approach to the sam
 2. Among matching scenes, one is picked at random, weighted. Scenes you attempted in the last three weeks or have saved are less likely; scenes whose suggested medium is yours are more likely. Energy only shades the choice within your level.
 3. Level is the most important filter, then medium, then subject. If nothing fresh matches, the subject is relaxed first (related subjects, then any), then older history is allowed (oldest first, never the last six), and only then a neighbouring level, any level and finally any medium. The suggestion screen says exactly what was relaxed.
 
+### References, in order of preference
+
+1. **My photo** — a photo you attach to one scene.
+2. **Illustrations** — 32 illustrated references bundled with the app: ten of your own sketches (harbour, riverside, hill street, bougainvillea door, 書店 bookshop, corner coffee house, किराना स्टोर, narrow timber house, Kerala house, blue stair house) and illustrations from your collection, cropped from the grids. Each is paired with the scenes it suits in `src/data/illustrated.ts`; your sketches come first. They are part of the public site.
+3. **My library** — your own inspiration images, added under *My Sketchbook → Reference library* with tags. They appear on scenes whose title or tags share words with the image's title or tags, or that you link from the scene (*Link images from my library*). They stay in this browser's IndexedDB and are included in the ZIP export.
+4. **Photos** — freely licensed Wikimedia Commons photos (below).
+5. **Composition guide** — the schematic drawing, always available offline.
+
+### Vignettes and signs
+
+Every plan includes vignette framing for its kind of scene (hero building or view in the middle, neighbours lighter, washes stopping short of the page edges). Scenes whose signs carry kanji or Devanagari get advice on lettering them; the guides draw those scripts as glyph shapes.
+
 ### Reference photos and composition guides
 
 Each scene searches Wikimedia Commons for freely licensed photos whose titles contain its search words, e.g. `intitle:tea intitle:stall`, trying the most specific words first. Maps, logos, drawings and small images are filtered out; each photo shows the photographer, the licence and a link to its Commons page. Results are cached for a week. When nothing suitable is found the app says so — it never pretends a reference exists.
 
-The **composition guide** is a schematic drawing generated from the scene's `guide` spec (floors, bays, awning, signs, balconies, cables, plants, trees, wet pavement…). It is always labelled *Composition guide (schematic)* and is not a photograph. For a focused study it frames the part of the scene to draw. Your own photos can be added per scene and always take priority.
+The **composition guide** is a schematic drawing generated from the scene's `guide` spec (floors, bays, awning, signs and their script, balconies, cables, utility poles, A-frame boards, bicycles, trucks, plants, trees, wet pavement…), drawn in an ink-sketch manner with selective hatching, scalloped foliage and vignetted washes. Templates: shopfront, corner, lane, façade, stall, doorway, street, café, waterfront, riverside, hill-street view, village/Kerala house and stair alley. It is always labelled *Composition guide (schematic)* and is not a photograph. For a focused study it frames the part of the scene to draw. Your own photos can be added per scene and always take priority.
 
 ### Image generation (future)
 

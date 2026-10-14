@@ -1,16 +1,18 @@
 // Minimal promise wrapper around IndexedDB for records that may be large:
-// session history, artwork (with image blobs) and user reference photos.
+// session history, artwork (with image blobs), user reference photos and the
+// personal reference library.
 // If IndexedDB cannot be opened, an in-memory store is used and the UI shows
 // a notice that nothing will survive a refresh.
 
-export type StoreName = 'sessions' | 'artworks' | 'references';
+export type StoreName = 'sessions' | 'artworks' | 'references' | 'library';
 
 const DB_NAME = 'quiet-corners-studio';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 const STORES: { name: StoreName; keyPath: string }[] = [
   { name: 'sessions', keyPath: 'id' },
   { name: 'artworks', keyPath: 'id' },
   { name: 'references', keyPath: 'promptId' },
+  { name: 'library', keyPath: 'id' },
 ];
 
 export class StorageError extends Error {
@@ -27,6 +29,7 @@ const memory: Record<StoreName, Map<string, unknown>> = {
   sessions: new Map(),
   artworks: new Map(),
   references: new Map(),
+  library: new Map(),
 };
 let usingMemory = false;
 

@@ -19,6 +19,12 @@ function buildJson(store: Store, files: Record<string, string>) {
       promptTitle: meta.promptId ? getPrompt(meta.promptId)?.title : undefined,
       file: files[meta.id],
     })),
+    referenceLibrary: store.library.map(({ image: _image, thumb: _thumb, ...meta }) => ({
+      ...meta,
+      addedAt: new Date(meta.addedAt).toISOString(),
+      scenes: meta.promptIds.map((id) => getPrompt(id)?.title ?? id),
+      file: files[meta.id],
+    })),
   };
 }
 
@@ -43,7 +49,7 @@ export function exportJson(store: Store) {
   downloadBlob(new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' }), `quiet-corners-${stamp()}.json`);
 }
 
-/** A ZIP with data.json plus every artwork file and reference photo. */
+/** A ZIP with data.json plus every artwork file, reference photo and library image. */
 export async function exportZip(store: Store) {
   const enc = new TextEncoder();
   const entries: ZipEntry[] = [];
@@ -57,6 +63,11 @@ export async function exportZip(store: Store) {
   for (const r of refs) {
     const name = `references/${r.promptId}-${safe(r.name)}.${extensionFor(r.image.type, r.name)}`;
     entries.push({ name, data: new Uint8Array(await r.image.arrayBuffer()) });
+  }
+  for (const l of store.library) {
+    const name = `library/${safe(l.title)}-${l.id.slice(0, 6)}.${extensionFor(l.image.type, l.fileName)}`;
+    files[l.id] = name;
+    entries.push({ name, data: new Uint8Array(await l.image.arrayBuffer()) });
   }
   const json = buildJson(store, files);
   entries.unshift({ name: 'data.json', data: enc.encode(JSON.stringify(json, null, 2)) });

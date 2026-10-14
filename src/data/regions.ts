@@ -55,6 +55,36 @@ export const TEMPLATE_REGIONS: Record<GuideTemplate, Record<string, string>> = {
     plants: 'the climbing plant and pots',
     pavement: 'the irregular pavement and outdoor chair',
   },
+  waterfront: {
+    boats: 'the nearest boat, its mooring line and reflection',
+    village: 'the village of houses and trees on the shore',
+    water: 'the water and the boats floating on it',
+    hills: 'the far hills and the horizon',
+  },
+  riverside: {
+    lamp: 'the lamp post and railing in the foreground',
+    bridge: 'the stone bridge and its arches',
+    buildings: 'the row of buildings across the river',
+    tower: 'the tower or spire against the sky',
+  },
+  vista: {
+    left: 'the row houses on the left side',
+    view: 'the bridge and water at the end of the street',
+    street: 'the street, kerbs and parked cars',
+    right: 'the row houses on the right side',
+  },
+  house: {
+    stair: 'the outside stair and its shadow',
+    door: 'the front door and its pots',
+    roof: 'the tiled roof and chimney',
+    balcony: 'the balcony with plants',
+  },
+  steps: {
+    steps: 'the steps climbing away from you',
+    near: 'the nearest wall, pots and plants',
+    lantern: 'the hanging lantern or sign',
+    top: 'the top of the steps where the alley turns',
+  },
 };
 
 export const regionLabel = (t: GuideTemplate, key: string) => TEMPLATE_REGIONS[t][key] ?? key;

@@ -6,10 +6,11 @@ import { PROMPTS, getPrompt } from './data/prompts';
 import { levelLabel, mediumLabel, RICHNESS_LABELS } from './data/taxonomy';
 import { richnessTotal } from './data/prompts/define';
 import { buildSuggestion } from './lib/plan';
+import { illustratedFor, illustratedLabel } from './data/illustrated';
 import { selectPrompt } from './lib/selector';
 import { seededRng } from './lib/random';
 
-const IDS = ['bk-01', 'sf-01', 'sf-02', 'cn-01', 'cn-02', 'fc-01', 'fc-02', 'ln-01', 'ln-02', 'st-01', 'bk-05', 'bk-06', 'fc-03', 'st-02'];
+const IDS = ['sk-01', 'sk-02', 'sk-08', 'sk-18', 'sf-02', 'bk-07', 'sk-05', 'sk-12', 'st-01', 'sk-15', 'fc-01', 'ln-01', 'sk-03', 'sk-04'];
 const W = ['', 'light', 'moderate', 'demanding'];
 
 it.skipIf(!process.env.GEN_EXAMPLES)('writes docs/examples.md', () => {
@@ -24,6 +25,8 @@ it.skipIf(!process.env.GEN_EXAMPLES)('writes docs/examples.md', () => {
     out.push(`**Scene.** ${p.scene}\n`);
     out.push(`**Why draw it.** ${p.why}\n`);
     out.push(`**Richness** (total ${richnessTotal(p.richness)}/15 → ${levelLabel(p.level)}): ` + RICHNESS_LABELS.map((r) => `${r.label} ${W[p.richness[r.key]]}`).join(' · ') + `. Full scene ≈ ${p.fullTime === '40' ? '30–45' : p.fullTime} min.\n`);
+    const refs = illustratedFor(p.id);
+    if (refs.length) out.push(`**Illustrated references.** ${refs.map((r) => `${r.title} (${illustratedLabel(r.kind).toLowerCase()})`).join('; ')}\n`);
     out.push(`**Suggested medium.** ${mediumLabel(m)} (also: ${p.media.slice(1).map(mediumLabel).join(', ')})\n`);
     for (const t of ['5', '10', '20'] as const) {
       const b = buildSuggestion(p, { time: t, medium: m, simplified: 0, createdAt: 1 }, 'intermediate');

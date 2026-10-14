@@ -15,6 +15,7 @@ import { MAX_SIMPLIFY, approachFor } from './plan';
 import { readLocal, writeLocal, clearLocal, localStorageAvailable } from './storage/local';
 import { idbDelete, idbGetAll, idbPut, idbClearAll, initIdb, idbIsPersistent, idbGet } from './storage/idb';
 import { createThumbnail, validateImage } from './images';
+import type { LibraryItem } from './library';
 
 export type Theme = 'system' | 'light' | 'dark';
 
@@ -92,6 +93,7 @@ function useStoreValue() {
 
   const [sessions, setSessions] = useState<SessionRecord[]>([]);
   const [artworks, setArtworks] = useState<ArtworkWithImage[]>([]);
+  const [library, setLibrary] = useState<LibraryItem[]>([]);
   const [ready, setReady] = useState(false);
   const [persistent, setPersistent] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -101,8 +103,13 @@ function useStoreValue() {
     (async () => {
       try {
         await initIdb();
-        const [s, a] = await Promise.all([idbGetAll<SessionRecord>('sessions'), idbGetAll<ArtworkWithImage>('artworks')]);
+        const [s, a, lib] = await Promise.all([
+          idbGetAll<SessionRecord>('sessions'),
+          idbGetAll<ArtworkWithImage>('artworks'),
+          idbGetAll<LibraryItem>('library'),
+        ]);
         if (cancelled) return;
+        setLibrary(lib.sort((x, y) => y.addedAt - x.addedAt));
         setSessions(s.sort((x, y) => y.endedAt - x.endedAt));
         setArtworks(a.sort((x, y) => (y.date === x.date ? y.createdAt - x.createdAt : y.date.localeCompare(x.date))));
       } catch {
@@ -278,6 +285,55 @@ function useStoreValue() {
 
   const removeReference = useCallback((promptId: string) => idbDelete('references', promptId), []);
 
+  // ----- Personal reference library ----------------------------------------
+
+  /** Add images to the library. Returns how many were added; throws on the first invalid file. */
+  const addLibraryItems = useCallback(async (files: File[], meta: { title?: string; tags: string[]; promptId?: string }) => {
+    const added: LibraryItem[] = [];
+    for (const file of files) {
+      validateImage(file);
+      const thumb = await createThumbnail(file);
+      const base = file.name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').trim();
+      const rec: LibraryItem = {
+        id: uid(),
+        title: (files.length === 1 && meta.title?.trim()) || base || 'Reference',
+        tags: meta.tags,
+        promptIds: meta.promptId ? [meta.promptId] : [],
+        image: file,
+        thumb,
+        fileName: file.name || 'reference',
+        addedAt: Date.now() + added.length,
+      };
+      await idbPut('library', rec);
+      added.push(rec);
+    }
+    setLibrary((list) => [...added.reverse(), ...list]);
+    return added.length;
+  }, []);
+
+  const updateLibraryItem = useCallback(async (id: string, patch: Partial<Pick<LibraryItem, 'title' | 'tags' | 'promptIds'>>) => {
+    const existing = await idbGet<LibraryItem>('library', id);
+    if (!existing) return;
+    const rec = { ...existing, ...patch };
+    await idbPut('library', rec);
+    setLibrary((list) => list.map((x) => (x.id === id ? rec : x)));
+  }, []);
+
+  const toggleLibraryLink = useCallback(
+    async (id: string, promptId: string) => {
+      const item = library.find((x) => x.id === id);
+      if (!item) return;
+      const promptIds = item.promptIds.includes(promptId) ? item.promptIds.filter((p) => p !== promptId) : [...item.promptIds, promptId];
+      await updateLibraryItem(id, { promptIds });
+    },
+    [library, updateLibraryItem],
+  );
+
+  const deleteLibraryItem = useCallback(async (id: string) => {
+    await idbDelete('library', id);
+    setLibrary((list) => list.filter((x) => x.id !== id));
+  }, []);
+
   // ----- Housekeeping ----------------------------------------------------
 
   const clearHistory = useCallback(() => {
@@ -296,6 +352,7 @@ function useStoreValue() {
     setActive(null);
     setSessions([]);
     setArtworks([]);
+    setLibrary([]);
   }, [setPrefsState, setRecent, setSaved, setAttempted, setCurrent, setActive]);
 
   return {
@@ -330,6 +387,11 @@ function useStoreValue() {
     getReference,
     setReference,
     removeReference,
+    library,
+    addLibraryItems,
+    updateLibraryItem,
+    toggleLibraryLink,
+    deleteLibraryItem,
     clearHistory,
     eraseAll,
   };

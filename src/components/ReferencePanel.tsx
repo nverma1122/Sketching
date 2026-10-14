@@ -1,45 +1,60 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { SketchPrompt } from '../data/types';
 import { useStore, type ReferencePhoto } from '../lib/store';
 import { findPhotos, getPhotoIndex, setPhotoIndex, type CommonsPhoto } from '../lib/commons';
+import { illustratedFor, illustratedLabel, illustratedSrc } from '../data/illustrated';
+import { libraryFor, type LibraryItem } from '../lib/library';
+import { href } from '../lib/router';
 import { SceneGuide } from './SceneGuide';
 import { regionLabel } from '../data/regions';
 import { Icon } from './Icons';
 import { Lightbox, useObjectUrl, useToast } from './ui';
 
-type View = 'mine' | 'photo' | 'guide';
+type View = 'mine' | 'illus' | 'library' | 'photo' | 'guide';
 type PhotoState = { status: 'idle' | 'loading' | 'ready' | 'empty' | 'error' | 'offline'; photos: CommonsPhoto[] };
 
 /**
- * Reference for a scene: the user's own photo, freely licensed photos from
- * Wikimedia Commons, and a schematic composition guide. When `focus` is set
- * (a focused study), the guide highlights that part of the full scene.
+ * Reference for a scene, in order of preference: the user's own photo,
+ * illustrated references bundled with the app (their sketches and their
+ * collection), images from their personal reference library, freely licensed
+ * photos from Wikimedia Commons, and a schematic composition guide. When
+ * `focus` is set (a focused study), the guide frames that part of the scene.
  */
 export function ReferencePanel({ prompt, focus, compact = false }: { prompt: SketchPrompt; focus?: string; compact?: boolean }) {
   const store = useStore();
   const toast = useToast();
   const online = store.prefs.onlinePhotos;
+  const illus = useMemo(() => illustratedFor(prompt.id), [prompt.id]);
+  const lib = useMemo(() => libraryFor(store.library, prompt), [store.library, prompt]);
   const [mine, setMine] = useState<ReferencePhoto | undefined>();
-  const preferred: View = focus || !online ? 'guide' : 'photo';
+  const preferred: View = illus.length ? 'illus' : lib.length ? 'library' : focus || !online ? 'guide' : 'photo';
   const [view, setView] = useState<View>(preferred);
   const focusLabel = focus ? regionLabel(prompt.guide.t, focus) : undefined;
   const [photoState, setPhotoState] = useState<PhotoState>({ status: 'idle', photos: [] });
   const [index, setIndex] = useState(0);
+  const [illusIdx, setIllusIdx] = useState(0);
+  const [libIdx, setLibIdx] = useState(0);
   const [enlarged, setEnlarged] = useState(false);
   const [busy, setBusy] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
   const mineUrl = useObjectUrl(mine?.image);
+  const libItem: LibraryItem | undefined = lib[Math.min(libIdx, lib.length - 1)];
+  const libUrl = useObjectUrl(libItem?.image);
+  const ill = illus[Math.min(illusIdx, illus.length - 1)];
 
-  // The user's own photo for this idea.
+  // The user's own photo for this scene.
   useEffect(() => {
     let cancelled = false;
     setMine(undefined);
+    setIllusIdx(0);
+    setLibIdx(0);
+    setView(preferred);
     store
       .getReference(prompt.id)
       .then((p) => {
         if (cancelled) return;
         setMine(p);
-        setView(p ? 'mine' : preferred);
+        if (p) setView('mine');
       })
       .catch(() => {});
     return () => {
@@ -117,6 +132,8 @@ export function ReferencePanel({ prompt, focus, compact = false }: { prompt: Ske
 
   const tabs: { key: View; label: string }[] = [
     ...(mine ? [{ key: 'mine' as const, label: 'My photo' }] : []),
+    ...(illus.length ? [{ key: 'illus' as const, label: 'Illustrations' }] : []),
+    ...(lib.length ? [{ key: 'library' as const, label: 'My library' }] : []),
     ...(online ? [{ key: 'photo' as const, label: 'Photos' }] : []),
     { key: 'guide', label: 'Composition guide' },
   ];
@@ -125,6 +142,10 @@ export function ReferencePanel({ prompt, focus, compact = false }: { prompt: Ske
   let frame;
   if (current === 'mine' && mineUrl) {
     frame = <img src={mineUrl} alt="Your reference photograph" />;
+  } else if (current === 'illus' && ill) {
+    frame = <img key={ill.id} src={illustratedSrc(ill)} alt={`${illustratedLabel(ill.kind)}: ${ill.title}`} />;
+  } else if (current === 'library' && libItem) {
+    frame = libUrl ? <img key={libItem.id} src={libUrl} alt={`From your reference library: ${libItem.title}`} /> : <div className="photo-placeholder" />;
   } else if (current === 'photo') {
     if (photoState.status === 'ready' && photo) {
       frame = <img key={photo.id} src={photo.src} alt={`Reference photo: ${photo.title}`} onError={skipBroken} referrerPolicy="no-referrer" />;
@@ -149,6 +170,13 @@ export function ReferencePanel({ prompt, focus, compact = false }: { prompt: Ske
 
   const canEnlarge = current !== 'photo' || (photoState.status === 'ready' && !!photo);
 
+  const cycler = (i: number, n: number, set: (i: number) => void, label: string) =>
+    n > 1 && (
+      <button className="btn btn-small btn-quiet" onClick={() => set((i + 1) % n)}>
+        <Icon name="shuffle" size={16} /> {label} <span className="muted small">({(i % n) + 1}/{n})</span>
+      </button>
+    );
+
   return (
     <section className={`reference ${compact ? 'reference-compact' : ''}`} aria-label="Reference">
       {tabs.length > 1 && (
@@ -172,6 +200,22 @@ export function ReferencePanel({ prompt, focus, compact = false }: { prompt: Ske
         <div className="ref-frame">{frame}</div>
       )}
 
+      {current === 'illus' && ill && (
+        <div className="photo-meta">
+          <p className="ref-caption credit">
+            <strong>{illustratedLabel(ill.kind)}</strong> · {ill.title}
+          </p>
+          {cycler(illusIdx, illus.length, setIllusIdx, 'Another illustration')}
+        </div>
+      )}
+      {current === 'library' && libItem && (
+        <div className="photo-meta">
+          <p className="ref-caption credit">
+            <strong>From your reference library</strong> · {libItem.title}
+          </p>
+          {cycler(libIdx, lib.length, setLibIdx, 'Another image')}
+        </div>
+      )}
       {current === 'photo' && photo && photoState.status === 'ready' && (
         <div className="photo-meta">
           <p className="ref-caption credit">
@@ -221,9 +265,32 @@ export function ReferencePanel({ prompt, focus, compact = false }: { prompt: Ske
         </div>
       )}
 
-      <Lightbox open={enlarged} onClose={() => setEnlarged(false)} title={current === 'mine' ? 'Your reference photo' : current === 'photo' && photo ? photo.title : prompt.title}>
+      {!compact && <LibraryPicker prompt={prompt} />}
+
+      <Lightbox
+        open={enlarged}
+        onClose={() => setEnlarged(false)}
+        title={
+          current === 'mine'
+            ? 'Your reference photo'
+            : current === 'illus' && ill
+              ? ill.title
+              : current === 'library' && libItem
+                ? libItem.title
+                : current === 'photo' && photo
+                  ? photo.title
+                  : prompt.title
+        }
+      >
         {current === 'mine' && mineUrl ? (
           <img src={mineUrl} alt="Your reference photograph, enlarged" />
+        ) : current === 'illus' && ill ? (
+          <>
+            <img src={illustratedSrc(ill)} alt={`${illustratedLabel(ill.kind)}: ${ill.title}, enlarged`} />
+            <p className="ref-caption">{illustratedLabel(ill.kind)}</p>
+          </>
+        ) : current === 'library' && libUrl ? (
+          <img src={libUrl} alt={`From your reference library: ${libItem?.title}, enlarged`} />
         ) : current === 'photo' && photo ? (
           <>
             <img src={photo.large} alt={`Reference photo: ${photo.title}, enlarged`} referrerPolicy="no-referrer" />
@@ -242,5 +309,45 @@ export function ReferencePanel({ prompt, focus, compact = false }: { prompt: Ske
         )}
       </Lightbox>
     </section>
+  );
+}
+
+/** Link images from the personal reference library to this scene. */
+function LibraryPicker({ prompt }: { prompt: SketchPrompt }) {
+  const store = useStore();
+  if (store.library.length === 0) {
+    return (
+      <p className="small muted ref-library-hint">
+        Keep your own inspiration images in <a href={href('/sketchbook/references')}>My reference library</a> — they’ll appear here for matching scenes.
+      </p>
+    );
+  }
+  const linked = store.library.filter((l) => l.promptIds.includes(prompt.id)).length;
+  return (
+    <details className="ref-library">
+      <summary>
+        Link images from my library{linked ? ` (${linked} linked)` : ''}
+      </summary>
+      <ul className="lib-pick">
+        {store.library.map((l) => (
+          <li key={l.id}>
+            <LibThumbToggle item={l} on={l.promptIds.includes(prompt.id)} onToggle={() => store.toggleLibraryLink(l.id, prompt.id)} />
+          </li>
+        ))}
+      </ul>
+      <a className="small" href={href('/sketchbook/references')}>
+        Manage my reference library
+      </a>
+    </details>
+  );
+}
+
+function LibThumbToggle({ item, on, onToggle }: { item: LibraryItem; on: boolean; onToggle: () => void }) {
+  const url = useObjectUrl(item.thumb ?? item.image);
+  return (
+    <button className={`lib-thumb ${on ? 'on' : ''}`} onClick={onToggle} aria-pressed={on} aria-label={`${on ? 'Unlink' : 'Link'} ${item.title}`}>
+      {url && <img src={url} alt="" />}
+      <span>{item.title}</span>
+    </button>
   );
 }

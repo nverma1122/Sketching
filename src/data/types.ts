@@ -40,7 +40,20 @@ export interface Richness {
 // ---------------------------------------------------------------------------
 // Composition guides: schematic drawings generated from a small spec.
 
-export type GuideTemplate = 'shopfront' | 'corner' | 'lane' | 'facade' | 'stall' | 'doorway' | 'street' | 'cafe';
+export type GuideTemplate =
+  | 'shopfront'
+  | 'corner'
+  | 'lane'
+  | 'facade'
+  | 'stall'
+  | 'doorway'
+  | 'street'
+  | 'cafe'
+  | 'waterfront'
+  | 'riverside'
+  | 'vista'
+  | 'house'
+  | 'steps';
 
 export interface GuideSpec {
   t: GuideTemplate;
@@ -48,7 +61,7 @@ export interface GuideSpec {
   floors?: number;
   /** Window bays across the façade (2–5). */
   bays?: number;
-  awning?: 'striped' | 'plain' | 'corrugated' | 'noren' | 'none';
+  awning?: 'striped' | 'plain' | 'corrugated' | 'noren' | 'tiled' | 'none';
   sign?: 'fascia' | 'projecting' | 'both' | 'layered' | 'none';
   door?: 'left' | 'centre' | 'right';
   recessed?: boolean;
@@ -67,6 +80,22 @@ export interface GuideSpec {
   arch?: boolean;
   tiles?: boolean;
   figure?: boolean;
+  /** Utility pole with tangled wires on this side. */
+  pole?: 'left' | 'right';
+  /** Script used on signs, drawn as glyph shapes. */
+  script?: 'kanji' | 'devanagari' | 'latin';
+  /** Sandwich board on the pavement. */
+  aframe?: boolean;
+  bicycle?: boolean;
+  /** Small delivery truck parked in front. */
+  truck?: boolean;
+  /** House: outside stair to the upper door. */
+  stair?: boolean;
+  /** House: number of stacked roof tiers (Kerala style). */
+  tiers?: number;
+  palms?: boolean;
+  /** Riverside / waterfront: a church spire or tower. */
+  spire?: boolean;
 }
 
 // ---------------------------------------------------------------------------

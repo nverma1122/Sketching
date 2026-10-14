@@ -494,7 +494,7 @@ export const laneScenes = [
     twenty: 'potted plants, bicycles, cables and hatching under the eaves',
     long: 'colour, timber grain on the near doors and a figure walking away',
     constraint: 'Use red only for the lanterns.',
-    guide: { t: 'lane', lamp: true, plants: 1, cables: true, shutters: false },
+    guide: { t: 'lane', lamp: true, plants: 1, cables: true, shutters: false, bicycle: true },
     photo: ['japanese alley', 'kyoto alley', 'tokyo alley'],
     tags: ['japanese', 'alley'],
   }),

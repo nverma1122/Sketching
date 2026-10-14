@@ -5,6 +5,7 @@ import { cornerScenes } from './corners';
 import { facadeScenes } from './facades';
 import { laneScenes } from './lanes';
 import { stallScenes } from './stalls';
+import { sketchbookScenes } from './sketchbook';
 
 /**
  * The complete scene library. To add a scene, append an entry to any of the
@@ -18,6 +19,7 @@ export const PROMPTS: SketchPrompt[] = [
   ...facadeScenes,
   ...laneScenes,
   ...stallScenes,
+  ...sketchbookScenes,
 ];
 
 const BY_ID = new Map(PROMPTS.map((p) => [p.id, p]));
