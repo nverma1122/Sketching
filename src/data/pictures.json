@@ -96,6 +96,14 @@
   "h": 1100
  },
  {
+  "id": "quick-13",
+  "level": "quick",
+  "medium": "ink-wash",
+  "title": "Stacked steel tiffin carrier",
+  "w": 1100,
+  "h": 1100
+ },
+ {
   "id": "quick-14",
   "level": "quick",
   "medium": "watercolour",
@@ -112,6 +120,14 @@
   "h": 1100
  },
  {
+  "id": "quick-16",
+  "level": "quick",
+  "medium": "ink",
+  "title": "Single wooden rowing boat pulled up on the shore",
+  "w": 1100,
+  "h": 1100
+ },
+ {
   "id": "quick-17",
   "level": "quick",
   "medium": "pencil",
@@ -124,6 +140,22 @@
   "level": "quick",
   "medium": "ink-wash",
   "title": "Croissant and a cup of coffee",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-19",
+  "level": "quick",
+  "medium": "watercolour",
+  "title": "Noren curtain hanging in a doorway",
+  "w": 1100,
+  "h": 1100
+ },
+ {
+  "id": "quick-20",
+  "level": "quick",
+  "medium": "gouache",
+  "title": "Small balcony railing with three flower pots",
   "w": 1100,
   "h": 1100
  },

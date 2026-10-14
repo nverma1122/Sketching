@@ -65,7 +65,7 @@ button {
 }
 .seg-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
 }
 .seg-row button {
   border: var(--border);

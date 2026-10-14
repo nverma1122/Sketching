@@ -2,9 +2,9 @@
 
 A minimal sketching companion. Choose **how long** you have and a **medium**, and the app shows one reference picture to sketch, with a timer.
 
-- **Lengths:** Quick (5–10 min, one small object) · Short (20–30 min, a small scene) · Long (about 1 hour, a full scene) · Deep (2+ hours, a rich, detailed scene).
+- **Lengths:** Quick (5–10 min, one small object) and Long (about 1 hour, a full scene). The app only offers lengths and media that have pictures; Short (20–30 min) and Deep (2+ hours) appear automatically once pictures for them are added.
 - **Media:** Ink · Pencil · Ink + wash · Watercolour · Gouache (or Any).
-- **Another one** picks a different picture, avoiding recent ones. If there is no picture for a choice yet, the app says so and shows the closest match.
+- **Another one** picks a different picture, avoiding recent ones. 
 - Choices are remembered on the device. No account, no tracking. Works offline after the first visit.
 
 Open it: **https://nverma1122.github.io/Sketching/**
