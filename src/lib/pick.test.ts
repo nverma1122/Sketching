@@ -1,18 +1,51 @@
-import { describe, expect, it } from 'vitest';
-import { existsSync } from 'node:fs';
-import { LEVELS, MEDIA, PICTURES, pictureSrc, type Picture } from '../data/pictures';
-import { pickPicture, pushRecent } from './pick';
+import { describe, expect, it } from "vitest";
+import { existsSync } from "node:fs";
+import {
+  CANVA,
+  LEVELS,
+  MEDIA,
+  PICTURES,
+  pictureSrc,
+  type Item,
+} from "../data/pictures";
+import { pickPicture, pushRecent } from "./pick";
 
 const seq = (vals: number[]) => {
   let i = 0;
   return () => vals[i++ % vals.length];
 };
 
-const P = (id: string, level: Picture['level'], medium: Picture['medium']): Picture => ({ id, level, medium, title: id, w: 1, h: 1 });
-const LIB = [P('q1', 'quick', 'ink'), P('q2', 'quick', 'ink'), P('q3', 'quick', 'pencil'), P('l1', 'long', 'watercolour'), P('l2', 'long', 'ink')];
+const P = (id: string, level: Item["level"], medium: Item["medium"]): Item => ({
+  id,
+  kind: "canva",
+  level,
+  medium,
+  title: id,
+  src: id,
+  large: id,
+  w: 1,
+  h: 1,
+});
+const PH = (id: string, level: Item["level"]): Item => ({
+  id,
+  kind: "photo",
+  level,
+  title: id,
+  src: id,
+  large: id,
+  w: 1,
+  h: 1,
+});
+const LIB = [
+  P("q1", "quick", "ink"),
+  P("q2", "quick", "ink"),
+  P("q3", "quick", "pencil"),
+  P("l1", "long", "watercolour"),
+  P("l2", "long", "ink"),
+];
 
-describe('picture library', () => {
-  it('has a file for every picture and valid labels', () => {
+describe("picture library", () => {
+  it("has a file for every picture and valid labels", () => {
     expect(PICTURES.length).toBeGreaterThan(0);
     const levels = LEVELS.map((l) => l.key);
     const media = MEDIA.map((m) => m.key);
@@ -26,41 +59,97 @@ describe('picture library', () => {
   });
 });
 
-describe('pickPicture', () => {
-  it('matches length and medium exactly when possible', () => {
+describe("pickPicture", () => {
+  it("matches length and medium exactly when possible", () => {
     for (let i = 0; i < 20; i++) {
-      const r = pickPicture(LIB, { level: 'quick', medium: 'ink' }, [], Math.random)!;
-      expect(r.picture.level).toBe('quick');
-      expect(r.picture.medium).toBe('ink');
+      const r = pickPicture(
+        LIB,
+        { level: "quick", medium: "ink" },
+        [],
+        Math.random,
+      )!;
+      expect(r.picture.level).toBe("quick");
+      expect(r.picture.medium).toBe("ink");
       expect(r.note).toBeUndefined();
     }
   });
 
-  it('never repeats the current picture when there is a choice', () => {
+  it("never repeats the current picture when there is a choice", () => {
     let recent: string[] = [];
-    let last = '';
+    let last = "";
     for (let i = 0; i < 30; i++) {
-      const r = pickPicture(LIB, { level: 'quick' }, recent, Math.random)!;
+      const r = pickPicture(LIB, { level: "quick" }, recent, Math.random)!;
       expect(r.picture.id).not.toBe(last);
       last = r.picture.id;
       recent = pushRecent(recent, last);
     }
   });
 
-  it('keeps the length and explains when the medium is missing', () => {
-    const r = pickPicture(LIB, { level: 'quick', medium: 'gouache' }, [], seq([0]))!;
-    expect(r.picture.level).toBe('quick');
-    expect(r.note).toMatch(/No gouache pictures at this length/);
+  it("keeps the length and explains when the medium is missing", () => {
+    const r = pickPicture(
+      LIB,
+      { level: "quick", medium: "gouache" },
+      [],
+      seq([0]),
+    )!;
+    expect(r.picture.level).toBe("quick");
+    expect(r.note).toMatch(/No gouache pictures at this length right now/);
   });
 
-  it('falls back to the nearest length and explains', () => {
-    const r = pickPicture(LIB, { level: 'deep', medium: 'watercolour' }, [], seq([0]))!;
-    expect(r.picture.id).toBe('l1');
-    expect(r.note).toMatch(/No deep pictures yet/);
+  it("falls back to the nearest length and explains", () => {
+    const r = pickPicture(
+      LIB,
+      { level: "deep", medium: "watercolour" },
+      [],
+      seq([0]),
+    )!;
+    expect(r.picture.id).toBe("l1");
+    expect(r.note).toMatch(/No deep pictures available right now/);
   });
 
-  it('returns the only match even if it was just shown', () => {
-    const r = pickPicture(LIB, { level: 'long', medium: 'watercolour' }, ['l1'], seq([0]))!;
-    expect(r.picture.id).toBe('l1');
+  it("returns the only match even if it was just shown", () => {
+    const r = pickPicture(
+      LIB,
+      { level: "long", medium: "watercolour" },
+      ["l1"],
+      seq([0]),
+    )!;
+    expect(r.picture.id).toBe("l1");
+  });
+
+  it("treats photos as matching any medium", () => {
+    const lib = [...LIB, PH("d1", "deep")];
+    const r = pickPicture(
+      lib,
+      { level: "deep", medium: "gouache" },
+      [],
+      seq([0]),
+    )!;
+    expect(r.picture.id).toBe("d1");
+    expect(r.note).toBeUndefined();
+  });
+
+  it("mixes Canva pictures and photos evenly even when photos outnumber them", () => {
+    const lib = [
+      P("q1", "quick", "ink"),
+      P("q2", "quick", "ink"),
+      ...Array.from({ length: 40 }, (_, i) => PH(`p${i}`, "quick")),
+    ];
+    let canva = 0;
+    let recent: string[] = [];
+    for (let i = 0; i < 400; i++) {
+      const r = pickPicture(lib, { level: "quick" }, recent)!;
+      if (r.picture.kind === "canva") canva++;
+      recent = pushRecent(recent, r.picture.id);
+    }
+    expect(canva).toBeGreaterThan(120);
+    expect(canva).toBeLessThan(280);
+  });
+});
+
+describe("bundled Canva items", () => {
+  it("mirror pictures.json", () => {
+    expect(CANVA).toHaveLength(PICTURES.length);
+    expect(CANVA.every((c) => c.kind === "canva" && c.medium)).toBe(true);
   });
 });

@@ -138,6 +138,19 @@ button {
   color: var(--ink-soft);
   font-size: var(--text-sm);
 }
+.meta .credit {
+  margin-top: var(--s-1);
+  font-size: var(--text-xs);
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+.meta .credit a {
+  color: inherit;
+}
+.card.busy .pic img {
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
 .meta .note {
   margin-top: var(--s-2);
   padding: var(--s-2) var(--s-3);

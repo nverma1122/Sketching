@@ -1,51 +1,34 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
+  CANVA,
   LEVELS,
   MEDIA,
-  PICTURES,
   levelInfo,
   mediumLabel,
-  pictureSrc,
+  type Item,
   type Level,
   type Medium,
 } from "./data/pictures";
-import { pickPicture, pushRecent, type Pick } from "./lib/pick";
+import { PHOTO_QUERIES } from "./data/photoQueries";
+import { searchPhotos } from "./lib/commons";
+import { pickPicture, pushRecent } from "./lib/pick";
 
 // ---------------------------------------------------------------------------
 // Small persistent preferences (per device). Storage may be unavailable.
 
-const KEY = "qcs.v3";
+const KEY = "qcs.v4";
 interface Saved {
   level: Level;
   medium: Medium | "any";
   recent: string[];
-  current?: string;
+  current?: Item;
 }
 const DEFAULTS: Saved = { level: "quick", medium: "any", recent: [] };
-
-// Only offer choices that actually have pictures; more appear as pictures are added.
-const LEVELS_AVAILABLE = LEVELS.filter((l) =>
-  PICTURES.some((p) => p.level === l.key),
-);
-const mediaFor = (level: Level) =>
-  MEDIA.filter((m) =>
-    PICTURES.some((p) => p.level === level && p.medium === m.key),
-  );
-const fitLevel = (level: Level): Level =>
-  LEVELS_AVAILABLE.some((l) => l.key === level)
-    ? level
-    : (LEVELS_AVAILABLE[0]?.key ?? level);
-const fitMedium = (level: Level, medium: Medium | "any"): Medium | "any" =>
-  medium !== "any" && mediaFor(level).some((m) => m.key === medium)
-    ? medium
-    : "any";
 
 function load(): Saved {
   try {
     const raw = localStorage.getItem(KEY);
-    const s: Saved = raw ? { ...DEFAULTS, ...JSON.parse(raw) } : DEFAULTS;
-    const level = fitLevel(s.level);
-    return { ...s, level, medium: fitMedium(level, s.medium) };
+    return raw ? { ...DEFAULTS, ...JSON.parse(raw) } : DEFAULTS;
   } catch {
     return DEFAULTS;
   }
@@ -68,51 +51,133 @@ const fmt = (ms: number) => {
     : `${m}:${String(sec).padStart(2, "0")}`;
 };
 
+const shuffle = <T,>(list: T[]) => {
+  const a = [...list];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+const emptyPools = (): Record<Level, Item[]> => ({
+  quick: [],
+  short: [],
+  long: [],
+  deep: [],
+});
+
 // ---------------------------------------------------------------------------
 
 export function App() {
   const [state, setState] = useState<Saved>(load);
   const [note, setNote] = useState<string | undefined>();
+  const [loading, setLoading] = useState(false);
   const [zoom, setZoom] = useState(false);
+
+  // Wikimedia Commons photos found so far, per length. Each "Another one"
+  // searches one more phrase (cached for a week) so the pool keeps growing.
+  const photos = useRef(emptyPools());
+  const queue = useRef<Record<Level, string[]>>({
+    quick: shuffle(PHOTO_QUERIES.quick),
+    short: shuffle(PHOTO_QUERIES.short),
+    long: shuffle(PHOTO_QUERIES.long),
+    deep: shuffle(PHOTO_QUERIES.deep),
+  });
+  const broken = useRef(new Set<string>());
+  const request = useRef(0);
 
   useEffect(() => save(state), [state]);
 
-  const picture = useMemo(
-    () => PICTURES.find((p) => p.id === state.current),
-    [state.current],
-  );
+  const loadMore = useCallback(async (level: Level) => {
+    const q = queue.current[level].shift();
+    if (!q) return false;
+    try {
+      const found = await searchPhotos(q, level);
+      const have = new Set(photos.current[level].map((p) => p.id));
+      photos.current[level] = [
+        ...photos.current[level],
+        ...found.filter((p) => !have.has(p.id)),
+      ];
+      return true;
+    } catch (e) {
+      queue.current[level].push(q); // try this phrase again later
+      throw e;
+    }
+  }, []);
+
+  const pool = () =>
+    [...CANVA, ...Object.values(photos.current).flat()].filter(
+      (p) => !broken.current.has(p.id),
+    );
 
   const choose = useCallback(
-    (wantLevel: Level, wantMedium: Medium | "any", recent: string[]) => {
-      const level = fitLevel(wantLevel);
-      const medium = fitMedium(level, wantMedium);
-      const res: Pick | null = pickPicture(
-        PICTURES,
-        { level, medium: medium === "any" ? undefined : medium },
-        recent,
+    async (level: Level, medium: Medium | "any", recent: string[]) => {
+      const id = ++request.current;
+      const want = { level, medium: medium === "any" ? undefined : medium };
+      setState((s) => ({ ...s, level, medium }));
+
+      let res = pickPicture(pool(), want, recent);
+      let failed = false;
+      if (!res || res.note) {
+        // Nothing for this length yet: wait for photos (a couple of phrases at most).
+        setLoading(true);
+        for (let tries = 0; tries < 3 && (!res || res.note); tries++) {
+          try {
+            if (!(await loadMore(level))) break;
+          } catch {
+            failed = true;
+            break;
+          }
+          res = pickPicture(pool(), want, recent);
+        }
+        if (id !== request.current) return;
+        setLoading(false);
+      } else {
+        // Grow the photo pool quietly in the background.
+        loadMore(level).catch(() => {});
+      }
+      if (id !== request.current) return;
+      setNote(
+        res?.note && failed
+          ? `Couldn’t reach Wikimedia Commons. ${res.note}`
+          : res?.note,
       );
-      setNote(res?.note);
       setState((s) => ({
         ...s,
         level,
         medium,
-        current: res?.picture.id,
+        current: res?.picture,
         recent: res ? pushRecent(recent, res.picture.id) : recent,
       }));
     },
-    [],
+    [loadMore],
   );
 
-  // First visit, or the remembered picture no longer exists.
+  // First visit, or nothing remembered.
   useEffect(() => {
-    if (!picture) choose(state.level, state.medium, state.recent);
+    if (!state.current) void choose(state.level, state.medium, state.recent);
+    else loadMore(state.level).catch(() => {});
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const setLevel = (level: Level) => choose(level, state.medium, state.recent);
+  const picture = state.current;
+  const setLevel = (level: Level) =>
+    void choose(level, state.medium, state.recent);
   const setMedium = (medium: Medium | "any") =>
-    choose(state.level, medium, state.recent);
-  const another = () => choose(state.level, state.medium, state.recent);
-  const media = mediaFor(state.level);
+    void choose(state.level, medium, state.recent);
+  const another = () => void choose(state.level, state.medium, state.recent);
+  const onBroken = () => {
+    if (!picture) return;
+    broken.current.add(picture.id);
+    another();
+  };
+
+  const kindLabel = (p: Item) =>
+    p.kind === "photo"
+      ? state.medium === "any"
+        ? "Photo · any medium"
+        : `Photo · sketch it in ${mediumLabel(state.medium).toLowerCase()}`
+      : mediumLabel(p.medium!);
 
   return (
     <div className="app">
@@ -124,11 +189,8 @@ export function App() {
       <section className="controls" aria-label="Choose">
         <fieldset className="seg">
           <legend>How long?</legend>
-          <div
-            className="seg-row seg-4"
-            style={{ ["--cols" as string]: LEVELS_AVAILABLE.length }}
-          >
-            {LEVELS_AVAILABLE.map((l) => (
+          <div className="seg-row seg-4">
+            {LEVELS.map((l) => (
               <button
                 key={l.key}
                 type="button"
@@ -142,61 +204,96 @@ export function App() {
             ))}
           </div>
         </fieldset>
-        {media.length > 1 && (
-          <fieldset className="seg">
-            <legend>Medium</legend>
-            <div className="seg-row chips">
-              {[{ key: "any" as const, label: "Any" }, ...media].map((m) => (
-                <button
-                  key={m.key}
-                  type="button"
-                  className={state.medium === m.key ? "on" : ""}
-                  aria-pressed={state.medium === m.key}
-                  onClick={() => setMedium(m.key)}
-                >
-                  {m.label}
-                </button>
-              ))}
-            </div>
-          </fieldset>
-        )}
+        <fieldset className="seg">
+          <legend>Medium</legend>
+          <div className="seg-row chips">
+            {[{ key: "any" as const, label: "Any" }, ...MEDIA].map((m) => (
+              <button
+                key={m.key}
+                type="button"
+                className={state.medium === m.key ? "on" : ""}
+                aria-pressed={state.medium === m.key}
+                onClick={() => setMedium(m.key)}
+              >
+                {m.label}
+              </button>
+            ))}
+          </div>
+        </fieldset>
       </section>
 
       {picture ? (
-        <main className="card">
+        <main className={`card ${loading ? "busy" : ""}`} aria-busy={loading}>
           <button
             className="pic"
             onClick={() => setZoom(true)}
             aria-label="View picture full screen"
           >
             <img
-              src={pictureSrc(picture)}
-              alt={`${picture.title} — ${mediumLabel(picture.medium)}`}
+              key={picture.id}
+              src={picture.src}
+              alt={picture.title}
               width={picture.w}
               height={picture.h}
+              onError={onBroken}
+              referrerPolicy="no-referrer"
             />
           </button>
           <div className="meta">
             <h2>{picture.title}</h2>
             <p>
-              {mediumLabel(picture.medium)} · {levelInfo(picture.level).label} (
+              {kindLabel(picture)} · {levelInfo(picture.level).label} (
               {levelInfo(picture.level).time})
             </p>
-            {note && <p className="note">{note}</p>}
+            {picture.credit && (
+              <p className="credit">
+                Photo: {picture.credit.artist} ·{" "}
+                {picture.credit.licenseUrl ? (
+                  <a
+                    href={picture.credit.licenseUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {picture.credit.license}
+                  </a>
+                ) : (
+                  picture.credit.license
+                )}{" "}
+                ·{" "}
+                <a href={picture.credit.page} target="_blank" rel="noreferrer">
+                  Wikimedia Commons
+                </a>
+              </p>
+            )}
+            {loading && <p className="note">Finding photos…</p>}
+            {!loading && note && <p className="note">{note}</p>}
           </div>
           <div className="actions">
-            <button className="btn primary" onClick={another}>
+            <button
+              className="btn primary"
+              onClick={another}
+              disabled={loading}
+            >
               Another one
             </button>
           </div>
           <Timer
-            key={picture.id + picture.level}
-            minutes={levelInfo(picture.level).minutes}
+            key={picture.id + state.level}
+            minutes={levelInfo(state.level).minutes}
           />
         </main>
       ) : (
         <main className="card empty">
-          <p>No pictures yet.</p>
+          <p>
+            {loading
+              ? "Finding photos…"
+              : "No pictures available right now. Check your connection and try again."}
+          </p>
+          {!loading && (
+            <button className="btn primary" onClick={another}>
+              Try again
+            </button>
+          )}
         </main>
       )}
 
@@ -207,7 +304,11 @@ export function App() {
           aria-label={picture.title}
           onClick={() => setZoom(false)}
         >
-          <img src={pictureSrc(picture)} alt={picture.title} />
+          <img
+            src={picture.large}
+            alt={picture.title}
+            referrerPolicy="no-referrer"
+          />
           <button className="btn close" onClick={() => setZoom(false)}>
             Close
           </button>
@@ -215,7 +316,8 @@ export function App() {
       )}
 
       <footer className="foot">
-        Pictures generated in Canva for this app.
+        Pictures generated in Canva for this app · photos from Wikimedia
+        Commons, credited under each photo.
       </footer>
     </div>
   );
