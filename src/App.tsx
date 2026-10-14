@@ -1,29 +1,22 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import {
-  CANVA,
-  LEVELS,
-  MEDIA,
-  levelInfo,
-  mediumLabel,
-  type Item,
-  type Level,
-  type Medium,
-} from "./data/pictures";
-import { PHOTO_QUERIES } from "./data/photoQueries";
-import { searchPhotos } from "./lib/commons";
-import { pickPicture, pushRecent } from "./lib/pick";
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { CANVA, LEVELS, MEDIA, levelInfo, mediumLabel, type Item, type Level, type Medium } from './data/pictures';
+import { PHOTO_QUERIES } from './data/photoQueries';
+import { searchPhotos } from './lib/commons';
+import { searchOpenverse } from './lib/openverse';
+import { deleteMine, listMine, prepareImage, putMine, toItem, type MineRecord } from './lib/mine';
+import { pickPicture, pushRecent } from './lib/pick';
 
 // ---------------------------------------------------------------------------
 // Small persistent preferences (per device). Storage may be unavailable.
 
-const KEY = "qcs.v4";
+const KEY = 'qcs.v4';
 interface Saved {
   level: Level;
-  medium: Medium | "any";
+  medium: Medium | 'any';
   recent: string[];
   current?: Item;
 }
-const DEFAULTS: Saved = { level: "quick", medium: "any", recent: [] };
+const DEFAULTS: Saved = { level: 'quick', medium: 'any', recent: [] };
 
 function load(): Saved {
   try {
@@ -46,9 +39,7 @@ const fmt = (ms: number) => {
   const h = Math.floor(s / 3600);
   const m = Math.floor((s % 3600) / 60);
   const sec = s % 60;
-  return h
-    ? `${h}:${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`
-    : `${m}:${String(sec).padStart(2, "0")}`;
+  return h ? `${h}:${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}` : `${m}:${String(sec).padStart(2, '0')}`;
 };
 
 const shuffle = <T,>(list: T[]) => {
@@ -67,6 +58,20 @@ const emptyPools = (): Record<Level, Item[]> => ({
   deep: [],
 });
 
+interface Search {
+  source: 'commons' | 'openverse';
+  query: string;
+}
+/** Each length's phrases in random order, alternating between the two libraries. */
+const searchesFor = (level: Level): Search[] => {
+  const a = shuffle(PHOTO_QUERIES[level]);
+  const b = shuffle(PHOTO_QUERIES[level]);
+  return a.flatMap((q, i): Search[] => [
+    { source: i % 2 ? 'openverse' : 'commons', query: q },
+    { source: i % 2 ? 'commons' : 'openverse', query: b[i] },
+  ]);
+};
+
 // ---------------------------------------------------------------------------
 
 export function App() {
@@ -75,15 +80,21 @@ export function App() {
   const [loading, setLoading] = useState(false);
   const [zoom, setZoom] = useState(false);
 
-  // Wikimedia Commons photos found so far, per length. Each "Another one"
-  // searches one more phrase (cached for a week) so the pool keeps growing.
+  const [mine, setMine] = useState<Item[]>([]);
+  const [adding, setAdding] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  // Photos found so far, per length, from Wikimedia Commons and Openverse.
+  // Each "Another one" searches one more phrase (cached for a week), taking
+  // the two libraries in turn, so the pool keeps growing.
   const photos = useRef(emptyPools());
-  const queue = useRef<Record<Level, string[]>>({
-    quick: shuffle(PHOTO_QUERIES.quick),
-    short: shuffle(PHOTO_QUERIES.short),
-    long: shuffle(PHOTO_QUERIES.long),
-    deep: shuffle(PHOTO_QUERIES.deep),
+  const queue = useRef<Record<Level, Search[]>>({
+    quick: searchesFor('quick'),
+    short: searchesFor('short'),
+    long: searchesFor('long'),
+    deep: searchesFor('deep'),
   });
+  const mineRef = useRef<Item[]>([]);
   const broken = useRef(new Set<string>());
   const request = useRef(0);
 
@@ -93,12 +104,9 @@ export function App() {
     const q = queue.current[level].shift();
     if (!q) return false;
     try {
-      const found = await searchPhotos(q, level);
+      const found = await (q.source === 'commons' ? searchPhotos : searchOpenverse)(q.query, level);
       const have = new Set(photos.current[level].map((p) => p.id));
-      photos.current[level] = [
-        ...photos.current[level],
-        ...found.filter((p) => !have.has(p.id)),
-      ];
+      photos.current[level] = [...photos.current[level], ...found.filter((p) => !have.has(p.id))];
       return true;
     } catch (e) {
       queue.current[level].push(q); // try this phrase again later
@@ -106,31 +114,29 @@ export function App() {
     }
   }, []);
 
-  const pool = () =>
-    [...CANVA, ...Object.values(photos.current).flat()].filter(
-      (p) => !broken.current.has(p.id),
-    );
+  const pool = () => [...CANVA, ...mineRef.current, ...Object.values(photos.current).flat()].filter((p) => !broken.current.has(p.id));
 
   const choose = useCallback(
-    async (level: Level, medium: Medium | "any", recent: string[]) => {
+    async (level: Level, medium: Medium | 'any', recent: string[]) => {
       const id = ++request.current;
-      const want = { level, medium: medium === "any" ? undefined : medium };
+      const want = { level, medium: medium === 'any' ? undefined : medium };
       setState((s) => ({ ...s, level, medium }));
 
       let res = pickPicture(pool(), want, recent);
       let failed = false;
       if (!res || res.note) {
-        // Nothing for this length yet: wait for photos (a couple of phrases at most).
+        // Nothing for this length yet: wait for photos (a few phrases at most).
         setLoading(true);
-        for (let tries = 0; tries < 3 && (!res || res.note); tries++) {
+        let errors = 0;
+        for (let tries = 0; tries < 4 && (!res || res.note); tries++) {
           try {
             if (!(await loadMore(level))) break;
           } catch {
-            failed = true;
-            break;
+            errors++;
           }
           res = pickPicture(pool(), want, recent);
         }
+        failed = errors > 0 && (!res || !!res.note);
         if (id !== request.current) return;
         setLoading(false);
       } else {
@@ -138,11 +144,7 @@ export function App() {
         loadMore(level).catch(() => {});
       }
       if (id !== request.current) return;
-      setNote(
-        res?.note && failed
-          ? `Couldn’t reach Wikimedia Commons. ${res.note}`
-          : res?.note,
-      );
+      setNote(res?.note && failed ? `Couldn’t reach the photo libraries. ${res.note}` : res?.note);
       setState((s) => ({
         ...s,
         level,
@@ -154,17 +156,67 @@ export function App() {
     [loadMore],
   );
 
-  // First visit, or nothing remembered.
+  // Own pictures live in IndexedDB; their display URLs are made per visit.
+  const urls = useRef(new Map<string, string>());
+  const setMineItems = (items: Item[]) => {
+    mineRef.current = items;
+    setMine(items);
+  };
+  const addRecord = (r: MineRecord) => {
+    const url = URL.createObjectURL(r.blob);
+    urls.current.set(r.id, url);
+    return toItem(r, url);
+  };
+
   useEffect(() => {
-    if (!state.current) void choose(state.level, state.medium, state.recent);
-    else loadMore(state.level).catch(() => {});
+    let first = !state.current;
+    listMine()
+      .then((records) => {
+        const items = records.sort((a, b) => a.added - b.added).map(addRecord);
+        setMineItems(items);
+        // A remembered own picture needs its fresh URL (or is gone).
+        if (state.current?.kind === 'mine') {
+          const again = items.find((i) => i.id === state.current!.id);
+          if (again) setState((s) => ({ ...s, current: again }));
+          else first = true;
+        }
+      })
+      .catch(() => {
+        if (state.current?.kind === 'mine') first = true;
+      })
+      .finally(() => {
+        setReady(true);
+        if (first) void choose(state.level, state.medium, state.recent);
+        else loadMore(state.level).catch(() => {});
+      });
+    const map = urls.current;
+    return () => map.forEach((u) => URL.revokeObjectURL(u));
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const picture = state.current;
-  const setLevel = (level: Level) =>
-    void choose(level, state.medium, state.recent);
-  const setMedium = (medium: Medium | "any") =>
-    void choose(state.level, medium, state.recent);
+  const saveMine = async (r: MineRecord) => {
+    await putMine(r);
+    navigator.storage?.persist?.().catch(() => {});
+    const item = addRecord(r);
+    setMineItems([...mineRef.current, item]);
+    setAdding(false);
+    setNote(undefined);
+    setState((s) => ({ ...s, level: r.level, current: item, recent: pushRecent(s.recent, item.id) }));
+  };
+
+  const removeMine = async (item: Item) => {
+    if (!window.confirm(`Remove “${item.title}” from your pictures on this device?`)) return;
+    await deleteMine(item.id).catch(() => {});
+    const url = urls.current.get(item.id);
+    if (url) URL.revokeObjectURL(url);
+    urls.current.delete(item.id);
+    setMineItems(mineRef.current.filter((i) => i.id !== item.id));
+    another();
+  };
+
+  // Until own pictures load, a remembered one has no valid URL yet.
+  const picture = state.current?.kind === 'mine' && !mine.some((m) => m.id === state.current!.id) ? undefined : state.current;
+  const setLevel = (level: Level) => void choose(level, state.medium, state.recent);
+  const setMedium = (medium: Medium | 'any') => void choose(state.level, medium, state.recent);
   const another = () => void choose(state.level, state.medium, state.recent);
   const onBroken = () => {
     if (!picture) return;
@@ -172,12 +224,11 @@ export function App() {
     another();
   };
 
-  const kindLabel = (p: Item) =>
-    p.kind === "photo"
-      ? state.medium === "any"
-        ? "Photo · any medium"
-        : `Photo · sketch it in ${mediumLabel(state.medium).toLowerCase()}`
-      : mediumLabel(p.medium!);
+  const kindLabel = (p: Item) => {
+    const what = p.kind === 'mine' ? 'My picture' : p.kind === 'photo' ? 'Photo' : '';
+    if (p.medium) return what ? `${what} · ${mediumLabel(p.medium)}` : mediumLabel(p.medium);
+    return state.medium === 'any' ? `${what} · any medium` : `${what} · sketch it in ${mediumLabel(state.medium).toLowerCase()}`;
+  };
 
   return (
     <div className="app">
@@ -194,7 +245,7 @@ export function App() {
               <button
                 key={l.key}
                 type="button"
-                className={state.level === l.key ? "on" : ""}
+                className={state.level === l.key ? 'on' : ''}
                 aria-pressed={state.level === l.key}
                 onClick={() => setLevel(l.key)}
               >
@@ -207,11 +258,11 @@ export function App() {
         <fieldset className="seg">
           <legend>Medium</legend>
           <div className="seg-row chips">
-            {[{ key: "any" as const, label: "Any" }, ...MEDIA].map((m) => (
+            {[{ key: 'any' as const, label: 'Any' }, ...MEDIA].map((m) => (
               <button
                 key={m.key}
                 type="button"
-                className={state.medium === m.key ? "on" : ""}
+                className={state.medium === m.key ? 'on' : ''}
                 aria-pressed={state.medium === m.key}
                 onClick={() => setMedium(m.key)}
               >
@@ -223,45 +274,28 @@ export function App() {
       </section>
 
       {picture ? (
-        <main className={`card ${loading ? "busy" : ""}`} aria-busy={loading}>
-          <button
-            className="pic"
-            onClick={() => setZoom(true)}
-            aria-label="View picture full screen"
-          >
-            <img
-              key={picture.id}
-              src={picture.src}
-              alt={picture.title}
-              width={picture.w}
-              height={picture.h}
-              onError={onBroken}
-              referrerPolicy="no-referrer"
-            />
+        <main className={`card ${loading ? 'busy' : ''}`} aria-busy={loading}>
+          <button className="pic" onClick={() => setZoom(true)} aria-label="View picture full screen">
+            <img key={picture.id} src={picture.src} alt={picture.title} width={picture.w} height={picture.h} onError={onBroken} referrerPolicy="no-referrer" />
           </button>
           <div className="meta">
             <h2>{picture.title}</h2>
             <p>
-              {kindLabel(picture)} · {levelInfo(picture.level).label} (
-              {levelInfo(picture.level).time})
+              {kindLabel(picture)} · {levelInfo(picture.level).label} ({levelInfo(picture.level).time})
             </p>
             {picture.credit && (
               <p className="credit">
-                Photo: {picture.credit.artist} ·{" "}
+                Photo: {picture.credit.artist} ·{' '}
                 {picture.credit.licenseUrl ? (
-                  <a
-                    href={picture.credit.licenseUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={picture.credit.licenseUrl} target="_blank" rel="noreferrer">
                     {picture.credit.license}
                   </a>
                 ) : (
                   picture.credit.license
-                )}{" "}
-                ·{" "}
+                )}{' '}
+                ·{' '}
                 <a href={picture.credit.page} target="_blank" rel="noreferrer">
-                  Wikimedia Commons
+                  {picture.credit.source}
                 </a>
               </p>
             )}
@@ -269,27 +303,21 @@ export function App() {
             {!loading && note && <p className="note">{note}</p>}
           </div>
           <div className="actions">
-            <button
-              className="btn primary"
-              onClick={another}
-              disabled={loading}
-            >
+            <button className="btn primary" onClick={another} disabled={loading}>
               Another one
             </button>
+            {picture.kind === 'mine' && (
+              <button className="btn quiet" onClick={() => void removeMine(picture)}>
+                Remove
+              </button>
+            )}
           </div>
-          <Timer
-            key={picture.id + state.level}
-            minutes={levelInfo(state.level).minutes}
-          />
+          <Timer key={picture.id + state.level} minutes={levelInfo(state.level).minutes} />
         </main>
       ) : (
         <main className="card empty">
-          <p>
-            {loading
-              ? "Finding photos…"
-              : "No pictures available right now. Check your connection and try again."}
-          </p>
-          {!loading && (
+          <p>{loading || !ready ? 'Finding pictures…' : 'No pictures available right now. Check your connection and try again.'}</p>
+          {!loading && ready && (
             <button className="btn primary" onClick={another}>
               Try again
             </button>
@@ -298,32 +326,140 @@ export function App() {
       )}
 
       {zoom && picture && (
-        <div
-          className="zoom"
-          role="dialog"
-          aria-label={picture.title}
-          onClick={() => setZoom(false)}
-        >
-          <img
-            src={picture.large}
-            alt={picture.title}
-            referrerPolicy="no-referrer"
-          />
+        <div className="zoom" role="dialog" aria-label={picture.title} onClick={() => setZoom(false)}>
+          <img src={picture.large} alt={picture.title} referrerPolicy="no-referrer" />
           <button className="btn close" onClick={() => setZoom(false)}>
             Close
           </button>
         </div>
       )}
 
-      <footer className="foot">
-        Pictures generated in Canva for this app · photos from Wikimedia
-        Commons, credited under each photo.
-      </footer>
+      <section className="mine">
+        <button className="btn" onClick={() => setAdding(true)}>
+          + Add my own picture
+        </button>
+        <p className="small">
+          {mine.length ? `You have ${mine.length} picture${mine.length === 1 ? '' : 's'} saved` : 'Your own photos or screenshots'} — kept only on this device,
+          never uploaded. They come up alongside the other pictures.
+        </p>
+      </section>
+
+      {adding && <AddPicture level={state.level} medium={state.medium} onSave={saveMine} onCancel={() => setAdding(false)} />}
+
+      <footer className="foot">Pictures generated in Canva for this app · photos from Wikimedia Commons and Openverse, credited under each photo.</footer>
     </div>
   );
 }
 
 // ---------------------------------------------------------------------------
+
+function AddPicture({
+  level: startLevel,
+  medium: startMedium,
+  onSave,
+  onCancel,
+}: {
+  level: Level;
+  medium: Medium | 'any';
+  onSave: (r: MineRecord) => Promise<void>;
+  onCancel: () => void;
+}) {
+  const [file, setFile] = useState<File | undefined>();
+  const [preview, setPreview] = useState<string | undefined>();
+  const [level, setLevel] = useState<Level>(startLevel);
+  const [medium, setMedium] = useState<Medium | 'any'>(startMedium);
+  const [title, setTitle] = useState('');
+  const [error, setError] = useState<string | undefined>();
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    if (!file) return;
+    const url = URL.createObjectURL(file);
+    setPreview(url);
+    return () => URL.revokeObjectURL(url);
+  }, [file]);
+
+  const pickFile = (f?: File) => {
+    setError(undefined);
+    setFile(f);
+    if (f && !title)
+      setTitle(
+        f.name
+          .replace(/\.[a-z0-9]+$/i, '')
+          .replace(/[_-]+/g, ' ')
+          .slice(0, 80),
+      );
+  };
+
+  const save = async () => {
+    if (!file) return;
+    setBusy(true);
+    setError(undefined);
+    try {
+      const { blob, w, h } = await prepareImage(file);
+      await onSave({
+        id: `m${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`,
+        level,
+        medium: medium === 'any' ? undefined : medium,
+        title: title.trim() || 'My picture',
+        blob,
+        w,
+        h,
+        added: Date.now(),
+      });
+    } catch (e) {
+      setError((e as Error).message || 'That picture could not be saved.');
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="sheet" role="dialog" aria-modal="true" aria-label="Add my own picture">
+      <div className="sheet-body">
+        <h2>Add my own picture</h2>
+        <label className="file">
+          <input type="file" accept="image/*" onChange={(e) => pickFile(e.target.files?.[0])} />
+          {preview ? <img src={preview} alt="Chosen picture" /> : <span>Choose a picture or take a photo</span>}
+        </label>
+        <label className="field">
+          <span>Name</span>
+          <input type="text" value={title} maxLength={80} placeholder="e.g. Corner tea stall" onChange={(e) => setTitle(e.target.value)} />
+        </label>
+        <fieldset className="seg">
+          <legend>How long would it take?</legend>
+          <div className="seg-row seg-4">
+            {LEVELS.map((l) => (
+              <button key={l.key} type="button" className={level === l.key ? 'on' : ''} aria-pressed={level === l.key} onClick={() => setLevel(l.key)}>
+                <strong>{l.label}</strong>
+                <span>{l.time}</span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
+        <fieldset className="seg">
+          <legend>Medium</legend>
+          <div className="seg-row chips">
+            {[{ key: 'any' as const, label: 'Any' }, ...MEDIA].map((m) => (
+              <button key={m.key} type="button" className={medium === m.key ? 'on' : ''} aria-pressed={medium === m.key} onClick={() => setMedium(m.key)}>
+                {m.label}
+              </button>
+            ))}
+          </div>
+        </fieldset>
+        <p className="small">Saved only in this browser on this device. It is never uploaded or added to the public site.</p>
+        {error && <p className="note">{error}</p>}
+        <div className="actions">
+          <button className="btn primary" onClick={() => void save()} disabled={!file || busy}>
+            {busy ? 'Saving…' : 'Save'}
+          </button>
+          <button className="btn quiet" onClick={onCancel} disabled={busy}>
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function Timer({ minutes }: { minutes: number }) {
   const total = minutes * 60_000;
@@ -349,8 +485,8 @@ function Timer({ minutes }: { minutes: number }) {
   const done = left <= 0;
 
   return (
-    <div className={`timer ${done ? "done" : ""}`} aria-live="polite">
-      <span className="clock">{done ? "Time’s up" : fmt(left)}</span>
+    <div className={`timer ${done ? 'done' : ''}`} aria-live="polite">
+      <span className="clock">{done ? 'Time’s up' : fmt(left)}</span>
       <div className="timer-btns">
         {running ? (
           <button className="btn" onClick={() => setRunning(false)}>
@@ -358,7 +494,7 @@ function Timer({ minutes }: { minutes: number }) {
           </button>
         ) : (
           <button className="btn" onClick={start}>
-            {left === total ? "Start timer" : done ? "Again" : "Resume"}
+            {left === total ? 'Start timer' : done ? 'Again' : 'Resume'}
           </button>
         )}
         {left !== total && !running && (
@@ -367,11 +503,7 @@ function Timer({ minutes }: { minutes: number }) {
           </button>
         )}
       </div>
-      {done && (
-        <p className="small">
-          Keep going if you like — the timer is only a guide.
-        </p>
-      )}
+      {done && <p className="small">Keep going if you like — the timer is only a guide.</p>}
     </div>
   );
 }
