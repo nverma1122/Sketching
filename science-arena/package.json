@@ -1,0 +1,33 @@
+{
+  "name": "science-arena",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SCIENCE ARENA — gamified Grade 9 science competition preparation (MVPP & VVM).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b",
+    "test": "vitest run",
+    "validate-bank": "vitest run src/content/bank.test.ts",
+    "e2e": "node tests/e2e.mjs",
+    "ai-server": "node server/index.mjs"
+  },
+  "dependencies": {
+    "chart.js": "^4.6.1",
+    "idb": "^8.0.4",
+    "katex": "^0.16.47",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "typescript": "5.9",
+    "vite": "^7.3.7",
+    "vitest": "^3.2.7"
+  }
+}
