@@ -63,7 +63,7 @@ await check('dashboard shows title, level ring and 7 sections', async () => {
 });
 await check('every navigation link opens its page', async () => {
   for (const [hash, heading] of [['learn', 'My Learning'], ['practice', 'Practice Arena'], ['olympiad', 'Olympiad Challenge'], ['iq', 'Science IQ'], ['mistakes', 'Mistake Master'], ['daily', 'Daily Mission'], ['progress', 'My Progress'], ['home', 'Welcome']]) {
-    await page.locator(`.nav a[href="#/${hash}"]`).click();
+    await page.locator(`.nav nav a[href="#/${hash}"]`).click();
     await page.locator('h1', { hasText: heading }).first().waitFor({ timeout: 3000 });
   }
 });
