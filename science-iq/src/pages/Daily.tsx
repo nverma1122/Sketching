@@ -40,7 +40,10 @@ export function Daily({ go }: { go: Go }) {
   const day = dayKey();
   const rec = useStore((s) => s.daily[day]);
   const streak = useStore((s) => streakOf(s));
-  const [running, setRunning] = useState(false);
+  // index of the first unanswered question when this run started (fixed for the whole run)
+  const [startAt, setStartAt] = useState<number | null>(null);
+  const running = startAt !== null;
+  const setRunning = (on: boolean) => setStartAt(on ? (getState().daily[day]?.answers.length ?? 0) : null);
   const [res, setRes] = useState<{ items: QuizItem[]; seconds: number } | null>(null);
   const history = useStore((s) => Object.entries(s.daily).sort().reverse().slice(0, 7));
 
@@ -64,12 +67,12 @@ export function Daily({ go }: { go: Go }) {
 
   if (running) {
     const r = getState().daily[day];
-    const remaining = r.qids.slice(r.answers.length);
+    const remaining = r.qids.slice(startAt!);
     const t0 = Date.now();
     return (
       <Quiz
         mode="daily"
-        title={`📅 Daily Mission · ${r.answers.length ? `resumed at ${r.answers.length + 1}/10` : day}`}
+        title={`📅 Daily Mission · ${startAt ? `resumed at ${startAt + 1}/10` : day}`}
         hints
         next={(h) => (remaining[h.length] ? BY_ID[remaining[h.length]] : null)}
         onAnswer={(it) => update((s) => {

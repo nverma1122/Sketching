@@ -131,7 +131,7 @@ await check('retry mistakes serves the mistaken questions; clearing needs two sp
   assert(m.right === 1 && !m.cleared, 'one immediate correct answer must not clear a mistake');
 });
 await check('“new questions on the same topics” avoids mistaken questions', async () => {
-  await page.goto(URL + '#/mistakes');
+  await page.locator('.nav nav a[href="#/mistakes"]').click(); // clicking the current section restarts it
   await page.getByRole('button', { name: /New questions on the same topics/ }).click();
   const id = await qid();
   const s = await store();

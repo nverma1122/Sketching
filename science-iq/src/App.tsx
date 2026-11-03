@@ -29,6 +29,7 @@ export default function App() {
   const xp = useStore((s) => s.xp);
   const [toast, setToast] = useState<string | null>(null);
   const [online, setOnline] = useState(navigator.onLine);
+  const [nonce, setNonce] = useState(0); // clicking the current section again restarts it
 
   useEffect(() => {
     const f = () => {
@@ -73,7 +74,7 @@ export default function App() {
         </a>
         <nav>
           {NAV.map((n) => (
-            <a key={n.path} href={`#/${n.path}`} className={base === n.path ? 'active' : ''}>
+            <a key={n.path} href={`#/${n.path}`} className={base === n.path ? 'active' : ''} onClick={() => route === n.path && setNonce(nonce + 1)}>
               <span className="ni">{n.icon}</span>
               <span className="nl">{n.label}</span>
             </a>
@@ -91,7 +92,7 @@ export default function App() {
           </div>
         </div>
       </aside>
-      <main className="main" key={route}>
+      <main className="main" key={`${route}#${nonce}`}>
         {base === 'home' && <Dashboard go={go} />}
         {base === 'learn' && <Learning go={go} arg={arg} />}
         {base === 'practice' && <Practice go={go} arg={arg} />}
