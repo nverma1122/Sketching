@@ -8,11 +8,11 @@
   "q": "A runner completes exactly one lap of a 400 m circular track in 80 s. What are her average speed and average velocity for the lap?",
   "options": [
    "5 m/s and 5 m/s",
-   "5 m/s and 0 m/s",
+   "2.5 m/s and 0 m/s",
    "0 m/s and 5 m/s",
-   "2.5 m/s and 0 m/s"
+   "5 m/s and 0 m/s"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Average speed = total distance ÷ time = 400 m ÷ 80 s = 5 m/s. Average velocity = displacement ÷ time; after one full lap she is back at the start, so displacement = 0 and average velocity = 0.",
   "misconception": "Speed and velocity are not interchangeable: velocity uses displacement (with direction), which is zero for a closed loop.",
   "hints": [
@@ -37,11 +37,11 @@
   "q": "A car starts from rest, accelerates uniformly and covers 100 m in the first 10 s. What is its speed at the end of the 10 s?",
   "options": [
    "10 m/s",
-   "20 m/s",
+   "40 m/s",
    "15 m/s",
-   "40 m/s"
+   "20 m/s"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "s = ½at² gives 100 = ½ × a × 100, so a = 2 m/s². Then v = at = 2 × 10 = 20 m/s. Shortcut: for uniform acceleration from rest, average speed = v/2, so v = 2 × (100/10) = 20 m/s.",
   "misconception": "10 m/s is the AVERAGE speed. Because the car started from rest, its final speed is twice the average.",
   "hints": [
@@ -65,12 +65,12 @@
   "type": "data",
   "q": "A cyclist’s velocity was recorded every 2 s (the velocity changes uniformly between readings). What is the total displacement in the 6 s?",
   "options": [
-   "24 m",
-   "32 m",
+   "16 m",
    "48 m",
-   "16 m"
+   "32 m",
+   "24 m"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Displacement = area under the velocity–time graph. 0–2 s: triangle ½ × 2 × 8 = 8 m; 2–4 s: rectangle 2 × 8 = 16 m; 4–6 s: triangle 8 m. Total = 32 m.",
   "misconception": "48 m comes from treating the velocity as 8 m/s for the whole 6 s; the speeding-up and slowing-down phases only count half.",
   "hints": [
@@ -114,8 +114,8 @@
   "options": [
    "45 m",
    "31.25 m",
-   "50 m",
-   "61.25 m"
+   "61.25 m",
+   "50 m"
   ],
   "answer": 0,
   "explanation": "If the fall lasts T seconds, distance in the last second = ½g[T² − (T − 1)²] = 5(2T − 1). Setting 5(2T − 1) = 25 gives T = 3 s. Height = ½ × 10 × 3² = 45 m. Check: in 2 s it falls 20 m, so the last second covers 45 − 20 = 25 m ✓.",
@@ -141,12 +141,12 @@
   "type": "reasoning",
   "q": "Train A (150 m long, 20 m/s) and train B (100 m long, 30 m/s) move towards each other on parallel tracks. How long do they take to pass each other completely, from fronts meeting to rears separating?",
   "options": [
-   "5 s",
-   "25 s",
+   "12.5 s",
    "8.3 s",
-   "12.5 s"
+   "5 s",
+   "25 s"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Relative speed for opposite directions = 20 + 30 = 50 m/s. To pass completely, the relative distance covered must equal the sum of the lengths, 250 m. Time = 250 ÷ 50 = 5 s.",
   "misconception": "25 s uses the relative speed for trains moving in the SAME direction (30 − 20 = 10 m/s).",
   "hints": [
@@ -170,12 +170,12 @@
   "type": "mcq",
   "q": "A car goes round a circular roundabout at a constant speed of 30 km/h. Which statement is correct?",
   "options": [
-   "Its velocity is constant, so it is not accelerating.",
-   "Its velocity changes because its direction changes, so it is accelerating.",
+   "Its acceleration is along its direction of motion.",
    "It is accelerating only if its speed increases.",
-   "Its acceleration is along its direction of motion."
+   "Its velocity changes because its direction changes, so it is accelerating.",
+   "Its velocity is constant, so it is not accelerating."
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Velocity is a vector. In circular motion the direction keeps changing, so velocity changes and the car accelerates even at constant speed. This (centripetal) acceleration points towards the centre of the circle, perpendicular to the motion.",
   "misconception": "Acceleration is not just “speeding up”; any change of velocity — including a change of direction — is acceleration.",
   "hints": [
@@ -227,12 +227,12 @@
   "type": "what-if",
   "q": "A car braking at 36 km/h stops in 10 m. If the driver brakes with exactly the same deceleration from 72 km/h, what is the braking distance?",
   "options": [
-   "20 m",
-   "40 m",
    "14.1 m",
-   "80 m"
+   "80 m",
+   "20 m",
+   "40 m"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "From v² = u² + 2as with v = 0: s = u²/(2a). For the same deceleration, s ∝ u². Doubling the speed multiplies the braking distance by 2² = 4, so 10 m × 4 = 40 m. This is why speed limits matter so much near schools.",
   "misconception": "Doubling speed does not double braking distance — kinetic energy (and so the braking distance) grows with the SQUARE of speed.",
   "hints": [
@@ -256,12 +256,12 @@
   "type": "mcq",
   "q": "What does the slope of a distance–time graph represent?",
   "options": [
-   "Acceleration",
    "Speed",
-   "Distance travelled",
-   "Force"
+   "Acceleration",
+   "Force",
+   "Distance travelled"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Slope = change in distance ÷ change in time = speed. A steeper line means a faster object; a horizontal line means the object is at rest. (The slope of a velocity–time graph gives acceleration.)",
   "misconception": "Students often mix this up with the velocity–time graph, whose slope is acceleration and whose area is displacement.",
   "hints": [
@@ -284,12 +284,12 @@
   "type": "statement",
   "q": "Consider the statements:\nI. A body can have zero velocity and a non-zero acceleration at the same instant.\nII. A body moving at constant speed cannot be accelerating.\nIII. Acceleration is always in the direction of motion.\nWhich are correct?",
   "options": [
+   "I, II and III",
    "Only I",
    "I and II",
-   "II and III",
-   "I, II and III"
+   "II and III"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "I is true: a ball thrown upward has v = 0 at the top but a = g downward. II is false: uniform circular motion has constant speed but is accelerated. III is false: a braking car accelerates opposite to its motion, and in circular motion acceleration is perpendicular to motion.",
   "misconception": "It is tempting to think “stopped” means “no acceleration”, but acceleration depends on how velocity is changing, not on its current value.",
   "hints": [
@@ -313,12 +313,12 @@
   "type": "application",
   "q": "A standing passenger falls backwards when a stationary bus starts suddenly. This is best explained by:",
   "options": [
-   "inertia of rest",
-   "inertia of motion",
    "Newton's third law",
-   "friction from the floor pushing backwards"
+   "friction from the floor pushing backwards",
+   "inertia of rest",
+   "inertia of motion"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The bus floor drags the passenger’s feet forward, but the upper body tends to stay at rest because of inertia (Newton’s first law). The body therefore appears to fall backwards relative to the bus.",
   "misconception": "No backward force pushes the passenger; the upper body simply resists the change from rest.",
   "hints": [
@@ -343,8 +343,8 @@
   "options": [
    "30 N",
    "3 N",
-   "300 N",
-   "0.3 N"
+   "0.3 N",
+   "300 N"
   ],
   "answer": 0,
   "explanation": "Change in momentum = m × v = 0.15 kg × 20 m/s = 3 kg m/s. Average force = Δp/Δt = 3/0.1 = 30 N.",
@@ -370,12 +370,12 @@
   "type": "application",
   "q": "A fielder pulls his hands back while catching a fast cricket ball. Why does this reduce the sting?",
   "options": [
-   "It reduces the ball’s change in momentum.",
    "It increases the time over which the momentum changes, reducing the force.",
+   "It reduces the ball’s change in momentum.",
    "It reduces the mass of the ball relative to the hands.",
    "It converts the ball’s momentum into heat."
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The ball must lose all its momentum either way (Δp is fixed). Since F = Δp/Δt, spreading the stop over a longer time Δt reduces the average force on the hands. Airbags, crumple zones and sand pits for long jumpers use the same idea.",
   "misconception": "The momentum change is the same whether or not the hands move back — only the time, and therefore the force, changes.",
   "hints": [
@@ -399,12 +399,12 @@
   "type": "numerical",
   "q": "A 20 g bullet leaves a 5 kg rifle at 500 m/s. With what speed does the rifle recoil?",
   "options": [
-   "2 m/s",
    "0.2 m/s",
    "20 m/s",
-   "5 m/s"
+   "5 m/s",
+   "2 m/s"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Momentum before firing = 0, so after firing the momenta are equal and opposite: 0.02 × 500 = 5 × v → v = 10/5 = 2 m/s, backwards.",
   "misconception": "Using 20 instead of 0.02 kg gives a huge recoil — always convert mass to kilograms.",
   "hints": [
@@ -428,12 +428,12 @@
   "type": "reasoning",
   "q": "Blocks of 3 kg and 2 kg touch each other on a frictionless floor. A 10 N horizontal push is applied to the 3 kg block, so both move together. What force does the 3 kg block exert on the 2 kg block?",
   "options": [
-   "4 N",
-   "6 N",
    "10 N",
-   "2 N"
+   "6 N",
+   "2 N",
+   "4 N"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Acceleration of the pair = 10 N ÷ 5 kg = 2 m/s². The only horizontal force on the 2 kg block is the push from the 3 kg block, which must give it 2 m/s²: F = 2 × 2 = 4 N. (The 3 kg block feels 10 N forward and 4 N backward: net 6 N = 3 × 2 ✓.)",
   "misconception": "The full 10 N is not passed on: part of it is needed to accelerate the 3 kg block itself.",
   "hints": [
@@ -485,12 +485,12 @@
   "type": "what-if",
   "q": "An 80 kg astronaut floating at rest outside a space station throws a 2 kg wrench away at 4 m/s. What happens to the astronaut?",
   "options": [
+   "Moves at 4 m/s in the opposite direction",
    "Moves at 0.1 m/s in the opposite direction",
-   "Moves at 0.1 m/s in the same direction as the wrench",
    "Stays still, because there is no air to push against",
-   "Moves at 4 m/s in the opposite direction"
+   "Moves at 0.1 m/s in the same direction as the wrench"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Total momentum starts at zero and is conserved (no external force). 2 × 4 = 80 × v gives v = 0.1 m/s, opposite to the wrench. Rockets work the same way — they need no air to push on.",
   "misconception": "Propulsion does not need air. The thrown object pushes back on the thrower (Newton’s third law), in a vacuum too.",
   "hints": [
@@ -514,12 +514,12 @@
   "type": "mcq",
   "q": "Why do action and reaction forces never cancel each other out?",
   "options": [
+   "They act in the same direction.",
    "They act on different bodies.",
-   "Reaction is always slightly smaller than action.",
    "They act at different times.",
-   "They act in the same direction."
+   "Reaction is always slightly smaller than action."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Newton’s third-law forces are equal in size and opposite in direction, but each acts on a DIFFERENT body. Forces can only cancel if they act on the same body.",
   "misconception": "Equal and opposite does not mean balanced: balanced forces must act on the same object.",
   "hints": [
@@ -542,12 +542,12 @@
   "type": "reasoning",
   "q": "A horse pulls a cart. By Newton’s third law the cart pulls back on the horse with an equal force. Why, then, can the horse–cart system accelerate forward?",
   "options": [
+   "Because the cart’s mass is smaller than the horse’s.",
    "Because the horse’s pull is slightly larger than the cart’s pull.",
-   "Because the ground pushes the horse forward (friction) more than the ground’s friction holds the cart back.",
    "Because action and reaction cancel, leaving no force.",
-   "Because the cart’s mass is smaller than the horse’s."
+   "Because the ground pushes the horse forward (friction) more than the ground’s friction holds the cart back."
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The pull of horse on cart and cart on horse are internal to the system and always equal. The system accelerates because of EXTERNAL forces: the horse pushes the ground backwards, so the ground pushes the horse forwards. If that forward friction exceeds the rolling resistance on the cart, the system accelerates.",
   "misconception": "The third-law pair (horse ↔ cart) never decides whether the system moves; only external forces do.",
   "hints": [
@@ -570,12 +570,12 @@
   "type": "numerical",
   "q": "A 5 kg box is pushed along the floor with a horizontal force of 30 N while friction opposes it with 10 N. What is its acceleration?",
   "options": [
-   "4 m/s²",
-   "6 m/s²",
    "8 m/s²",
+   "6 m/s²",
+   "4 m/s²",
    "2 m/s²"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Net force = 30 − 10 = 20 N. a = F/m = 20/5 = 4 m/s².",
   "misconception": "6 m/s² ignores friction; Newton’s second law uses the NET force.",
   "hints": [
@@ -598,12 +598,12 @@
   "type": "interdisciplinary",
   "q": "In a crash, a passenger’s 5 kg head moving at 15 m/s is stopped by an airbag in 0.1 s instead of by the dashboard in 0.01 s. What is the average force on the head with the airbag?",
   "options": [
-   "750 N",
-   "7500 N",
    "75 N",
-   "1500 N"
+   "1500 N",
+   "750 N",
+   "7500 N"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Δp = 5 × 15 = 75 kg m/s in both cases. With the airbag F = 75/0.1 = 750 N; with the dashboard F = 75/0.01 = 7500 N. Increasing the stopping time tenfold reduces the force tenfold — the physics behind car safety design.",
   "misconception": "7500 N is the dashboard force. The airbag does not change the momentum lost, only the time taken.",
   "hints": [
@@ -627,12 +627,12 @@
   "type": "mcq",
   "q": "An astronaut has a mass of 60 kg on Earth. What is her mass on the Moon, where gravity is about one-sixth as strong?",
   "options": [
-   "60 kg",
+   "0 kg",
    "10 kg",
    "360 kg",
-   "0 kg"
+   "60 kg"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Mass is the amount of matter and does not change with location. Her WEIGHT on the Moon is about one-sixth of her weight on Earth (≈ 98 N instead of ≈ 588 N), but her mass stays 60 kg.",
   "misconception": "Mass and weight are different quantities: weight is a force (N) that depends on g; mass (kg) does not.",
   "hints": [
@@ -656,9 +656,9 @@
   "q": "The gravitational force between two bodies is F. If the mass of one body is doubled and the distance between them is halved, the new force is:",
   "options": [
    "8F",
-   "4F",
+   "16F",
    "2F",
-   "16F"
+   "4F"
   ],
   "answer": 0,
   "explanation": "F ∝ m₁m₂/r². Doubling one mass multiplies F by 2; halving r multiplies F by 1/(½)² = 4. New force = 2 × 4 × F = 8F.",
@@ -685,8 +685,8 @@
   "options": [
    "19.6 m/s²",
    "4.9 m/s²",
-   "39.2 m/s²",
-   "9.8 m/s²"
+   "9.8 m/s²",
+   "39.2 m/s²"
   ],
   "answer": 0,
   "explanation": "g = GM/R² and M = ρ × (4/3)πR³, so g = (4/3)πGρR — proportional to R for a fixed density. Doubling R doubles g: 2 × 9.8 = 19.6 m/s². (The mass becomes 8 times larger, but the radius-squared term divides by 4.)",
@@ -713,11 +713,11 @@
   "q": "A feather and a coin are released together inside a long tube from which all the air has been pumped out. What is observed?",
   "options": [
    "The coin lands first.",
-   "The feather lands first.",
    "Both land together.",
+   "The feather lands first.",
    "The feather floats."
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Without air resistance, every object near Earth’s surface falls with the same acceleration g, whatever its mass. In air the feather falls slowly only because air resistance is large compared with its tiny weight.",
   "misconception": "Heavier objects do not fall faster: a larger mass has a proportionally larger weight, so a = W/m = g is the same.",
   "hints": [
@@ -741,8 +741,8 @@
   "q": "At what height above Earth’s surface does the acceleration due to gravity fall to one-quarter of its surface value? (Earth’s radius ≈ 6400 km)",
   "options": [
    "6400 km",
-   "3200 km",
    "12,800 km",
+   "3200 km",
    "1600 km"
   ],
   "answer": 0,
@@ -769,12 +769,12 @@
   "type": "statement",
   "q": "Consider:\nI. Your weight can change from place to place on Earth.\nII. g is slightly greater at the poles than at the equator.\nIII. The universal gravitational constant G decreases with altitude.\nWhich are correct?",
   "options": [
-   "I and II only",
-   "I and III only",
    "II and III only",
-   "I, II and III"
+   "I, II and III",
+   "I and III only",
+   "I and II only"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "I: weight = mg and g varies, so weight varies. II: Earth is slightly flattened and spinning, so g ≈ 9.83 m/s² at the poles vs ≈ 9.78 m/s² at the equator. III: G is a universal constant (6.67 × 10⁻¹¹ N m² kg⁻²); it is g, not G, that changes.",
   "misconception": "Mixing up g (local, variable) and G (universal constant) is one of the most common errors in gravitation.",
   "hints": [
@@ -797,12 +797,12 @@
   "type": "what-if",
   "q": "A simple pendulum of fixed length is taken to a planet where the acceleration due to gravity is four times that on Earth. What happens to its time period?",
   "options": [
-   "It halves.",
+   "It stays the same, because the length is unchanged.",
    "It doubles.",
    "It becomes one-quarter.",
-   "It stays the same, because the length is unchanged."
+   "It halves."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "T = 2π√(L/g). With g four times larger, √(1/4) = ½, so the period halves: the pendulum swings faster because the stronger gravity pulls it back more quickly.",
   "misconception": "The period depends on the square ROOT of g, not on g directly, so ×4 gravity gives ½ the period, not ¼.",
   "hints": [
@@ -826,12 +826,12 @@
   "type": "numerical",
   "q": "A stone is dropped from rest from a cliff 80 m high. How long does it take to reach the ground? (g = 10 m/s², ignore air resistance)",
   "options": [
-   "4 s",
-   "8 s",
    "16 s",
+   "8 s",
+   "4 s",
    "2.8 s"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "h = ½gt² → 80 = 5t² → t² = 16 → t = 4 s.",
   "misconception": "8 s comes from forgetting the ½ in h = ½gt²; 16 s forgets to take the square root.",
   "hints": [
@@ -854,12 +854,12 @@
   "type": "application",
   "q": "Why does a sharp knife cut vegetables more easily than a blunt one, for the same push?",
   "options": [
-   "The sharp edge has a smaller area, so the pressure is greater.",
    "The sharp edge has a larger area, so the force is greater.",
+   "A sharp knife has less friction, so the force is greater.",
    "A sharp knife is heavier.",
-   "A sharp knife has less friction, so the force is greater."
+   "The sharp edge has a smaller area, so the pressure is greater."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Pressure = force ÷ area. The same force acting on the tiny area of a sharp edge produces a much greater pressure, enough to break the vegetable’s cells.",
   "misconception": "Sharpening does not change the force you apply — it changes the area over which it acts.",
   "hints": [
@@ -882,12 +882,12 @@
   "type": "numerical",
   "q": "A 2 kg brick rests on a table on its face measuring 10 cm × 20 cm. What pressure does it exert on the table? (g = 10 m/s²)",
   "options": [
-   "1000 Pa",
-   "100 Pa",
+   "4000 Pa",
    "10 Pa",
-   "4000 Pa"
+   "100 Pa",
+   "1000 Pa"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Weight = 2 × 10 = 20 N. Area = 0.1 m × 0.2 m = 0.02 m². Pressure = 20/0.02 = 1000 Pa.",
   "misconception": "Using 200 cm² without converting to m² gives 0.1 — areas must be in m² for pascals (1 m² = 10,000 cm²).",
   "hints": [
@@ -911,12 +911,12 @@
   "type": "numerical",
   "q": "Ice (density 900 kg/m³) floats in fresh water (1000 kg/m³). What percentage of an ice cube’s volume is above the water surface?",
   "options": [
-   "10%",
    "90%",
-   "50%",
-   "1%"
+   "1%",
+   "10%",
+   "50%"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "For a floating body, fraction submerged = ρ_body/ρ_liquid = 900/1000 = 0.9, i.e. 90% under water. So 10% is above the surface — the origin of “the tip of the iceberg”.",
   "misconception": "90% is the fraction BELOW the surface.",
   "hints": [
@@ -939,12 +939,12 @@
   "type": "what-if",
   "q": "A glass is filled to the brim with water with an ice cube floating in it. The ice cube melts completely. What happens?",
   "options": [
-   "Water overflows.",
-   "The water level falls.",
    "The water level stays exactly at the brim.",
-   "It depends on the room temperature."
+   "It depends on the room temperature.",
+   "The water level falls.",
+   "Water overflows."
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "A floating ice cube displaces its own WEIGHT of water. When it melts, it becomes water of exactly that weight, which occupies exactly the volume it was already displacing. So the level does not change. (Melting LAND ice, which is not floating, does raise sea level.)",
   "misconception": "The part of the ice above water seems as if it should overflow, but ice is less dense than water — it shrinks to fill exactly the “hole” it made.",
   "hints": [
@@ -968,12 +968,12 @@
   "type": "numerical",
   "q": "A metal object weighs 10 N in air and 6 N when fully submerged in water (density 1000 kg/m³). What is the density of the metal?",
   "options": [
+   "1667 kg/m³",
    "2500 kg/m³",
    "1500 kg/m³",
-   "1667 kg/m³",
    "4000 kg/m³"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Buoyant force = 10 − 6 = 4 N = weight of water displaced. Relative density = weight in air ÷ loss of weight in water = 10/4 = 2.5, so density = 2500 kg/m³.",
   "misconception": "1667 kg/m³ comes from dividing by the apparent weight (6 N) instead of by the LOSS of weight (4 N).",
   "hints": [
@@ -998,11 +998,11 @@
   "q": "An egg sinks in a glass of tap water but floats after enough salt is dissolved. What is the best explanation?",
   "options": [
    "Salt makes the egg lighter.",
-   "Salt water is denser, so the same displaced volume weighs more and gives a larger upthrust.",
+   "Salt dissolves the egg shell, making it hollow.",
    "Salt reduces the surface tension of water.",
-   "Salt dissolves the egg shell, making it hollow."
+   "Salt water is denser, so the same displaced volume weighs more and gives a larger upthrust."
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Upthrust = volume displaced × density of liquid × g. Dissolving salt raises the density of the water. Once the liquid is denser than the egg, the upthrust on the fully submerged egg exceeds its weight and it rises until it floats.",
   "misconception": "The egg’s weight does not change. An object floats or sinks depending on its density compared with the LIQUID’s density.",
   "hints": [
@@ -1026,12 +1026,12 @@
   "type": "what-if",
   "q": "A boat carrying a heavy iron anchor floats in a swimming pool. The anchor is thrown overboard and sinks to the bottom. What happens to the water level in the pool?",
   "options": [
-   "It rises.",
    "It falls.",
-   "It stays the same.",
-   "It rises, then returns to the original level."
+   "It rises.",
+   "It rises, then returns to the original level.",
+   "It stays the same."
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "In the boat, the anchor is floating indirectly, so it displaces water equal to its WEIGHT. Iron is about 8 times denser than water, so that is a large volume. On the bottom it displaces only its own VOLUME, which is much smaller. Less water is displaced, so the level falls.",
   "misconception": "Many expect no change because “the same things are in the pool”. What matters is how much water is displaced: weight-equivalent when floating, volume-equivalent when sunk.",
   "hints": [
@@ -1055,12 +1055,12 @@
   "type": "numerical",
   "q": "What is the pressure due to water alone at a depth of 10 m in a lake? (density of water 1000 kg/m³, g = 10 m/s²)",
   "options": [
-   "1 × 10⁵ Pa",
+   "1 × 10³ Pa",
    "1 × 10⁴ Pa",
    "1 × 10⁶ Pa",
-   "1 × 10³ Pa"
+   "1 × 10⁵ Pa"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "P = hρg = 10 × 1000 × 10 = 100,000 Pa = 1 × 10⁵ Pa — roughly the same as atmospheric pressure. So a diver at 10 m feels about twice the pressure at the surface.",
   "misconception": "Pressure in a liquid depends on depth, not on the size or shape of the lake.",
   "hints": [
@@ -1083,12 +1083,12 @@
   "type": "reasoning",
   "q": "How much work does Earth’s gravity do on a satellite moving in a perfectly circular orbit during one revolution?",
   "options": [
+   "Positive, because gravity pulls the satellite",
    "Zero, because the force is always perpendicular to the displacement",
    "mgh, where h is the height of the orbit",
-   "Positive, because gravity pulls the satellite",
    "Negative, because the satellite moves away from Earth"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "W = Fs cos θ. In a circular orbit, gravity points to the centre while the motion is tangential, so θ = 90° and cos 90° = 0 at every instant. No work is done, which is why the satellite’s speed stays constant.",
   "misconception": "A force can act continuously yet do no work if it is perpendicular to the motion.",
   "hints": [
@@ -1111,12 +1111,12 @@
   "type": "numerical",
   "q": "A 1000 kg car speeds up from 10 m/s to 20 m/s. How much work must the net force do on it?",
   "options": [
-   "150 kJ",
-   "50 kJ",
+   "200 kJ",
    "100 kJ",
-   "200 kJ"
+   "50 kJ",
+   "150 kJ"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Work–energy theorem: W = ΔKE = ½m(v² − u²) = ½ × 1000 × (400 − 100) = 150,000 J = 150 kJ.",
   "misconception": "50 kJ uses ½m(v − u)², squaring the change in speed instead of taking the change in v².",
   "hints": [
@@ -1141,9 +1141,9 @@
   "q": "A motor lifts a 200 kg load through a height of 15 m in 30 s at steady speed. What is the power output of the motor? (g = 10 m/s²)",
   "options": [
    "1000 W",
+   "600 W",
    "100 W",
-   "3000 W",
-   "600 W"
+   "3000 W"
   ],
   "answer": 0,
   "explanation": "Work = mgh = 200 × 10 × 15 = 30,000 J. Power = work/time = 30,000/30 = 1000 W = 1 kW.",
@@ -1169,12 +1169,12 @@
   "type": "numerical",
   "q": "A pendulum bob is pulled aside until it is 45 cm higher than its lowest point and then released. Ignoring air resistance, how fast is it moving as it passes through the lowest point? (g = 10 m/s²)",
   "options": [
+   "4.5 m/s",
    "3 m/s",
    "9 m/s",
-   "4.5 m/s",
    "2.1 m/s"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Energy conservation: mgh = ½mv², so v = √(2gh) = √(2 × 10 × 0.45) = √9 = 3 m/s. The mass cancels, and the length of the string does not matter — only the drop in height.",
   "misconception": "You do not need the length of the string or the mass of the bob: only the vertical height drop matters.",
   "hints": [
@@ -1198,12 +1198,12 @@
   "type": "interdisciplinary",
   "q": "A pump that is 75% efficient lifts 300 kg of water into a tank 20 m above the ground. How much electrical energy does it use? (g = 10 m/s²)",
   "options": [
+   "75 kJ",
    "80 kJ",
-   "60 kJ",
    "45 kJ",
-   "75 kJ"
+   "60 kJ"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Useful work = mgh = 300 × 10 × 20 = 60,000 J. Efficiency = useful output/input, so input = 60,000/0.75 = 80,000 J = 80 kJ. The extra 20 kJ is wasted, mostly as heat and sound.",
   "misconception": "45 kJ multiplies by 0.75 instead of dividing: the input must always be LARGER than the useful output.",
   "hints": [
@@ -1283,12 +1283,12 @@
   "type": "numerical",
   "q": "A sound wave has a frequency of 500 Hz and a wavelength of 0.68 m. What is its speed?",
   "options": [
-   "340 m/s",
-   "735 m/s",
    "0.00136 m/s",
+   "735 m/s",
+   "340 m/s",
    "170 m/s"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "v = fλ = 500 × 0.68 = 340 m/s, the speed of sound in air at about 20 °C.",
   "misconception": "Dividing f by λ instead of multiplying gives a meaningless 735.",
   "hints": [
@@ -1311,12 +1311,12 @@
   "type": "numerical",
   "q": "The sensation of a sound persists in our brain for about 0.1 s. What is the minimum distance from a reflecting wall for a distinct echo to be heard, if the speed of sound is 344 m/s?",
   "options": [
-   "17.2 m",
-   "34.4 m",
    "8.6 m",
-   "172 m"
+   "34.4 m",
+   "172 m",
+   "17.2 m"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "For a distinct echo, the reflected sound must arrive at least 0.1 s after the original. In 0.1 s sound travels 34.4 m — but that is the round trip, there and back. So the wall must be at least 34.4/2 = 17.2 m away.",
   "misconception": "34.4 m forgets that the sound has to travel to the wall AND back.",
   "hints": [
@@ -1341,9 +1341,9 @@
   "q": "A sound wave passes from air into water, where sound travels about four times faster. Which describes the wave in water?",
   "options": [
    "Same frequency, longer wavelength",
+   "Lower frequency, longer wavelength",
    "Higher frequency, same wavelength",
-   "Same frequency, shorter wavelength",
-   "Lower frequency, longer wavelength"
+   "Same frequency, shorter wavelength"
   ],
   "answer": 0,
   "explanation": "Frequency is set by the source and does not change when a wave crosses into a new medium (every incoming vibration produces one vibration on the other side). Since v = fλ and v increases about 4 times, λ increases about 4 times.",
@@ -1371,8 +1371,8 @@
   "options": [
    "1500 m",
    "3000 m",
-   "750 m",
-   "6000 m"
+   "6000 m",
+   "750 m"
   ],
   "answer": 0,
   "explanation": "Total path = 1500 × 2 = 3000 m, which is down and back up. Depth = 3000/2 = 1500 m.",
@@ -1398,8 +1398,8 @@
   "q": "Putting your ear to a railway line, you can hear an approaching train before you hear it through the air. Why?",
   "options": [
    "Sound travels faster in steel than in air.",
-   "Steel amplifies sound.",
    "Sound travels in straight lines only through solids.",
+   "Steel amplifies sound.",
    "Air absorbs all low-frequency sound."
   ],
   "answer": 0,
@@ -1425,12 +1425,12 @@
   "type": "mcq",
   "q": "Which set describes the image formed by a plane mirror?",
   "options": [
-   "Virtual, erect, laterally inverted and the same size",
-   "Real, inverted and the same size",
+   "Real, erect and magnified",
    "Virtual, inverted and smaller",
-   "Real, erect and magnified"
+   "Virtual, erect, laterally inverted and the same size",
+   "Real, inverted and the same size"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Reflected rays from a plane mirror diverge; they only appear to come from a point behind the mirror, so the image is virtual. It is upright, the same size, as far behind the mirror as the object is in front, and left–right reversed (lateral inversion).",
   "misconception": "The image is not “on” the mirror — it is located behind it.",
   "hints": [
@@ -1453,9 +1453,9 @@
   "q": "Light travels at 3 × 10⁸ m/s in vacuum and 2.25 × 10⁸ m/s in water. What is the refractive index of water?",
   "options": [
    "1.33",
-   "1.5",
    "0.75",
-   "2.25"
+   "2.25",
+   "1.5"
   ],
   "answer": 0,
   "explanation": "n = c/v = (3 × 10⁸)/(2.25 × 10⁸) = 1.33. Refractive index is always greater than 1 for a material medium because light is slower in it than in vacuum.",
@@ -1479,12 +1479,12 @@
   "type": "numerical",
   "q": "An object is placed 15 cm in front of a convex lens of focal length 10 cm. Where is the image formed?",
   "options": [
-   "30 cm on the other side of the lens (real)",
    "6 cm on the same side (virtual)",
+   "30 cm on the other side of the lens (real)",
    "15 cm on the other side (real)",
    "60 cm on the other side (real)"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Lens formula 1/v − 1/u = 1/f with u = −15 cm, f = +10 cm: 1/v = 1/10 − 1/15 = 1/30, so v = +30 cm. Positive v means a real image on the opposite side; magnification = v/u = −2 (inverted, twice the size).",
   "misconception": "6 cm comes from adding 1/10 + 1/15 — the sign convention for the object distance matters.",
   "hints": [
@@ -1508,8 +1508,8 @@
   "q": "A glass convex lens (refractive index 1.5) is placed under water (refractive index 1.33). How does its behaviour change?",
   "options": [
    "It converges light less strongly — its focal length increases.",
-   "It converges light more strongly — its focal length decreases.",
    "It becomes a diverging lens.",
+   "It converges light more strongly — its focal length decreases.",
    "Nothing changes; focal length depends only on the curvature."
   ],
   "answer": 0,
@@ -1536,9 +1536,9 @@
   "q": "Why does the clear daytime sky look blue, while the Sun looks reddish at sunset?",
   "options": [
    "Air molecules scatter short (blue) wavelengths much more than long (red) ones.",
-   "The oceans reflect blue light into the sky.",
+   "Blue light travels faster through air than red light.",
    "Ozone is blue in colour.",
-   "Blue light travels faster through air than red light."
+   "The oceans reflect blue light into the sky."
   ],
   "answer": 0,
   "explanation": "Small air molecules scatter light far more strongly at short wavelengths, so blue light is scattered across the sky and reaches our eyes from all directions. At sunset sunlight passes through much more air, so most blue is scattered out of the direct beam and the remaining light reaching us is reddish.",
@@ -1562,12 +1562,12 @@
   "type": "numerical",
   "q": "A concave (diverging) lens has a focal length of 50 cm. What is its power?",
   "options": [
+   "−50 D",
    "−2 D",
-   "+2 D",
    "−0.5 D",
-   "−50 D"
+   "+2 D"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "P = 1/f with f in metres. A diverging lens has negative focal length: f = −0.5 m, so P = 1/(−0.5) = −2 dioptres. Such lenses correct short-sightedness.",
   "misconception": "−50 D uses centimetres instead of metres; +2 D ignores the sign of a diverging lens.",
   "hints": [
@@ -1590,12 +1590,12 @@
   "type": "mcq",
   "q": "Three different resistors are connected in series to a battery. Which quantity is the same for all three?",
   "options": [
-   "Current through each",
    "Potential difference across each",
    "Power dissipated in each",
+   "Current through each",
    "Resistance of each"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "In a series circuit there is only one path, so the same charge per second (current) passes through every component. The potential difference divides in proportion to the resistances (V = IR), and so does the power (P = I²R).",
   "misconception": "In series, current is shared equally — it is voltage that is split. In parallel it is the other way round.",
   "hints": [
@@ -1617,12 +1617,12 @@
   "type": "what-if",
   "q": "A wire has a resistance of 5 Ω. A second wire of the same material and the same cross-sectional area is twice as long. What is its resistance?",
   "options": [
-   "10 Ω",
-   "2.5 Ω",
    "20 Ω",
-   "5 Ω"
+   "10 Ω",
+   "5 Ω",
+   "2.5 Ω"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "R = ρL/A. With the same material (ρ) and area (A), resistance is directly proportional to length. Twice the length → twice the resistance = 10 Ω. Electrons have twice as far to travel through the obstructing lattice.",
   "misconception": "20 Ω applies to a wire STRETCHED to double length, where the area also halves; here the area is unchanged.",
   "hints": [
@@ -1645,12 +1645,12 @@
   "type": "numerical",
   "q": "Two 6 Ω resistors are connected in parallel, and this combination is connected in series with a third 6 Ω resistor across an 18 V battery. What current does the battery supply?",
   "options": [
-   "2 A",
+   "6 A",
    "1 A",
    "3 A",
-   "6 A"
+   "2 A"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Two 6 Ω in parallel: 1/R = 1/6 + 1/6 → R = 3 Ω. Adding the series 6 Ω gives 9 Ω total. I = V/R = 18/9 = 2 A.",
   "misconception": "1 A treats all three as one series chain (18 Ω); 6 A forgets the series resistor (18 ÷ 3); 3 A uses a single 6 Ω resistor. Simplify the parallel pair first, then add the series part.",
   "hints": [
@@ -1673,12 +1673,12 @@
   "type": "reasoning",
   "q": "A 100 W bulb and a 60 W bulb (both rated for 220 V) are connected in SERIES across a 220 V supply. Which glows more brightly?",
   "options": [
-   "The 60 W bulb",
-   "The 100 W bulb",
    "Both equally",
+   "The 100 W bulb",
+   "The 60 W bulb",
    "Neither glows at all"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "From P = V²/R at rated voltage, R = V²/P: the 60 W bulb has the larger resistance (≈ 807 Ω vs 484 Ω). In series, both carry the same current, so the power P = I²R is greater in the bulb with greater resistance — the 60 W bulb glows brighter. (Both glow dimmer than normal.)",
   "misconception": "The power rating applies only at 220 V across EACH bulb; in series neither gets its rated voltage.",
   "hints": [
@@ -1701,12 +1701,12 @@
   "type": "numerical",
   "q": "A 1500 W electric heater is used for 2 hours. How much electrical energy does it use, in kilowatt-hours?",
   "options": [
-   "3 kWh",
-   "3000 kWh",
    "0.75 kWh",
-   "30 kWh"
+   "30 kWh",
+   "3 kWh",
+   "3000 kWh"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Energy = power × time = 1.5 kW × 2 h = 3 kWh (3 “units” on an electricity bill). In joules this is 3 × 3.6 × 10⁶ = 1.08 × 10⁷ J.",
   "misconception": "3000 kWh forgets to convert watts to kilowatts.",
   "hints": [
@@ -1729,12 +1729,12 @@
   "type": "mcq",
   "q": "Why can two magnetic field lines never cross each other?",
   "options": [
-   "At a crossing point the field would have two directions at once, which is impossible.",
    "Field lines repel each other.",
    "Field lines only exist outside the magnet.",
+   "At a crossing point the field would have two directions at once, which is impossible.",
    "Field lines always run parallel."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The tangent to a field line at any point gives the direction a compass needle would point. If two lines crossed, a compass at that point would have to point two ways at once — impossible, since the field has a single direction at each point.",
   "misconception": "Field lines are a model of direction; they are not physical strings that push each other.",
   "hints": [
@@ -1756,12 +1756,12 @@
   "type": "application",
   "q": "Which change would NOT make an electromagnet stronger?",
   "options": [
-   "Replacing the soft-iron core with a copper core",
-   "Increasing the number of turns of wire",
    "Increasing the current",
-   "Winding the coil more tightly around the same soft-iron core"
+   "Winding the coil more tightly around the same soft-iron core",
+   "Replacing the soft-iron core with a copper core",
+   "Increasing the number of turns of wire"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "An electromagnet’s strength increases with current and with the number of turns, and a soft-iron core concentrates the field enormously because iron is magnetic. Copper is non-magnetic, so replacing iron with copper would make the electromagnet much WEAKER.",
   "misconception": "Copper is an excellent conductor, but conducting electricity is not the same as being magnetic.",
   "hints": [
@@ -1783,12 +1783,12 @@
   "type": "experiment",
   "q": "A coil is connected to a sensitive galvanometer. Consider:\nI. Pushing a bar magnet into the coil deflects the needle.\nII. Holding the magnet still inside the coil keeps the needle deflected.\nIII. Pulling the magnet out deflects the needle the opposite way.\nIV. Moving the magnet faster gives a larger deflection.\nWhich are correct?",
   "options": [
-   "I, III and IV only",
-   "I, II and III only",
    "I and II only",
-   "All four"
+   "I, III and IV only",
+   "All four",
+   "I, II and III only"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Electromagnetic induction (Faraday): a current is induced only while the magnetic field through the coil is CHANGING. A stationary magnet causes no change, so no current (II is false). Reversing the motion reverses the current (III), and faster change gives a larger induced current (IV).",
   "misconception": "A magnet sitting in a coil does not produce electricity — only change does.",
   "hints": [
@@ -1810,12 +1810,12 @@
   "type": "mcq",
   "q": "Fleming’s left-hand rule is used to find the direction of:",
   "options": [
-   "the force on a current-carrying conductor in a magnetic field",
-   "the induced current in a generator",
    "the magnetic field around a straight wire",
-   "the poles of a bar magnet"
+   "the poles of a bar magnet",
+   "the force on a current-carrying conductor in a magnetic field",
+   "the induced current in a generator"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Left hand: First finger = Field, seCond finger = Current, thuMb = Motion (force). It gives the force on a current-carrying conductor — the principle of the electric motor. The RIGHT-hand rule gives induced current (generators).",
   "misconception": "Left hand → motors; right hand → generators.",
   "hints": [
@@ -1837,12 +1837,12 @@
   "type": "mcq",
   "q": "Heat from the Sun reaches Earth through the near-vacuum of space by:",
   "options": [
-   "radiation",
    "conduction",
    "convection",
+   "radiation",
    "both conduction and convection"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Conduction and convection need particles of matter. Radiation is the transfer of energy by electromagnetic waves (infrared, visible light), which travel through a vacuum.",
   "misconception": "Convection needs a fluid to flow; there is almost none in space.",
   "hints": [
@@ -1864,12 +1864,12 @@
   "type": "numerical",
   "q": "How much heat is needed to raise the temperature of 2 kg of water from 20 °C to 70 °C? (specific heat capacity of water = 4200 J kg⁻¹ °C⁻¹)",
   "options": [
+   "210 kJ",
    "420 kJ",
    "42 kJ",
-   "210 kJ",
    "840 kJ"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Q = mcΔT = 2 × 4200 × 50 = 420,000 J = 420 kJ.",
   "misconception": "840 kJ uses 100 °C rise or doubles twice; ΔT is 70 − 20 = 50 °C.",
   "hints": [
@@ -1891,12 +1891,12 @@
   "type": "numerical",
   "q": "1 kg of water at 80 °C is mixed with 3 kg of water at 20 °C in an insulated container. What is the final temperature?",
   "options": [
-   "35 °C",
+   "30 °C",
    "50 °C",
    "40 °C",
-   "30 °C"
+   "35 °C"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Heat lost by hot water = heat gained by cold water: 1 × c × (80 − T) = 3 × c × (T − 20) → 80 − T = 3T − 60 → T = 35 °C. It is a weighted average of the temperatures, weighted by mass.",
   "misconception": "50 °C is the simple average, which only applies to equal masses.",
   "hints": [
@@ -1919,12 +1919,12 @@
   "type": "application",
   "q": "Why are small gaps left between sections of railway track?",
   "options": [
+   "To save steel",
    "To allow the rails to expand in hot weather without buckling",
-   "To drain rainwater",
    "To reduce the noise of trains",
-   "To save steel"
+   "To drain rainwater"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Metals expand when heated. Without gaps, rails heated by summer sun would push against each other and buckle. (Modern continuous welded rail is pre-stressed to manage the same problem.)",
   "hints": [
    "What happens to the length of a steel rail when it gets hot?"
@@ -1946,9 +1946,9 @@
   "q": "What would happen to the boiling point of water if the atmospheric pressure above it were increased?",
   "options": [
    "It would rise above 100 °C.",
+   "Water would no longer boil at any temperature.",
    "It would fall below 100 °C.",
-   "It would stay at 100 °C, a fixed property of water.",
-   "Water would no longer boil at any temperature."
+   "It would stay at 100 °C, a fixed property of water."
   ],
   "answer": 0,
   "explanation": "Water boils when its vapour pressure equals the pressure above it. Higher outside pressure means the water must be hotter before its vapour pressure is high enough. That is why a pressure cooker (≈ 2 atm) cooks at about 120 °C, while at high altitude water boils below 100 °C.",

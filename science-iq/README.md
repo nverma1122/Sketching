@@ -10,7 +10,7 @@ npm install
 npm run dev        # http://localhost:5173 — development
 npm run build      # validates the question bank, type-checks, builds into dist/
 npm run preview    # serves the built app at http://localhost:4173
-npm run e2e        # end-to-end test in Chromium (needs Playwright; run after build)
+npm run e2e        # end-to-end test in Chromium (needs Playwright; run after build) — 28 checks
 ```
 
 Open the app once while online (or from `npm run preview`). The service worker then caches everything, and the app works with no connection. On a phone or tablet, use the browser's **Add to Home screen** option to install it.
@@ -67,6 +67,7 @@ There are ten levels, from **Science Explorer** (0 XP) to **Science Champion** (
 - The explanation is at least 40 characters, there is at least one hint, and the time is 15–300 s.
 - Science IQ problems have at least two hints.
 - **Answers are recomputed independently.** Every numerical question carries a formula (`v`) that is evaluated separately. The keyed option must match it within 0.6%, and no other option may match it. 77 answers are checked this way, and the check already caught several real errors while the bank was being written.
+- **Answer positions are balanced.** Options are shuffled in a fixed order based on each question's ID, so the correct answer is not always A (current split A/B/C/D: 78 / 59 / 66 / 74). Assertion–reason questions keep their standard option order.
 - **Near-duplicate detection.** Question texts are normalised, with numbers replaced by `#`, then compared by word-trigram similarity. Anything at 0.6 or above is rejected, so a question with only its numbers changed cannot get in.
 
 ### Adding questions

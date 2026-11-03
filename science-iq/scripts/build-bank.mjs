@@ -79,6 +79,24 @@ function jaccard(a, b) {
   return i / (a.size + b.size - i || 1);
 }
 
+function shuffleIdx(id) {
+  let h = 2166136261;
+  for (const c of id) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  let a = h >>> 0;
+  const rand = () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = Math.imul(a ^ (a >>> 15), a | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const p = [0, 1, 2, 3];
+  for (let i = 3; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [p[i], p[j]] = [p[j], p[i]];
+  }
+  return p;
+}
+
 const errors = [];
 let verifiedCount = 0;
 const all = [];
@@ -93,7 +111,7 @@ for (const file of readdirSync(SRC).filter((f) => f.endsWith('.mjs')).sort()) {
     continue;
   }
   const items = (await import(pathToFileURL(join(SRC, file)).href)).default;
-  for (const r of items) {
+  for (let r of items) {
     const where = `${file} ${r.id}`;
     const err = (m) => errors.push(`${where}: ${m}`);
     if (!r.id || ids.has(r.id)) err('missing or duplicate id');
@@ -129,6 +147,12 @@ for (const file of readdirSync(SRC).filter((f) => f.endsWith('.mjs')).sort()) {
           if (i !== r.a && close(parseNumber(String(o)))) err(`another option (${i}) also equals the computed answer ${val}`);
         });
       }
+    }
+    // Option order: authored with the key mostly first, so shuffle deterministically by id
+    // (same order on every build). Assertion–reason keeps its standard fixed option order.
+    if (Array.isArray(r.o) && r.o.length === 4 && r.ty !== 'assertion-reason' && !r.fixed) {
+      const perm = shuffleIdx(r.id);
+      r = { ...r, o: perm.map((i) => r.o[i]), a: perm.indexOf(r.a) };
     }
     const tracks = ['GEN'];
     if (VVM[subject]?.includes(r.t)) tracks.unshift('VVM');
@@ -181,4 +205,5 @@ console.log(`✓ ${all.length} questions validated and written to src/data/bank/
 console.log('  by subject:', count((q) => q.subject));
 console.log('  by level:  ', count((q) => ['', 'Foundation', 'Advanced', 'Olympiad'][q.level]));
 console.log('  by type:   ', count((q) => q.type));
+console.log('  answer position A/B/C/D:', [0, 1, 2, 3].map((i) => all.filter((q) => q.answer === i).length).join(' / '));
 console.log('  Science IQ:', all.filter((q) => q.iq).length, '· answers recomputed from formulas:', verifiedCount);

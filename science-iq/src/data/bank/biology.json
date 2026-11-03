@@ -7,12 +7,12 @@
   "type": "mcq",
   "q": "Which organelle is called the “powerhouse of the cell” because it releases energy from food?",
   "options": [
-   "Mitochondrion",
    "Ribosome",
+   "Lysosome",
    "Golgi apparatus",
-   "Lysosome"
+   "Mitochondrion"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Mitochondria carry out the later stages of aerobic respiration, releasing energy from glucose and storing it as ATP. Cells that need lots of energy, such as muscle and sperm cells, have many mitochondria.",
   "misconception": "Ribosomes make proteins; they do not release energy.",
   "hints": [
@@ -35,12 +35,12 @@
   "type": "experiment",
   "q": "Onion-peel cells are mounted in a concentrated salt solution and observed under a microscope. What will be seen, and why?",
   "options": [
-   "The cytoplasm shrinks away from the cell wall because water leaves the cell by osmosis.",
    "The cells swell and burst because salt enters.",
-   "Nothing changes because the cell wall is impermeable.",
-   "The cell wall dissolves in salt."
+   "The cytoplasm shrinks away from the cell wall because water leaves the cell by osmosis.",
+   "The cell wall dissolves in salt.",
+   "Nothing changes because the cell wall is impermeable."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The salt solution has a lower water concentration than the cell sap (it is hypertonic). Water moves out of the cell through the selectively permeable membrane by osmosis; the vacuole and cytoplasm shrink and pull away from the rigid cell wall — plasmolysis. The wall itself is freely permeable and keeps its shape.",
   "misconception": "Plant cells do not burst in water because of their cell wall — and in salt the wall stays, but the membrane pulls away from it.",
   "hints": [
@@ -64,9 +64,9 @@
   "q": "Consider:\nI. Plant cells have both chloroplasts and mitochondria.\nII. Bacterial cells have a membrane-bound nucleus.\nIII. Ribosomes are found in both prokaryotic and eukaryotic cells.\nIV. Animal cells usually have large central vacuoles.\nWhich are correct?",
   "options": [
    "I and III only",
-   "I, II and III only",
+   "I, III and IV only",
    "II and IV only",
-   "I, III and IV only"
+   "I, II and III only"
   ],
   "answer": 0,
   "explanation": "I: true — plants photosynthesise in chloroplasts AND respire in mitochondria. II: false — bacteria are prokaryotes with no membrane-bound nucleus (DNA lies in the nucleoid). III: true — all cells need ribosomes to make proteins. IV: false — animal cells have small, temporary vacuoles; a large central vacuole is typical of plant cells.",
@@ -91,12 +91,12 @@
   "type": "what-if",
   "q": "A drug destroys all the ribosomes in a cell but leaves everything else intact. What will the cell first become unable to do?",
   "options": [
-   "Make new proteins, including enzymes",
+   "Store food in vacuoles",
    "Store genetic information",
    "Let water in by osmosis",
-   "Store food in vacuoles"
+   "Make new proteins, including enzymes"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Ribosomes are the sites of protein synthesis: they read messenger RNA and join amino acids. Without them, no new proteins — enzymes, membrane proteins, hormones — can be made. DNA would still be stored in the nucleus, and osmosis (a passive process) would continue, but the cell would soon die as worn-out proteins were not replaced.",
   "misconception": "DNA carries the instructions, but ribosomes are needed to carry them out.",
   "hints": [
@@ -120,12 +120,12 @@
   "type": "numerical",
   "q": "A human skin cell contains 46 chromosomes. How many chromosomes does each human egg cell contain?",
   "options": [
-   "23",
    "46",
+   "12",
    "92",
-   "12"
+   "23"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Gametes are made by meiosis, which halves the chromosome number (diploid 2n = 46 → haploid n = 23). At fertilisation, egg (23) + sperm (23) restores 46.",
   "misconception": "46 would be the number after mitosis, which keeps the number unchanged.",
   "hints": [
@@ -148,12 +148,12 @@
   "type": "reasoning",
   "q": "Why is it essential that gametes are produced by meiosis rather than by mitosis?",
   "options": [
+   "Mitosis cannot happen in reproductive organs.",
    "Otherwise the chromosome number would double in every generation after fertilisation.",
    "Mitosis is too slow to produce enough gametes.",
-   "Mitosis cannot happen in reproductive organs.",
    "Meiosis produces identical cells, which is necessary for fertilisation."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "If eggs and sperm each had the full 46 chromosomes, the zygote would have 92, and the next generation 184. Meiosis halves the number so that fertilisation restores the normal diploid number. Meiosis also creates variation (it does NOT produce identical cells).",
   "misconception": "Meiosis produces genetically different cells — that variation is a second advantage.",
   "hints": [
@@ -177,12 +177,12 @@
   "type": "mcq",
   "q": "Which part of a plant cell is freely permeable and gives the cell its rigid shape?",
   "options": [
-   "Cell wall",
+   "Vacuole membrane",
    "Plasma membrane",
    "Nuclear membrane",
-   "Vacuole membrane"
+   "Cell wall"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The cellulose cell wall is fully permeable — it lets almost all substances pass — but is strong and rigid, giving shape and protection. The plasma membrane inside it is selectively permeable.",
   "misconception": "The wall is permeable; the membrane is selectively permeable.",
   "hints": [
@@ -207,8 +207,8 @@
   "options": [
    "The potato cell sap has roughly the same water concentration as 5% sugar solution.",
    "Sugar enters the cells in R, making them shrink.",
-   "Potato cells are impermeable to water.",
-   "The cell sap is more concentrated than 30% sugar solution."
+   "The cell sap is more concentrated than 30% sugar solution.",
+   "Potato cells are impermeable to water."
   ],
   "answer": 0,
   "explanation": "In P water entered (cells were more concentrated than water); in R water left (solution more concentrated than cells). In Q there was no net movement, so the solution and the cell sap had about the same water concentration. This is how the concentration of cell sap can be estimated experimentally.",
@@ -233,12 +233,12 @@
   "type": "mcq",
   "q": "Which plant tissue carries water and dissolved minerals from the roots to the leaves?",
   "options": [
-   "Xylem",
+   "Epidermis",
    "Phloem",
-   "Parenchyma",
-   "Epidermis"
+   "Xylem",
+   "Parenchyma"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Xylem (vessels and tracheids, mostly dead, thick-walled cells) conducts water and minerals upwards. Phloem carries food made in the leaves to other parts.",
   "misconception": "Xylem carries water; phloem carries food — “phloem = food”.",
   "hints": [
@@ -261,12 +261,12 @@
   "type": "reasoning",
   "q": "Which type of muscle is striated (striped) under a microscope but works involuntarily?",
   "options": [
-   "Cardiac muscle",
-   "Skeletal muscle",
+   "None of these",
    "Smooth muscle",
-   "None of these"
+   "Skeletal muscle",
+   "Cardiac muscle"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Skeletal muscle is striated and voluntary; smooth muscle (gut, blood vessels) is unstriated and involuntary; cardiac muscle is striated, branched and involuntary, and contracts rhythmically throughout life without tiring.",
   "hints": [
    "Think of the one muscle that beats all your life without your control."
@@ -288,12 +288,12 @@
   "type": "mcq",
   "q": "A sprained ankle involves damage to the tissue that connects bone to bone. What is this tissue?",
   "options": [
-   "Ligament",
+   "Areolar tissue",
    "Tendon",
    "Cartilage",
-   "Areolar tissue"
+   "Ligament"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Ligaments are strong, slightly elastic connective tissue joining bone to bone at joints. Tendons join muscle to bone and are tough but not very elastic. Over-stretching a ligament causes a sprain.",
   "misconception": "Tendon = muscle-to-bone; ligament = bone-to-bone.",
   "hints": [
@@ -316,12 +316,12 @@
   "type": "what-if",
   "q": "A ring of bark (including the phloem) is removed from around the trunk of a tree, leaving the xylem intact. After some weeks the bark just ABOVE the ring swells. Why?",
   "options": [
-   "Food moving down from the leaves in the phloem cannot pass the ring and accumulates above it.",
-   "Water moving up in the xylem collects above the ring.",
    "The roots send extra food upward.",
-   "The cut surface absorbs water from the air."
+   "Food moving down from the leaves in the phloem cannot pass the ring and accumulates above it.",
+   "The cut surface absorbs water from the air.",
+   "Water moving up in the xylem collects above the ring."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Phloem carries sugars from the leaves down to the roots. Removing the ring (girdling) breaks the phloem, so food piles up above the cut, causing swelling. Water still rises because the xylem is intact — so the leaves stay green for a while, but the roots eventually starve and the tree dies.",
   "misconception": "The xylem is still intact, so water flow is not the cause of the swelling.",
   "hints": [
@@ -345,12 +345,12 @@
   "type": "mcq",
   "q": "Blood is classified as which type of tissue?",
   "options": [
-   "Fluid connective tissue",
-   "Epithelial tissue",
+   "Nervous tissue",
    "Muscular tissue",
-   "Nervous tissue"
+   "Fluid connective tissue",
+   "Epithelial tissue"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Blood has cells (RBCs, WBCs, platelets) suspended in a fluid matrix (plasma) and connects different parts of the body by transporting materials — so it is a fluid connective tissue.",
   "misconception": "Being a liquid does not stop blood being a tissue.",
   "hints": [
@@ -373,12 +373,12 @@
   "type": "application",
   "q": "Grass grows back after mowing because it has a meristem near the base of its leaves. Which type of meristem is this?",
   "options": [
-   "Intercalary meristem",
-   "Apical meristem",
+   "Permanent tissue",
    "Lateral meristem (cambium)",
-   "Permanent tissue"
+   "Intercalary meristem",
+   "Apical meristem"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Intercalary meristem lies at the base of leaves or internodes. Because mowing removes the tips but not the base, the grass continues to grow. Apical meristems are at shoot and root tips; lateral meristem (cambium) increases girth.",
   "hints": [
    "Where on the grass blade is the growing region?"
@@ -400,12 +400,12 @@
   "type": "mcq",
   "q": "In the five-kingdom classification, why are fungi placed in a kingdom separate from plants?",
   "options": [
-   "They lack chlorophyll and absorb food from outside (saprophytic nutrition), and their walls are made of chitin.",
    "They are all single-celled.",
    "They have no cell walls.",
-   "They are prokaryotes."
+   "They are prokaryotes.",
+   "They lack chlorophyll and absorb food from outside (saprophytic nutrition), and their walls are made of chitin."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Fungi are eukaryotic and mostly multicellular, but they cannot photosynthesise; they secrete enzymes onto food and absorb the products. Their cell walls contain chitin, not cellulose. These differences in nutrition and structure justify a separate kingdom.",
   "misconception": "Yeast is single-celled but most fungi (moulds, mushrooms) are multicellular.",
   "hints": [
@@ -429,9 +429,9 @@
   "q": "Why are viruses usually NOT placed in any of the five kingdoms?",
   "options": [
    "They show life processes only inside a host cell and have no cellular structure of their own.",
-   "They are too small to see with any microscope.",
    "They contain no genetic material.",
-   "They are all harmless."
+   "They are all harmless.",
+   "They are too small to see with any microscope."
   ],
   "answer": 0,
   "explanation": "Viruses are particles of genetic material (DNA or RNA) in a protein coat. They have no cytoplasm, ribosomes or metabolism, and reproduce only by hijacking a host cell. Because they are not cells, they fall outside the five-kingdom system based on cell type.",
@@ -457,9 +457,9 @@
   "q": "Which of these animals is a mammal?",
   "options": [
    "Bat",
-   "Penguin",
    "Shark",
-   "Crocodile"
+   "Crocodile",
+   "Penguin"
   ],
   "answer": 0,
   "explanation": "Bats have hair and feed their young on milk — defining features of mammals. Penguins are birds, sharks are fish (cartilaginous), crocodiles are reptiles.",
@@ -484,12 +484,12 @@
   "type": "reasoning",
   "q": "An organism is multicellular, has cells with cell walls and chloroplasts, produces seeds, but its seeds are not enclosed in a fruit. To which group does it belong?",
   "options": [
-   "Gymnosperms",
    "Angiosperms",
+   "Bryophytes",
    "Pteridophytes",
-   "Bryophytes"
+   "Gymnosperms"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Seeds rule out bryophytes and pteridophytes (which reproduce by spores). Among seed plants, angiosperms enclose their seeds in a fruit; gymnosperms (“naked seeds”, e.g. pine, cycas) do not.",
   "hints": [
    "Which plant groups produce seeds?",
@@ -512,12 +512,12 @@
   "type": "mcq",
   "q": "In the scientific name Panthera tigris, what does “Panthera” represent?",
   "options": [
-   "The genus",
    "The species",
-   "The family",
-   "The kingdom"
+   "The kingdom",
+   "The genus",
+   "The family"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Binomial nomenclature (Linnaeus) gives two names: the genus (capitalised, here Panthera) and the species epithet (lower case, tigris). Lions are Panthera leo — the same genus, different species.",
   "hints": [
    "The first word of a binomial name is…?"
@@ -539,12 +539,12 @@
   "type": "mcq",
   "q": "Which part of the brain coordinates balance and precise voluntary movements such as riding a bicycle?",
   "options": [
-   "Cerebellum",
    "Cerebrum",
    "Medulla oblongata",
+   "Cerebellum",
    "Hypothalamus"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The cerebellum (hind-brain) coordinates muscular activity, posture and balance. The cerebrum handles thinking and voluntary decisions; the medulla controls involuntary actions such as heartbeat and breathing; the hypothalamus regulates temperature, hunger and hormones.",
   "hints": [
    "It sits at the back of the brain, below the cerebrum."
@@ -565,12 +565,12 @@
   "type": "reasoning",
   "q": "You touch a hot pan and pull your hand away before you even feel the pain. Why?",
   "options": [
-   "It is a reflex action controlled by the spinal cord, without waiting for the brain.",
+   "Hormones make the hand move.",
    "The brain decides very quickly to move the hand.",
    "The muscles of the hand sense heat directly.",
-   "Hormones make the hand move."
+   "It is a reflex action controlled by the spinal cord, without waiting for the brain."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "In a reflex arc, the sensory neuron carries the signal to the spinal cord, a relay neuron passes it directly to a motor neuron, and the arm muscle contracts. The signal reaches the brain slightly later, which is when you become aware of the pain.",
   "hints": [
    "Which part of the nervous system handles reflexes?"
@@ -592,9 +592,9 @@
   "q": "A person with uncontrolled diabetes produces too little insulin. Which observation would you expect?",
   "options": [
    "High blood glucose, with glucose appearing in the urine",
-   "Low blood glucose and no glucose in urine",
+   "Glucose being absorbed more quickly into body cells",
    "Increased storage of glucose as glycogen in the liver",
-   "Glucose being absorbed more quickly into body cells"
+   "Low blood glucose and no glucose in urine"
   ],
   "answer": 0,
   "explanation": "Insulin, from the pancreas, makes cells take up glucose and makes the liver store it as glycogen. With too little insulin, glucose stays in the blood. When blood glucose is very high, the kidneys cannot reabsorb it all, so glucose appears in the urine.",
@@ -620,9 +620,9 @@
   "q": "Which is the functional unit of the human kidney that filters blood?",
   "options": [
    "Nephron",
-   "Neuron",
+   "Villus",
    "Alveolus",
-   "Villus"
+   "Neuron"
   ],
   "answer": 0,
   "explanation": "Each kidney has about a million nephrons. In each, blood is filtered in the glomerulus (inside Bowman’s capsule); useful substances such as glucose and much of the water are then reabsorbed, and the remaining fluid becomes urine.",
@@ -646,12 +646,12 @@
   "type": "what-if",
   "q": "Vaccination introduces a harmless form of a pathogen. Why does a vaccinated person usually not fall ill when later exposed to the real pathogen?",
   "options": [
+   "Vaccines make the pathogen unable to infect any cell.",
    "The immune system has memory cells that recognise the pathogen and respond quickly before it multiplies.",
-   "The vaccine kills every pathogen that enters later.",
    "The vaccine stays in the blood forever as a drug.",
-   "Vaccines make the pathogen unable to infect any cell."
+   "The vaccine kills every pathogen that enters later."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The vaccine triggers a primary immune response that produces antibodies and long-lived memory cells. On real exposure, memory cells mount a faster, stronger secondary response that destroys the pathogen before it can cause disease.",
   "misconception": "A vaccine is not a medicine that kills germs directly; it trains the immune system.",
   "hints": [
@@ -674,12 +674,12 @@
   "type": "mcq",
   "q": "Which nutrient deficiency causes scurvy, with bleeding gums?",
   "options": [
-   "Vitamin C",
-   "Vitamin D",
+   "Iodine",
    "Iron",
-   "Iodine"
+   "Vitamin D",
+   "Vitamin C"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Vitamin C is needed to make collagen, a protein in gums, skin and blood vessels. Without it, gums bleed and wounds heal poorly. Citrus fruits and amla are rich sources. (Vitamin D deficiency → rickets; iron → anaemia; iodine → goitre.)",
   "hints": [
    "Sailors on long voyages avoided this disease by eating citrus fruit."
@@ -701,8 +701,8 @@
   "q": "A student adds iodine solution to two test tubes of starch solution. Saliva is added to tube A only, and both are kept at 37 °C for 20 minutes before testing. Tube A stays brown–yellow; tube B turns blue-black. What does this show?",
   "options": [
    "Salivary amylase digests starch.",
-   "Saliva contains starch.",
    "Iodine digests starch at 37 °C.",
+   "Saliva contains starch.",
    "Temperature alone breaks down starch."
   ],
   "answer": 0,
@@ -727,12 +727,12 @@
   "type": "reasoning",
   "q": "Why is the inner wall of the small intestine folded into millions of finger-like villi?",
   "options": [
-   "To greatly increase the surface area for absorbing digested food",
-   "To grind food into smaller pieces",
    "To produce bile",
+   "To grind food into smaller pieces",
+   "To greatly increase the surface area for absorbing digested food",
    "To slow down the movement of food completely"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Villi (and the microvilli on their cells) enormously increase the surface area, and each villus has a rich blood supply and a lacteal, so digested food is absorbed quickly. Bile is made by the liver; grinding happens in the mouth and stomach.",
   "hints": [
    "Absorption happens across a surface. How do you make a surface bigger in a small space?"
@@ -753,12 +753,12 @@
   "type": "what-if",
   "q": "A person’s gall bladder is removed, so bile can no longer be stored and released in large amounts after a meal. Digestion of which food is most affected?",
   "options": [
-   "Fats",
-   "Starch",
    "Proteins",
-   "Vitamins C and B"
+   "Fats",
+   "Vitamins C and B",
+   "Starch"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Bile contains no enzymes, but its salts emulsify fats — breaking large fat globules into tiny droplets so that lipase can act on a much larger surface area. Without a burst of bile after a fatty meal, fat digestion is slower and less complete. (Bile still trickles directly from the liver, so people manage with a low-fat diet.)",
   "misconception": "Bile does not digest fat chemically; it emulsifies it so enzymes can work faster.",
   "hints": [
@@ -781,12 +781,12 @@
   "type": "mcq",
   "q": "During a sprint, muscles start to ache with cramp. What is building up in them?",
   "options": [
+   "Ethanol from fermentation",
    "Lactic acid from anaerobic respiration",
    "Carbon dioxide from aerobic respiration",
-   "Ethanol from fermentation",
    "Excess oxygen"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "When oxygen supply cannot keep up, muscle cells respire anaerobically: glucose → lactic acid + a little energy. Accumulating lactic acid contributes to fatigue and cramps. Yeast produces ethanol and CO₂ in anaerobic respiration, but human muscle does not.",
   "misconception": "Ethanol is the product in yeast, not in human muscle.",
   "hints": [
@@ -808,12 +808,12 @@
   "type": "numerical",
   "q": "Complete aerobic respiration of one glucose molecule yields about 38 ATP, while anaerobic respiration yields 2 ATP. Roughly how many times more energy does aerobic respiration release per glucose?",
   "options": [
-   "19 times",
    "36 times",
-   "2 times",
-   "76 times"
+   "19 times",
+   "76 times",
+   "2 times"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "38 ÷ 2 = 19. Aerobic respiration oxidises glucose completely to CO₂ and water in the mitochondria, releasing far more of its energy; anaerobic respiration leaves much energy locked in lactic acid or ethanol. (Modern estimates are closer to 30–32 ATP, but the conclusion is the same.)",
   "misconception": "36 is the difference, not the ratio.",
   "hints": [
@@ -835,12 +835,12 @@
   "type": "reasoning",
   "q": "Fish die when water becomes warm and polluted with sewage, even though no toxin is present. Which is the best explanation?",
   "options": [
-   "Warm water holds less dissolved oxygen, and bacteria decomposing sewage use up much of what remains.",
    "Warm water makes fish too buoyant.",
    "Sewage adds too much oxygen.",
-   "Fish cannot swim in warm water."
+   "Fish cannot swim in warm water.",
+   "Warm water holds less dissolved oxygen, and bacteria decomposing sewage use up much of what remains."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Gases are less soluble in warmer water, so dissolved oxygen falls. Decomposer bacteria feeding on sewage respire aerobically and consume more oxygen (high biological oxygen demand). Together these can leave too little oxygen for fish gills to extract.",
   "hints": [
    "How does temperature affect how much gas a liquid can dissolve?",
@@ -863,8 +863,8 @@
   "q": "In which structures of the human lungs does gas exchange take place?",
   "options": [
    "Alveoli",
-   "Trachea",
    "Bronchi",
+   "Trachea",
    "Diaphragm"
   ],
   "answer": 0,
@@ -916,8 +916,8 @@
   "q": "Why is the muscular wall of the left ventricle much thicker than that of the right ventricle?",
   "options": [
    "The left ventricle pumps blood all round the body, needing much higher pressure than pumping to the nearby lungs.",
-   "The left ventricle holds more blood.",
    "The right ventricle pumps oxygenated blood, which is lighter.",
+   "The left ventricle holds more blood.",
    "The left ventricle receives blood from the lungs at high pressure."
   ],
   "answer": 0,
@@ -943,12 +943,12 @@
   "type": "mcq",
   "q": "Which blood component helps blood to clot at a wound?",
   "options": [
-   "Platelets",
    "Red blood cells",
+   "Plasma water",
    "White blood cells",
-   "Plasma water"
+   "Platelets"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Platelets (cell fragments) gather at a damaged vessel and release substances that convert fibrinogen into a mesh of fibrin threads, trapping blood cells to form a clot.",
   "hints": [
    "They are tiny cell fragments, not full cells."
@@ -969,12 +969,12 @@
   "type": "numerical",
   "q": "The heart pumps about 70 mL of blood with each beat. At a resting rate of 72 beats per minute, about how many litres does it pump per minute?",
   "options": [
-   "5.04 L",
    "50.4 L",
    "0.97 L",
-   "504 L"
+   "504 L",
+   "5.04 L"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Cardiac output = stroke volume × heart rate = 70 mL × 72 = 5040 mL ≈ 5.04 L per minute — roughly the whole blood volume of an adult every minute.",
   "misconception": "50.4 L and 504 L come from converting mL to L incorrectly (1 L = 1000 mL).",
   "hints": [
@@ -997,8 +997,8 @@
   "q": "Bryophyllum can produce new plants from buds on the edges of its leaves. This is an example of:",
   "options": [
    "Vegetative propagation",
-   "Sexual reproduction",
    "Fragmentation of algae",
+   "Sexual reproduction",
    "Pollination"
   ],
   "answer": 0,
@@ -1023,12 +1023,12 @@
   "type": "reasoning",
   "q": "A farmer grows a banana variety only from cuttings for many years. A new fungal disease arrives. Why is the whole crop at high risk?",
   "options": [
-   "All the plants are genetically identical, so if one is susceptible, all are.",
-   "Cuttings always produce weak plants.",
    "Bananas cannot be infected by fungi.",
-   "Asexual reproduction increases variation."
+   "Asexual reproduction increases variation.",
+   "All the plants are genetically identical, so if one is susceptible, all are.",
+   "Cuttings always produce weak plants."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Asexual reproduction produces clones with no genetic variation. Any plant that lacks resistance means every plant lacks it. Sexual reproduction, by mixing genes, produces variation that makes it more likely some individuals survive a new disease.",
   "misconception": "Asexual reproduction reduces variation, it does not increase it.",
   "hints": [
@@ -1051,12 +1051,12 @@
   "type": "mcq",
   "q": "In a flowering plant, after fertilisation, the ovary develops into the ______ and the ovules develop into the ______.",
   "options": [
-   "fruit; seeds",
+   "stigma; style",
    "seeds; fruit",
    "petals; pollen",
-   "stigma; style"
+   "fruit; seeds"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "After fertilisation, each ovule (containing the zygote) becomes a seed, and the ovary wall ripens into the fruit that encloses the seeds.",
   "hints": [
    "How many seeds can one fruit contain?"
@@ -1078,12 +1078,12 @@
   "type": "what-if",
   "q": "A plant species’ flowers are pollinated by only one species of bee. If that bee became extinct, which would most likely happen first?",
   "options": [
-   "Seed production would fall sharply, threatening the plant’s survival.",
-   "The plant would start producing seeds by meiosis alone.",
+   "Nothing, because plants make their own food.",
    "Fruit would form without fertilisation in all cases.",
-   "Nothing, because plants make their own food."
+   "The plant would start producing seeds by meiosis alone.",
+   "Seed production would fall sharply, threatening the plant’s survival."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Without its pollinator, pollen would not reach the stigma, so fertilisation — and seed formation — would largely stop. The plant could survive for a while but would fail to reproduce sexually. This dependence is why pollinator decline threatens both biodiversity and food crops.",
   "misconception": "Photosynthesis feeds the plant but does not make seeds.",
   "hints": [
@@ -1135,8 +1135,8 @@
   "q": "A tall pea plant of unknown genotype is crossed with a dwarf plant (tt). Of the offspring, about half are tall and half are dwarf. What was the genotype of the tall parent?",
   "options": [
    "Tt",
-   "TT",
    "tt",
+   "TT",
    "It cannot be determined"
   ],
   "answer": 0,
@@ -1161,12 +1161,12 @@
   "type": "mcq",
   "q": "Which parent determines whether a human baby is a boy or a girl?",
   "options": [
-   "The father, because a sperm can carry either an X or a Y chromosome",
    "The mother, because the egg carries X or Y",
+   "Neither — it depends on diet during pregnancy",
    "Both parents equally",
-   "Neither — it depends on diet during pregnancy"
+   "The father, because a sperm can carry either an X or a Y chromosome"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Mothers are XX and every egg carries an X. Fathers are XY, so half the sperm carry X and half carry Y. An X sperm gives XX (girl); a Y sperm gives XY (boy).",
   "hints": [
    "Which parent has two different sex chromosomes?"
@@ -1187,12 +1187,12 @@
   "type": "numerical",
   "q": "In a cross between two pea plants that are both heterozygous for two independently inherited traits (TtRr × TtRr, tall/round dominant), about how many of every 16 offspring will be dwarf AND wrinkled (ttrr)?",
   "options": [
-   "1",
-   "3",
    "9",
-   "4"
+   "3",
+   "4",
+   "1"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Because the genes assort independently, multiply probabilities: P(tt) = ¼ and P(rr) = ¼, so P(ttrr) = 1/16 — one in every 16. This is the “1” in Mendel’s 9 : 3 : 3 : 1 ratio.",
   "misconception": "9 is the number showing both DOMINANT traits.",
   "hints": [
@@ -1215,12 +1215,12 @@
   "type": "mcq",
   "q": "Genes are segments of which molecule?",
   "options": [
-   "DNA",
    "Protein",
+   "ATP",
    "Glucose",
-   "ATP"
+   "DNA"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "A gene is a section of DNA that carries the instructions for making a particular protein (or functional RNA). DNA is packed with proteins into chromosomes in the nucleus.",
   "hints": [
    "It is the molecule shaped like a double helix."
@@ -1241,12 +1241,12 @@
   "type": "reasoning",
   "q": "Bacteria in a patient become resistant to an antibiotic after a course of treatment is not completed. Which explanation fits natural selection?",
   "options": [
-   "A few bacteria were already resistant by chance; they survived and multiplied when the others were killed.",
    "The antibiotic taught the bacteria how to resist it.",
+   "The antibiotic became weaker over time.",
    "Bacteria chose to change their DNA to survive.",
-   "The antibiotic became weaker over time."
+   "A few bacteria were already resistant by chance; they survived and multiplied when the others were killed."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Variation already existed: random mutations had made a few bacteria resistant. The antibiotic killed the susceptible ones, so the resistant survivors reproduced and passed on resistance. Stopping treatment early leaves more of these survivors. Organisms do not change on purpose.",
   "misconception": "Natural selection acts on existing variation; it does not create changes in response to need.",
   "hints": [
@@ -1268,12 +1268,12 @@
   "type": "mcq",
   "q": "The forelimbs of a human, a bat and a whale have the same basic bone pattern but different functions. These are:",
   "options": [
+   "Fossils",
    "Homologous organs, evidence of common ancestry",
-   "Analogous organs, evidence of similar function",
    "Vestigial organs",
-   "Fossils"
+   "Analogous organs, evidence of similar function"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Homologous organs share the same basic structure and origin but are adapted for different uses (grasping, flying, swimming) — evidence that these animals evolved from a common ancestor. Analogous organs (e.g. bird and insect wings) have similar functions but different structures and origins.",
   "misconception": "Similar function → analogous; similar structure → homologous.",
   "hints": [
@@ -1297,8 +1297,8 @@
   "options": [
    "Each form survives better where it matches the bark, consistent with predation by sight.",
    "Dark moths survive better everywhere.",
-   "Soot directly changes pale moths into dark moths.",
-   "Survival does not depend on the type of woodland."
+   "Survival does not depend on the type of woodland.",
+   "Soot directly changes pale moths into dark moths."
   ],
   "answer": 0,
   "explanation": "Recapture rates: clean woods — pale 25%, dark 6.25%; sooty woods — pale 7.5%, dark 30%. Each form survives better where it is camouflaged, consistent with birds eating the moths they can see. This is the classic industrial melanism example of natural selection.",
@@ -1348,12 +1348,12 @@
   "type": "numerical",
   "q": "In the food chain grass → grasshopper → frog → snake, the grass captures 20,000 kJ of energy. Using the 10% law, how much energy reaches the snake?",
   "options": [
-   "20 kJ",
    "200 kJ",
+   "20 kJ",
    "2000 kJ",
    "2 kJ"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Each transfer passes on about 10%: grass 20,000 → grasshopper 2000 → frog 200 → snake 20 kJ. The rest is used in respiration and lost as heat at each level.",
   "misconception": "200 kJ stops at the frog — count the transfers carefully (three of them).",
   "hints": [
@@ -1376,12 +1376,12 @@
   "type": "reasoning",
   "q": "A non-biodegradable pesticide is sprayed on crops at a very low concentration. Years later, it is found at the HIGHEST concentration in eagles. Why?",
   "options": [
-   "It is not broken down or excreted, so it accumulates at each trophic level (biomagnification).",
-   "Eagles are sprayed directly.",
    "The pesticide multiplies inside animals.",
-   "Eagles drink more water than other animals."
+   "Eagles are sprayed directly.",
+   "Eagles drink more water than other animals.",
+   "It is not broken down or excreted, so it accumulates at each trophic level (biomagnification)."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Each consumer eats many organisms from the level below, and the persistent chemical is stored (often in fat) rather than broken down. So its concentration increases up the food chain and is highest in top predators. DDT thinned eagles’ and falcons’ eggshells in this way.",
   "misconception": "The pesticide does not reproduce; it concentrates because it is retained.",
   "hints": [
@@ -1405,12 +1405,12 @@
   "type": "mcq",
   "q": "Which organisms convert nitrogen gas from the air into compounds that plants can use?",
   "options": [
-   "Nitrogen-fixing bacteria such as Rhizobium in legume root nodules",
    "Fungi that decompose leaves",
-   "Green plants directly from the air",
-   "Earthworms"
+   "Earthworms",
+   "Nitrogen-fixing bacteria such as Rhizobium in legume root nodules",
+   "Green plants directly from the air"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Most organisms cannot use N₂ gas. Nitrogen-fixing bacteria (e.g. Rhizobium in root nodules of peas and beans, and free-living cyanobacteria) convert it into ammonia/ammonium, which is then used to make amino acids. Lightning also fixes a small amount.",
   "misconception": "Plants cannot absorb nitrogen gas directly, even though air is 78% nitrogen.",
   "hints": [
@@ -1433,12 +1433,12 @@
   "type": "what-if",
   "q": "In a pond ecosystem, all decomposers (bacteria and fungi) are suddenly killed. What would happen in the long run?",
   "options": [
+   "Nothing would change, because energy comes from the Sun.",
    "Dead matter would pile up and nutrients would stop being recycled, so plant growth would eventually decline.",
    "Plants would grow faster with less competition.",
-   "Nothing would change, because energy comes from the Sun.",
    "Oxygen levels would fall immediately to zero."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Decomposers break down dead organisms and wastes, releasing nutrients (nitrates, phosphates, CO₂) back into the water and soil. Without them, nutrients stay locked in dead bodies; producers run short of nutrients and the whole food web would decline, even though sunlight is still available.",
   "misconception": "Energy comes from the Sun, but nutrients must be recycled — and recycling depends on decomposers.",
   "hints": [
@@ -1462,12 +1462,12 @@
   "type": "interdisciplinary",
   "q": "Large-scale deforestation affects the carbon cycle mainly because:",
   "options": [
-   "fewer trees absorb CO₂ by photosynthesis, and burning or rotting wood releases stored carbon",
    "trees produce most of the nitrogen in the air",
-   "forests release CO₂ only at night",
-   "soil becomes colder"
+   "fewer trees absorb CO₂ by photosynthesis, and burning or rotting wood releases stored carbon",
+   "soil becomes colder",
+   "forests release CO₂ only at night"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Forests are major carbon stores. Cutting them removes a sink that absorbs CO₂ through photosynthesis, and burning or decay of the cleared wood releases the stored carbon as CO₂, adding to the greenhouse effect.",
   "hints": [
    "Which process removes CO₂ from the air?"
@@ -1489,12 +1489,12 @@
   "type": "mcq",
   "q": "What are the raw materials of photosynthesis?",
   "options": [
-   "Carbon dioxide and water",
    "Oxygen and glucose",
-   "Glucose and water",
-   "Nitrogen and oxygen"
+   "Carbon dioxide and water",
+   "Nitrogen and oxygen",
+   "Glucose and water"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ in the presence of light and chlorophyll. Glucose and oxygen are the products, not the raw materials.",
   "misconception": "Oxygen and glucose are what photosynthesis makes; they are the raw materials of respiration.",
   "hints": [
@@ -1516,12 +1516,12 @@
   "type": "what-if",
   "q": "A healthy potted plant in bright light is suddenly moved into dim light. Which change is most likely in the first few hours?",
   "options": [
-   "The rate of photosynthesis falls, possibly below the rate of respiration, so the plant may give out net CO₂.",
    "The plant stops respiring.",
    "The rate of photosynthesis rises to compensate.",
-   "The plant immediately loses all its chlorophyll."
+   "The plant immediately loses all its chlorophyll.",
+   "The rate of photosynthesis falls, possibly below the rate of respiration, so the plant may give out net CO₂."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Light intensity limits photosynthesis, so the rate falls. Respiration continues at about the same rate day and night. If photosynthesis drops below respiration (below the “compensation point”), the plant uses more sugar than it makes and releases net CO₂ instead of net O₂. Over days, it may grow towards the light (phototropism).",
   "misconception": "Plants respire all the time, not only at night.",
   "hints": [
@@ -1544,12 +1544,12 @@
   "type": "experiment",
   "q": "A destarched potted plant has one leaf partly covered with black paper and is kept in sunlight for a day. When tested with iodine, only the uncovered part of the leaf turns blue-black. What does this show?",
   "options": [
-   "Light is necessary for photosynthesis (starch formation).",
-   "Chlorophyll is necessary for photosynthesis.",
    "CO₂ is necessary for photosynthesis.",
-   "Iodine is made in the leaf."
+   "Iodine is made in the leaf.",
+   "Chlorophyll is necessary for photosynthesis.",
+   "Light is necessary for photosynthesis (starch formation)."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Both parts of the leaf had chlorophyll, CO₂ and water; the only difference was light. Starch (shown by blue-black iodine) formed only where light reached, so light is necessary. Destarching first ensures that any starch found was made during the experiment.",
   "misconception": "The chlorophyll conclusion needs a variegated leaf; this experiment varies only light.",
   "hints": [
@@ -1571,12 +1571,12 @@
   "type": "reasoning",
   "q": "On a hot, dry, windy day, many plants partly close their stomata. What is the main trade-off?",
   "options": [
-   "It reduces water loss but also reduces CO₂ intake, slowing photosynthesis.",
-   "It increases water loss and photosynthesis.",
+   "It increases CO₂ intake.",
    "It stops respiration completely.",
-   "It increases CO₂ intake."
+   "It reduces water loss but also reduces CO₂ intake, slowing photosynthesis.",
+   "It increases water loss and photosynthesis."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Stomata let in CO₂ for photosynthesis but also let out water vapour (transpiration). Closing them saves water — vital on a hot, windy day — but cuts the CO₂ supply, so photosynthesis slows.",
   "hints": [
    "What passes in, and what passes out, through stomata?"
@@ -1599,8 +1599,8 @@
   "options": [
    "Auxin",
    "Insulin",
-   "Adrenaline",
-   "Thyroxine"
+   "Thyroxine",
+   "Adrenaline"
   ],
   "answer": 0,
   "explanation": "Auxin moves to the shaded side of the shoot tip and makes cells there grow longer, so the shoot bends towards the light (phototropism). Insulin, adrenaline and thyroxine are animal hormones.",

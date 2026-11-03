@@ -8,9 +8,9 @@
   "q": "Which gas makes the largest contribution to the human-caused increase in the greenhouse effect?",
   "options": [
    "Carbon dioxide",
-   "Oxygen",
+   "Argon",
    "Nitrogen",
-   "Argon"
+   "Oxygen"
   ],
   "answer": 0,
   "explanation": "CO₂ from burning fossil fuels and deforestation is the largest contributor to recent warming. Oxygen, nitrogen and argon (together over 99% of dry air) do not absorb infrared radiation significantly.",
@@ -33,12 +33,12 @@
   "type": "reasoning",
   "q": "Why is melting Arctic sea ice described as a “positive feedback” for global warming?",
   "options": [
-   "Dark ocean water absorbs more sunlight than white ice, causing further warming and more melting.",
+   "Ice melts faster when the Sun is closer.",
    "Melting floating ice raises sea level enormously.",
-   "Melting ice releases large amounts of oxygen.",
-   "Ice melts faster when the Sun is closer."
+   "Dark ocean water absorbs more sunlight than white ice, causing further warming and more melting.",
+   "Melting ice releases large amounts of oxygen."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Ice has a high albedo (it reflects most sunlight); open ocean is dark and absorbs most of it. As ice melts, more sunlight is absorbed, warming the water and melting more ice — the change reinforces itself. (Floating sea ice barely changes sea level when it melts.)",
   "misconception": "“Positive” feedback means self-reinforcing, not “good”.",
   "hints": [
@@ -59,12 +59,12 @@
   "type": "statement",
   "q": "Consider:\nI. Without any greenhouse effect, Earth’s average temperature would be well below freezing.\nII. The ozone hole is the main cause of global warming.\nIII. Methane traps more heat per molecule than carbon dioxide.\nWhich are correct?",
   "options": [
-   "I and III only",
    "I and II only",
+   "I and III only",
    "II and III only",
    "I, II and III"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "I: true — without it Earth would average about −18 °C instead of about +15 °C. II: false — ozone depletion lets in more UV; it is a separate problem from greenhouse warming. III: true — methane is a much more powerful greenhouse gas per molecule (roughly 80 times CO₂ over 20 years), though there is far less of it.",
   "misconception": "The ozone hole and global warming are often confused, but they have different causes and effects.",
   "hints": [
@@ -85,12 +85,12 @@
   "type": "data",
   "q": "Atmospheric CO₂ measured at Mauna Loa, Hawaii (annual averages, rounded). What was the approximate average rate of increase between 2000 and 2020?",
   "options": [
-   "2.2 ppm per year",
-   "1.1 ppm per year",
    "44 ppm per year",
-   "4.4 ppm per year"
+   "1.1 ppm per year",
+   "4.4 ppm per year",
+   "2.2 ppm per year"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Increase = 414 − 370 = 44 ppm over 20 years = 2.2 ppm per year. For 1960–1980 the rate was (339 − 317)/20 ≈ 1.1 ppm/year — so not only is CO₂ rising, the rate of rise has roughly doubled.",
   "misconception": "44 ppm is the total change, not the yearly rate.",
   "hints": [
@@ -130,12 +130,12 @@
   "type": "reasoning",
   "q": "Why is a forest with many species usually more stable than a plantation of a single tree species?",
   "options": [
-   "With many species and food links, the loss of one species or a disease has a smaller effect on the whole ecosystem.",
+   "Diverse forests receive more sunlight.",
    "Monocultures grow more slowly.",
    "Single-species plantations have no insects.",
-   "Diverse forests receive more sunlight."
+   "With many species and food links, the loss of one species or a disease has a smaller effect on the whole ecosystem."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "In a diverse ecosystem, food webs have many alternative pathways and species respond differently to stresses, so one pest, disease or drought rarely collapses the whole system. A monoculture can be wiped out by a single pest that attacks that species.",
   "hints": [
    "What happens to a single-species plantation if one pest arrives?"
@@ -157,8 +157,8 @@
   "options": [
    "Villagers, many of them women, hugging trees to stop them being felled",
    "Building India’s first wildlife sanctuary",
-   "Cleaning the Ganga river",
-   "Introducing solar cookers"
+   "Introducing solar cookers",
+   "Cleaning the Ganga river"
   ],
   "answer": 0,
   "explanation": "“Chipko” means “to cling”. Village communities in Uttarakhand embraced trees to prevent commercial logging, highlighting the link between forests and local livelihoods. It inspired forest-conservation policy in India.",
@@ -182,8 +182,8 @@
   "options": [
    "Fewer predators → more deer → overgrazing of saplings → fewer young trees",
    "Fewer predators → fewer deer → more saplings",
-   "Hunting directly destroys saplings",
-   "More deer improve soil, killing saplings"
+   "More deer improve soil, killing saplings",
+   "Hunting directly destroys saplings"
   ],
   "answer": 0,
   "explanation": "Predators control herbivore numbers. Without wolves, deer multiply and browse heavily on young trees, so few saplings survive — an example of a trophic cascade. When wolves were reintroduced to Yellowstone (USA), browsing pressure fell and some tree growth recovered.",
@@ -209,8 +209,8 @@
   "options": [
    "Wind",
    "Coal",
-   "Natural gas",
-   "Petroleum"
+   "Petroleum",
+   "Natural gas"
   ],
   "answer": 0,
   "explanation": "Wind is renewed continuously by solar heating of the atmosphere. Coal, natural gas and petroleum are fossil fuels formed over millions of years; we use them far faster than they form.",
@@ -232,12 +232,12 @@
   "type": "numerical",
   "q": "Sunlight delivers about 1000 W per square metre on a clear day. How much electrical power does a 2 m² solar panel with 20% efficiency produce?",
   "options": [
-   "400 W",
+   "100 W",
    "2000 W",
-   "200 W",
-   "100 W"
+   "400 W",
+   "200 W"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Input power = 1000 × 2 = 2000 W. Output = 20% of 2000 = 400 W. The other 80% is reflected or turned into heat.",
   "misconception": "200 W forgets that the panel is 2 m².",
   "hints": [
@@ -259,12 +259,12 @@
   "type": "reasoning",
   "q": "The power available from wind is proportional to the CUBE of the wind speed. If the wind speed doubles, the available power becomes:",
   "options": [
-   "8 times larger",
    "2 times larger",
-   "4 times larger",
-   "16 times larger"
+   "8 times larger",
+   "16 times larger",
+   "4 times larger"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Power ∝ v³, so doubling v multiplies power by 2³ = 8. (Each second, twice as much air passes through, and each kilogram has four times the kinetic energy: 2 × 4 = 8.) This is why turbines are placed on windy ridges and offshore.",
   "misconception": "4 times uses kinetic energy ∝ v² but forgets that more air also passes each second.",
   "hints": [
@@ -286,12 +286,12 @@
   "type": "mcq",
   "q": "What is a major limitation of solar and wind power that energy storage helps to solve?",
   "options": [
-   "Their output varies with weather and time of day.",
+   "They can only be built in deserts.",
    "They release greenhouse gases.",
    "They need imported fuel.",
-   "They can only be built in deserts."
+   "Their output varies with weather and time of day."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Solar produces nothing at night and less on cloudy days; wind varies with the weather. Batteries, pumped hydro storage and grid connections store or share energy so supply can meet demand.",
   "hints": [
    "When does a solar panel produce no electricity?"
@@ -312,9 +312,9 @@
   "q": "Lakes receiving fertiliser run-off often develop a thick green scum of algae, after which many fish die. What is the main cause of the fish deaths?",
   "options": [
    "Decomposition of dead algae by bacteria uses up dissolved oxygen.",
-   "Algae release poisonous oxygen.",
+   "The water becomes too cold.",
    "Fertilisers directly poison all fish.",
-   "The water becomes too cold."
+   "Algae release poisonous oxygen."
   ],
   "answer": 0,
   "explanation": "Nitrates and phosphates cause an algal bloom (eutrophication). When the algae die, decomposing bacteria multiply and consume most of the dissolved oxygen, so fish suffocate. Algae also block light for submerged plants.",
@@ -336,12 +336,12 @@
   "type": "mcq",
   "q": "Which pollutants are mainly responsible for acid rain?",
   "options": [
-   "Sulphur dioxide and nitrogen oxides",
-   "Carbon monoxide and ozone",
    "Methane and CFCs",
-   "Oxygen and nitrogen"
+   "Oxygen and nitrogen",
+   "Carbon monoxide and ozone",
+   "Sulphur dioxide and nitrogen oxides"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "SO₂ (from burning sulphur-containing coal) and NOₓ (from vehicle engines and power plants) react with water in the air to form sulphuric and nitric acids. Acid rain damages forests, lakes and buildings — including marble monuments such as the Taj Mahal.",
   "hints": [
    "Which gases form sulphuric and nitric acids?"
@@ -387,12 +387,12 @@
   "type": "mcq",
   "q": "Before genetic engineering, insulin for diabetics was extracted from animal pancreases. Today most insulin is made by:",
   "options": [
-   "bacteria or yeast into which the human insulin gene has been inserted",
    "synthesising it from glucose in factories",
+   "collecting it from human donors",
    "extracting it from plants",
-   "collecting it from human donors"
+   "bacteria or yeast into which the human insulin gene has been inserted"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Recombinant DNA technology inserts the human insulin gene into microbes such as E. coli or yeast, which then produce human insulin in large fermenters. It is identical to human insulin and available in large quantities.",
   "hints": [
    "Which organisms multiply quickly and can be given a human gene?"
@@ -412,12 +412,12 @@
   "type": "reasoning",
   "q": "CRISPR–Cas9 is often called “genetic scissors”. What does it allow scientists to do?",
   "options": [
-   "Cut DNA at a precisely chosen sequence so that a gene can be disabled, corrected or replaced",
-   "Make exact copies of whole organisms",
    "Read the DNA of any organism without cutting it",
-   "Turn bacteria into viruses"
+   "Turn bacteria into viruses",
+   "Cut DNA at a precisely chosen sequence so that a gene can be disabled, corrected or replaced",
+   "Make exact copies of whole organisms"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "A guide RNA directs the Cas9 enzyme to a matching DNA sequence, where it cuts both strands. The cell’s repair process can then disable the gene or insert a corrected version. It was adapted from a bacterial defence system against viruses; Emmanuelle Charpentier and Jennifer Doudna received the 2020 Nobel Prize in Chemistry for it.",
   "misconception": "Cloning an organism and editing a gene are different technologies.",
   "hints": [
@@ -440,9 +440,9 @@
   "q": "Bt cotton is protected from bollworm caterpillars because it:",
   "options": [
    "carries a gene from the bacterium Bacillus thuringiensis that makes a protein toxic to the caterpillars",
+   "has thorns",
    "is sprayed with chemical pesticide inside the seed",
-   "grows too fast for insects to eat",
-   "has thorns"
+   "grows too fast for insects to eat"
   ],
   "answer": 0,
   "explanation": "A gene from Bacillus thuringiensis (Bt) was inserted into the cotton genome. The plant makes a crystal (Cry) protein that becomes toxic in the alkaline gut of certain caterpillars, but is harmless to humans and most other animals.",
@@ -464,12 +464,12 @@
   "type": "reasoning",
   "q": "A machine-learning program is trained to recognise skin diseases using thousands of photos, almost all of light-skinned patients. What is the most likely problem?",
   "options": [
+   "It will become conscious.",
    "It may perform poorly on patients with darker skin, because it learnt from unrepresentative data.",
    "It will refuse to work on any new photo.",
-   "It will become conscious.",
    "It will work equally well for everyone because computers are objective."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Machine-learning models learn patterns from their training data. If the data are not representative, the model can be less accurate for under-represented groups — a form of bias. Good AI design needs diverse, carefully checked data and testing.",
   "misconception": "Computers are not automatically objective; they reflect the data they were trained on.",
   "hints": [
@@ -490,12 +490,12 @@
   "type": "mcq",
   "q": "A robot vacuum cleaner detects a wall and turns away. Which component lets it sense the wall?",
   "options": [
-   "A sensor (such as an infrared or bump sensor)",
    "An actuator",
    "A battery",
+   "A sensor (such as an infrared or bump sensor)",
    "A solar panel"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Robots sense their surroundings with sensors (infrared, ultrasonic, touch, cameras), process the data with a controller, and act through actuators such as motors. Sense → think → act.",
   "misconception": "Actuators produce movement; sensors gather information.",
   "hints": [
@@ -517,9 +517,9 @@
   "q": "A cube of side 1 cm is divided into cubes of side 1 mm. By what factor does the total surface area increase?",
   "options": [
    "10 times",
-   "100 times",
    "1000 times",
-   "6 times"
+   "6 times",
+   "100 times"
   ],
   "answer": 0,
   "explanation": "Original area = 6 × (1 cm)² = 6 cm². Cutting into 1 mm cubes gives 10 × 10 × 10 = 1000 cubes, each with area 6 × (0.1 cm)² = 0.06 cm², total 60 cm² — 10 times larger. Surface area per volume rises as size falls, which is why nanoparticles (far smaller still) are so reactive.",
@@ -543,9 +543,9 @@
   "q": "Gold is unreactive as a bar, yet gold nanoparticles a few nanometres across can act as good catalysts. Which is the best explanation?",
   "options": [
    "Nanoparticles have a huge surface area per unit mass, and a large fraction of their atoms are at the surface with unusual properties.",
-   "Nanoparticles are made of a different element.",
    "Gold becomes radioactive at small sizes.",
-   "Small particles are heavier per atom."
+   "Small particles are heavier per atom.",
+   "Nanoparticles are made of a different element."
   ],
   "answer": 0,
   "explanation": "Catalysis happens at surfaces. In a particle only a few nanometres across, a large proportion of atoms are surface atoms, many at edges and corners with fewer neighbours, which makes them more reactive. Properties such as colour and melting point also change at the nanoscale.",
@@ -569,12 +569,12 @@
   "type": "mcq",
   "q": "mRNA vaccines (used widely against COVID-19) work by:",
   "options": [
+   "killing the virus directly in the blood",
    "giving cells temporary instructions to make a harmless viral protein, which trains the immune system",
    "changing the person’s DNA permanently",
-   "injecting live virus",
-   "killing the virus directly in the blood"
+   "injecting live virus"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The mRNA is read by ribosomes in the cytoplasm to make a viral protein (e.g. the spike protein). The immune system learns to recognise it and forms memory cells. The mRNA breaks down within days and does not enter the nucleus or alter DNA.",
   "misconception": "mRNA does not change a person’s DNA.",
   "hints": [
@@ -595,12 +595,12 @@
   "type": "interdisciplinary",
   "q": "Gravitational waves were first directly detected in 2015 by the LIGO detectors. What produced the signal?",
   "options": [
-   "Two black holes spiralling together and merging over a billion light-years away",
    "An earthquake in the USA",
+   "The Moon’s tides",
    "A solar flare",
-   "The Moon’s tides"
+   "Two black holes spiralling together and merging over a billion light-years away"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The signal, GW150914, came from two black holes (about 36 and 29 times the Sun’s mass) merging about 1.3 billion light-years away. It confirmed a prediction of Einstein’s general relativity. India is building LIGO-India in Maharashtra to join the network.",
   "hints": [
    "Gravitational waves are ripples in space-time from extremely massive, violent events."
@@ -620,12 +620,12 @@
   "type": "application",
   "q": "Why are LEDs replacing incandescent bulbs for lighting?",
   "options": [
-   "LEDs convert a much larger fraction of electrical energy into light rather than heat.",
-   "LEDs produce more heat, so they warm rooms.",
+   "LEDs only produce ultraviolet light.",
    "LEDs do not need electricity.",
-   "LEDs only produce ultraviolet light."
+   "LEDs convert a much larger fraction of electrical energy into light rather than heat.",
+   "LEDs produce more heat, so they warm rooms."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "An incandescent bulb heats a filament until it glows; most of the energy (about 90% or more) is emitted as heat. LEDs produce light directly from electrons crossing a semiconductor junction, using far less power for the same brightness and lasting much longer.",
   "hints": [
    "Touch an old bulb and an LED after an hour — which is hotter?"

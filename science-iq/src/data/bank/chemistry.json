@@ -8,8 +8,8 @@
   "q": "The smell of hot, freshly cooked food reaches you from across a room much faster than the smell of the same food when cold. Why?",
   "options": [
    "Particles diffuse faster at higher temperature because they have more kinetic energy.",
-   "Hot food releases heavier particles.",
    "Cold air blocks smells completely.",
+   "Hot food releases heavier particles.",
    "Hot food pushes the air towards you."
   ],
   "answer": 0,
@@ -35,12 +35,12 @@
   "type": "mcq",
   "q": "While ice is melting at 0 °C, heat is continuously supplied but the thermometer reading does not rise. Where does the heat go?",
   "options": [
-   "It overcomes the forces of attraction between particles (latent heat of fusion).",
-   "It is lost to the surroundings.",
    "It increases the kinetic energy of the particles.",
+   "It is lost to the surroundings.",
+   "It overcomes the forces of attraction between particles (latent heat of fusion).",
    "It is stored as chemical energy in new bonds."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "During a change of state, the energy supplied is used to break the attractions holding particles in the solid lattice rather than to make particles move faster. Temperature measures average kinetic energy, so it stays constant until all the ice has melted.",
   "misconception": "Constant temperature does not mean no energy is being absorbed — the energy is “hidden” (latent) in the change of state.",
   "hints": [
@@ -63,12 +63,12 @@
   "type": "application",
   "q": "On which day would wet clothes on a line dry fastest?",
   "options": [
-   "A warm, dry, windy day",
-   "A warm, humid, still day",
    "A cold, humid, windy day",
-   "A cold, still, foggy day"
+   "A cold, still, foggy day",
+   "A warm, dry, windy day",
+   "A warm, humid, still day"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Evaporation is faster at higher temperature, lower humidity (air can hold more vapour) and with wind (which carries vapour away from the surface). All three favour a warm, dry, windy day.",
   "misconception": "Temperature alone is not enough: humid, still air slows evaporation a lot.",
   "hints": [
@@ -91,12 +91,12 @@
   "type": "numerical",
   "q": "Convert −40 °C to the Kelvin scale.",
   "options": [
-   "233 K",
    "313 K",
-   "−233 K",
-   "273 K"
+   "273 K",
+   "233 K",
+   "−233 K"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "T(K) = T(°C) + 273 = −40 + 273 = 233 K. The Kelvin scale has no negative values because 0 K is absolute zero.",
   "misconception": "313 K subtracts instead of adds the −40.",
   "hints": [
@@ -119,12 +119,12 @@
   "type": "experiment",
   "q": "Ice at −10 °C is heated at a constant rate until it has all turned to steam above 100 °C, and its temperature is plotted against time. The graph has two flat (horizontal) sections. Which is true?",
   "options": [
-   "The flat section at 100 °C is much longer than the one at 0 °C.",
-   "The flat section at 0 °C is much longer than the one at 100 °C.",
    "Both flat sections are equally long.",
+   "The flat section at 0 °C is much longer than the one at 100 °C.",
+   "The flat section at 100 °C is much longer than the one at 0 °C.",
    "The flat sections show that heat is being lost."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Flat sections are changes of state. Their lengths are proportional to the latent heat needed. The latent heat of vaporisation of water (≈ 2260 kJ/kg) is about 7 times its latent heat of fusion (≈ 334 kJ/kg), because boiling must separate particles completely, while melting only loosens them. So at a constant heating rate, boiling takes about 7 times longer.",
   "misconception": "Equal flat sections would require equal latent heats — but turning liquid into gas needs far more energy than melting.",
   "hints": [
@@ -148,12 +148,12 @@
   "type": "experiment",
   "q": "A block of dry ice (solid CO₂) left on a table gets smaller and produces a white fog, but no liquid puddle ever forms. Which process explains this?",
   "options": [
-   "Sublimation",
-   "Melting",
    "Condensation",
-   "Freezing"
+   "Freezing",
+   "Sublimation",
+   "Melting"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "At normal atmospheric pressure, solid CO₂ turns directly into gas (sublimation) at about −78 °C, without passing through a liquid state. The white fog is water vapour from the air condensing in the cold gas.",
   "misconception": "The fog is not CO₂ “steam” — CO₂ gas is invisible; the fog is condensed water from the air.",
   "hints": [
@@ -176,12 +176,12 @@
   "type": "numerical",
   "q": "How much energy is needed to melt 0.5 kg of ice already at 0 °C? (latent heat of fusion of ice = 334 kJ/kg)",
   "options": [
-   "167 kJ",
    "334 kJ",
-   "668 kJ",
-   "83.5 kJ"
+   "83.5 kJ",
+   "167 kJ",
+   "668 kJ"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Q = mL = 0.5 × 334 = 167 kJ. No temperature change is involved because the ice is already at its melting point.",
   "misconception": "668 kJ multiplies by 2 instead of 0.5.",
   "hints": [
@@ -204,12 +204,12 @@
   "type": "statement",
   "q": "Consider:\nI. Gases are highly compressible because their particles are far apart.\nII. Liquids diffuse faster than gases.\nIII. Solids have a definite shape and a definite volume.\nIV. Particles of a solid do not move at all.\nWhich are correct?",
   "options": [
-   "I and III only",
    "I, II and III only",
    "III and IV only",
+   "I and III only",
    "I, III and IV only"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "I is true (large spaces between gas particles). II is false: gas particles move faster with more space, so gases diffuse faster than liquids. III is true. IV is false: particles in a solid vibrate about fixed positions — they are never completely still above absolute zero.",
   "misconception": "“Fixed positions” in a solid does not mean motionless; the particles vibrate.",
   "hints": [
@@ -232,12 +232,12 @@
   "type": "numerical",
   "q": "What is the molar mass of sulphuric acid, H₂SO₄? (H = 1, S = 32, O = 16)",
   "options": [
-   "98 g/mol",
    "49 g/mol",
-   "96 g/mol",
-   "100 g/mol"
+   "100 g/mol",
+   "98 g/mol",
+   "96 g/mol"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Molar mass = 2(1) + 32 + 4(16) = 2 + 32 + 64 = 98 g/mol.",
   "misconception": "96 g/mol forgets the two hydrogen atoms.",
   "hints": [
@@ -260,12 +260,12 @@
   "type": "numerical",
   "q": "How many water molecules are in 9 g of water? (Avogadro constant = 6.022 × 10²³ mol⁻¹)",
   "options": [
-   "3.011 × 10²³",
-   "6.022 × 10²³",
    "1.204 × 10²⁴",
-   "5.42 × 10²⁴"
+   "5.42 × 10²⁴",
+   "3.011 × 10²³",
+   "6.022 × 10²³"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Molar mass of H₂O = 18 g/mol, so 9 g = 0.5 mol. Molecules = 0.5 × 6.022 × 10²³ = 3.011 × 10²³.",
   "misconception": "5.42 × 10²⁴ multiplies the mass (9) by Avogadro’s number instead of the number of moles.",
   "hints": [
@@ -316,12 +316,12 @@
   "type": "reasoning",
   "q": "Which of the following contains the greatest number of ATOMS?",
   "options": [
-   "4 g of hydrogen gas (H₂)",
    "32 g of oxygen gas (O₂)",
    "18 g of water (H₂O)",
-   "44 g of carbon dioxide (CO₂)"
+   "44 g of carbon dioxide (CO₂)",
+   "4 g of hydrogen gas (H₂)"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Count moles of atoms: H₂: 4/2 = 2 mol molecules × 2 = 4 mol atoms. O₂: 32/32 = 1 mol × 2 = 2 mol atoms. H₂O: 18/18 = 1 mol × 3 = 3 mol atoms. CO₂: 44/44 = 1 mol × 3 = 3 mol atoms. Hydrogen wins with 4 mol of atoms (≈ 2.4 × 10²⁴ atoms).",
   "misconception": "The largest mass does not mean the most atoms; light atoms like hydrogen give many atoms per gram.",
   "hints": [
@@ -345,12 +345,12 @@
   "type": "numerical",
   "q": "In water, hydrogen and oxygen always combine in the mass ratio 1 : 8. What mass of oxygen is needed to react completely with 3 g of hydrogen?",
   "options": [
-   "24 g",
-   "8 g",
    "3 g",
-   "27 g"
+   "24 g",
+   "27 g",
+   "8 g"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Law of constant proportions: mass ratio H : O = 1 : 8, so 3 g of hydrogen needs 3 × 8 = 24 g of oxygen, forming 27 g of water.",
   "misconception": "27 g is the mass of water formed, not of oxygen needed.",
   "hints": [
@@ -373,12 +373,12 @@
   "type": "numerical",
   "q": "Ammonium nitrate (NH₄NO₃) is used as a fertiliser. What percentage of its mass is nitrogen? (N = 14, H = 1, O = 16)",
   "options": [
-   "35%",
    "17.5%",
-   "28%",
-   "46.7%"
+   "35%",
+   "46.7%",
+   "28%"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Molar mass = 14 + 4 + 14 + 48 = 80 g/mol. It contains TWO nitrogen atoms (one in NH₄⁺ and one in NO₃⁻): 28 g. Percentage = 28/80 × 100 = 35%.",
   "misconception": "17.5% counts only one nitrogen atom — always count every atom of the element in the formula.",
   "hints": [
@@ -403,9 +403,9 @@
   "q": "Aluminium has a valency of 3 and the sulphate ion (SO₄) has a valency of 2. What is the formula of aluminium sulphate?",
   "options": [
    "Al₂(SO₄)₃",
+   "Al₂SO₄",
    "Al₃(SO₄)₂",
-   "AlSO₄",
-   "Al₂SO₄"
+   "AlSO₄"
   ],
   "answer": 0,
   "explanation": "Criss-cross the valencies: Al³⁺ and SO₄²⁻ combine as 2 × (+3) = +6 and 3 × (−2) = −6, giving Al₂(SO₄)₃, which is electrically neutral.",
@@ -430,12 +430,12 @@
   "type": "reasoning",
   "q": "A magnesium ribbon is burnt in air and all the white ash is collected. The ash weighs MORE than the original ribbon. Does this violate the law of conservation of mass?",
   "options": [
-   "No — the ash includes oxygen from the air that combined with the magnesium.",
-   "Yes — mass is created during combustion.",
    "Yes — burning always increases mass.",
-   "No — the balance must be faulty."
+   "No — the balance must be faulty.",
+   "Yes — mass is created during combustion.",
+   "No — the ash includes oxygen from the air that combined with the magnesium."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "2Mg + O₂ → 2MgO. The mass of magnesium oxide = mass of magnesium + mass of oxygen taken from the air. Total mass of all reactants (including the oxygen) equals the total mass of products, so mass is conserved.",
   "misconception": "When a reaction takes in a gas from the air, the solid product can weigh more than the starting solid.",
   "hints": [
@@ -460,8 +460,8 @@
   "options": [
    "CH₂O",
    "C₂H₄O",
-   "CHO",
-   "CH₄O"
+   "CH₄O",
+   "CHO"
   ],
   "answer": 0,
   "explanation": "In 100 g: C = 40/12 = 3.33 mol, H = 6.7/1 = 6.7 mol, O = 53.3/16 = 3.33 mol. Dividing by the smallest (3.33): C : H : O = 1 : 2 : 1, so the empirical formula is CH₂O. (Glucose, C₆H₁₂O₆, has this empirical formula.)",
@@ -487,12 +487,12 @@
   "type": "experiment",
   "q": "In Rutherford’s gold-foil experiment, most alpha particles passed straight through the foil. What did this show?",
   "options": [
+   "Gold atoms have no nucleus.",
    "Most of the atom is empty space.",
-   "Atoms are solid, hard spheres.",
    "Electrons are heavier than protons.",
-   "Gold atoms have no nucleus."
+   "Atoms are solid, hard spheres."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "If the atom were a uniform solid ball, the particles would be blocked or deflected. Most passed straight through, so most of the atom must be empty space. The rare large deflections showed a tiny, dense, positive nucleus.",
   "misconception": "The few particles that bounced back are the evidence for the nucleus; the many that passed through are the evidence for empty space.",
   "hints": [
@@ -515,12 +515,12 @@
   "type": "mcq",
   "q": "Sodium has atomic number 11. What is the electronic configuration of the sodium ion, Na⁺?",
   "options": [
-   "2, 8",
-   "2, 8, 1",
    "2, 8, 2",
-   "2, 7"
+   "2, 8",
+   "2, 7",
+   "2, 8, 1"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "A sodium atom is 2, 8, 1. It loses its single outer electron to form Na⁺, leaving 10 electrons arranged 2, 8 — the same stable arrangement as neon.",
   "misconception": "2, 8, 1 is the neutral atom; a positive ion has LOST electrons.",
   "hints": [
@@ -543,12 +543,12 @@
   "type": "numerical",
   "q": "An aluminium atom has mass number 27 and atomic number 13. How many neutrons does it have?",
   "options": [
-   "14",
+   "40",
    "13",
-   "27",
-   "40"
+   "14",
+   "27"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Neutrons = mass number − atomic number = 27 − 13 = 14.",
   "hints": [
    "Mass number = protons + neutrons."
@@ -570,12 +570,12 @@
   "type": "numerical",
   "q": "Natural chlorine is about 75% chlorine-35 and 25% chlorine-37. What is its average atomic mass?",
   "options": [
-   "35.5 u",
-   "36 u",
    "35 u",
-   "37.5 u"
+   "35.5 u",
+   "37.5 u",
+   "36 u"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Average = 0.75 × 35 + 0.25 × 37 = 26.25 + 9.25 = 35.5 u. It is closer to 35 because chlorine-35 is three times as abundant.",
   "misconception": "36 u is the simple average, which ignores the abundances.",
   "hints": [
@@ -598,12 +598,12 @@
   "type": "numerical",
   "q": "An element has only two isotopes, of mass 10 u and 11 u, and an average atomic mass of 10.8 u. What percentage of its atoms are the lighter isotope?",
   "options": [
-   "20%",
-   "80%",
    "8%",
-   "50%"
+   "50%",
+   "80%",
+   "20%"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Let x be the fraction of mass-10 atoms: 10x + 11(1 − x) = 10.8 → 11 − x = 10.8 → x = 0.2, i.e. 20%. Sense check: the average (10.8) is much closer to 11, so the heavier isotope must dominate. (This is boron.)",
   "misconception": "80% is the abundance of the heavier isotope — check which side the average lies on.",
   "hints": [
@@ -628,9 +628,9 @@
   "q": "Which pair of atoms are isobars?",
   "options": [
    "⁴⁰₁₈Ar and ⁴⁰₂₀Ca",
-   "¹²₆C and ¹⁴₆C",
+   "²³Na and ²⁴Mg",
    "¹H and ²H",
-   "²³Na and ²⁴Mg"
+   "¹²₆C and ¹⁴₆C"
   ],
   "answer": 0,
   "explanation": "Isobars have the same mass number but different atomic numbers: argon-40 (Z = 18) and calcium-40 (Z = 20). C-12/C-14 and ¹H/²H are isotopes (same Z, different A).",
@@ -683,12 +683,12 @@
   "type": "reasoning",
   "q": "The M shell can hold up to 18 electrons, yet potassium (Z = 19) has the configuration 2, 8, 8, 1 rather than 2, 8, 9. Why?",
   "options": [
-   "The outermost shell of an atom cannot hold more than 8 electrons.",
-   "The M shell can only hold 8 electrons.",
    "Potassium has only 18 electrons.",
-   "The N shell fills before the M shell in every atom."
+   "The N shell fills before the M shell in every atom.",
+   "The M shell can only hold 8 electrons.",
+   "The outermost shell of an atom cannot hold more than 8 electrons."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "In the Bohr–Bury scheme taught in Class IX, the outermost shell can hold at most 8 electrons. Putting 9 in the M shell would make it an outermost shell with 9, so the 19th electron goes into the N shell. (The deeper reason — energy levels of sub-shells — is studied in higher classes.)",
   "misconception": "The M shell can hold 18, but not while it is the outermost shell.",
   "hints": [
@@ -711,12 +711,12 @@
   "type": "mcq",
   "q": "Which correctly describes a neutron?",
   "options": [
-   "No charge, mass about equal to a proton",
-   "Negative charge, negligible mass",
    "Positive charge, mass about equal to a proton",
-   "No charge, negligible mass"
+   "Negative charge, negligible mass",
+   "No charge, negligible mass",
+   "No charge, mass about equal to a proton"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Neutrons, discovered by James Chadwick in 1932, are neutral particles in the nucleus with a mass very slightly greater than a proton’s (≈ 1 u).",
   "misconception": "Neutral does not mean massless.",
   "hints": [
@@ -739,12 +739,12 @@
   "type": "what-if",
   "q": "Suppose Thomson’s “plum-pudding” model (positive charge spread evenly through the atom, electrons embedded in it) had been correct. What would Rutherford’s gold-foil experiment have shown?",
   "options": [
+   "No alpha particles passing through at all",
    "Nearly all alpha particles passing through with only small deflections and none bouncing back",
    "Most alpha particles bouncing straight back",
-   "No alpha particles passing through at all",
    "Alpha particles being absorbed and turned into gold"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "With positive charge spread thinly, no region of the atom would have a strong enough concentrated charge to turn back a fast, heavy alpha particle — only slight deflections would occur. The observed rare large deflections (about 1 in 20,000 bounced back) proved that the positive charge is concentrated in a tiny nucleus.",
   "misconception": "Spreading the same charge over a bigger volume makes the repulsion at any point much weaker.",
   "hints": [
@@ -768,12 +768,12 @@
   "type": "mcq",
   "q": "Which of these is a compound?",
   "options": [
-   "Water",
    "Air",
-   "Brass",
-   "Sea water"
+   "Water",
+   "Sea water",
+   "Brass"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Water (H₂O) has hydrogen and oxygen chemically combined in a fixed ratio with new properties. Air and sea water are mixtures; brass is an alloy of copper and zinc — a mixture whose composition can vary.",
   "misconception": "Alloys look uniform, but they are mixtures, not compounds.",
   "hints": [
@@ -796,12 +796,12 @@
   "type": "application",
   "q": "How can camphor be separated from a mixture of camphor and common salt?",
   "options": [
+   "Chromatography",
    "Sublimation",
-   "Filtration",
    "Magnetic separation",
-   "Chromatography"
+   "Filtration"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Camphor sublimes (turns directly to vapour on gentle heating) and re-solidifies on a cool surface, while salt does not. Both are soluble-ish solids, so filtration alone would not work.",
   "hints": [
    "Which of the two substances changes from solid directly to vapour?"
@@ -823,12 +823,12 @@
   "type": "experiment",
   "q": "A drop of black marker ink on filter paper is dipped in water. After some time the spot spreads into separate blue, yellow and red bands. What can you conclude?",
   "options": [
+   "The paper contains coloured dyes.",
    "The ink is a mixture of dyes that travel at different rates.",
    "Water reacts with the ink to make new coloured compounds.",
-   "The ink is a pure compound that decomposes.",
-   "The paper contains coloured dyes."
+   "The ink is a pure compound that decomposes."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "This is paper chromatography. Each dye has a different solubility in the solvent and attraction to the paper, so they move different distances and separate. A pure substance gives a single spot.",
   "misconception": "No chemical reaction occurs — chromatography is a physical separation.",
   "hints": [
@@ -852,8 +852,8 @@
   "q": "20 g of salt is dissolved in 180 g of water. What is the concentration of the solution as a mass-by-mass percentage?",
   "options": [
    "10%",
-   "11.1%",
    "20%",
+   "11.1%",
    "9%"
   ],
   "answer": 0,
@@ -880,9 +880,9 @@
   "q": "Which technique is used in dairies to separate cream from milk?",
   "options": [
    "Centrifugation",
+   "Evaporation",
    "Distillation",
-   "Sublimation",
-   "Evaporation"
+   "Sublimation"
   ],
   "answer": 0,
   "explanation": "Spinning milk at high speed in a centrifuge forces the denser parts outward and the lighter fat (cream) collects near the centre, where it is drawn off. The same principle is used to separate blood cells from plasma.",
@@ -906,12 +906,12 @@
   "type": "experiment",
   "q": "A narrow torch beam is shone through four liquids. In which will the path of the beam be clearly visible from the side?",
   "options": [
-   "Diluted milk",
-   "Salt solution",
    "Sugar solution",
-   "Copper sulphate solution"
+   "Copper sulphate solution",
+   "Diluted milk",
+   "Salt solution"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Milk is a colloid: its fat and protein particles are big enough to scatter light (the Tyndall effect), making the beam visible. In true solutions (salt, sugar, copper sulphate) the particles are too small to scatter light noticeably.",
   "misconception": "A coloured solution (copper sulphate) is still a true solution — colour is not the same as scattering.",
   "hints": [
@@ -934,12 +934,12 @@
   "type": "statement",
   "q": "Iron filings and sulphur powder are (i) simply mixed, and (ii) heated strongly to form iron sulphide. Which statement is correct?",
   "options": [
-   "In (i) a magnet can pull out the iron; in (ii) it cannot, because a new substance has formed.",
    "In both cases a magnet can pull out the iron.",
+   "In (ii) the product keeps the properties of both iron and sulphur.",
    "In (i) the components are in a fixed ratio; in (ii) they are in any ratio.",
-   "In (ii) the product keeps the properties of both iron and sulphur."
+   "In (i) a magnet can pull out the iron; in (ii) it cannot, because a new substance has formed."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "A mixture keeps the properties of its components (iron stays magnetic) and can have any proportions. Heating causes a chemical reaction, Fe + S → FeS; iron sulphide is a compound with new properties — it is not attracted like iron and has a fixed composition.",
   "misconception": "Compounds have fixed composition and new properties; mixtures keep the properties of their parts.",
   "hints": [
@@ -962,12 +962,12 @@
   "type": "reasoning",
   "q": "You must recover all three components of a mixture of iron filings, sand and common salt. Which order of steps works?",
   "options": [
-   "Magnet → add water and stir → filter → evaporate the filtrate",
    "Add water → evaporate → magnet → filter",
+   "Evaporate → add water → magnet → filter",
    "Filter → magnet → add water → evaporate",
-   "Evaporate → add water → magnet → filter"
+   "Magnet → add water and stir → filter → evaporate the filtrate"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "First remove the iron with a magnet (dry). Then add water: salt dissolves, sand does not. Filtering leaves sand on the paper; the salt solution passes through. Evaporating the filtrate recovers the salt. Other orders fail — e.g. you cannot filter a dry mixture, and evaporating first does nothing useful.",
   "misconception": "Using the magnet after adding water works but leaves the iron wet and rusting; the key point is that dissolving must come before filtering, and filtering before evaporating.",
   "hints": [
@@ -992,9 +992,9 @@
   "q": "Moving from left to right across Period 3 (Na → Cl), atomic radius decreases. Why?",
   "options": [
    "Nuclear charge increases while electrons are added to the same shell, so they are pulled in more strongly.",
-   "Electrons are added to new shells.",
+   "The number of shells decreases.",
    "Atoms lose neutrons across the period.",
-   "The number of shells decreases."
+   "Electrons are added to new shells."
   ],
   "answer": 0,
   "explanation": "Across a period, each element has one more proton but its extra electron goes into the same (third) shell. The greater nuclear charge pulls all the electrons closer, so the atom shrinks.",
@@ -1018,12 +1018,12 @@
   "type": "mcq",
   "q": "Lithium, sodium and potassium are placed in the same group of the periodic table because they all have:",
   "options": [
+   "eight valence electrons",
    "one valence electron",
    "the same number of shells",
-   "the same atomic mass",
-   "eight valence electrons"
+   "the same atomic mass"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Elements of a group have the same number of electrons in their outermost shell — here one (Li 2,1; Na 2,8,1; K 2,8,8,1) — so they show similar chemical properties, such as reacting vigorously with water to form alkalis.",
   "misconception": "Same group = same valence electrons; same period = same number of shells.",
   "hints": [
@@ -1045,12 +1045,12 @@
   "type": "reasoning",
   "q": "An unknown element X has atomic number 20. Which set of predictions is correct?",
   "options": [
-   "Group 2, Period 4; a metal; its chloride is XCl₂",
    "Group 2, Period 4; a non-metal; its chloride is XCl",
+   "Group 2, Period 4; a metal; its chloride is XCl₂",
    "Group 4, Period 2; a metal; its chloride is XCl₄",
    "Group 18, Period 4; an unreactive gas"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Z = 20 → configuration 2, 8, 8, 2: four shells (Period 4) and two valence electrons (Group 2). It loses two electrons easily, so it is a metal forming X²⁺ and therefore XCl₂. (X is calcium — CaCl₂.)",
   "misconception": "Group 4, Period 2 swaps the meaning of the two numbers: shells give the period, valence electrons give the group.",
   "hints": [
@@ -1075,8 +1075,8 @@
   "options": [
    "Gallium",
    "Germanium",
-   "Scandium",
-   "Silicon"
+   "Silicon",
+   "Scandium"
   ],
   "answer": 0,
   "explanation": "Gallium (discovered 1875) matched Mendeleev’s predictions for eka-aluminium closely, including its atomic mass and density. Eka-silicon became germanium and eka-boron became scandium. These successful predictions convinced chemists of his table’s value.",
@@ -1102,11 +1102,11 @@
   "options": [
    "2H₂ + O₂ → 2H₂O",
    "H₂ + O₂ → H₂O",
-   "H₂ + O₂ → H₂O₂",
-   "H₂ + 2O₂ → 2H₂O"
+   "H₂ + 2O₂ → 2H₂O",
+   "H₂ + O₂ → H₂O₂"
   ],
   "answer": 0,
-  "explanation": "Count atoms: left 4 H and 2 O; right 2 × H₂O = 4 H and 2 O ✓. Option B has 2 O on the left but 1 on the right. Option C forms hydrogen peroxide, a different substance — balancing must never change formulas.",
+  "explanation": "Count atoms: left 4 H and 2 O; right 2 × H₂O = 4 H and 2 O ✓. H₂ + O₂ → H₂O has 2 O on the left but 1 on the right; H₂ + O₂ → H₂O₂ forms hydrogen peroxide, a different substance — balancing must never change formulas.",
   "misconception": "Balancing is done by changing coefficients only; changing subscripts (H₂O → H₂O₂) changes the substance.",
   "hints": [
    "Count H and O atoms on both sides."
@@ -1127,12 +1127,12 @@
   "type": "experiment",
   "q": "A zinc strip is placed in blue copper sulphate solution. After an hour the solution is nearly colourless and the strip is coated with a reddish-brown layer. Which explanation is correct?",
   "options": [
-   "Zinc, being more reactive, displaces copper from copper sulphate.",
-   "Copper displaces zinc from zinc sulphate.",
+   "Zinc dissolves physically without any reaction.",
    "The solution simply evaporates.",
-   "Zinc dissolves physically without any reaction."
+   "Zinc, being more reactive, displaces copper from copper sulphate.",
+   "Copper displaces zinc from zinc sulphate."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Zn + CuSO₄ → ZnSO₄ + Cu. Zinc is above copper in the reactivity series, so it displaces copper; reddish-brown copper deposits on the strip, and the blue colour (due to Cu²⁺ ions) fades as colourless zinc sulphate forms.",
   "misconception": "A less reactive metal cannot displace a more reactive one — the reverse reaction does not happen.",
   "hints": [
@@ -1157,8 +1157,8 @@
   "options": [
    "Carbon dioxide",
    "Magnesium",
-   "Magnesium oxide",
-   "Carbon"
+   "Carbon",
+   "Magnesium oxide"
   ],
   "answer": 0,
   "explanation": "CO₂ loses its oxygen to become carbon — loss of oxygen is reduction. Magnesium gains oxygen (oxidised) and acts as the reducing agent. This is why CO₂ fire extinguishers must never be used on magnesium fires.",
@@ -1182,12 +1182,12 @@
   "type": "experiment",
   "q": "White silver chloride kept in sunlight slowly turns grey. What type of reaction is this?",
   "options": [
-   "Photochemical decomposition",
    "Combination",
+   "Photochemical decomposition",
    "Double displacement",
    "Neutralisation"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "2AgCl → 2Ag + Cl₂ in the presence of light. Light energy decomposes silver chloride, and the grey colour is finely divided silver metal. Silver halides were used in black-and-white photography for this reason.",
   "hints": [
    "Is one substance breaking into two, or are two combining?"
@@ -1209,9 +1209,9 @@
   "q": "Calcium carbonate decomposes on heating: CaCO₃ → CaO + CO₂. What mass of carbon dioxide is released when 50 g of CaCO₃ decomposes completely? (Ca = 40, C = 12, O = 16)",
   "options": [
    "22 g",
+   "50 g",
    "44 g",
-   "28 g",
-   "50 g"
+   "28 g"
   ],
   "answer": 0,
   "explanation": "M(CaCO₃) = 100 g/mol, so 50 g = 0.5 mol. The equation is 1 : 1, so 0.5 mol CO₂ forms. Mass = 0.5 × 44 = 22 g. (The remaining 28 g is CaO — mass is conserved: 22 + 28 = 50 g.)",
@@ -1236,12 +1236,12 @@
   "type": "application",
   "q": "Packets of potato chips are filled with nitrogen gas rather than air. Why?",
   "options": [
+   "To make the chips crunchier by reacting with them",
    "To prevent the oils from being oxidised and going rancid",
    "To add nitrogen as a nutrient",
-   "To make the chips crunchier by reacting with them",
    "Because nitrogen is lighter and makes the packet float"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Fats and oils react slowly with oxygen (oxidation), producing bad-smelling, bad-tasting compounds — rancidity. Nitrogen is unreactive, so replacing the air removes the oxygen and also cushions the chips.",
   "hints": [
    "Which gas in air causes food oils to spoil?"
@@ -1262,12 +1262,12 @@
   "type": "mcq",
   "q": "A few drops of phenolphthalein turn a colourless solution pink. What is the most likely pH of the solution?",
   "options": [
-   "11",
    "7",
-   "3",
-   "1"
+   "1",
+   "11",
+   "3"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Phenolphthalein is colourless in acidic and neutral solutions and turns pink in basic solutions (roughly pH above 8–9). Only pH 11 is basic.",
   "misconception": "Neutral solutions (pH 7) leave phenolphthalein colourless.",
   "hints": [
@@ -1289,12 +1289,12 @@
   "type": "numerical",
   "q": "Solution P has pH 3 and solution Q has pH 6. How does the hydrogen-ion concentration of P compare with that of Q?",
   "options": [
-   "1000 times greater",
-   "3 times greater",
    "2 times greater",
+   "3 times greater",
+   "1000 times greater",
    "100 times greater"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The pH scale is logarithmic: each unit is a factor of 10 in [H⁺]. A difference of 3 units means 10³ = 1000 times greater H⁺ concentration in P.",
   "misconception": "pH is not a linear scale; pH 3 is not simply “twice as acidic” as pH 6.",
   "hints": [
@@ -1317,9 +1317,9 @@
   "q": "A bee sting injects an acidic liquid. Which household substance would best relieve it?",
   "options": [
    "Baking soda paste",
-   "Lemon juice",
+   "Tomato ketchup",
    "Vinegar",
-   "Tomato ketchup"
+   "Lemon juice"
   ],
   "answer": 0,
   "explanation": "Baking soda (sodium hydrogencarbonate) is mildly basic, so it neutralises the acid. Lemon juice, vinegar and ketchup are all acidic and would not help.",
@@ -1342,12 +1342,12 @@
   "type": "what-if",
   "q": "A solution of an acid with pH 5 is diluted 1000 times with pure water. What is the pH of the diluted solution closest to?",
   "options": [
-   "Just below 7 — still very slightly acidic",
-   "8",
    "2",
+   "8",
+   "Just below 7 — still very slightly acidic",
    "Exactly 5, since dilution does not change pH"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "A naïve calculation (pH 5 + 3) gives pH 8, which is impossible: adding water to an acid can never make it basic. As the acid’s H⁺ falls towards 10⁻⁸ mol/L, the H⁺ from water itself (10⁻⁷ mol/L) dominates, so the pH approaches 7 from below (about 6.96).",
   "misconception": "Blindly adding 3 to the pH ignores that water itself provides H⁺ ions; an acid solution can approach neutral but never cross into basic by dilution.",
   "hints": [
@@ -1370,12 +1370,12 @@
   "type": "mcq",
   "q": "Plaster of Paris sets into a hard mass when mixed with water. Which change takes place?",
   "options": [
-   "Calcium sulphate hemihydrate absorbs water to become gypsum (CaSO₄·2H₂O).",
-   "Calcium carbonate decomposes to quicklime.",
    "Sodium chloride crystallises.",
-   "Gypsum loses water to become anhydrous calcium sulphate."
+   "Gypsum loses water to become anhydrous calcium sulphate.",
+   "Calcium sulphate hemihydrate absorbs water to become gypsum (CaSO₄·2H₂O).",
+   "Calcium carbonate decomposes to quicklime."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Plaster of Paris is CaSO₄·½H₂O. With water it re-forms gypsum, CaSO₄·2H₂O, whose interlocking crystals make a hard solid — used for casts and statues.",
   "misconception": "Setting is gaining water; making Plaster of Paris from gypsum is losing water.",
   "hints": [
@@ -1397,12 +1397,12 @@
   "type": "reasoning",
   "q": "Aluminium is a fairly reactive metal, yet aluminium foil and window frames do not corrode away. Why?",
   "options": [
-   "A thin, tough layer of aluminium oxide forms on the surface and protects the metal beneath.",
    "Aluminium does not react with oxygen.",
+   "A thin, tough layer of aluminium oxide forms on the surface and protects the metal beneath.",
    "Aluminium is always painted.",
    "Aluminium is below hydrogen in the reactivity series."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Aluminium reacts with oxygen almost immediately, forming a very thin, compact Al₂O₃ layer that sticks to the surface and stops further reaction (passivation). Anodising thickens this layer deliberately. Rust on iron, by contrast, is porous and flakes off.",
   "misconception": "Being reactive and corroding badly are not the same; the nature of the oxide layer matters.",
   "hints": [
@@ -1425,9 +1425,9 @@
   "q": "A metal X displaces copper from copper sulphate solution but does NOT displace zinc from zinc sulphate solution. Which could X be?",
   "options": [
    "Iron",
-   "Magnesium",
+   "Gold",
    "Silver",
-   "Gold"
+   "Magnesium"
   ],
   "answer": 0,
   "explanation": "X must be more reactive than copper but less reactive than zinc. In the reactivity series … Mg > Al > Zn > Fe > Pb > Cu > Ag > Au, so iron fits. Magnesium would also displace zinc; silver and gold would not displace copper.",
@@ -1452,12 +1452,12 @@
   "type": "mcq",
   "q": "Which non-metal is a liquid at room temperature?",
   "options": [
-   "Bromine",
    "Mercury",
    "Iodine",
-   "Sulphur"
+   "Sulphur",
+   "Bromine"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Bromine is the only non-metal that is liquid at room temperature (a red-brown, volatile liquid). Mercury is also liquid but it is a metal; iodine and sulphur are solids.",
   "misconception": "Mercury is the liquid METAL.",
   "hints": [
@@ -1479,12 +1479,12 @@
   "type": "application",
   "q": "Why is sodium metal stored under kerosene?",
   "options": [
-   "It reacts vigorously with oxygen and moisture in air.",
    "Kerosene makes it softer to cut.",
-   "It dissolves in kerosene to make a solution.",
-   "Kerosene prevents it from melting."
+   "Kerosene prevents it from melting.",
+   "It reacts vigorously with oxygen and moisture in air.",
+   "It dissolves in kerosene to make a solution."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Sodium is so reactive that it tarnishes quickly in air and reacts violently with water, releasing hydrogen that can catch fire. Kerosene does not react with sodium and keeps air and moisture away.",
   "hints": [
    "What happens when sodium meets water?"
@@ -1505,12 +1505,12 @@
   "type": "reasoning",
   "q": "Diamond and graphite are both pure carbon. Why is graphite a good conductor of electricity while diamond is not?",
   "options": [
-   "In graphite each carbon bonds to only three others, leaving one free (delocalised) electron per atom.",
+   "Graphite is softer, so electrons can push through.",
    "Graphite contains metal impurities.",
-   "Diamond has no electrons.",
-   "Graphite is softer, so electrons can push through."
+   "In graphite each carbon bonds to only three others, leaving one free (delocalised) electron per atom.",
+   "Diamond has no electrons."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "In diamond every carbon is covalently bonded to four others in a rigid 3-D network — all four valence electrons are locked in bonds, so it is very hard and does not conduct. In graphite each carbon bonds to three others in flat hexagonal layers; the fourth electron is delocalised and can move, so graphite conducts. The weakly held layers slide, making it soft.",
   "misconception": "Softness and conduction are separate effects of the same layered structure.",
   "hints": [
@@ -1532,12 +1532,12 @@
   "type": "mcq",
   "q": "Methane is CH₄ and ethane is C₂H₆. What is the formula of the next member of this homologous series?",
   "options": [
-   "C₃H₈",
-   "C₃H₆",
    "C₃H₁₀",
-   "C₂H₈"
+   "C₂H₈",
+   "C₃H₆",
+   "C₃H₈"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Successive members of a homologous series differ by a –CH₂– unit. Alkanes follow CₙH₂ₙ₊₂, so for n = 3: C₃H₈ (propane).",
   "misconception": "C₃H₆ is propene, an alkene (CₙH₂ₙ).",
   "hints": [
@@ -1561,8 +1561,8 @@
   "options": [
    "Soap reacts with calcium and magnesium ions to form insoluble salts; detergents do not.",
    "Detergents are acids that dissolve oil.",
-   "Soap cannot form micelles in any water.",
-   "Hard water contains oil that blocks soap."
+   "Hard water contains oil that blocks soap.",
+   "Soap cannot form micelles in any water."
   ],
   "answer": 0,
   "explanation": "Hard water contains Ca²⁺ and Mg²⁺ ions. Soap molecules (sodium salts of long-chain fatty acids) react with these ions to form insoluble calcium/magnesium salts — scum — wasting the soap. Detergents (e.g. sulphonate salts) do not form insoluble salts with these ions, so they still form micelles and clean.",
@@ -1585,12 +1585,12 @@
   "type": "mcq",
   "q": "Baking soda makes cakes rise. What gas does it release when heated or mixed with an acid?",
   "options": [
-   "Carbon dioxide",
-   "Oxygen",
    "Hydrogen",
-   "Nitrogen"
+   "Nitrogen",
+   "Carbon dioxide",
+   "Oxygen"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Baking soda is sodium hydrogencarbonate (NaHCO₃). On heating, 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂; with an acid it also releases CO₂. The gas bubbles expand in the batter and make it rise.",
   "hints": [
    "Baking soda is a hydrogencarbonate."
@@ -1611,12 +1611,12 @@
   "type": "experiment",
   "q": "Cut apple slices turn brown quickly, but slices dipped in lemon juice stay pale for longer. What is the best explanation?",
   "options": [
+   "Lemon juice reacts with the brown pigment to remove it.",
    "Browning is an enzyme-driven oxidation in air; the acid in lemon juice slows the enzyme.",
-   "Lemon juice adds colour that hides the brown.",
    "Apples turn brown because they absorb water from the air.",
-   "Lemon juice reacts with the brown pigment to remove it."
+   "Lemon juice adds colour that hides the brown."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Cutting exposes compounds in the apple to oxygen, and an enzyme (polyphenol oxidase) catalyses their oxidation to brown pigments. Lemon juice is acidic (and contains vitamin C, an antioxidant), which reduces the enzyme’s activity and the oxidation.",
   "hints": [
    "What in the air reacts with the cut surface?"
@@ -1639,8 +1639,8 @@
   "options": [
    "Salt lowers the freezing point, so ice melts and absorbs latent heat from the mixture and the moulds.",
    "Salt is naturally colder than ice.",
-   "Salt reacts with ice in a reaction that produces cold.",
-   "Salt reflects heat away from the moulds."
+   "Salt reflects heat away from the moulds.",
+   "Salt reacts with ice in a reaction that produces cold."
   ],
   "answer": 0,
   "explanation": "Dissolved salt lowers the freezing point of water well below 0 °C. At 0 °C the ice is now above the freezing point of the salty water, so it keeps melting. Melting needs latent heat, which it takes from its surroundings — the mixture and the kulfi — driving the temperature down (to about −10 °C or lower).",

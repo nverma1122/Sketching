@@ -7,12 +7,12 @@
   "type": "reasoning",
   "q": "The gaps between the terms of 2, 6, 12, 20, 30 follow a rule. Which term comes after 30?",
   "options": [
+   "44",
    "42",
-   "40",
    "36",
-   "44"
+   "40"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Differences are 4, 6, 8, 10 — increasing by 2 — so the next difference is 12: 30 + 12 = 42. (The terms are also n(n + 1): 1×2, 2×3, 3×4 … 6×7 = 42.)",
   "hints": [
    "Look at the differences between consecutive terms."
@@ -34,12 +34,12 @@
   "type": "reasoning",
   "q": "Each term of 3, 5, 9, 17, 33 is obtained from the one before it by the same two operations. What is the next term?",
   "options": [
-   "65",
-   "49",
    "66",
-   "57"
+   "49",
+   "57",
+   "65"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Each term is double the previous minus 1: 3×2−1 = 5, 5×2−1 = 9, … 33×2−1 = 65. Equivalently, the differences 2, 4, 8, 16 double, so the next difference is 32.",
   "misconception": "49 assumes the differences grow by a fixed amount.",
   "hints": [
@@ -62,12 +62,12 @@
   "type": "reasoning",
   "q": "Which number continues the sequence 1, 4, 27, 256?",
   "options": [
+   "1296",
    "3125",
    "625",
-   "1024",
-   "1296"
+   "1024"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The terms are nⁿ: 1¹ = 1, 2² = 4, 3³ = 27, 4⁴ = 256, so the next is 5⁵ = 3125.",
   "misconception": "625 = 5⁴ continues only the base, not the exponent.",
   "hints": [
@@ -93,8 +93,8 @@
   "options": [
    "U",
    "T",
-   "V",
-   "S"
+   "S",
+   "V"
   ],
   "answer": 0,
   "explanation": "Positions are 1, 3, 6, 10, 15 — the gaps are +2, +3, +4, +5 — so add 6: 15 + 6 = 21 = U.",
@@ -118,12 +118,12 @@
   "type": "reasoning",
   "q": "Which is the odd one out?",
   "options": [
-   "Sulphur",
-   "Copper",
    "Silver",
-   "Aluminium"
+   "Aluminium",
+   "Sulphur",
+   "Copper"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Copper, silver and aluminium are metals (good conductors of heat and electricity). Sulphur is a non-metal and a poor conductor.",
   "hints": [
    "Group them by a property such as conductivity."
@@ -145,12 +145,12 @@
   "type": "reasoning",
   "q": "Thermometer : Temperature :: Ammeter : ?",
   "options": [
-   "Current",
    "Voltage",
+   "Power",
    "Resistance",
-   "Power"
+   "Current"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "A thermometer measures temperature; an ammeter measures electric current (in amperes). A voltmeter measures potential difference.",
   "hints": [
    "What unit does an ammeter’s name come from?"
@@ -172,12 +172,12 @@
   "type": "reasoning",
   "q": "If CAT is coded as DBU, how is DOG coded?",
   "options": [
-   "EPH",
-   "CNF",
    "EOG",
-   "DPH"
+   "DPH",
+   "EPH",
+   "CNF"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Each letter moves one place forward: C→D, A→B, T→U. So D→E, O→P, G→H: EPH.",
   "hints": [
    "Compare each letter with its code letter."
@@ -199,12 +199,12 @@
   "type": "reasoning",
   "q": "In a code, TEA is written as BFU. Using the same rule, how is SUN written?",
   "options": [
+   "MTR",
    "OVT",
-   "TVO",
    "OUT",
-   "MTR"
+   "TVO"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The rule is: reverse the word, then move each letter one place forward. TEA → AET → BFU ✓. SUN → NUS → OVT.",
   "misconception": "TVO shifts the letters but forgets to reverse the order.",
   "hints": [
@@ -228,12 +228,12 @@
   "type": "reasoning",
   "q": "A girl walks 5 km north, turns right and walks 3 km, then turns right again and walks 9 km. How far and in which direction is she from her starting point?",
   "options": [
-   "5 km south-east",
    "5 km north-east",
+   "5 km south-east",
    "4 km south",
    "17 km south-east"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "North 5, then right (east) 3, then right (south) 9: she ends 3 km east and 9 − 5 = 4 km south of the start. Distance = √(3² + 4²) = 5 km, towards the south-east.",
   "misconception": "17 km is the total distance walked, not the displacement.",
   "hints": [
@@ -286,8 +286,8 @@
   "q": "In a row of 40 students, Meena is 12th from the left. What is her position from the right?",
   "options": [
    "29th",
-   "28th",
    "30th",
+   "28th",
    "52nd"
   ],
   "answer": 0,
@@ -313,12 +313,12 @@
   "type": "reasoning",
   "q": "What is the angle between the hour hand and the minute hand of a clock at 3:40?",
   "options": [
-   "130°",
    "140°",
    "120°",
-   "150°"
+   "150°",
+   "130°"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Minute hand: 40 × 6° = 240° from 12. Hour hand: 3 × 30° + 40 × 0.5° = 110° (it moves 0.5° per minute). Angle = 240° − 110° = 130°.",
   "misconception": "150° ignores that the hour hand has moved past the 3 by 20°.",
   "hints": [
@@ -342,12 +342,12 @@
   "type": "reasoning",
   "q": "1 January 2025 was a Wednesday. On which day of the week did 1 January 2026 fall?",
   "options": [
-   "Thursday",
-   "Wednesday",
    "Friday",
-   "Tuesday"
+   "Wednesday",
+   "Tuesday",
+   "Thursday"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "2025 is not a leap year, so it has 365 days = 52 weeks + 1 day. The day of the week moves forward by one: Wednesday → Thursday.",
   "misconception": "Friday would apply after a leap year (366 days = 52 weeks + 2 days).",
   "hints": [
@@ -370,12 +370,12 @@
   "type": "reasoning",
   "q": "Statements: All roses are flowers. Some flowers fade quickly.\nConclusion: Some roses fade quickly.\nDoes the conclusion follow?",
   "options": [
-   "No — the flowers that fade quickly may not include any roses.",
+   "No — roses are not flowers.",
    "Yes — roses are flowers, so some must fade quickly.",
    "Yes — all flowers fade quickly.",
-   "No — roses are not flowers."
+   "No — the flowers that fade quickly may not include any roses."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Roses are a subset of flowers, and “some flowers” fade quickly — but those could all be non-roses. Since a Venn diagram can be drawn where no rose fades quickly, the conclusion does not necessarily follow.",
   "misconception": "A conclusion must be true in EVERY possible arrangement, not just one.",
   "hints": [
@@ -427,12 +427,12 @@
   "type": "reasoning",
   "q": "In a class of 50 students, 30 like Physics, 25 like Chemistry and 10 like both. How many like neither?",
   "options": [
-   "5",
-   "15",
+   "10",
    "0",
-   "10"
+   "15",
+   "5"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Students who like at least one = 30 + 25 − 10 = 45 (the 10 who like both were counted twice). Neither = 50 − 45 = 5.",
   "misconception": "0 assumes 30 + 25 = 55 covers everyone, double-counting the 10.",
   "hints": [
@@ -456,12 +456,12 @@
   "type": "numerical",
   "q": "Pipe A alone fills a tank in 6 hours and pipe B alone fills it in 3 hours. How long do both together take?",
   "options": [
-   "2 hours",
-   "4.5 hours",
    "9 hours",
-   "1.5 hours"
+   "1.5 hours",
+   "4.5 hours",
+   "2 hours"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "In one hour A fills 1/6 and B fills 1/3 = 2/6 of the tank; together 3/6 = 1/2 per hour, so 2 hours.",
   "misconception": "4.5 hours averages the times — adding pipes must make it faster than either alone.",
   "hints": [
@@ -484,12 +484,12 @@
   "type": "numerical",
   "q": "A bus travels from town P to town Q at 60 km/h and returns along the same road at 40 km/h. What is its average speed for the round trip?",
   "options": [
-   "48 km/h",
+   "52 km/h",
    "50 km/h",
-   "45 km/h",
-   "52 km/h"
+   "48 km/h",
+   "45 km/h"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Let the distance be d. Time = d/60 + d/40 = 5d/120 = d/24. Average speed = 2d ÷ (d/24) = 48 km/h. The bus spends longer at the slower speed, so the average is below 50.",
   "misconception": "50 km/h averages the speeds, which works only for equal TIMES, not equal distances.",
   "hints": [
@@ -513,12 +513,12 @@
   "type": "numerical",
   "q": "On a map with scale 1 : 50,000, two villages are 4 cm apart. What is the real distance between them?",
   "options": [
-   "2 km",
+   "0.2 km",
    "20 km",
-   "200 m",
-   "0.2 km"
+   "2 km",
+   "200 m"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "4 cm × 50,000 = 200,000 cm = 2000 m = 2 km.",
   "hints": [
    "1 km = 100,000 cm."
@@ -540,12 +540,12 @@
   "type": "numerical",
   "q": "A bacterial population doubles every 20 minutes. Starting with 100 bacteria, how many will there be after 2 hours (with no limits on growth)?",
   "options": [
-   "6400",
-   "1200",
+   "600",
    "3200",
-   "600"
+   "1200",
+   "6400"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "2 hours = 120 minutes = 6 doubling periods. 100 × 2⁶ = 100 × 64 = 6400. Exponential growth quickly outpaces linear growth: adding 100 every 20 minutes would give only 700.",
   "misconception": "1200 multiplies 100 by 12 (or 2 × 6) instead of doubling six times.",
   "hints": [
@@ -568,12 +568,12 @@
   "type": "numerical",
   "q": "Estimate: about how many times does a human heart beat in a 70-year life at an average 70 beats per minute?",
   "options": [
-   "≈ 2.58 × 10⁹",
-   "≈ 2.58 × 10⁶",
    "≈ 2.58 × 10¹²",
-   "≈ 4.9 × 10⁷"
+   "≈ 2.58 × 10⁶",
+   "≈ 4.9 × 10⁷",
+   "≈ 2.58 × 10⁹"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Beats = 70 per min × 60 min × 24 h × 365 days × 70 years ≈ 2.58 × 10⁹ — about two and a half billion. Order-of-magnitude estimates like this are a key scientific skill.",
   "misconception": "4.9 × 10⁷ stops after one year’s minutes; carry the calculation through every unit.",
   "hints": [
@@ -598,8 +598,8 @@
   "q": "A student investigates how the amount of fertiliser affects the height of bean plants. Which is the independent variable?",
   "options": [
    "The amount of fertiliser",
-   "The height of the plants",
    "The type of soil",
+   "The height of the plants",
    "The amount of water"
   ],
   "answer": 0,
@@ -625,12 +625,12 @@
   "type": "experiment",
   "q": "A company claims its new toothpaste prevents cavities. Which test would give the most reliable evidence?",
   "options": [
-   "Randomly split many similar volunteers into two groups using identical-looking tubes — new toothpaste or ordinary — and compare new cavities after a year.",
+   "Compare the company’s staff with people from another city.",
    "Ask ten people who like the toothpaste whether they got fewer cavities.",
-   "Give the new toothpaste to everyone and count cavities after a year.",
-   "Compare the company’s staff with people from another city."
+   "Randomly split many similar volunteers into two groups using identical-looking tubes — new toothpaste or ordinary — and compare new cavities after a year.",
+   "Give the new toothpaste to everyone and count cavities after a year."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "A large, randomised, controlled and blinded trial keeps everything except the toothpaste similar between groups, so any difference can be attributed to the toothpaste. The other designs lack a fair control group or introduce bias.",
   "misconception": "Without a control group, there is nothing to compare with.",
   "hints": [
@@ -655,9 +655,9 @@
   "q": "A student wants to find out whether the length of a pendulum affects its time period. Which set of variables must be kept CONSTANT?",
   "options": [
    "The mass of the bob and the starting angle (kept small)",
+   "Only the colour of the bob",
    "The length and the mass",
-   "The time period and the length",
-   "Only the colour of the bob"
+   "The time period and the length"
   ],
   "answer": 0,
   "explanation": "Length is the independent variable and the period is the dependent variable. To make the test fair, other factors that might affect the period — the mass of the bob and the amplitude (starting angle, kept small) — must be held constant. (In fact, the period barely depends on mass, but the experiment must not assume that.)",
@@ -683,12 +683,12 @@
   "type": "experiment",
   "q": "Why do scientists repeat an experiment several times and average the results?",
   "options": [
-   "To reduce the effect of random errors and check that results are reliable",
-   "To make the experiment take longer",
    "To change the independent variable",
-   "To remove systematic errors completely"
+   "To reduce the effect of random errors and check that results are reliable",
+   "To remove systematic errors completely",
+   "To make the experiment take longer"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Random errors scatter readings above and below the true value, so averaging repeats reduces their effect, and consistent repeats show the result is reliable. Systematic errors (e.g. a balance that always reads 2 g high) shift every reading and are NOT removed by averaging.",
   "misconception": "Repeating does not fix a systematic error such as a zero error on an instrument.",
   "hints": [
@@ -711,12 +711,12 @@
   "type": "experiment",
   "q": "Bean seeds are set up in four tubes for a week:\nA – dry cotton, warm, air\nB – moist cotton, warm, air\nC – moist cotton, in a refrigerator, air\nD – seeds under boiled, cooled water with a layer of oil on top, warm\nOnly the seeds in B germinate. What is the correct conclusion?",
   "options": [
-   "Germination needs water, a suitable temperature and oxygen.",
-   "Germination needs only water.",
    "Germination needs light.",
-   "Germination needs only warmth."
+   "Germination needs only warmth.",
+   "Germination needs water, a suitable temperature and oxygen.",
+   "Germination needs only water."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Compare each tube with B: A lacks water, C lacks warmth, D lacks oxygen (boiling removes dissolved air and the oil stops more dissolving). Each fails, so each factor is necessary. Light was not tested — all tubes could be in the same light.",
   "misconception": "Light cannot be concluded because no tube tested it.",
   "hints": [
@@ -740,12 +740,12 @@
   "type": "data",
   "q": "A toy car starts from rest. Its distance is recorded each second. Assuming uniform acceleration, what is the acceleration?",
   "options": [
-   "4 m/s²",
    "8 m/s²",
+   "16 m/s²",
    "2 m/s²",
-   "16 m/s²"
+   "4 m/s²"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Distance grows as t² (2 × 1, 2 × 4, 2 × 9, 2 × 16), the signature of uniform acceleration from rest. s = ½at² → 32 = ½ × a × 16 → a = 4 m/s². Check at t = 1: ½ × 4 × 1 = 2 m ✓.",
   "misconception": "2 m/s² reads the coefficient of t² directly and forgets the ½.",
   "hints": [
@@ -789,12 +789,12 @@
   "type": "data",
   "q": "The table shows the solubility of potassium nitrate in water. A saturated solution in 100 g of water at 60 °C is cooled to 20 °C. What mass of crystals forms?",
   "options": [
+   "32 g",
    "78 g",
    "110 g",
-   "32 g",
    "46 g"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "At 60 °C, 110 g dissolves in 100 g of water. At 20 °C only 32 g can stay dissolved. The excess, 110 − 32 = 78 g, crystallises out. This is how crystallisation purifies substances.",
   "misconception": "46 g uses the 40 °C to 60 °C difference.",
   "hints": [
@@ -833,12 +833,12 @@
   "type": "data",
   "q": "The activity of an enzyme was measured at different temperatures. Which conclusion is best supported?",
   "options": [
-   "Activity is highest near 37 °C and falls sharply above it, as the enzyme is denatured.",
+   "Temperature has no effect on activity.",
    "Activity always increases with temperature.",
    "The enzyme works best at 55 °C.",
-   "Temperature has no effect on activity."
+   "Activity is highest near 37 °C and falls sharply above it, as the enzyme is denatured."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Activity rises from 10 °C to a peak at 37 °C (the optimum) because molecules move faster and collide more. Above the optimum, heat changes the enzyme’s shape (denaturation), so activity drops to almost zero at 55 °C.",
   "hints": [
    "Where is the peak?",
@@ -883,12 +883,12 @@
   "type": "data",
   "q": "A study of 5 towns found that towns with more storks also had more babies born. Which conclusion is most scientifically sound?",
   "options": [
-   "Both increase with town size, so the correlation does not show that storks cause births.",
    "Storks bring babies.",
    "Babies attract storks.",
-   "There is no relationship in the data."
+   "There is no relationship in the data.",
+   "Both increase with town size, so the correlation does not show that storks cause births."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Both stork pairs and births rise with population — larger towns have more buildings for nests and more people. A third variable (town size) explains the correlation. Correlation alone never proves causation.",
   "misconception": "A strong correlation can be produced entirely by a hidden third factor.",
   "hints": [
@@ -948,12 +948,12 @@
   "type": "reasoning",
   "q": "Which of these is an OBSERVATION rather than an inference?",
   "options": [
-   "The solution turned blue when the powder was added.",
+   "The powder was impure.",
    "The powder contains copper.",
    "A chemical reaction released energy.",
-   "The powder was impure."
+   "The solution turned blue when the powder was added."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "An observation is what is directly detected with the senses or instruments (a colour change). The other statements are inferences — explanations or conclusions drawn from observations, which could be wrong.",
   "hints": [
    "Which statement simply describes what was seen?"
@@ -977,8 +977,8 @@
   "options": [
    "It rained during the night.",
    "There is water on the road.",
-   "The puddles are shallow.",
-   "The road is wet in several places."
+   "The road is wet in several places.",
+   "The puddles are shallow."
   ],
   "answer": 0,
   "explanation": "Seeing water is an observation. “It rained” is an inference — a possible explanation that might be wrong (a water tanker or burst pipe could also explain it). Good scientists test inferences against other evidence.",
@@ -1002,12 +1002,12 @@
   "type": "reasoning",
   "q": "Records show that fires attended by more fire engines cause more damage. A councillor proposes sending fewer engines to reduce damage. What is wrong with this reasoning?",
   "options": [
+   "More engines always cause traffic jams.",
    "Bigger fires cause both more damage and more engines being sent; engines do not cause the damage.",
-   "Fire engines spread fire with water.",
    "Records about fires are always wrong.",
-   "More engines always cause traffic jams."
+   "Fire engines spread fire with water."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The size of the fire is a confounding variable: large fires do more damage AND need more engines. Reducing engines would make fires worse. This is a classic case of mistaking correlation for causation.",
   "hints": [
    "What decides how many engines are sent?",
@@ -1030,12 +1030,12 @@
   "type": "interdisciplinary",
   "q": "A balloon filled with helium rises, but the same balloon filled with air from your lungs sinks slowly. Why?",
   "options": [
-   "Helium is less dense than air, so the upthrust exceeds the balloon’s weight; exhaled air is slightly denser than room air.",
    "Helium is pulled upward by the Sun.",
-   "Your breath makes the balloon magnetic.",
-   "Helium has no mass."
+   "Helium is less dense than air, so the upthrust exceeds the balloon’s weight; exhaled air is slightly denser than room air.",
+   "Helium has no mass.",
+   "Your breath makes the balloon magnetic."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Upthrust equals the weight of air displaced. Helium (≈ 0.18 kg/m³) is much lighter than air (≈ 1.2 kg/m³), so the total weight of balloon + helium is less than the upthrust. Exhaled air is warm but contains CO₂ and is close to room-air density, so balloon + breath is heavier than the air it displaces.",
   "misconception": "Helium does have mass — it is just much less dense than air.",
   "hints": [
@@ -1058,12 +1058,12 @@
   "type": "application",
   "q": "A vacuum flask keeps tea hot. Which feature mainly reduces heat loss by RADIATION?",
   "options": [
-   "The silvered (shiny) inner surfaces",
-   "The vacuum between the double walls",
+   "The outer plastic case",
    "The plastic stopper",
-   "The outer plastic case"
+   "The silvered (shiny) inner surfaces",
+   "The vacuum between the double walls"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Shiny silvered surfaces are poor emitters and good reflectors of infrared radiation, so they reflect heat back into the tea. The vacuum stops conduction and convection (which need particles) but not radiation; the stopper reduces convection and evaporation at the top.",
   "misconception": "The vacuum cannot stop radiation — radiation crosses a vacuum (that is how sunlight reaches us).",
   "hints": [
@@ -1200,8 +1200,8 @@
   "options": [
    "Reducing water loss by transpiration, which is greatest from large surfaces in hot, dry daytime air",
    "Increasing photosynthesis by catching more light",
-   "Protecting the plant from cold",
-   "Making the plant heavier so it is not blown away"
+   "Making the plant heavier so it is not blown away",
+   "Protecting the plant from cold"
   ],
   "answer": 0,
   "explanation": "Transpiration increases with leaf area, temperature, wind and low humidity. Spines drastically reduce the surface area for water loss (photosynthesis happens in the green stem). Opening stomata in the cool night (CAM plants store CO₂ as acids for daytime use) cuts water loss further.",

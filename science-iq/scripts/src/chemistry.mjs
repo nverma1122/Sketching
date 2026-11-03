@@ -248,7 +248,7 @@ export default [
   { id: 'CHE-040', t: 'Chemical Reactions', d: 1, ty: 'mcq', s: 35,
     q: 'Which equation for the formation of water is correctly balanced?',
     o: ['2H₂ + O₂ → 2H₂O', 'H₂ + O₂ → H₂O', 'H₂ + O₂ → H₂O₂', 'H₂ + 2O₂ → 2H₂O'], a: 0,
-    e: 'Count atoms: left 4 H and 2 O; right 2 × H₂O = 4 H and 2 O ✓. Option B has 2 O on the left but 1 on the right. Option C forms hydrogen peroxide, a different substance — balancing must never change formulas.',
+    e: 'Count atoms: left 4 H and 2 O; right 2 × H₂O = 4 H and 2 O ✓. H₂ + O₂ → H₂O has 2 O on the left but 1 on the right; H₂ + O₂ → H₂O₂ forms hydrogen peroxide, a different substance — balancing must never change formulas.',
     m: 'Balancing is done by changing coefficients only; changing subscripts (H₂O → H₂O₂) changes the substance.',
     h: ['Count H and O atoms on both sides.'] },
   { id: 'CHE-041', t: 'Chemical Reactions', d: 2, ty: 'experiment', s: 50,

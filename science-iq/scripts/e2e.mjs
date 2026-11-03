@@ -300,6 +300,7 @@ for (const [name, vp] of [['phone', { width: 390, height: 844 }], ['tablet', { w
       assert(over <= 1, `${h} overflows by ${over}px`);
     }
     await p.goto(URL + '#/home');
+    await p.waitForTimeout(500); // let the page fade-in finish
     await p.screenshot({ path: `shots/${name}-home.png` });
     await p.goto(URL + '#/practice');
     await p.getByRole('button', { name: 'Start practice →' }).click();
