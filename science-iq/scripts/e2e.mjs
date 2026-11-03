@@ -34,6 +34,7 @@ const assert = (c, m) => {
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 1280, height: 860 }, acceptDownloads: true });
 const page = await ctx.newPage();
+page.setDefaultTimeout(8000);
 const errors = [];
 page.on('pageerror', (e) => errors.push(e.message));
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));

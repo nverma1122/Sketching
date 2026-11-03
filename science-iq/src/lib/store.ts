@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from 'react';
+import { useRef, useSyncExternalStore } from 'react';
 import { BY_ID, topicKey } from './bank';
 import type { Question } from './types';
 
@@ -112,14 +112,24 @@ export function update(fn: (s: State) => State | void) {
 
 export const getState = () => state;
 export const getSaveError = () => saveError;
+const subscribe = (f: () => void) => {
+  subs.add(f);
+  return () => {
+    subs.delete(f);
+  };
+};
+
+/**
+ * Subscribe a component to part of the state. The selector's result is cached until the state
+ * object changes, so selectors that build new arrays (filter, map …) do not cause render loops.
+ */
 export function useStore<T>(sel: (s: State) => T): T {
-  return useSyncExternalStore(
-    (f) => {
-      subs.add(f);
-      return () => subs.delete(f);
-    },
-    () => sel(state),
-  );
+  const cache = useRef<{ s: State; v: T } | null>(null);
+  const get = () => {
+    if (!cache.current || cache.current.s !== state) cache.current = { s: state, v: sel(state) };
+    return cache.current.v;
+  };
+  return useSyncExternalStore(subscribe, get);
 }
 
 // ------------------------------------------------------------------ XP rules
