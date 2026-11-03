@@ -1,0 +1,681 @@
+[
+ {
+  "id": "SPA-001",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Mercury is the planet closest to the Sun, yet Venus has the hottest surface in the Solar System (about 465 °C). Why?",
+  "options": [
+   "Venus’s thick carbon dioxide atmosphere traps heat by a runaway greenhouse effect.",
+   "Venus is larger, so it receives more sunlight.",
+   "Venus has active volcanoes covering its whole surface.",
+   "Venus rotates faster, causing friction heating."
+  ],
+  "answer": 0,
+  "explanation": "Venus’s atmosphere is about 96% CO₂ and roughly 90 times as dense as Earth’s. It lets sunlight in but traps outgoing infrared, so heat cannot escape. Mercury has almost no atmosphere, so its night side cools to about −180 °C.",
+  "misconception": "Distance from the Sun is not the only factor — the atmosphere controls how much heat is retained.",
+  "hints": [
+   "What is Venus’s atmosphere made of, and how thick is it?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-002",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 1,
+  "type": "mcq",
+  "q": "Why does Mars appear reddish?",
+  "options": [
+   "Its surface dust and rocks contain iron oxide (rust).",
+   "It is very hot.",
+   "It reflects red light from the Sun only.",
+   "Its atmosphere is made of red gas."
+  ],
+  "answer": 0,
+  "explanation": "Martian soil is rich in iron oxides, which give it a rusty red colour. Mars is actually cold (average about −60 °C).",
+  "hints": [
+   "What gives rust its colour?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-003",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which planet has an average density lower than that of water?",
+  "options": [
+   "Saturn",
+   "Earth",
+   "Jupiter",
+   "Mercury"
+  ],
+  "answer": 0,
+  "explanation": "Saturn is made mostly of hydrogen and helium; its average density is about 0.69 g/cm³, less than water (1 g/cm³). Earth is the densest planet (about 5.5 g/cm³).",
+  "misconception": "Being the biggest (Jupiter) does not make a planet the least dense.",
+  "hints": [
+   "Which gas giant is famous for being “light enough to float”?"
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-004",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A comet’s tail always points away from the Sun, even when the comet is moving away from the Sun. Why?",
+  "options": [
+   "Radiation pressure and the solar wind push the gas and dust away from the Sun.",
+   "The tail is left behind as the comet moves, like smoke from a train.",
+   "The Sun’s gravity repels the tail.",
+   "The tail is a reflection of sunlight."
+  ],
+  "answer": 0,
+  "explanation": "Near the Sun, ice in the comet’s nucleus vaporises. The streaming solar wind (charged particles) and the pressure of sunlight push the released gas and dust outward, so the tails point away from the Sun regardless of the comet’s direction of travel.",
+  "misconception": "A comet’s tail is not a trail left behind by motion, so it can even lead the comet.",
+  "hints": [
+   "What flows outward from the Sun?",
+   "If the tail were just left behind, which way would it point when the comet moves away from the Sun?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-005",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 1,
+  "type": "mcq",
+  "q": "What causes the seasons on Earth?",
+  "options": [
+   "The tilt of Earth’s axis (about 23.5°) as it orbits the Sun",
+   "Earth being much closer to the Sun in summer",
+   "Changes in the Sun’s brightness",
+   "The Moon’s gravity"
+  ],
+  "answer": 0,
+  "explanation": "Because Earth’s axis is tilted, each hemisphere leans towards the Sun for part of the year (longer days, more direct sunlight — summer) and away for the other part (winter). Earth is actually closest to the Sun in early January, during the northern winter.",
+  "misconception": "Distance from the Sun is not the cause: the two hemispheres have opposite seasons at the same distance.",
+  "hints": [
+   "Why do Australia and India have opposite seasons at the same time?"
+  ],
+  "time": 30,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-006",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why do we see phases of the Moon (new moon, crescent, full moon …)?",
+  "options": [
+   "We see different amounts of the Moon’s sunlit half as it orbits Earth.",
+   "Earth’s shadow covers different parts of the Moon.",
+   "The Moon produces less light at some times.",
+   "Clouds hide part of the Moon."
+  ],
+  "answer": 0,
+  "explanation": "The Sun always lights half of the Moon. As the Moon orbits Earth (about 29.5 days from new moon to new moon), the fraction of that lit half facing us changes. Earth’s shadow only falls on the Moon during a lunar eclipse.",
+  "misconception": "Phases are not caused by Earth’s shadow — that would be an eclipse.",
+  "hints": [
+   "How much of the Moon does the Sun light at any time?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-007",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 2,
+  "type": "numerical",
+  "q": "The Sun is about 1.5 × 10⁸ km from Earth and light travels at 3 × 10⁵ km/s. About how long does sunlight take to reach us?",
+  "options": [
+   "8.3 minutes",
+   "8.3 seconds",
+   "83 minutes",
+   "0.5 minutes"
+  ],
+  "answer": 0,
+  "explanation": "t = d/c = 1.5 × 10⁸ ÷ 3 × 10⁵ = 500 s ≈ 8.3 minutes. So we always see the Sun as it was about 8 minutes ago.",
+  "misconception": "0.5 minutes forgets to convert 500 s properly; 500 s is 8.3 minutes.",
+  "hints": [
+   "Time = distance ÷ speed; then convert seconds to minutes."
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-008",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Stars twinkle in the night sky, but planets usually shine steadily. Why?",
+  "options": [
+   "Stars are effectively point sources, so atmospheric refraction makes their light flicker; planets appear as tiny discs whose flickers average out.",
+   "Planets are hotter than stars.",
+   "Stars are moving very fast.",
+   "Planets produce their own steady light."
+  ],
+  "answer": 0,
+  "explanation": "Turbulent layers of air keep changing their refractive index, bending starlight slightly and rapidly. A distant star is essentially a point, so its brightness and position flicker. A planet is close enough to appear as a small disc; the variations from different points of the disc average out.",
+  "misconception": "Planets do not make their own light — they reflect sunlight.",
+  "hints": [
+   "What does the atmosphere do to light passing through it?",
+   "How big does a star look compared with a planet?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-009",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 1,
+  "type": "mcq",
+  "q": "A light-year is a unit of:",
+  "options": [
+   "distance",
+   "time",
+   "speed",
+   "brightness"
+  ],
+  "answer": 0,
+  "explanation": "A light-year is the distance light travels in one year — about 9.46 × 10¹² km. The nearest star after the Sun, Proxima Centauri, is about 4.2 light-years away.",
+  "misconception": "Despite the word “year”, it measures distance, not time.",
+  "hints": [
+   "Speed × time = ?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-010",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is the source of the Sun’s energy?",
+  "options": [
+   "Nuclear fusion of hydrogen into helium in its core",
+   "Burning of gases like a fire",
+   "Nuclear fission of uranium",
+   "Gravitational energy from falling meteors"
+  ],
+  "answer": 0,
+  "explanation": "In the Sun’s core (about 15 million °C), hydrogen nuclei fuse to form helium. A small amount of mass is converted to a large amount of energy (E = mc²). Chemical burning would have used up the Sun in a few thousand years.",
+  "misconception": "Fission (splitting heavy nuclei) powers nuclear reactors; stars run on fusion.",
+  "hints": [
+   "Does the Sun split heavy atoms or join light ones?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-011",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 3,
+  "type": "reasoning",
+  "q": "What will the Sun most likely become at the end of its life?",
+  "options": [
+   "A red giant, then a white dwarf",
+   "A supernova, then a black hole",
+   "A neutron star",
+   "A brown dwarf, then a planet"
+  ],
+  "answer": 0,
+  "explanation": "Stars of about the Sun’s mass swell into red giants when hydrogen in the core runs out, shed their outer layers as a planetary nebula, and leave a hot, dense core — a white dwarf. Only stars more than about 8 times the Sun’s mass end in supernovae that may leave neutron stars or black holes.",
+  "misconception": "The Sun is not massive enough to explode as a supernova or form a black hole.",
+  "hints": [
+   "Does a star’s mass decide how it dies?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-012",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 3,
+  "type": "what-if",
+  "q": "Light from a distant galaxy is observed to be shifted towards longer (redder) wavelengths. What does this tell astronomers?",
+  "options": [
+   "The galaxy is moving away from us.",
+   "The galaxy is moving towards us.",
+   "The galaxy is very hot.",
+   "The galaxy contains only red stars."
+  ],
+  "answer": 0,
+  "explanation": "A source moving away stretches the waves it emits, increasing their wavelength — a redshift (like the falling pitch of a passing siren, the Doppler effect). Hubble found that more distant galaxies have larger redshifts, evidence that the universe is expanding.",
+  "misconception": "Redshift is not about the colour of the stars themselves; it is a shift of the whole spectrum.",
+  "hints": [
+   "Think of the sound of an ambulance siren as it drives away.",
+   "Moving away stretches or squashes the waves?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-013",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 2,
+  "type": "mcq",
+  "q": "Why is a black hole “black”?",
+  "options": [
+   "Its gravity is so strong that not even light can escape from within its event horizon.",
+   "It is made of dark rock.",
+   "It is too far away to be seen.",
+   "It absorbs only visible light but emits radio waves."
+  ],
+  "answer": 0,
+  "explanation": "A black hole forms when matter collapses into a tiny region. Inside the event horizon the escape velocity exceeds the speed of light, so no light or signal can leave. We detect black holes by their effects on nearby stars and hot gas.",
+  "hints": [
+   "What would the escape velocity have to be for light to be trapped?"
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-014",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 2,
+  "type": "mcq",
+  "q": "A geostationary communication satellite appears fixed in the sky. Which is true of its orbit?",
+  "options": [
+   "It orbits above the equator once a day in the same direction as Earth rotates.",
+   "It is stationary in space with no orbit.",
+   "It orbits over the poles once a day.",
+   "It orbits just above the atmosphere every 90 minutes."
+  ],
+  "answer": 0,
+  "explanation": "A geostationary satellite orbits about 35,800 km above the equator with a period equal to one rotation of Earth, moving in the same direction, so it stays above the same place. Dish antennas can then point at it without moving.",
+  "misconception": "It is not motionless — it moves at about 3 km/s, matching Earth’s rotation.",
+  "hints": [
+   "For a satellite to stay over one place, its period must match what?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-015",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 3,
+  "type": "numerical",
+  "q": "Earth orbits the Sun at 1 astronomical unit (AU) in 1 year. Using Kepler’s third law (T² ∝ r³), what is the orbital period of a planet at 9 AU?",
+  "options": [
+   "27 years",
+   "9 years",
+   "81 years",
+   "3 years"
+  ],
+  "answer": 0,
+  "explanation": "T² ∝ r³ → T = r^1.5 in years when r is in AU: 9^1.5 = (√9)³ = 3³ = 27 years. (Saturn, at about 9.5 AU, takes about 29 years.)",
+  "misconception": "81 years uses T ∝ r²; 9 years assumes T ∝ r.",
+  "hints": [
+   "T² = r³ when T is in years and r in AU.",
+   "√9 = 3. What is 3³?"
+  ],
+  "time": 80,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-016",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Two satellites are in the same circular orbit around Earth, one of 500 kg and one of 5000 kg. How do their orbital speeds compare?",
+  "options": [
+   "They are equal.",
+   "The heavier satellite is 10 times faster.",
+   "The lighter satellite is 10 times faster.",
+   "The heavier satellite falls to Earth."
+  ],
+  "answer": 0,
+  "explanation": "Gravity provides the centripetal force: GMm/r² = mv²/r, so v = √(GM/r). The satellite’s mass m cancels. Orbital speed depends only on Earth’s mass and the orbital radius — just as all objects fall with the same acceleration.",
+  "misconception": "A heavier satellite feels more gravity, but also has more inertia — the two effects cancel exactly.",
+  "hints": [
+   "Write gravitational force = centripetal force for a satellite of mass m.",
+   "Does m appear on both sides?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-017",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 3,
+  "type": "numerical",
+  "q": "The International Space Station orbits about 400 km above Earth’s surface (Earth’s radius ≈ 6400 km). Approximately what percentage of surface gravity acts on it there?",
+  "options": [
+   "89%",
+   "0%",
+   "50%",
+   "100%"
+  ],
+  "answer": 0,
+  "explanation": "g ∝ 1/r²: g_ISS/g = (6400/6800)² ≈ 0.886, about 89%. Gravity is far from zero; astronauts feel weightless because they and the station are in continuous free fall around Earth.",
+  "misconception": "“Zero gravity” in orbit is a myth — the station is falling around Earth under almost full gravity.",
+  "hints": [
+   "Use distances from Earth’s CENTRE: 6400 km and 6800 km.",
+   "g varies as 1/r²."
+  ],
+  "time": 90,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-018",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 1,
+  "type": "numerical",
+  "q": "Gravity on the Moon is about 1.6 m/s². What is the weight of a 60 kg astronaut on the Moon?",
+  "options": [
+   "96 N",
+   "60 N",
+   "588 N",
+   "37.5 N"
+  ],
+  "answer": 0,
+  "explanation": "Weight = mg = 60 × 1.6 = 96 N, about one-sixth of the 588 N the astronaut weighs on Earth. The mass is still 60 kg.",
+  "misconception": "37.5 N divides instead of multiplying; 588 N is the Earth weight.",
+  "hints": [
+   "Weight = mass × gravitational acceleration."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-019",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 2,
+  "type": "mcq",
+  "q": "Why can the Moon keep only an extremely thin trace of atmosphere?",
+  "options": [
+   "Its weak gravity (low escape velocity) lets gas molecules escape into space.",
+   "The Moon is too cold for gases.",
+   "The Sun blows away every planet’s atmosphere.",
+   "The Moon has no rocks to release gases."
+  ],
+  "answer": 0,
+  "explanation": "The Moon’s escape velocity is only about 2.4 km/s (Earth’s is 11.2 km/s). Sunlight heats gas molecules on the dayside to speeds at which many can escape over time, so the Moon cannot hold a substantial atmosphere.",
+  "hints": [
+   "Compare the Moon’s escape velocity with Earth’s."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-020",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 1,
+  "type": "mcq",
+  "q": "Chandrayaan-3’s Vikram lander made India the first country to soft-land near the Moon’s south pole. In which year did it land?",
+  "options": [
+   "2023",
+   "2019",
+   "2008",
+   "2014"
+  ],
+  "answer": 0,
+  "explanation": "Chandrayaan-3’s Vikram lander touched down near the lunar south pole on 23 August 2023, and the Pragyan rover explored the surface. (Chandrayaan-1 launched in 2008; Chandrayaan-2’s lander was lost in 2019; 2014 is when Mangalyaan reached Mars.)",
+  "hints": [
+   "This date is now celebrated in India as National Space Day."
+  ],
+  "time": 30,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-021",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 2,
+  "type": "mcq",
+  "q": "What was special about India’s Mars Orbiter Mission (Mangalyaan), which entered Mars orbit in September 2014?",
+  "options": [
+   "India became the first Asian nation to reach Mars orbit, and the first nation to do so on its first attempt.",
+   "It was the first spacecraft ever to land on Mars.",
+   "It brought samples back from Mars.",
+   "It carried astronauts."
+  ],
+  "answer": 0,
+  "explanation": "Launched on 5 November 2013 by PSLV and inserted into Mars orbit on 24 September 2014, MOM made ISRO the fourth space agency to reach Mars and the first to succeed on its maiden attempt, at a famously low cost.",
+  "misconception": "Mangalyaan was an orbiter, not a lander.",
+  "hints": [
+   "“Orbiter” is in the mission’s name."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-022",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 3,
+  "type": "reasoning",
+  "q": "India’s solar observatory Aditya-L1 is placed near Lagrange point L1, about 1.5 million km from Earth towards the Sun. What is the main advantage of this position?",
+  "options": [
+   "It can watch the Sun continuously, without being blocked by Earth or eclipses.",
+   "It is closer to the Sun than Mercury, so it sees more detail.",
+   "There is no gravity at L1.",
+   "It can land on the Sun from there."
+  ],
+  "answer": 0,
+  "explanation": "At L1, the combined pull of the Sun and Earth lets a spacecraft keep pace with Earth in its orbit, staying between Earth and the Sun. From a halo orbit there it has an uninterrupted view of the Sun — no night, no eclipses — ideal for studying solar flares and the solar wind before they reach Earth. 1.5 million km is only about 1% of the Earth–Sun distance.",
+  "misconception": "Gravity is not zero at L1; the forces combine so that the orbit period matches Earth’s.",
+  "hints": [
+   "What could block a satellite’s view of the Sun if it orbited close to Earth?",
+   "1.5 million km compared with 150 million km — is it close to the Sun?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-023",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which instrument aboard India’s Chandrayaan-1 (2008) helped find evidence of water molecules on the Moon’s surface?",
+  "options": [
+   "NASA’s Moon Mineralogy Mapper (M3)",
+   "The Pragyan rover",
+   "The Hubble Space Telescope",
+   "The Vikram lander"
+  ],
+  "answer": 0,
+  "explanation": "Chandrayaan-1 carried international instruments. NASA’s Moon Mineralogy Mapper detected the infrared signature of water and hydroxyl on the lunar surface, announced in 2009. Its Moon Impact Probe also supported the findings. Pragyan and Vikram belong to Chandrayaan-3.",
+  "hints": [
+   "Pragyan and Vikram flew on a later mission."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-024",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 2,
+  "type": "numerical",
+  "q": "When Mars is 2.25 × 10⁸ km from Earth, how long does a radio command take to reach a Mars rover? (speed of light = 3 × 10⁸ m/s)",
+  "options": [
+   "12.5 minutes",
+   "12.5 seconds",
+   "750 minutes",
+   "1.25 minutes"
+  ],
+  "answer": 0,
+  "explanation": "Convert km to m: 2.25 × 10¹¹ m. t = d/c = 2.25 × 10¹¹ / 3 × 10⁸ = 750 s = 12.5 minutes. A reply takes another 12.5 minutes, which is why Mars rovers must drive partly by themselves.",
+  "misconception": "750 minutes forgets that 750 is in seconds.",
+  "hints": [
+   "Convert km to m first.",
+   "Then convert seconds to minutes."
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-025",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 1,
+  "type": "mcq",
+  "q": "Why are space telescopes such as Hubble and James Webb placed above Earth’s atmosphere?",
+  "options": [
+   "The atmosphere blurs images and absorbs many wavelengths such as infrared, ultraviolet and X-rays.",
+   "They need to be closer to the stars.",
+   "There is no gravity in space.",
+   "Telescopes work only in the dark."
+  ],
+  "answer": 0,
+  "explanation": "Turbulent air distorts light (the reason stars twinkle), and the atmosphere blocks much of the ultraviolet, X-ray and infrared light that carries valuable information. Above the atmosphere, telescopes get sharper images across more wavelengths.",
+  "misconception": "Being a few hundred km “closer” to stars light-years away makes no practical difference.",
+  "hints": [
+   "What does the atmosphere do to starlight?"
+  ],
+  "time": 30,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-026",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "Long-duration astronauts on the ISS often return with weaker bones and muscles. What is the main cause?",
+  "options": [
+   "In free fall, bones and muscles no longer have to support the body’s weight, so the body reduces bone and muscle mass.",
+   "Cosmic rays dissolve calcium.",
+   "Food in space contains no calcium.",
+   "Low air pressure in the station."
+  ],
+  "answer": 0,
+  "explanation": "Bone and muscle respond to load. In continuous free fall the skeleton bears no weight, so bone is broken down faster than it is rebuilt (astronauts can lose roughly 1–1.5% of bone mass per month in weight-bearing bones) and muscles waste. Astronauts exercise about two hours a day to slow this.",
+  "hints": [
+   "What does gravity normally make your bones and muscles do all day?",
+   "What happens to a muscle that is never used?"
+  ],
+  "time": 80,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ }
+]

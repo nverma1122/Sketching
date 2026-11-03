@@ -1,0 +1,1221 @@
+[
+ {
+  "id": "REA-001",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 1,
+  "type": "reasoning",
+  "q": "The gaps between the terms of 2, 6, 12, 20, 30 follow a rule. Which term comes after 30?",
+  "options": [
+   "42",
+   "40",
+   "36",
+   "44"
+  ],
+  "answer": 0,
+  "explanation": "Differences are 4, 6, 8, 10 — increasing by 2 — so the next difference is 12: 30 + 12 = 42. (The terms are also n(n + 1): 1×2, 2×3, 3×4 … 6×7 = 42.)",
+  "hints": [
+   "Look at the differences between consecutive terms."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-002",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Each term of 3, 5, 9, 17, 33 is obtained from the one before it by the same two operations. What is the next term?",
+  "options": [
+   "65",
+   "49",
+   "66",
+   "57"
+  ],
+  "answer": 0,
+  "explanation": "Each term is double the previous minus 1: 3×2−1 = 5, 5×2−1 = 9, … 33×2−1 = 65. Equivalently, the differences 2, 4, 8, 16 double, so the next difference is 32.",
+  "misconception": "49 assumes the differences grow by a fixed amount.",
+  "hints": [
+   "Compare each term with twice the previous one."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-003",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Which number continues the sequence 1, 4, 27, 256?",
+  "options": [
+   "3125",
+   "625",
+   "1024",
+   "1296"
+  ],
+  "answer": 0,
+  "explanation": "The terms are nⁿ: 1¹ = 1, 2² = 4, 3³ = 27, 4⁴ = 256, so the next is 5⁵ = 3125.",
+  "misconception": "625 = 5⁴ continues only the base, not the exponent.",
+  "hints": [
+   "Try writing each term as a power.",
+   "Is the base or the exponent changing — or both?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-004",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Find the next letter: A, C, F, J, O, ?",
+  "options": [
+   "U",
+   "T",
+   "V",
+   "S"
+  ],
+  "answer": 0,
+  "explanation": "Positions are 1, 3, 6, 10, 15 — the gaps are +2, +3, +4, +5 — so add 6: 15 + 6 = 21 = U.",
+  "hints": [
+   "Convert letters to their positions in the alphabet."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-005",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 1,
+  "type": "reasoning",
+  "q": "Which is the odd one out?",
+  "options": [
+   "Sulphur",
+   "Copper",
+   "Silver",
+   "Aluminium"
+  ],
+  "answer": 0,
+  "explanation": "Copper, silver and aluminium are metals (good conductors of heat and electricity). Sulphur is a non-metal and a poor conductor.",
+  "hints": [
+   "Group them by a property such as conductivity."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-006",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Thermometer : Temperature :: Ammeter : ?",
+  "options": [
+   "Current",
+   "Voltage",
+   "Resistance",
+   "Power"
+  ],
+  "answer": 0,
+  "explanation": "A thermometer measures temperature; an ammeter measures electric current (in amperes). A voltmeter measures potential difference.",
+  "hints": [
+   "What unit does an ammeter’s name come from?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-007",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "If CAT is coded as DBU, how is DOG coded?",
+  "options": [
+   "EPH",
+   "CNF",
+   "EOG",
+   "DPH"
+  ],
+  "answer": 0,
+  "explanation": "Each letter moves one place forward: C→D, A→B, T→U. So D→E, O→P, G→H: EPH.",
+  "hints": [
+   "Compare each letter with its code letter."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-008",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In a code, TEA is written as BFU. Using the same rule, how is SUN written?",
+  "options": [
+   "OVT",
+   "TVO",
+   "OUT",
+   "MTR"
+  ],
+  "answer": 0,
+  "explanation": "The rule is: reverse the word, then move each letter one place forward. TEA → AET → BFU ✓. SUN → NUS → OVT.",
+  "misconception": "TVO shifts the letters but forgets to reverse the order.",
+  "hints": [
+   "Compare the first letter of the code with the LAST letter of the word.",
+   "Reverse first, then look at the shift."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-009",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A girl walks 5 km north, turns right and walks 3 km, then turns right again and walks 9 km. How far and in which direction is she from her starting point?",
+  "options": [
+   "5 km south-east",
+   "5 km north-east",
+   "4 km south",
+   "17 km south-east"
+  ],
+  "answer": 0,
+  "explanation": "North 5, then right (east) 3, then right (south) 9: she ends 3 km east and 9 − 5 = 4 km south of the start. Distance = √(3² + 4²) = 5 km, towards the south-east.",
+  "misconception": "17 km is the total distance walked, not the displacement.",
+  "hints": [
+   "Turning right from north faces east; right again faces south.",
+   "Find the net east and net south distances."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-010",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Pointing to a girl in a photograph, Ravi says, “She is the daughter of the only son of my paternal grandfather.” How is the girl related to Ravi?",
+  "options": [
+   "Sister",
+   "Cousin",
+   "Niece",
+   "Aunt"
+  ],
+  "answer": 0,
+  "explanation": "The only son of Ravi’s paternal grandfather is Ravi’s father. The daughter of Ravi’s father is Ravi’s sister.",
+  "misconception": "Cousin would need the grandfather to have another son or a daughter.",
+  "hints": [
+   "Who is the only son of Ravi’s father’s father?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-011",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 1,
+  "type": "reasoning",
+  "q": "In a row of 40 students, Meena is 12th from the left. What is her position from the right?",
+  "options": [
+   "29th",
+   "28th",
+   "30th",
+   "52nd"
+  ],
+  "answer": 0,
+  "explanation": "Position from right = total − position from left + 1 = 40 − 12 + 1 = 29.",
+  "misconception": "28 forgets to add 1 (Meena herself is counted in both directions).",
+  "hints": [
+   "How many students stand to her right?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-012",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "What is the angle between the hour hand and the minute hand of a clock at 3:40?",
+  "options": [
+   "130°",
+   "140°",
+   "120°",
+   "150°"
+  ],
+  "answer": 0,
+  "explanation": "Minute hand: 40 × 6° = 240° from 12. Hour hand: 3 × 30° + 40 × 0.5° = 110° (it moves 0.5° per minute). Angle = 240° − 110° = 130°.",
+  "misconception": "150° ignores that the hour hand has moved past the 3 by 20°.",
+  "hints": [
+   "The minute hand moves 6° per minute.",
+   "The hour hand also moves: 0.5° per minute."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-013",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "1 January 2025 was a Wednesday. On which day of the week did 1 January 2026 fall?",
+  "options": [
+   "Thursday",
+   "Wednesday",
+   "Friday",
+   "Tuesday"
+  ],
+  "answer": 0,
+  "explanation": "2025 is not a leap year, so it has 365 days = 52 weeks + 1 day. The day of the week moves forward by one: Wednesday → Thursday.",
+  "misconception": "Friday would apply after a leap year (366 days = 52 weeks + 2 days).",
+  "hints": [
+   "How many days are left over after removing complete weeks from 365?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-014",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Statements: All roses are flowers. Some flowers fade quickly.\nConclusion: Some roses fade quickly.\nDoes the conclusion follow?",
+  "options": [
+   "No — the flowers that fade quickly may not include any roses.",
+   "Yes — roses are flowers, so some must fade quickly.",
+   "Yes — all flowers fade quickly.",
+   "No — roses are not flowers."
+  ],
+  "answer": 0,
+  "explanation": "Roses are a subset of flowers, and “some flowers” fade quickly — but those could all be non-roses. Since a Venn diagram can be drawn where no rose fades quickly, the conclusion does not necessarily follow.",
+  "misconception": "A conclusion must be true in EVERY possible arrangement, not just one.",
+  "hints": [
+   "Can you draw a diagram where the statements are true but no rose fades quickly?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-015",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "If “+” means “×”, “×” means “−”, “−” means “÷” and “÷” means “+”, what is the value of 8 + 3 − 6 × 2 ÷ 1?",
+  "options": [
+   "3",
+   "5",
+   "1",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "Substitute: 8 × 3 ÷ 6 − 2 + 1. Using the normal order (÷ and × first, left to right): 24 ÷ 6 = 4, then 4 − 2 + 1 = 3.",
+  "misconception": "Working strictly left to right after substitution happens to give the same here; the common slip is substituting the wrong symbol.",
+  "hints": [
+   "Rewrite the expression with the real operations first.",
+   "Then apply the usual order of operations."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-016",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In a class of 50 students, 30 like Physics, 25 like Chemistry and 10 like both. How many like neither?",
+  "options": [
+   "5",
+   "15",
+   "0",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "Students who like at least one = 30 + 25 − 10 = 45 (the 10 who like both were counted twice). Neither = 50 − 45 = 5.",
+  "misconception": "0 assumes 30 + 25 = 55 covers everyone, double-counting the 10.",
+  "hints": [
+   "Draw a Venn diagram with two overlapping circles.",
+   "Students who like both are counted in both totals."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-017",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "Pipe A alone fills a tank in 6 hours and pipe B alone fills it in 3 hours. How long do both together take?",
+  "options": [
+   "2 hours",
+   "4.5 hours",
+   "9 hours",
+   "1.5 hours"
+  ],
+  "answer": 0,
+  "explanation": "In one hour A fills 1/6 and B fills 1/3 = 2/6 of the tank; together 3/6 = 1/2 per hour, so 2 hours.",
+  "misconception": "4.5 hours averages the times — adding pipes must make it faster than either alone.",
+  "hints": [
+   "What fraction of the tank does each pipe fill in one hour?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-018",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A bus travels from town P to town Q at 60 km/h and returns along the same road at 40 km/h. What is its average speed for the round trip?",
+  "options": [
+   "48 km/h",
+   "50 km/h",
+   "45 km/h",
+   "52 km/h"
+  ],
+  "answer": 0,
+  "explanation": "Let the distance be d. Time = d/60 + d/40 = 5d/120 = d/24. Average speed = 2d ÷ (d/24) = 48 km/h. The bus spends longer at the slower speed, so the average is below 50.",
+  "misconception": "50 km/h averages the speeds, which works only for equal TIMES, not equal distances.",
+  "hints": [
+   "Average speed = total distance ÷ total time.",
+   "Try a convenient distance such as 120 km each way."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-019",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 1,
+  "type": "numerical",
+  "q": "On a map with scale 1 : 50,000, two villages are 4 cm apart. What is the real distance between them?",
+  "options": [
+   "2 km",
+   "20 km",
+   "200 m",
+   "0.2 km"
+  ],
+  "answer": 0,
+  "explanation": "4 cm × 50,000 = 200,000 cm = 2000 m = 2 km.",
+  "hints": [
+   "1 km = 100,000 cm."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-020",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "A bacterial population doubles every 20 minutes. Starting with 100 bacteria, how many will there be after 2 hours (with no limits on growth)?",
+  "options": [
+   "6400",
+   "1200",
+   "3200",
+   "600"
+  ],
+  "answer": 0,
+  "explanation": "2 hours = 120 minutes = 6 doubling periods. 100 × 2⁶ = 100 × 64 = 6400. Exponential growth quickly outpaces linear growth: adding 100 every 20 minutes would give only 700.",
+  "misconception": "1200 multiplies 100 by 12 (or 2 × 6) instead of doubling six times.",
+  "hints": [
+   "How many 20-minute periods are in 2 hours?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-021",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "Estimate: about how many times does a human heart beat in a 70-year life at an average 70 beats per minute?",
+  "options": [
+   "≈ 2.58 × 10⁹",
+   "≈ 2.58 × 10⁶",
+   "≈ 2.58 × 10¹²",
+   "≈ 4.9 × 10⁷"
+  ],
+  "answer": 0,
+  "explanation": "Beats = 70 per min × 60 min × 24 h × 365 days × 70 years ≈ 2.58 × 10⁹ — about two and a half billion. Order-of-magnitude estimates like this are a key scientific skill.",
+  "misconception": "4.9 × 10⁷ stops after one year’s minutes; carry the calculation through every unit.",
+  "hints": [
+   "Beats per year = beats per minute × minutes in a year.",
+   "Then multiply by the number of years."
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-022",
+  "subject": "Scientific Reasoning",
+  "topic": "Experimental Design",
+  "level": 1,
+  "type": "experiment",
+  "q": "A student investigates how the amount of fertiliser affects the height of bean plants. Which is the independent variable?",
+  "options": [
+   "The amount of fertiliser",
+   "The height of the plants",
+   "The type of soil",
+   "The amount of water"
+  ],
+  "answer": 0,
+  "explanation": "The independent variable is the one the experimenter deliberately changes (fertiliser amount). Plant height is the dependent variable (measured). Soil type and water are control variables that should be kept the same.",
+  "misconception": "The variable you measure is the dependent variable, not the independent one.",
+  "hints": [
+   "Which variable does the student choose and change?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-023",
+  "subject": "Scientific Reasoning",
+  "topic": "Experimental Design",
+  "level": 2,
+  "type": "experiment",
+  "q": "A company claims its new toothpaste prevents cavities. Which test would give the most reliable evidence?",
+  "options": [
+   "Randomly split many similar volunteers into two groups using identical-looking tubes — new toothpaste or ordinary — and compare new cavities after a year.",
+   "Ask ten people who like the toothpaste whether they got fewer cavities.",
+   "Give the new toothpaste to everyone and count cavities after a year.",
+   "Compare the company’s staff with people from another city."
+  ],
+  "answer": 0,
+  "explanation": "A large, randomised, controlled and blinded trial keeps everything except the toothpaste similar between groups, so any difference can be attributed to the toothpaste. The other designs lack a fair control group or introduce bias.",
+  "misconception": "Without a control group, there is nothing to compare with.",
+  "hints": [
+   "What should the only difference between the groups be?",
+   "Why might it matter if people know which toothpaste they are using?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-024",
+  "subject": "Scientific Reasoning",
+  "topic": "Experimental Design",
+  "level": 3,
+  "type": "experiment",
+  "q": "A student wants to find out whether the length of a pendulum affects its time period. Which set of variables must be kept CONSTANT?",
+  "options": [
+   "The mass of the bob and the starting angle (kept small)",
+   "The length and the mass",
+   "The time period and the length",
+   "Only the colour of the bob"
+  ],
+  "answer": 0,
+  "explanation": "Length is the independent variable and the period is the dependent variable. To make the test fair, other factors that might affect the period — the mass of the bob and the amplitude (starting angle, kept small) — must be held constant. (In fact, the period barely depends on mass, but the experiment must not assume that.)",
+  "misconception": "You cannot keep length constant — it is the variable being tested.",
+  "hints": [
+   "Which variable is changed and which is measured?",
+   "What else might affect how a pendulum swings?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-025",
+  "subject": "Scientific Reasoning",
+  "topic": "Experimental Design",
+  "level": 2,
+  "type": "experiment",
+  "q": "Why do scientists repeat an experiment several times and average the results?",
+  "options": [
+   "To reduce the effect of random errors and check that results are reliable",
+   "To make the experiment take longer",
+   "To change the independent variable",
+   "To remove systematic errors completely"
+  ],
+  "answer": 0,
+  "explanation": "Random errors scatter readings above and below the true value, so averaging repeats reduces their effect, and consistent repeats show the result is reliable. Systematic errors (e.g. a balance that always reads 2 g high) shift every reading and are NOT removed by averaging.",
+  "misconception": "Repeating does not fix a systematic error such as a zero error on an instrument.",
+  "hints": [
+   "Which kind of error makes readings vary randomly?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-026",
+  "subject": "Scientific Reasoning",
+  "topic": "Experimental Design",
+  "level": 3,
+  "type": "experiment",
+  "q": "Bean seeds are set up in four tubes for a week:\nA – dry cotton, warm, air\nB – moist cotton, warm, air\nC – moist cotton, in a refrigerator, air\nD – seeds under boiled, cooled water with a layer of oil on top, warm\nOnly the seeds in B germinate. What is the correct conclusion?",
+  "options": [
+   "Germination needs water, a suitable temperature and oxygen.",
+   "Germination needs only water.",
+   "Germination needs light.",
+   "Germination needs only warmth."
+  ],
+  "answer": 0,
+  "explanation": "Compare each tube with B: A lacks water, C lacks warmth, D lacks oxygen (boiling removes dissolved air and the oil stops more dissolving). Each fails, so each factor is necessary. Light was not tested — all tubes could be in the same light.",
+  "misconception": "Light cannot be concluded because no tube tested it.",
+  "hints": [
+   "Compare each failing tube with B — what is missing?",
+   "Why was the water in D boiled and covered with oil?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-027",
+  "subject": "Scientific Reasoning",
+  "topic": "Data Interpretation",
+  "level": 2,
+  "type": "data",
+  "q": "A toy car starts from rest. Its distance is recorded each second. Assuming uniform acceleration, what is the acceleration?",
+  "options": [
+   "4 m/s²",
+   "8 m/s²",
+   "2 m/s²",
+   "16 m/s²"
+  ],
+  "answer": 0,
+  "explanation": "Distance grows as t² (2 × 1, 2 × 4, 2 × 9, 2 × 16), the signature of uniform acceleration from rest. s = ½at² → 32 = ½ × a × 16 → a = 4 m/s². Check at t = 1: ½ × 4 × 1 = 2 m ✓.",
+  "misconception": "2 m/s² reads the coefficient of t² directly and forgets the ½.",
+  "hints": [
+   "Is the distance proportional to t or t²?",
+   "Use s = ½at² with any row."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "table": {
+   "head": [
+    "Time (s)",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "rows": [
+    [
+     "Distance (m)",
+     0,
+     2,
+     8,
+     18,
+     32
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "REA-028",
+  "subject": "Scientific Reasoning",
+  "topic": "Data Interpretation",
+  "level": 3,
+  "type": "data",
+  "q": "The table shows the solubility of potassium nitrate in water. A saturated solution in 100 g of water at 60 °C is cooled to 20 °C. What mass of crystals forms?",
+  "options": [
+   "78 g",
+   "110 g",
+   "32 g",
+   "46 g"
+  ],
+  "answer": 0,
+  "explanation": "At 60 °C, 110 g dissolves in 100 g of water. At 20 °C only 32 g can stay dissolved. The excess, 110 − 32 = 78 g, crystallises out. This is how crystallisation purifies substances.",
+  "misconception": "46 g uses the 40 °C to 60 °C difference.",
+  "hints": [
+   "How much was dissolved at 60 °C, and how much can stay dissolved at 20 °C?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "table": {
+   "head": [
+    "Temperature (°C)",
+    "20",
+    "40",
+    "60"
+   ],
+   "rows": [
+    [
+     "Solubility (g per 100 g water)",
+     32,
+     64,
+     110
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "REA-029",
+  "subject": "Scientific Reasoning",
+  "topic": "Data Interpretation",
+  "level": 2,
+  "type": "data",
+  "q": "The activity of an enzyme was measured at different temperatures. Which conclusion is best supported?",
+  "options": [
+   "Activity is highest near 37 °C and falls sharply above it, as the enzyme is denatured.",
+   "Activity always increases with temperature.",
+   "The enzyme works best at 55 °C.",
+   "Temperature has no effect on activity."
+  ],
+  "answer": 0,
+  "explanation": "Activity rises from 10 °C to a peak at 37 °C (the optimum) because molecules move faster and collide more. Above the optimum, heat changes the enzyme’s shape (denaturation), so activity drops to almost zero at 55 °C.",
+  "hints": [
+   "Where is the peak?",
+   "What happens after the peak?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "table": {
+   "head": [
+    "Temperature (°C)",
+    "10",
+    "20",
+    "30",
+    "37",
+    "45",
+    "55"
+   ],
+   "rows": [
+    [
+     "Activity (units)",
+     5,
+     12,
+     25,
+     40,
+     22,
+     3
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "REA-030",
+  "subject": "Scientific Reasoning",
+  "topic": "Data Interpretation",
+  "level": 3,
+  "type": "data",
+  "q": "A study of 5 towns found that towns with more storks also had more babies born. Which conclusion is most scientifically sound?",
+  "options": [
+   "Both increase with town size, so the correlation does not show that storks cause births.",
+   "Storks bring babies.",
+   "Babies attract storks.",
+   "There is no relationship in the data."
+  ],
+  "answer": 0,
+  "explanation": "Both stork pairs and births rise with population — larger towns have more buildings for nests and more people. A third variable (town size) explains the correlation. Correlation alone never proves causation.",
+  "misconception": "A strong correlation can be produced entirely by a hidden third factor.",
+  "hints": [
+   "Look at the third row of the table.",
+   "Could one factor cause both of the others?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "table": {
+   "head": [
+    "Town",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "rows": [
+    [
+     "Stork pairs",
+     2,
+     5,
+     9,
+     14,
+     20
+    ],
+    [
+     "Births per year",
+     80,
+     150,
+     260,
+     390,
+     560
+    ],
+    [
+     "Population (thousands)",
+     4,
+     8,
+     13,
+     20,
+     28
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "REA-031",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 1,
+  "type": "reasoning",
+  "q": "Which of these is an OBSERVATION rather than an inference?",
+  "options": [
+   "The solution turned blue when the powder was added.",
+   "The powder contains copper.",
+   "A chemical reaction released energy.",
+   "The powder was impure."
+  ],
+  "answer": 0,
+  "explanation": "An observation is what is directly detected with the senses or instruments (a colour change). The other statements are inferences — explanations or conclusions drawn from observations, which could be wrong.",
+  "hints": [
+   "Which statement simply describes what was seen?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-032",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 2,
+  "type": "reasoning",
+  "q": "You see puddles on the road early in the morning. Which statement is an inference?",
+  "options": [
+   "It rained during the night.",
+   "There is water on the road.",
+   "The puddles are shallow.",
+   "The road is wet in several places."
+  ],
+  "answer": 0,
+  "explanation": "Seeing water is an observation. “It rained” is an inference — a possible explanation that might be wrong (a water tanker or burst pipe could also explain it). Good scientists test inferences against other evidence.",
+  "hints": [
+   "Which statement could turn out to be wrong even though the others are true?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-033",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Records show that fires attended by more fire engines cause more damage. A councillor proposes sending fewer engines to reduce damage. What is wrong with this reasoning?",
+  "options": [
+   "Bigger fires cause both more damage and more engines being sent; engines do not cause the damage.",
+   "Fire engines spread fire with water.",
+   "Records about fires are always wrong.",
+   "More engines always cause traffic jams."
+  ],
+  "answer": 0,
+  "explanation": "The size of the fire is a confounding variable: large fires do more damage AND need more engines. Reducing engines would make fires worse. This is a classic case of mistaking correlation for causation.",
+  "hints": [
+   "What decides how many engines are sent?",
+   "Could one hidden factor explain both quantities?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-034",
+  "subject": "Scientific Reasoning",
+  "topic": "Applying Principles",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "A balloon filled with helium rises, but the same balloon filled with air from your lungs sinks slowly. Why?",
+  "options": [
+   "Helium is less dense than air, so the upthrust exceeds the balloon’s weight; exhaled air is slightly denser than room air.",
+   "Helium is pulled upward by the Sun.",
+   "Your breath makes the balloon magnetic.",
+   "Helium has no mass."
+  ],
+  "answer": 0,
+  "explanation": "Upthrust equals the weight of air displaced. Helium (≈ 0.18 kg/m³) is much lighter than air (≈ 1.2 kg/m³), so the total weight of balloon + helium is less than the upthrust. Exhaled air is warm but contains CO₂ and is close to room-air density, so balloon + breath is heavier than the air it displaces.",
+  "misconception": "Helium does have mass — it is just much less dense than air.",
+  "hints": [
+   "Archimedes’ principle works in gases as well as liquids."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-035",
+  "subject": "Scientific Reasoning",
+  "topic": "Applying Principles",
+  "level": 3,
+  "type": "application",
+  "q": "A vacuum flask keeps tea hot. Which feature mainly reduces heat loss by RADIATION?",
+  "options": [
+   "The silvered (shiny) inner surfaces",
+   "The vacuum between the double walls",
+   "The plastic stopper",
+   "The outer plastic case"
+  ],
+  "answer": 0,
+  "explanation": "Shiny silvered surfaces are poor emitters and good reflectors of infrared radiation, so they reflect heat back into the tea. The vacuum stops conduction and convection (which need particles) but not radiation; the stopper reduces convection and evaporation at the top.",
+  "misconception": "The vacuum cannot stop radiation — radiation crosses a vacuum (that is how sunlight reaches us).",
+  "hints": [
+   "Which method of heat transfer can cross a vacuum?",
+   "Which surfaces reflect infrared best?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-036",
+  "subject": "Scientific Reasoning",
+  "topic": "Applying Principles",
+  "level": 1,
+  "type": "assertion-reason",
+  "q": "Assertion (A): A diver feels pressure in the ears when diving deep in a swimming pool.\nReason (R): Pressure in a liquid increases with depth.",
+  "options": [
+   "Both A and R are true, and R correctly explains A.",
+   "Both A and R are true, but R does not explain A.",
+   "A is true, but R is false.",
+   "A is false, but R is true."
+  ],
+  "answer": 0,
+  "explanation": "P = hρg: the deeper the diver goes, the greater the water pressure pushing on the eardrum compared with the air inside the middle ear. R correctly explains A.",
+  "hints": [
+   "How does liquid pressure depend on depth?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-037",
+  "subject": "Scientific Reasoning",
+  "topic": "Applying Principles",
+  "level": 2,
+  "type": "assertion-reason",
+  "q": "Assertion (A): Cooking rice in an open pot takes longer at high altitudes.\nReason (R): At high altitudes water boils at a higher temperature.",
+  "options": [
+   "Both A and R are true, and R correctly explains A.",
+   "Both A and R are true, but R does not explain A.",
+   "A is true, but R is false.",
+   "A is false, but R is true."
+  ],
+  "answer": 2,
+  "explanation": "A is true, but R is false. Atmospheric pressure is lower at high altitude, so water boils at a LOWER temperature (about 70 °C on top of Mount Everest). Food cooks more slowly in this cooler boiling water — hence pressure cookers are used in the hills.",
+  "misconception": "Lower pressure lowers the boiling point; it does not raise it.",
+  "hints": [
+   "Is air pressure higher or lower on a mountain?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-038",
+  "subject": "Scientific Reasoning",
+  "topic": "Applying Principles",
+  "level": 3,
+  "type": "assertion-reason",
+  "q": "Assertion (A): A body moving in a circle at constant speed has a constant acceleration.\nReason (R): The direction of the centripetal acceleration changes continuously as the body moves.",
+  "options": [
+   "Both A and R are true, and R correctly explains A.",
+   "Both A and R are true, but R does not explain A.",
+   "A is true, but R is false.",
+   "A is false, but R is true."
+  ],
+  "answer": 3,
+  "explanation": "A is false: the acceleration has constant MAGNITUDE (v²/r), but its direction (always towards the centre) keeps changing, so the acceleration vector is not constant. R is true, and it is exactly why A is false.",
+  "misconception": "A vector is constant only if both its size and its direction are constant.",
+  "hints": [
+   "Is acceleration a vector?",
+   "Does the direction towards the centre stay the same as the body moves round?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-039",
+  "subject": "Scientific Reasoning",
+  "topic": "Applying Principles",
+  "level": 2,
+  "type": "assertion-reason",
+  "q": "Assertion (A): Burning a candle involves both physical and chemical changes.\nReason (R): The wax melts (a physical change), and the wax vapour burns to form carbon dioxide and water (a chemical change).",
+  "options": [
+   "Both A and R are true, and R correctly explains A.",
+   "Both A and R are true, but R does not explain A.",
+   "A is true, but R is false.",
+   "A is false, but R is true."
+  ],
+  "answer": 0,
+  "explanation": "Melting wax can be reversed by cooling — a physical change. Combustion produces new substances (CO₂ and H₂O) and releases energy — a chemical change. R correctly explains A.",
+  "hints": [
+   "Which part of the process forms new substances?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-040",
+  "subject": "Scientific Reasoning",
+  "topic": "Applying Principles",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "Desert plants such as cacti have spines instead of broad leaves, and open their stomata mainly at night. Which principle links these adaptations?",
+  "options": [
+   "Reducing water loss by transpiration, which is greatest from large surfaces in hot, dry daytime air",
+   "Increasing photosynthesis by catching more light",
+   "Protecting the plant from cold",
+   "Making the plant heavier so it is not blown away"
+  ],
+  "answer": 0,
+  "explanation": "Transpiration increases with leaf area, temperature, wind and low humidity. Spines drastically reduce the surface area for water loss (photosynthesis happens in the green stem). Opening stomata in the cool night (CAM plants store CO₂ as acids for daytime use) cuts water loss further.",
+  "hints": [
+   "What is the scarcest resource in a desert?",
+   "When and from where do plants lose the most water?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ }
+]
