@@ -1,5 +1,1598 @@
 [
  {
+  "id": "CHE-061",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 1,
+  "type": "mcq",
+  "q": "On what basis are elements arranged in the modern periodic table?",
+  "options": [
+   "Increasing atomic mass",
+   "Increasing density",
+   "Alphabetical order of names",
+   "Increasing atomic number"
+  ],
+  "answer": 3,
+  "explanation": "Henry Moseley showed in 1913 that atomic number (the number of protons) is the fundamental property. Arranging by atomic number removed the anomalies of Mendeleev’s mass-based table, such as argon (39.9) coming before potassium (39.1).",
+  "misconception": "Mendeleev used atomic mass; the modern table uses atomic number.",
+  "hints": [
+   "It is the number of protons."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-062",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why does atomic radius increase down a group (for example from lithium to caesium)?",
+  "options": [
+   "Nuclear charge decreases down a group.",
+   "Each element down the group has an extra electron shell.",
+   "Electrons become heavier down a group.",
+   "Atoms lose protons down a group."
+  ],
+  "answer": 1,
+  "explanation": "Going down a group adds a whole new shell each time, so the outer electrons are much further from the nucleus. Nuclear charge does increase, but inner shells shield the outer electrons, so the extra shell dominates.",
+  "misconception": "Nuclear charge increases down a group, but the added shell outweighs it.",
+  "hints": [
+   "What changes about the number of shells down a group?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-063",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 2,
+  "type": "mcq",
+  "q": "How does metallic character change across Period 3 (from sodium to chlorine)?",
+  "options": [
+   "It increases, then decreases",
+   "It stays the same",
+   "It decreases, because atoms hold their outer electrons more tightly and tend to gain rather than lose electrons",
+   "It increases steadily"
+  ],
+  "answer": 2,
+  "explanation": "Metals lose electrons easily. Across a period the nuclear charge grows and the atoms shrink, so the outer electrons are held more strongly. Elements change from reactive metals (Na, Mg) through a metalloid (Si) to non-metals (P, S, Cl).",
+  "hints": [
+   "What makes an element metallic — losing or gaining electrons?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-064",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 3,
+  "type": "statement",
+  "q": "An element X has the electronic configuration 2, 8, 7. Consider:\nI. X is in Group 17 and Period 3.\nII. X forms the ion X⁻.\nIII. X is a metal.\nIV. X combines with sodium to form an ionic compound NaX.\nWhich are correct?",
+  "options": [
+   "I, II and IV only",
+   "All four",
+   "I and III only",
+   "II and III only"
+  ],
+  "answer": 0,
+  "explanation": "Three shells → Period 3; seven valence electrons → Group 17 (halogens). It gains one electron to complete its octet, forming X⁻ — typical of a non-metal (III false). Sodium gives one electron to X, forming the ionic compound NaX. X is chlorine.",
+  "misconception": "Seven valence electrons means gaining one, not losing seven.",
+  "hints": [
+   "Shells give the period; valence electrons give the group.",
+   "Is it easier for X to gain 1 or lose 7 electrons?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-065",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 1,
+  "type": "mcq",
+  "q": "Why are noble gases such as neon and argon chemically very unreactive?",
+  "options": [
+   "They have no electrons.",
+   "They are too heavy to react.",
+   "Their outermost shells are completely filled.",
+   "They are always liquids."
+  ],
+  "answer": 2,
+  "explanation": "Neon (2, 8) and argon (2, 8, 8) have stable, full outer shells, so they have almost no tendency to gain, lose or share electrons. Other elements react to reach this kind of stable configuration.",
+  "hints": [
+   "Write the electronic configuration of neon."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-066",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 2,
+  "type": "numerical",
+  "q": "In Döbereiner’s triad lithium (7), sodium (?), potassium (39), the middle element’s atomic mass is roughly the average of the other two. What value does this predict for sodium?",
+  "options": [
+   "46",
+   "23",
+   "32",
+   "16"
+  ],
+  "answer": 1,
+  "explanation": "(7 + 39)/2 = 23, which matches sodium’s actual atomic mass (≈ 23). Döbereiner’s triads (1829) were an early hint of periodicity, but only a few such triads existed.",
+  "hints": [
+   "Take the average of 7 and 39."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-067",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 2,
+  "type": "mcq",
+  "q": "What was the main limitation of Newlands’ Law of Octaves?",
+  "options": [
+   "It included the noble gases incorrectly.",
+   "It placed elements by atomic number.",
+   "It ignored atomic mass completely.",
+   "It worked only up to calcium; heavier elements did not fit the pattern of every eighth element being similar."
+  ],
+  "answer": 3,
+  "explanation": "Newlands noticed that every eighth element (by atomic mass) had similar properties, like notes in music. The pattern broke down after calcium, and he forced some unlike elements together (e.g. iron with oxygen and sulphur). Noble gases had not yet been discovered.",
+  "hints": [
+   "Did the pattern hold for heavy elements?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-068",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 3,
+  "type": "reasoning",
+  "q": "An element X forms an oxide with the formula X₂O₃. What is the most likely formula of its chloride?",
+  "options": [
+   "XCl",
+   "XCl₂",
+   "X₂Cl₃",
+   "XCl₃"
+  ],
+  "answer": 3,
+  "explanation": "In X₂O₃, two X atoms balance three oxygens of valency 2: 2 × v = 3 × 2, so the valency of X is 3. Chlorine has valency 1, so the chloride is XCl₃ (for example aluminium: Al₂O₃ and AlCl₃).",
+  "misconception": "X₂Cl₃ copies the oxide’s subscripts instead of working out the valency.",
+  "hints": [
+   "Work out the valency of X from the oxide.",
+   "Chlorine’s valency is 1."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-069",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 1,
+  "type": "mcq",
+  "q": "How many periods (horizontal rows) and groups (vertical columns) does the modern periodic table have?",
+  "options": [
+   "7 periods and 18 groups",
+   "18 periods and 7 groups",
+   "8 periods and 8 groups",
+   "10 periods and 20 groups"
+  ],
+  "answer": 0,
+  "explanation": "The long-form periodic table has 7 periods and 18 groups. The period number equals the number of electron shells being filled.",
+  "hints": [
+   "Periods are rows; groups are columns."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-070",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Which reacts most vigorously with water: lithium, sodium or potassium?",
+  "options": [
+   "Potassium, because its outer electron is furthest from the nucleus and most easily lost",
+   "Lithium, because it is the smallest",
+   "Sodium, because it is in the middle",
+   "All react equally"
+  ],
+  "answer": 0,
+  "explanation": "Reactivity of Group 1 metals increases down the group. Potassium’s single outer electron is in the fourth shell, well shielded and far from the nucleus, so it is lost most easily. Potassium reacts so violently that the hydrogen released catches fire with a lilac flame.",
+  "hints": [
+   "How easily is each atom’s outer electron removed?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-071",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Unlike Group 1 metals, the reactivity of the halogens (Group 17) DECREASES down the group. Why?",
+  "options": [
+   "Halogens react by gaining an electron; in larger atoms the incoming electron is further from the nucleus and attracted less strongly.",
+   "Heavier halogens have fewer valence electrons.",
+   "The nuclear charge decreases down the group.",
+   "Halogens react by losing electrons, which is harder in bigger atoms."
+  ],
+  "answer": 0,
+  "explanation": "Halogens need one electron to complete their outer shell. Fluorine is small, so an incoming electron is held very strongly — it is the most reactive non-metal. Down the group atoms get bigger and more shielded, so they attract an extra electron less strongly and reactivity falls (F > Cl > Br > I).",
+  "misconception": "The trend reverses compared with Group 1 because halogens gain rather than lose electrons.",
+  "hints": [
+   "Do halogens react by gaining or losing electrons?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-072",
+  "subject": "Chemistry",
+  "topic": "Periodic Classification",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is the position of hydrogen in the periodic table considered unusual?",
+  "options": [
+   "It resembles alkali metals (one valence electron, forms H⁺) and also halogens (needs one electron, forms H⁻ and H₂ molecules).",
+   "It is the heaviest element.",
+   "It is a noble gas.",
+   "It has no electrons."
+  ],
+  "answer": 0,
+  "explanation": "Hydrogen (configuration 1) has one electron like Group 1 metals and can form H⁺, but it is a diatomic non-metal gas that can also gain an electron to form H⁻ (as in NaH), like the halogens. So it does not fit neatly into either group.",
+  "hints": [
+   "Compare hydrogen with both sodium and chlorine."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-073",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which of these is a chemical change?",
+  "options": [
+   "Melting of ice",
+   "Breaking a glass",
+   "Rusting of iron",
+   "Dissolving sugar in water"
+  ],
+  "answer": 2,
+  "explanation": "Rusting forms a new substance (hydrated iron(III) oxide) with different properties and cannot easily be reversed. Melting, dissolving and breaking change only the state, arrangement or shape — physical changes.",
+  "hints": [
+   "Which forms a new substance?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-074",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 2,
+  "type": "experiment",
+  "q": "Water is added to quicklime (calcium oxide). The mixture becomes very hot and forms slaked lime. Which statement describes this reaction?",
+  "options": [
+   "A decomposition reaction that is endothermic",
+   "A displacement reaction",
+   "A combination reaction that is exothermic",
+   "A physical change"
+  ],
+  "answer": 2,
+  "explanation": "CaO + H₂O → Ca(OH)₂ + heat. Two substances combine into one, and heat is released (exothermic). Slaked lime is used for whitewashing; it slowly reacts with CO₂ in air to form a shiny layer of calcium carbonate.",
+  "hints": [
+   "How many products are formed, and does it get hot or cold?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-075",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 2,
+  "type": "experiment",
+  "q": "Water is electrolysed using inert electrodes. The gases collected at the two electrodes are in what volume ratio, hydrogen : oxygen?",
+  "options": [
+   "1 : 1",
+   "1 : 2",
+   "1 : 8",
+   "2 : 1"
+  ],
+  "answer": 3,
+  "explanation": "2H₂O → 2H₂ + O₂. Two molecules of hydrogen form for each molecule of oxygen, and equal numbers of gas molecules occupy equal volumes, so the volume ratio is 2 : 1. (1 : 8 is the MASS ratio of hydrogen to oxygen in water.)",
+  "misconception": "1 : 8 is the mass ratio, not the volume ratio.",
+  "hints": [
+   "Look at the coefficients in the balanced equation."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-076",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 3,
+  "type": "numerical",
+  "q": "During the electrolysis of acidified water, 20 mL of hydrogen is collected at the cathode. What volume of oxygen is collected at the anode at the same temperature and pressure?",
+  "options": [
+   "10 mL",
+   "160 mL",
+   "40 mL",
+   "20 mL"
+  ],
+  "answer": 0,
+  "explanation": "The equation 2H₂O → 2H₂ + O₂ gives hydrogen and oxygen in a 2 : 1 ratio by volume, so 20 mL of hydrogen comes with 10 mL of oxygen. 160 mL would be using the 1 : 8 mass ratio, which does not apply to volumes.",
+  "misconception": "160 mL wrongly applies the mass ratio to gas volumes.",
+  "hints": [
+   "What is the mole (volume) ratio of H₂ to O₂ in the equation?",
+   "Equal volumes of gases contain equal numbers of molecules."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-077",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 2,
+  "type": "experiment",
+  "q": "Sodium sulphate solution is mixed with barium chloride solution and a white solid immediately forms. What is the white solid?",
+  "options": [
+   "Sodium sulphide",
+   "Sodium chloride",
+   "Barium sulphate",
+   "Barium oxide"
+  ],
+  "answer": 2,
+  "explanation": "Na₂SO₄ + BaCl₂ → BaSO₄↓ + 2NaCl. The ions swap partners (double displacement). Barium sulphate is insoluble and forms a white precipitate, while sodium chloride stays dissolved. This is the standard test for sulphate ions.",
+  "misconception": "Sodium chloride forms too, but it is soluble and stays in solution.",
+  "hints": [
+   "The ions swap partners. Which product is insoluble?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-078",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Propane (C₃H₈), the main fuel in some LPG, burns completely in oxygen to form carbon dioxide and water. In the balanced equation, how many molecules of O₂ are needed per molecule of propane?",
+  "options": [
+   "5",
+   "3",
+   "10",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "C₃H₈ + ?O₂ → 3CO₂ + 4H₂O (balance C first, then H). Oxygen atoms on the right: 3 × 2 + 4 × 1 = 10, so 5 O₂ molecules are needed: C₃H₈ + 5O₂ → 3CO₂ + 4H₂O.",
+  "misconception": "10 counts oxygen ATOMS; each O₂ molecule supplies two.",
+  "hints": [
+   "Balance carbon, then hydrogen, then count oxygen atoms on the right."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-079",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 2,
+  "type": "experiment",
+  "q": "When ammonium chloride is dissolved in water in a test tube, the tube feels cold. What does this show?",
+  "options": [
+   "No energy change happens.",
+   "The process is endothermic — it absorbs heat from the surroundings.",
+   "The process is exothermic.",
+   "Ammonium chloride was stored in a refrigerator."
+  ],
+  "answer": 1,
+  "explanation": "Dissolving ammonium chloride takes in more energy than it releases, so it draws heat from the water and the tube, lowering the temperature. Instant cold packs use similar endothermic dissolving.",
+  "hints": [
+   "If something feels cold, where is the heat going?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-080",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 3,
+  "type": "experiment",
+  "q": "Equal masses of marble chips and powdered marble are added to separate flasks of the same dilute hydrochloric acid. The powder fizzes much more vigorously. What is the reason?",
+  "options": [
+   "The acid is more concentrated in the second flask.",
+   "Powder is heavier.",
+   "Powdered marble is a different chemical.",
+   "Powder has a much larger surface area, so more acid particles collide with it each second."
+  ],
+  "answer": 3,
+  "explanation": "Reactions happen when particles collide. Grinding the marble exposes far more surface to the acid, increasing the rate of collisions and therefore the rate of CO₂ production. The total CO₂ eventually produced is the same, because the masses are equal.",
+  "misconception": "The final amount of gas is the same; only the rate differs.",
+  "hints": [
+   "Where do the acid and marble particles meet?",
+   "What does grinding do to the area of contact?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-081",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 2,
+  "type": "experiment",
+  "q": "Hydrogen peroxide decomposes very slowly at room temperature, but bubbles rapidly when a pinch of manganese dioxide is added. Afterwards the manganese dioxide is recovered unchanged in mass. What is its role?",
+  "options": [
+   "An indicator",
+   "A product",
+   "A catalyst",
+   "A reactant"
+  ],
+  "answer": 2,
+  "explanation": "2H₂O₂ → 2H₂O + O₂. Manganese dioxide speeds up the reaction by providing an easier pathway, but is not used up — so it is a catalyst. Enzymes are biological catalysts.",
+  "hints": [
+   "Was it used up in the reaction?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-082",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 2,
+  "type": "application",
+  "q": "Why does food keep longer in a refrigerator?",
+  "options": [
+   "Refrigerators remove oxygen from food.",
+   "Lower temperature slows down the chemical reactions and microbial growth that spoil food.",
+   "Cold kills all bacteria instantly.",
+   "Cold makes food heavier."
+  ],
+  "answer": 1,
+  "explanation": "Reaction rates — including those of enzymes in food and in microbes — fall sharply as temperature drops, because particles move more slowly and collide less often with enough energy. Refrigeration slows spoilage; it does not stop it entirely.",
+  "misconception": "Most bacteria are not killed by refrigeration; their growth is slowed.",
+  "hints": [
+   "How does temperature affect the rate of reactions?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-083",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which observation is NOT, on its own, evidence of a chemical reaction?",
+  "options": [
+   "A precipitate appearing when two solutions mix",
+   "A permanent colour change",
+   "A change in shape",
+   "Bubbles of a new gas forming"
+  ],
+  "answer": 2,
+  "explanation": "Gas evolution, a precipitate, a permanent colour change or a temperature change can indicate that new substances are forming. A change in shape (bending wire, cutting paper) is a physical change.",
+  "hints": [
+   "Which change produces no new substance?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-084",
+  "subject": "Chemistry",
+  "topic": "Chemical Reactions",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In a blast furnace, iron is produced by the reaction Fe₂O₃ + 3CO → 2Fe + 3CO₂. Which substance acts as the reducing agent?",
+  "options": [
+   "Iron(III) oxide",
+   "Carbon dioxide",
+   "Carbon monoxide",
+   "Iron"
+  ],
+  "answer": 2,
+  "explanation": "Fe₂O₃ loses oxygen (it is reduced to Fe). CO gains oxygen (it is oxidised to CO₂). The substance that causes reduction and is itself oxidised is the reducing agent: carbon monoxide.",
+  "misconception": "The substance that is reduced (Fe₂O₃) is the oxidising agent, not the reducing agent.",
+  "hints": [
+   "Which reactant gains oxygen?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-085",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 1,
+  "type": "mcq",
+  "q": "What colour change does an acid produce with blue litmus paper?",
+  "options": [
+   "No change",
+   "Red litmus turns blue",
+   "Blue litmus turns red",
+   "Blue litmus turns green"
+  ],
+  "answer": 2,
+  "explanation": "Acids turn blue litmus red; bases turn red litmus blue. Neutral solutions leave both unchanged.",
+  "hints": [
+   "Acids: blue → ?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-086",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 2,
+  "type": "experiment",
+  "q": "Zinc granules are added to dilute sulphuric acid and a gas bubbles off. A burning splint held at the mouth of the test tube goes out with a “pop”. What is the gas?",
+  "options": [
+   "Hydrogen",
+   "Carbon dioxide",
+   "Chlorine",
+   "Oxygen"
+  ],
+  "answer": 0,
+  "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Reactive metals displace hydrogen from dilute acids. Hydrogen burns explosively with oxygen in the air, giving the characteristic pop. Oxygen would relight a glowing splint; CO₂ would put the flame out silently.",
+  "hints": [
+   "Metal + acid → salt + ?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-087",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why must concentrated acid always be added slowly to water, and never water to the acid?",
+  "options": [
+   "The acid becomes stronger when water is added.",
+   "Dilution releases a lot of heat; adding water to acid can boil the water instantly and spray acid out.",
+   "Water reacts with acid to make a poisonous gas.",
+   "It does not matter which way round."
+  ],
+  "answer": 1,
+  "explanation": "Dissolving a concentrated acid such as sulphuric acid in water is highly exothermic. If a little water is poured into a lot of acid, the water can boil locally and splash hot acid. Adding acid slowly to plenty of water spreads the heat safely.",
+  "hints": [
+   "Is dilution of a concentrated acid exothermic or endothermic?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-088",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 3,
+  "type": "numerical",
+  "q": "In a titration, 25 mL of sodium hydroxide solution is exactly neutralised by 50 mL of hydrochloric acid of concentration 0.1 mol/L. What is the concentration of the sodium hydroxide? (HCl + NaOH → NaCl + H₂O)",
+  "options": [
+   "0.1 mol/L",
+   "2 mol/L",
+   "0.05 mol/L",
+   "0.2 mol/L"
+  ],
+  "answer": 3,
+  "explanation": "Moles of HCl = 0.050 L × 0.1 mol/L = 0.005 mol. The reaction is 1 : 1, so NaOH = 0.005 mol in 0.025 L: concentration = 0.005/0.025 = 0.2 mol/L. It took twice the volume of acid, so the alkali must be twice as concentrated.",
+  "misconception": "0.05 mol/L inverts the volume ratio.",
+  "hints": [
+   "Calculate moles of HCl used.",
+   "Moles of NaOH equal moles of HCl for a 1 : 1 reaction."
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-089",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Tooth enamel starts to dissolve when the pH in the mouth falls below about 5.5. Why does brushing with toothpaste help prevent decay?",
+  "options": [
+   "Toothpaste is slightly basic and neutralises acids produced by bacteria feeding on sugar.",
+   "Toothpaste adds sugar for the teeth.",
+   "Toothpaste is acidic and kills bacteria.",
+   "Toothpaste makes enamel heavier."
+  ],
+  "answer": 0,
+  "explanation": "Bacteria in plaque break down sugars and produce acids, lowering pH near the teeth. Enamel (calcium hydroxyapatite) dissolves in acid. Toothpastes are generally mildly basic, neutralising excess acid, and fluoride strengthens enamel.",
+  "hints": [
+   "What produces acid in the mouth after eating sweets?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-090",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 2,
+  "type": "application",
+  "q": "A farmer finds that his soil is too acidic for his crop. What should he add?",
+  "options": [
+   "More nitrogen fertiliser such as ammonium sulphate",
+   "Lemon juice",
+   "Vinegar",
+   "Lime or powdered chalk (calcium carbonate)"
+  ],
+  "answer": 3,
+  "explanation": "Lime (calcium oxide or hydroxide) and chalk are bases that neutralise excess acid, raising soil pH. Vinegar and lemon juice are acidic, and ammonium fertilisers tend to make soil more acidic.",
+  "hints": [
+   "What neutralises acids?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-091",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 3,
+  "type": "experiment",
+  "q": "Dry hydrogen chloride gas does not change the colour of DRY blue litmus paper, but it turns MOIST blue litmus paper red. What does this show?",
+  "options": [
+   "The dry litmus paper was faulty.",
+   "Water itself is acidic.",
+   "HCl is a base when dry.",
+   "Acidic properties appear only when the acid forms H⁺ (H₃O⁺) ions, which requires water."
+  ],
+  "answer": 3,
+  "explanation": "HCl molecules do not release hydrogen ions on their own. In water they ionise: HCl + H₂O → H₃O⁺ + Cl⁻, and it is these ions that change the indicator. Acids show their acidic behaviour only in aqueous solution.",
+  "misconception": "Pure water is neutral — the colour change comes from ions formed when HCl dissolves.",
+  "hints": [
+   "What has to happen to HCl molecules before they behave as an acid?",
+   "What does the water in the moist paper allow?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-092",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 2,
+  "type": "mcq",
+  "q": "Universal indicator turns red in solution P, green in Q and violet in R. Which correctly identifies them?",
+  "options": [
+   "P neutral, Q acidic, R basic",
+   "P strongly acidic, Q neutral, R strongly basic",
+   "All three are acidic",
+   "P strongly basic, Q neutral, R strongly acidic"
+  ],
+  "answer": 1,
+  "explanation": "Universal indicator shows the whole pH range: red (pH ≈ 1–2, strong acid), orange/yellow (weak acid), green (pH 7, neutral), blue (weak base) and violet/purple (pH ≈ 13–14, strong base).",
+  "hints": [
+   "Green is in the middle of the scale."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-093",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 1,
+  "type": "experiment",
+  "q": "A turmeric-stained cloth turns reddish-brown when washed with soap. What does this tell you about the soap solution?",
+  "options": [
+   "It is acidic.",
+   "It is basic.",
+   "It contains turmeric.",
+   "It is neutral."
+  ],
+  "answer": 1,
+  "explanation": "Turmeric is a natural indicator: yellow in acidic and neutral solutions, reddish-brown in basic ones. Soap solutions are mildly basic.",
+  "hints": [
+   "Turmeric changes colour with which type of solution?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-094",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 2,
+  "type": "application",
+  "q": "Which salt, made by passing chlorine gas over dry slaked lime, is used to disinfect drinking water?",
+  "options": [
+   "Bleaching powder",
+   "Washing soda",
+   "Plaster of Paris",
+   "Baking soda"
+  ],
+  "answer": 0,
+  "explanation": "Cl₂ + Ca(OH)₂ → CaOCl₂ + H₂O. Bleaching powder releases chlorine, which kills microbes in water and bleaches cotton and linen.",
+  "hints": [
+   "Which compound releases chlorine?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-095",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is washing soda, and what is one of its uses?",
+  "options": [
+   "Sodium carbonate decahydrate (Na₂CO₃·10H₂O); removing permanent hardness of water",
+   "Calcium sulphate; setting fractures",
+   "Sodium hydrogencarbonate; making cakes rise",
+   "Sodium chloride; preserving food"
+  ],
+  "answer": 0,
+  "explanation": "Washing soda is Na₂CO₃·10H₂O. Its carbonate ions precipitate the calcium and magnesium ions that make water hard, and it is used in cleaning and in making glass. Baking soda is NaHCO₃.",
+  "misconception": "Washing soda (Na₂CO₃·10H₂O) and baking soda (NaHCO₃) are different compounds.",
+  "hints": [
+   "It contains ten molecules of water of crystallisation."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-096",
+  "subject": "Chemistry",
+  "topic": "Acids, Bases & Salts",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "Acid rain has lowered the pH of a mountain lake to about 5, and fish populations are falling. Which action would directly address the chemical cause in the lake?",
+  "options": [
+   "Adding vinegar to balance the pH",
+   "Adding more water from the same rainfall",
+   "Adding powdered limestone (calcium carbonate) to neutralise the acid",
+   "Adding table salt to the lake"
+  ],
+  "answer": 2,
+  "explanation": "Calcium carbonate is a base: CaCO₃ + 2H⁺ → Ca²⁺ + H₂O + CO₂, raising pH towards neutral. Liming is used in parts of Scandinavia. It treats the symptom; the lasting solution is cutting SO₂ and NOₓ emissions that cause acid rain.",
+  "hints": [
+   "What substance neutralises acid without harming the water?",
+   "Which option is a base?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-097",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 1,
+  "type": "mcq",
+  "q": "A metal can be beaten into thin sheets and drawn into thin wires. These properties are called:",
+  "options": [
+   "conductivity and density",
+   "malleability and ductility",
+   "sonority and lustre",
+   "brittleness and hardness"
+  ],
+  "answer": 1,
+  "explanation": "Malleable means it can be hammered into sheets; ductile means it can be drawn into wires. Gold is the most malleable and ductile metal — one gram can be drawn into a wire about 2 km long.",
+  "hints": [
+   "Sheets → malleable; wires → ?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-098",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 1,
+  "type": "application",
+  "q": "Why are cooking pans made of metal but fitted with plastic or wooden handles?",
+  "options": [
+   "Plastic handles make the pan heavier.",
+   "Metal handles would melt.",
+   "Metals conduct heat well to cook food; plastic and wood are poor conductors, so the handle stays cool.",
+   "Wood conducts heat better than metal."
+  ],
+  "answer": 2,
+  "explanation": "Metals have free electrons that carry heat quickly, ideal for transferring heat to food. Plastic and wood are insulators, protecting the cook’s hand.",
+  "hints": [
+   "Which materials conduct heat well?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-099",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 2,
+  "type": "mcq",
+  "q": "How is the bond formed between sodium and chlorine in sodium chloride?",
+  "options": [
+   "They are held by a metallic bond",
+   "Chlorine gives an electron to sodium",
+   "Sodium and chlorine share a pair of electrons",
+   "Sodium transfers one electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction"
+  ],
+  "answer": 3,
+  "explanation": "Na (2, 8, 1) loses its outer electron and Cl (2, 8, 7) gains it, giving both a stable octet. The oppositely charged ions attract strongly in all directions, forming an ionic lattice with a high melting point (801 °C).",
+  "misconception": "Sharing electrons is covalent bonding, typical of non-metal with non-metal.",
+  "hints": [
+   "Which atom has one electron to lose, and which needs one more?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-100",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Solid sodium chloride does not conduct electricity, but molten sodium chloride and its solution in water do. Why?",
+  "options": [
+   "Solid NaCl has no ions.",
+   "Melting creates free electrons.",
+   "Water conducts electricity by itself strongly.",
+   "In the solid the ions are fixed in the lattice; when molten or dissolved, the ions are free to move and carry charge."
+  ],
+  "answer": 3,
+  "explanation": "Electric current needs mobile charge carriers. In solid NaCl the Na⁺ and Cl⁻ ions are locked in place. Melting or dissolving frees the ions to move towards the electrodes, so the liquid or solution conducts (and is decomposed — electrolysis).",
+  "misconception": "Ionic compounds conduct by moving IONS, not free electrons as metals do.",
+  "hints": [
+   "What must be free to move for a substance to conduct?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-101",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 2,
+  "type": "experiment",
+  "q": "Iron nails are kept for a week in three test tubes: (A) dry air with calcium chloride to absorb moisture; (B) boiled water covered with a layer of oil; (C) ordinary tap water open to air. Only the nail in C rusts. What can be concluded?",
+  "options": [
+   "Rusting needs both oxygen (air) and water.",
+   "Rusting needs only air.",
+   "Rusting needs oil.",
+   "Rusting needs only water."
+  ],
+  "answer": 0,
+  "explanation": "Tube A has air but no water; tube B has water but no dissolved air (boiling removes it and oil stops it re-dissolving). Neither nail rusts. Only C has both, so both oxygen and water are necessary.",
+  "hints": [
+   "What is missing from each tube that does not rust?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-102",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Galvanised iron (coated with zinc) does not rust even where the zinc coating is scratched and the iron is exposed. Why?",
+  "options": [
+   "The scratch fills with zinc again.",
+   "Zinc makes the iron less reactive permanently.",
+   "Zinc reflects oxygen away.",
+   "Zinc is more reactive than iron, so it corrodes in preference and protects the iron (sacrificial protection)."
+  ],
+  "answer": 3,
+  "explanation": "Zinc is above iron in the reactivity series. When both are exposed to water and air, zinc gives up electrons more readily and is oxidised instead of the iron. A plain paint coating, by contrast, stops protecting as soon as it is scratched.",
+  "misconception": "Zinc protects not only as a barrier but also chemically, by being sacrificed.",
+  "hints": [
+   "Which metal is more reactive: zinc or iron?",
+   "Which metal will lose electrons first?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-103",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 2,
+  "type": "mcq",
+  "q": "Brass, used in musical instruments and door fittings, is an alloy of:",
+  "options": [
+   "copper and tin",
+   "lead and tin",
+   "copper and zinc",
+   "iron and carbon"
+  ],
+  "answer": 2,
+  "explanation": "Brass = copper + zinc. Bronze = copper + tin. Steel = iron + carbon (and often other metals). Solder = lead + tin (lead-free solders now use tin with silver or copper). Alloys are often harder and more corrosion-resistant than the pure metals.",
+  "misconception": "Bronze, not brass, is copper and tin.",
+  "hints": [
+   "Bronze is copper and tin — brass is different."
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-104",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 1,
+  "type": "reasoning",
+  "q": "Why is gold often found as the pure metal in nature, while sodium never is?",
+  "options": [
+   "Gold is very unreactive, while sodium reacts readily with oxygen and water.",
+   "Gold is lighter than sodium.",
+   "Sodium is too rare.",
+   "Gold is a non-metal."
+  ],
+  "answer": 0,
+  "explanation": "Metals at the bottom of the reactivity series (gold, platinum) resist reacting with air and water, so they survive uncombined for millions of years. Highly reactive metals like sodium exist only in compounds such as rock salt.",
+  "hints": [
+   "Where are gold and sodium in the reactivity series?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-105",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Iron is extracted by heating its oxide with carbon, but aluminium is extracted by electrolysis of molten alumina. Why can carbon not be used for aluminium?",
+  "options": [
+   "Aluminium oxide is a gas.",
+   "Aluminium is found as the pure metal.",
+   "Aluminium is more reactive than carbon, so carbon cannot take oxygen away from aluminium oxide.",
+   "Carbon reacts with electricity."
+  ],
+  "answer": 2,
+  "explanation": "A reducing agent can remove oxygen only from a metal less reactive than itself. Carbon is more reactive than iron but less reactive than aluminium. So aluminium needs the much more energy-intensive route of electrolysis — why recycling aluminium saves so much energy.",
+  "hints": [
+   "Can a less reactive element remove oxygen from a more reactive one?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-106",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 2,
+  "type": "application",
+  "q": "In the thermite reaction, Fe₂O₃ + 2Al → 2Fe + Al₂O₃, so much heat is released that the iron produced is molten. What is it used for?",
+  "options": [
+   "Purifying water",
+   "Making glass",
+   "Making fertiliser",
+   "Welding railway tracks and broken machine parts"
+  ],
+  "answer": 3,
+  "explanation": "Aluminium is more reactive than iron, so it displaces iron from its oxide in a highly exothermic reaction. The molten iron flows into the gap between rails and solidifies, joining them.",
+  "hints": [
+   "What can molten iron be used to join?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-107",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 3,
+  "type": "numerical",
+  "q": "Haematite ore is mainly iron(III) oxide, Fe₂O₃. What percentage of the mass of pure Fe₂O₃ is iron? (Fe = 56, O = 16)",
+  "options": [
+   "77.8%",
+   "35%",
+   "56%",
+   "70%"
+  ],
+  "answer": 3,
+  "explanation": "Molar mass = 2 × 56 + 3 × 16 = 112 + 48 = 160 g/mol. Iron = 112/160 × 100 = 70%. So at most 700 kg of iron can be obtained from each tonne of pure Fe₂O₃.",
+  "misconception": "35% counts only one iron atom; 77.8% is the value for FeO.",
+  "hints": [
+   "How many iron atoms are in one formula unit of Fe₂O₃?",
+   "% = mass of Fe ÷ molar mass × 100."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-108",
+  "subject": "Chemistry",
+  "topic": "Metals & Non-metals",
+  "level": 2,
+  "type": "experiment",
+  "q": "Copper roofs and statues (like the Statue of Liberty) slowly turn green. What forms on the surface?",
+  "options": [
+   "Copper sulphate from rainwater",
+   "Basic copper carbonate, from reaction with oxygen, water and carbon dioxide in the air",
+   "Moss growing on the metal",
+   "Copper oxide only, which is green"
+  ],
+  "answer": 1,
+  "explanation": "In moist air containing CO₂, copper slowly forms a green layer (patina) of basic copper carbonate, CuCO₃·Cu(OH)₂. It protects the metal underneath. Copper oxide formed by heating is black.",
+  "hints": [
+   "Which three substances in air are involved?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-109",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 1,
+  "type": "mcq",
+  "q": "Carbon has four valence electrons. How does it usually form bonds?",
+  "options": [
+   "By metallic bonding",
+   "By losing four electrons",
+   "By gaining four electrons",
+   "By sharing electrons (covalent bonds)"
+  ],
+  "answer": 3,
+  "explanation": "Losing or gaining four electrons would need too much energy (forming C⁴⁺ or C⁴⁻). Instead, carbon shares its four electrons, forming four covalent bonds — it is tetravalent, as in methane (CH₄).",
+  "hints": [
+   "Is it easy to gain or lose four electrons?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-110",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Millions of carbon compounds are known — far more than for any other element. Which property mainly explains this?",
+  "options": [
+   "Catenation: carbon atoms form strong bonds with each other, giving long chains, branches and rings.",
+   "Carbon forms only ionic compounds.",
+   "Carbon is a metal.",
+   "Carbon is the most abundant element."
+  ],
+  "answer": 0,
+  "explanation": "Carbon–carbon bonds are strong and stable, so carbon can link into chains and rings of almost any length. Combined with its valency of 4 (allowing branches and bonds to H, O, N and others), this gives enormous variety.",
+  "hints": [
+   "What can carbon atoms do with each other?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-111",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 2,
+  "type": "mcq",
+  "q": "Ethanol (C₂H₅OH) and ethanoic acid (CH₃COOH) both contain two carbon atoms. Which functional groups do they contain?",
+  "options": [
+   "Ethanol: –OH (alcohol); ethanoic acid: –COOH (carboxylic acid)",
+   "Both: –COOH",
+   "Ethanol: –CHO; ethanoic acid: –OH",
+   "Both: –OH only"
+  ],
+  "answer": 0,
+  "explanation": "The functional group decides a compound’s chemistry. –OH makes ethanol an alcohol (neutral, burns cleanly). –COOH makes ethanoic acid a weak acid (vinegar is 5–8% ethanoic acid).",
+  "hints": [
+   "Which compound is an acid?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-112",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 3,
+  "type": "reasoning",
+  "q": "How many different structural isomers have the formula C₄H₁₀?",
+  "options": [
+   "4",
+   "2",
+   "1",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "Four carbons can be arranged as a straight chain (butane) or as a three-carbon chain with a branch on the middle carbon (2-methylpropane, isobutane). Any other drawing is one of these two. Isomers have the same formula but different structures and properties.",
+  "misconception": "Bending a chain on paper does not create a new isomer.",
+  "hints": [
+   "Try a straight chain and a branched chain."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-113",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 2,
+  "type": "experiment",
+  "q": "Bromine water (orange) is shaken separately with two hydrocarbons. With hydrocarbon X it stays orange; with Y it quickly becomes colourless. What can be concluded?",
+  "options": [
+   "Y is a metal.",
+   "Both are alkanes.",
+   "X is unsaturated; Y is saturated.",
+   "Y is unsaturated (contains a C=C double bond); X is saturated."
+  ],
+  "answer": 3,
+  "explanation": "Bromine adds across carbon–carbon double bonds (addition reaction), decolourising bromine water. Saturated hydrocarbons (alkanes) have only single bonds and do not react in this way under normal conditions.",
+  "hints": [
+   "Which kind of bond can bromine add across?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-114",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 2,
+  "type": "numerical",
+  "q": "What is the molar mass of ethanol, C₂H₅OH? (C = 12, H = 1, O = 16)",
+  "options": [
+   "45 g/mol",
+   "46 g/mol",
+   "62 g/mol",
+   "29 g/mol"
+  ],
+  "answer": 1,
+  "explanation": "C₂H₅OH contains 2 C, 6 H (5 + 1) and 1 O: 2 × 12 + 6 × 1 + 16 = 46 g/mol.",
+  "misconception": "45 g/mol forgets the hydrogen in the –OH group.",
+  "hints": [
+   "Count all the hydrogen atoms, including the one in –OH."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-115",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A gas stove burning with a yellow, sooty flame is producing more carbon monoxide than usual. What is the most likely cause?",
+  "options": [
+   "Too much oxygen is reaching the fuel.",
+   "The flame is too hot.",
+   "The fuel contains no carbon.",
+   "Not enough oxygen is reaching the fuel, so combustion is incomplete."
+  ],
+  "answer": 3,
+  "explanation": "With plenty of oxygen, hydrocarbons burn completely to CO₂ and H₂O with a clean blue flame. With limited oxygen, combustion is incomplete, producing soot (glowing carbon particles make the flame yellow) and poisonous carbon monoxide. Blocked air holes should be cleaned.",
+  "hints": [
+   "What does incomplete combustion produce?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-116",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 3,
+  "type": "what-if",
+  "q": "Carbon monoxide from a faulty heater in a closed room can kill without any warning smell. Why is it so dangerous to the body?",
+  "options": [
+   "It makes the blood too thick to flow.",
+   "It is a strong acid that burns the lungs.",
+   "It blocks sound reaching the ears.",
+   "It binds to haemoglobin far more strongly than oxygen, so the blood carries much less oxygen."
+  ],
+  "answer": 3,
+  "explanation": "Haemoglobin binds CO about 200–250 times more strongly than O₂, forming carboxyhaemoglobin. Even a small concentration of CO greatly reduces the oxygen the blood can carry, starving the brain and heart. CO is colourless and odourless — hence CO detectors and good ventilation.",
+  "hints": [
+   "Which molecule in red blood cells normally carries oxygen?",
+   "What happens if another gas occupies its binding sites?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "CHE-117",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 2,
+  "type": "application",
+  "q": "Vegetable oils are converted into solid vanaspati ghee by heating with hydrogen in the presence of nickel. What is this process?",
+  "options": [
+   "Neutralisation",
+   "Hydrogenation — an addition reaction that saturates C=C double bonds",
+   "Fermentation",
+   "Combustion"
+  ],
+  "answer": 1,
+  "explanation": "Unsaturated oils have C=C double bonds. With a nickel catalyst, hydrogen adds across them, making the fats more saturated and solid at room temperature. Diets high in saturated and trans fats are linked to heart disease.",
+  "hints": [
+   "What is added to the oil?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-118",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 2,
+  "type": "experiment",
+  "q": "Ethanol and ethanoic acid are warmed with a few drops of concentrated sulphuric acid. A sweet, fruity smell is produced. What has formed?",
+  "options": [
+   "An ester",
+   "A soap",
+   "Carbon dioxide",
+   "An alkane"
+  ],
+  "answer": 0,
+  "explanation": "Alcohol + carboxylic acid → ester + water (esterification), with sulphuric acid as a catalyst. Esters give many fruits and perfumes their smells.",
+  "hints": [
+   "Many fruit smells come from this class of compound."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-119",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 3,
+  "type": "reasoning",
+  "q": "How does soap remove an oily stain from cloth?",
+  "options": [
+   "Soap dissolves the cloth around the stain.",
+   "Soap reacts with oil to form water.",
+   "Soap makes oil denser than water so it sinks.",
+   "Soap molecules point their hydrocarbon tails into the oil and their ionic heads into the water, forming micelles that are rinsed away."
+  ],
+  "answer": 3,
+  "explanation": "A soap molecule has a long hydrophobic (oil-loving) tail and an ionic hydrophilic (water-loving) head. In water they cluster around oil droplets with tails inside the oil and heads outside, forming micelles. The micelles stay suspended in water and wash away.",
+  "hints": [
+   "A soap molecule has two very different ends."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "CHE-120",
+  "subject": "Chemistry",
+  "topic": "Carbon Chemistry",
+  "level": 1,
+  "type": "mcq",
+  "q": "Diamond, graphite and buckminsterfullerene (C₆₀) are all pure carbon with very different properties. They are called:",
+  "options": [
+   "allotropes",
+   "isomers",
+   "alloys",
+   "isotopes"
+  ],
+  "answer": 0,
+  "explanation": "Allotropes are different structural forms of the same element. Isotopes are atoms with different numbers of neutrons; isomers are different compounds with the same formula; alloys are mixtures of metals.",
+  "misconception": "Isotopes differ in neutrons; allotropes differ in how atoms are bonded together.",
+  "hints": [
+   "Different forms of the same element in the same state."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
   "id": "CHE-001",
   "subject": "Chemistry",
   "topic": "Matter",
