@@ -1,5 +1,1896 @@
 [
  {
+  "id": "SPA-027",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which is the largest planet in the Solar System?",
+  "options": [
+   "Neptune",
+   "Earth",
+   "Jupiter",
+   "Saturn"
+  ],
+  "answer": 2,
+  "explanation": "Jupiter is more than twice as massive as all the other planets combined and about 11 times Earth’s diameter. It is a gas giant made mostly of hydrogen and helium.",
+  "hints": [
+   "It has the Great Red Spot."
+  ],
+  "time": 20,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-028",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 2,
+  "type": "mcq",
+  "q": "Where is the main asteroid belt of the Solar System?",
+  "options": [
+   "Between Venus and Earth",
+   "Beyond Neptune",
+   "Between the orbits of Mars and Jupiter",
+   "Between Earth and Mars"
+  ],
+  "answer": 2,
+  "explanation": "Most asteroids orbit between Mars and Jupiter. Jupiter’s strong gravity is thought to have prevented this material from forming a planet. The icy Kuiper Belt beyond Neptune is a different region containing Pluto.",
+  "hints": [
+   "It separates the rocky inner planets from the gas giants."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-029",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 3,
+  "type": "reasoning",
+  "q": "The four inner planets are small and rocky, while the outer planets are giant worlds of gas and ice. Which explanation best accounts for this?",
+  "options": [
+   "Near the young Sun it was too hot for ices to condense, so only rock and metal could form planets; farther out, abundant ices let large cores grow and capture gas.",
+   "The Sun’s gravity pulled all the gas inward.",
+   "The outer planets formed later from comets.",
+   "The inner planets lost their rocks to the Sun."
+  ],
+  "answer": 0,
+  "explanation": "In the disc around the young Sun, temperature fell with distance. Inside the “frost line” (about where the asteroid belt is today) only metals and silicates could solidify, and they were scarce, so planets stayed small. Beyond it, water, ammonia and methane ices also froze, providing far more solid material; big cores formed quickly and gravitationally gathered hydrogen and helium.",
+  "hints": [
+   "How did temperature change with distance from the young Sun?",
+   "Which substances can only be solid where it is cold?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-030",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 3,
+  "type": "numerical",
+  "q": "Mars orbits the Sun at an average distance of 1.52 AU. Using Kepler’s third law (T² = r³ with T in years and r in AU), what is the length of a Martian year?",
+  "options": [
+   "1.87 Earth years",
+   "1.52 Earth years",
+   "3.5 Earth years",
+   "2.31 Earth years"
+  ],
+  "answer": 0,
+  "explanation": "T = r^1.5 = 1.52^1.5 ≈ 1.87 years (about 687 days). The law works for every planet because they all orbit the same star.",
+  "misconception": "2.31 uses T ∝ r² instead of T² ∝ r³.",
+  "hints": [
+   "T = r × √r."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-031",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why was Pluto reclassified as a “dwarf planet” by the International Astronomical Union in 2006?",
+  "options": [
+   "It is made of gas.",
+   "It was found to be a moon of Neptune.",
+   "It stopped orbiting the Sun.",
+   "It has not cleared its orbital neighbourhood of other objects, one of the conditions for being a planet."
+  ],
+  "answer": 3,
+  "explanation": "A planet must orbit the Sun, be massive enough to be round, and have cleared its orbit. Pluto meets the first two but shares its region with many Kuiper Belt objects, including Eris, which is similar in mass. So it was placed in the new category of dwarf planets.",
+  "hints": [
+   "Pluto lies in a crowded belt of icy bodies."
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-032",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 3,
+  "type": "what-if",
+  "q": "If Earth had no Moon, what would be the most noticeable change in the oceans?",
+  "options": [
+   "There would be no tides at all.",
+   "Tides would be twice as large.",
+   "The oceans would freeze.",
+   "Tides would be much smaller, caused only by the Sun."
+  ],
+  "answer": 3,
+  "explanation": "The Moon is far less massive than the Sun but much closer, so its tidal effect (which depends on the difference in pull across Earth, ∝ M/d³) is about twice the Sun’s. Without the Moon, solar tides would remain but be less than half today’s typical range.",
+  "misconception": "The Sun also produces tides, so they would not vanish completely.",
+  "hints": [
+   "Does the Sun also raise tides?",
+   "Which has the bigger tidal effect on Earth — the Sun or the Moon?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-033",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is the difference between a meteor and a meteorite?",
+  "options": [
+   "A meteor is the streak of light from a space rock burning in the atmosphere; a meteorite is a piece that reaches the ground.",
+   "A meteor is a type of star.",
+   "A meteorite burns up; a meteor lands.",
+   "They are the same thing."
+  ],
+  "answer": 0,
+  "explanation": "Small rocks in space are meteoroids. When one enters the atmosphere at high speed, friction heats it and the air around it glows — a meteor or “shooting star”. Any fragment surviving to the ground is a meteorite.",
+  "misconception": "Shooting stars are not stars.",
+  "hints": [
+   "Which one reaches Earth’s surface?"
+  ],
+  "time": 30,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-034",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 3,
+  "type": "reasoning",
+  "q": "We always see the same face of the Moon from Earth. What does this tell us about the Moon’s rotation?",
+  "options": [
+   "It rotates once on its axis in exactly the same time it takes to orbit Earth (synchronous rotation).",
+   "It rotates once every 24 hours.",
+   "It does not rotate at all.",
+   "It rotates twice for each orbit."
+  ],
+  "answer": 0,
+  "explanation": "If the Moon did not rotate, we would see all sides of it during each orbit. Because its rotation period equals its orbital period (about 27.3 days), the same hemisphere always faces Earth. This tidal locking resulted from Earth’s gravity slowing the Moon’s spin over billions of years.",
+  "misconception": "A non-rotating Moon would show us its far side during each orbit.",
+  "hints": [
+   "If the Moon did not spin at all, would we see its far side during an orbit?",
+   "Walk around a chair while always facing it — do you turn?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-035",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 2,
+  "type": "mcq",
+  "q": "What are Saturn’s spectacular rings made of?",
+  "options": [
+   "Clouds of liquid water",
+   "Countless pieces of ice and rock, from dust grains to boulders",
+   "A solid sheet of metal",
+   "Glowing gas"
+  ],
+  "answer": 1,
+  "explanation": "The rings consist of billions of particles, mostly water ice with some rock, each orbiting Saturn separately. They are hundreds of thousands of kilometres wide but mostly only tens of metres thick.",
+  "hints": [
+   "Why are the rings so bright and reflective?"
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-036",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 2,
+  "type": "numerical",
+  "q": "The acceleration due to gravity on Mars is about 3.7 m/s². What would a 50 kg rover weigh on Mars?",
+  "options": [
+   "50 N",
+   "490 N",
+   "13.5 N",
+   "185 N"
+  ],
+  "answer": 3,
+  "explanation": "W = mg = 50 × 3.7 = 185 N, about 38% of its 490 N weight on Earth. Lower gravity helps rovers and landers, but Mars’s thin atmosphere makes landing difficult.",
+  "misconception": "490 N is the rover’s weight on Earth.",
+  "hints": [
+   "Weight = mass × local g."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-037",
+  "subject": "Space Science",
+  "topic": "Solar System",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Through his telescope in 1610, Galileo saw Venus go through a full set of phases like the Moon, including a nearly full disc. Why was this important?",
+  "options": [
+   "A full set of phases is only possible if Venus orbits the Sun, supporting the Sun-centred (heliocentric) model.",
+   "It proved that Venus has its own light.",
+   "It proved Venus is larger than Earth.",
+   "It showed that Venus orbits Earth."
+  ],
+  "answer": 0,
+  "explanation": "In the Earth-centred (Ptolemaic) model, Venus always stayed between Earth and the Sun and could show only crescent phases. Galileo saw a nearly full Venus, which requires Venus to pass behind the Sun — only possible if it orbits the Sun.",
+  "hints": [
+   "For Venus to look nearly full, where must it be relative to the Sun?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-038",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is the name of the galaxy that contains our Solar System, and what shape is it?",
+  "options": [
+   "Orion, a spiral galaxy",
+   "Andromeda, an elliptical galaxy",
+   "The Milky Way, an irregular galaxy",
+   "The Milky Way, a barred spiral galaxy"
+  ],
+  "answer": 3,
+  "explanation": "The Milky Way is a barred spiral galaxy about 100,000 light-years across, containing perhaps 100–400 billion stars. The Sun lies in one of its spiral arms, about 26,000 light-years from the centre. The faint band of light across a dark sky is our edge-on view of its disc.",
+  "misconception": "Orion is a constellation, not a galaxy.",
+  "hints": [
+   "Its name comes from the milky band across the night sky."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-039",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Betelgeuse looks reddish and Rigel looks bluish-white. What does this tell us?",
+  "options": [
+   "Betelgeuse is hotter than Rigel.",
+   "Rigel is closer to Earth.",
+   "Rigel’s surface is much hotter than Betelgeuse’s.",
+   "Both are planets."
+  ],
+  "answer": 2,
+  "explanation": "A star’s colour depends on its surface temperature, just as a heated iron bar glows red, then white. Red stars are coolest (about 3000 °C), yellow ones like the Sun about 5500 °C, and blue-white ones hottest (above 10,000 °C).",
+  "misconception": "Red does not mean “hot” for stars — red stars are the coolest.",
+  "hints": [
+   "Think of a heated metal rod: which colour appears at the highest temperature?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-040",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 2,
+  "type": "numerical",
+  "q": "Light travels at about 3 × 10⁵ km/s. Roughly how far is one light-year?",
+  "options": [
+   "3 × 10⁵ km",
+   "1.5 × 10⁸ km",
+   "9.46 × 10⁹ km",
+   "9.46 × 10¹² km"
+  ],
+  "answer": 3,
+  "explanation": "Seconds in a year ≈ 365.25 × 24 × 3600 ≈ 3.16 × 10⁷ s. Distance = 3 × 10⁵ km/s × 3.16 × 10⁷ s ≈ 9.46 × 10¹² km — nearly ten trillion kilometres.",
+  "misconception": "1.5 × 10⁸ km is the Earth–Sun distance (1 AU).",
+  "hints": [
+   "How many seconds are in a year?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-041",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "Astronomers say “we are made of star stuff”. What do they mean?",
+  "options": [
+   "Most elements in our bodies heavier than hydrogen and helium (carbon, oxygen, iron, etc.) were made by nuclear fusion in stars and scattered by stellar explosions.",
+   "Humans were born on other stars.",
+   "Our bodies contain glowing gas.",
+   "Stars are made of human cells."
+  ],
+  "answer": 0,
+  "explanation": "The Big Bang produced mainly hydrogen and helium. Fusion inside stars built carbon, oxygen, nitrogen and other elements up to iron; elements heavier than iron formed in supernovae and neutron-star mergers. These were spread through space and later became part of the Sun, Earth and living things.",
+  "hints": [
+   "Where were elements like carbon and oxygen made?",
+   "How did they get out of the stars?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-042",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is a neutron star?",
+  "options": [
+   "A planet with no atmosphere",
+   "The extremely dense collapsed core of a massive star left after a supernova",
+   "A newly forming star",
+   "A star made of hydrogen gas only"
+  ],
+  "answer": 1,
+  "explanation": "When a massive star’s core collapses, protons and electrons merge into neutrons, forming a ball only about 20 km across but more massive than the Sun. A teaspoon of its matter would weigh billions of tonnes. Fast-spinning neutron stars observed as regular radio pulses are called pulsars.",
+  "hints": [
+   "It forms from the core of a very massive star."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-043",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 3,
+  "type": "what-if",
+  "q": "Imagine the Sun were instantly replaced by a black hole of exactly the same mass. What would happen to Earth’s orbit?",
+  "options": [
+   "Earth would fly off into space.",
+   "Earth would orbit faster.",
+   "Earth would be sucked into the black hole.",
+   "It would stay the same, because gravity at Earth’s distance depends only on the mass and the distance."
+  ],
+  "answer": 3,
+  "explanation": "Newton’s law F = GMm/r² depends only on mass and distance. With the same mass at the same distance, Earth would feel the same pull and keep the same orbit. (It would, of course, become dark and freeze.) Black holes are dangerous only very close to them.",
+  "misconception": "Black holes are not cosmic vacuum cleaners; far away, their gravity is the same as any object of equal mass.",
+  "hints": [
+   "What does gravitational force depend on?",
+   "Would the mass or the distance change?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-044",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 2,
+  "type": "reasoning",
+  "q": "The stars of a constellation such as Orion appear close together in the sky. Are they actually close to one another in space?",
+  "options": [
+   "Yes, they orbit each other.",
+   "They are all planets.",
+   "Usually not — they lie at very different distances and only appear grouped from Earth.",
+   "Yes, they are all at the same distance."
+  ],
+  "answer": 2,
+  "explanation": "Constellations are patterns as seen from Earth. Stars in Orion range from hundreds to over a thousand light-years away. From another star system, the patterns would look completely different.",
+  "hints": [
+   "Can you judge distance from a flat picture of the sky?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-045",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why does Polaris (the Pole Star) appear almost fixed in the sky while other stars seem to circle around it during the night?",
+  "options": [
+   "It is the closest star to Earth.",
+   "It is the brightest star.",
+   "It moves at the same speed as Earth.",
+   "It lies almost directly above Earth’s North Pole, in line with Earth’s axis of rotation."
+  ],
+  "answer": 3,
+  "explanation": "The apparent nightly motion of stars is due to Earth’s rotation. A star almost exactly on the line of the axis shows almost no motion, so travellers used Polaris to find north. It is neither the closest nor the brightest star.",
+  "hints": [
+   "What causes stars to appear to move across the sky at night?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-046",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Which observation is one of the strongest pieces of evidence for the Big Bang theory?",
+  "options": [
+   "The rings of Saturn",
+   "The phases of the Moon",
+   "The Sun rising every morning",
+   "The cosmic microwave background — faint radiation coming from all directions, left over from the hot early universe"
+  ],
+  "answer": 3,
+  "explanation": "Discovered by Penzias and Wilson in 1965, the cosmic microwave background is radiation released about 380,000 years after the Big Bang, now stretched by cosmic expansion into microwaves corresponding to about 2.7 K. Together with galaxies receding (redshift) and the abundance of light elements, it strongly supports the theory.",
+  "hints": [
+   "It is radiation that fills the whole sky."
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-047",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 3,
+  "type": "reasoning",
+  "q": "The Andromeda Galaxy is about 2.5 million light-years away. When you look at it tonight, what are you actually seeing?",
+  "options": [
+   "Light reflected from the Moon",
+   "Andromeda as it was about 2.5 million years ago, when the light left it",
+   "Andromeda exactly as it is tonight",
+   "Andromeda as it will be in 2.5 million years"
+  ],
+  "answer": 1,
+  "explanation": "Light takes 2.5 million years to cross that distance, so the image reaching your eye left Andromeda when early human ancestors lived in Africa. Telescopes looking at more distant objects are therefore looking further back in time.",
+  "hints": [
+   "What does a distance of 2.5 million light-years mean for light?",
+   "How long has the light been travelling?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-048",
+  "subject": "Space Science",
+  "topic": "Stars & Galaxies",
+  "level": 1,
+  "type": "mcq",
+  "q": "Where are new stars born?",
+  "options": [
+   "On the surface of old stars",
+   "Inside planets",
+   "In nebulae — huge clouds of gas and dust that collapse under gravity",
+   "In black holes"
+  ],
+  "answer": 2,
+  "explanation": "Dense regions of a nebula contract under their own gravity, heating up until hydrogen fusion begins in the core and a star “switches on”. The Orion Nebula is a nearby stellar nursery visible with binoculars.",
+  "hints": [
+   "Stars form from clouds of gas."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-049",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 1,
+  "type": "mcq",
+  "q": "Who was the first human to travel into space, in 1961?",
+  "options": [
+   "Valentina Tereshkova",
+   "Neil Armstrong",
+   "Yuri Gagarin",
+   "Rakesh Sharma"
+  ],
+  "answer": 2,
+  "explanation": "Soviet cosmonaut Yuri Gagarin orbited Earth once in Vostok 1 on 12 April 1961. Valentina Tereshkova became the first woman in space in 1963; Neil Armstrong first walked on the Moon in 1969; Rakesh Sharma was the first Indian in space in 1984.",
+  "hints": [
+   "He flew in Vostok 1."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-050",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which mission first landed humans on the Moon, and in which year?",
+  "options": [
+   "Vostok 1, 1961",
+   "Apollo 13, 1970",
+   "Chandrayaan-1, 2008",
+   "Apollo 11, 1969"
+  ],
+  "answer": 3,
+  "explanation": "On 20 July 1969, Apollo 11’s lunar module landed in the Sea of Tranquillity; Neil Armstrong and Buzz Aldrin walked on the surface while Michael Collins orbited above. Apollo 13 had to abort its landing after an explosion.",
+  "hints": [
+   "Neil Armstrong was its commander."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-051",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 2,
+  "type": "reasoning",
+  "q": "How can a rocket accelerate in the vacuum of space, where there is no air to push against?",
+  "options": [
+   "Gravity pushes it forwards.",
+   "It pushes against the Sun’s light.",
+   "It needs air and cannot work in space.",
+   "It pushes exhaust gas backwards at high speed, and the gas pushes the rocket forwards (Newton’s third law)."
+  ],
+  "answer": 3,
+  "explanation": "The rocket throws mass (hot exhaust) out of the nozzle; by conservation of momentum, the rocket gains equal and opposite momentum. Air is not needed — in fact, rockets work slightly better in a vacuum.",
+  "misconception": "A rocket does not push on the air; it pushes on its own exhaust.",
+  "hints": [
+   "What does the rocket push on?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-052",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Most satellites are launched towards the east, and ISRO’s launch site at Sriharikota is on India’s east coast, fairly close to the equator. Why?",
+  "options": [
+   "Rockets cannot fly west.",
+   "Gravity is weaker on coasts.",
+   "Earth rotates eastward, giving the rocket a free boost (up to about 0.46 km/s at the equator), and an eastern coastline lets rocket stages fall safely into the sea.",
+   "The Sun rises in the east, giving extra solar energy."
+  ],
+  "answer": 2,
+  "explanation": "A point on the equator moves eastward at about 465 m/s because of Earth’s rotation. Launching east adds this speed, saving fuel. Being near the equator maximises the boost and suits geostationary orbits. On the east coast, spent stages and any failed launch fall over the Bay of Bengal rather than populated land.",
+  "hints": [
+   "Which way does Earth spin, and how fast is the equator moving?",
+   "Where do spent rocket stages fall?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-053",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why are most launch vehicles built in several stages that are dropped one after another?",
+  "options": [
+   "Discarding empty fuel tanks and engines reduces the mass to be accelerated, so the remaining stages can reach higher speeds.",
+   "So the rocket can land on the Moon.",
+   "To make the rocket look larger.",
+   "Because one engine cannot burn fuel."
+  ],
+  "answer": 0,
+  "explanation": "Once a stage’s fuel is used, its heavy tanks and engines are dead weight. Dropping them means less mass for the next stage to push, so the same thrust gives more acceleration. This makes reaching orbital speed (about 7.8 km/s) practical.",
+  "hints": [
+   "What happens to the acceleration when mass decreases but force stays the same?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-054",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 2,
+  "type": "numerical",
+  "q": "Earth’s escape velocity is about 11.2 km/s. What is this in km/h?",
+  "options": [
+   "672 km/h",
+   "3.11 km/h",
+   "40,320 km/h",
+   "4032 km/h"
+  ],
+  "answer": 2,
+  "explanation": "11.2 km/s × 3600 s/h = 40,320 km/h — about 33 times the speed of sound in air.",
+  "hints": [
+   "There are 3600 seconds in an hour."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-055",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is “space debris” in low Earth orbit a serious concern?",
+  "options": [
+   "Debris pollutes the oceans immediately.",
+   "Debris makes the Moon fall.",
+   "Debris blocks sunlight from reaching Earth.",
+   "Even tiny fragments travel at around 7–8 km/s, so collisions can destroy satellites and create more debris."
+  ],
+  "answer": 3,
+  "explanation": "Old satellites, rocket stages and fragments from collisions orbit at very high speed. Because kinetic energy ∝ v², a fleck of paint can chip a spacecraft window. Collisions create more fragments, which could make some orbits unusable (the Kessler syndrome).",
+  "hints": [
+   "How fast do objects in low Earth orbit move?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-056",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 2,
+  "type": "numerical",
+  "q": "The International Space Station orbits Earth about once every 90 minutes. Roughly how many sunrises do its astronauts see in 24 hours?",
+  "options": [
+   "4",
+   "1",
+   "16",
+   "90"
+  ],
+  "answer": 2,
+  "explanation": "Each orbit includes one sunrise and one sunset. 24 h = 1440 min; 1440/90 = 16 orbits, so about 16 sunrises a day.",
+  "hints": [
+   "How many 90-minute orbits fit into a day?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-057",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 3,
+  "type": "reasoning",
+  "q": "The James Webb Space Telescope observes mainly in infrared light. Why is infrared especially useful for studying the very first galaxies?",
+  "options": [
+   "The first galaxies were cold and dark.",
+   "Their light has been stretched (redshifted) from visible and ultraviolet into the infrared by the expansion of the universe, and infrared also passes through dust clouds.",
+   "Infrared is faster than visible light.",
+   "Infrared light is not affected by distance."
+  ],
+  "answer": 1,
+  "explanation": "Light from galaxies more than 13 billion years old has been redshifted so much that it now arrives as infrared. Infrared also penetrates dust that hides star-forming regions. Webb is kept very cold (below about −230 °C) so its own heat does not swamp the faint infrared signals.",
+  "misconception": "All light travels at the same speed in a vacuum.",
+  "hints": [
+   "What does the expansion of the universe do to light from distant galaxies?",
+   "Which way on the spectrum is “red”?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-058",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 1,
+  "type": "mcq",
+  "q": "Rakesh Sharma became the first Indian citizen to travel into space in 1984. On which spacecraft did he fly?",
+  "options": [
+   "Apollo 11",
+   "NASA Space Shuttle",
+   "Soviet Soyuz T-11",
+   "India’s Gaganyaan"
+  ],
+  "answer": 2,
+  "explanation": "Squadron Leader Rakesh Sharma flew aboard Soyuz T-11 in April 1984 and spent about eight days at the Salyut 7 space station. Asked how India looked from space, he famously replied, “Saare Jahan Se Achha”.",
+  "hints": [
+   "It was a joint mission with the Soviet Union."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-059",
+  "subject": "Space Science",
+  "topic": "Space Exploration",
+  "level": 3,
+  "type": "what-if",
+  "q": "Why must an astronaut wear a pressurised spacesuit during a spacewalk, even for a short time?",
+  "options": [
+   "Space has too much air pressure.",
+   "In a vacuum, there is no pressure to keep body fluids liquid or provide oxygen; the suit also protects against extreme temperatures and radiation.",
+   "The suit is only for appearance.",
+   "The suit makes astronauts heavier so they don’t float."
+  ],
+  "answer": 1,
+  "explanation": "Without outside pressure, gases dissolved in body fluids would come out of solution and saliva would boil at body temperature; the person would lose consciousness within about 15 seconds from lack of oxygen. Temperatures in sunlight and shadow differ by hundreds of degrees, so suits are insulated and white to reflect sunlight.",
+  "hints": [
+   "What does air pressure do for our bodies on Earth?",
+   "How hot or cold can it be in space?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-060",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is a satellite?",
+  "options": [
+   "A rocket on its way to the Moon",
+   "Any object that orbits a planet or other larger body, natural (like the Moon) or artificial",
+   "A star that orbits the Sun",
+   "Only a man-made machine in space"
+  ],
+  "answer": 1,
+  "explanation": "The Moon is Earth’s natural satellite; thousands of artificial satellites orbit Earth for communication, navigation, weather and research. Jupiter has dozens of natural satellites.",
+  "hints": [
+   "Is the Moon a satellite?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-061",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Earth-observation satellites such as India’s Cartosat series often use a polar orbit. Why?",
+  "options": [
+   "Polar orbits are the highest possible.",
+   "Polar orbits stay above one city all the time.",
+   "Polar orbits need no speed.",
+   "As Earth rotates beneath the polar orbit, the satellite eventually passes over every part of the globe."
+  ],
+  "answer": 3,
+  "explanation": "A polar orbit crosses near both poles. Each orbit takes about 90–100 minutes, during which Earth turns beneath it, so successive passes scan different strips. Many are sun-synchronous, passing each place at the same local time, giving consistent lighting for images.",
+  "misconception": "A satellite that stays over one place is geostationary, above the equator.",
+  "hints": [
+   "What does Earth do beneath the satellite between passes?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-062",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 3,
+  "type": "numerical",
+  "q": "A geostationary satellite orbits 42,164 km from Earth’s centre and completes one orbit in 86,164 s (one sidereal day). What is its orbital speed?",
+  "options": [
+   "0.47 km/s",
+   "11.2 km/s",
+   "7.8 km/s",
+   "3.07 km/s"
+  ],
+  "answer": 3,
+  "explanation": "v = 2πr/T = 2π × 42,164 / 86,164 ≈ 3.07 km/s. This is much slower than a low-orbit satellite (≈ 7.8 km/s); 0.47 km/s is the speed of a point on Earth’s equator.",
+  "misconception": "7.8 km/s is for low Earth orbit.",
+  "hints": [
+   "Speed = circumference ÷ period."
+  ],
+  "time": 80,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-063",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 2,
+  "type": "reasoning",
+  "q": "The ISS (about 400 km up) moves at about 7.7 km/s, while geostationary satellites (about 35,800 km up) move at about 3.1 km/s. Why do higher satellites move more slowly?",
+  "options": [
+   "There is more air resistance higher up.",
+   "Higher satellites have smaller engines.",
+   "Gravity is weaker farther from Earth, so less speed is needed for gravity to supply the centripetal force (v = √(GM/r)).",
+   "Higher satellites are heavier."
+  ],
+  "answer": 2,
+  "explanation": "For a circular orbit, gravity provides exactly the centripetal force: GMm/r² = mv²/r, so v = √(GM/r). Larger r means smaller v. And because the path is also longer, the period grows rapidly (T² ∝ r³).",
+  "hints": [
+   "How does gravity change with distance from Earth?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-064",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 2,
+  "type": "mcq",
+  "q": "India’s regional navigation system NavIC, like GPS, works by:",
+  "options": [
+   "using a single satellite that photographs the user",
+   "measuring the Earth’s magnetic field",
+   "receiving timed signals from several satellites and calculating position from their travel times",
+   "bouncing radar off the ground"
+  ],
+  "answer": 2,
+  "explanation": "Each satellite broadcasts its position and a precise time. A receiver measures how long signals from at least four satellites took to arrive and calculates its position (trilateration). Atomic clocks are essential, since a timing error of a millionth of a second means about 300 m of position error.",
+  "hints": [
+   "Signal travel time × speed of light = distance."
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-065",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why do satellites in very low orbits (around 200–300 km) gradually lose height and eventually burn up?",
+  "options": [
+   "Earth’s gravity becomes stronger every year.",
+   "They run out of battery.",
+   "The Sun pushes them down.",
+   "The thin upper atmosphere still causes drag, slowing them so they spiral lower into denser air."
+  ],
+  "answer": 3,
+  "explanation": "Even at a few hundred kilometres there are some air molecules. Drag removes orbital energy, the orbit shrinks, the air gets denser and drag increases further. The ISS needs periodic engine boosts to stay up.",
+  "hints": [
+   "Is space at 300 km a perfect vacuum?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-066",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 3,
+  "type": "what-if",
+  "q": "A satellite is in a circular orbit. Its engine fires briefly forward, increasing its speed (but not enough to escape Earth). What happens to its orbit?",
+  "options": [
+   "It stops moving.",
+   "It falls straight down to Earth.",
+   "It moves into a larger, elliptical orbit, rising higher on the opposite side of Earth.",
+   "It stays in exactly the same circular orbit, only faster."
+  ],
+  "answer": 2,
+  "explanation": "At the new, higher speed, gravity is no longer enough to bend its path into the same circle, so it climbs away from Earth, slowing as it rises, then falls back to the burn point: an ellipse. A second burn at the high point can circularise a bigger orbit — how satellites are raised to geostationary orbit (a transfer orbit).",
+  "misconception": "A faster speed in the same circle would need a stronger gravitational pull.",
+  "hints": [
+   "Can gravity at the same distance keep a faster satellite in the same circle?",
+   "What happens to speed as the satellite climbs?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-067",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 2,
+  "type": "application",
+  "q": "Why can a home DTH (satellite TV) dish be fixed in one position permanently?",
+  "options": [
+   "It points at a geostationary satellite, which stays above the same point on the equator.",
+   "The satellite moves with the Sun.",
+   "The dish receives signals from all directions.",
+   "The satellite is very close to Earth."
+  ],
+  "answer": 0,
+  "explanation": "Geostationary satellites (such as India’s GSAT series) orbit eastward once per day above the equator, so they appear motionless from the ground. A fixed dish facing the right part of the southern sky in India receives its signals continuously.",
+  "hints": [
+   "Which type of orbit appears stationary from the ground?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-068",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 3,
+  "type": "numerical",
+  "q": "A phone call is relayed via a geostationary satellite about 35,800 km above the equator. Ignoring other delays, how long does the radio signal take to go up to the satellite and back down to Earth? (speed of light = 3 × 10⁵ km/s)",
+  "options": [
+   "About 0.24 s",
+   "About 0.12 s",
+   "About 0.024 s",
+   "About 2.4 s"
+  ],
+  "answer": 0,
+  "explanation": "Total path ≈ 2 × 35,800 = 71,600 km. Time = 71,600 / 300,000 ≈ 0.24 s. Replies take another 0.24 s, causing the noticeable pause in satellite calls — one reason undersea fibre-optic cables and low-orbit satellites are preferred.",
+  "misconception": "0.12 s counts only the upward journey.",
+  "hints": [
+   "The signal must go up AND come back down.",
+   "Time = distance ÷ speed."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-069",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which was the first artificial satellite, launched in 1957?",
+  "options": [
+   "Explorer 1 (USA)",
+   "Aryabhata (India)",
+   "Sputnik 1 (Soviet Union)",
+   "Hubble (USA)"
+  ],
+  "answer": 2,
+  "explanation": "Sputnik 1, launched on 4 October 1957, was a 58 cm metal sphere that transmitted radio beeps. It began the Space Age. Explorer 1 (USA) followed in 1958; India’s Aryabhata was launched in 1975.",
+  "hints": [
+   "It started the “space race”."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-070",
+  "subject": "Space Science",
+  "topic": "Satellites & Orbits",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Weather satellites take infrared images in which high storm clouds appear very bright. Why can infrared show how high clouds are?",
+  "options": [
+   "Low clouds are invisible in visible light.",
+   "Higher clouds are colder and emit less infrared; the cold tops of tall storm clouds stand out clearly.",
+   "Infrared images show only rain.",
+   "High clouds reflect more infrared from the Sun."
+  ],
+  "answer": 1,
+  "explanation": "Temperature in the lower atmosphere falls with height. Every object emits infrared depending on its temperature, so satellite sensors effectively measure cloud-top temperature and therefore height. (In standard displays, cold cloud tops are shown bright.) Infrared also works at night.",
+  "hints": [
+   "How does air temperature change with height?",
+   "What does the amount of infrared emitted depend on?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-071",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 3,
+  "type": "what-if",
+  "q": "On the International Space Station, a candle flame is almost spherical and dim blue rather than tall and yellow. Why?",
+  "options": [
+   "There is no oxygen on the ISS.",
+   "In free fall there is no buoyant “upward” rise of hot gas, so no convection draws in fresh air and stretches the flame.",
+   "Candles burn at a lower temperature in space.",
+   "The wax is different in space."
+  ],
+  "answer": 1,
+  "explanation": "On Earth, hot combustion gases are less dense and rise, pulling fresh air in from below and stretching the flame upward. In orbit, everything falls together, so there is no buoyancy: oxygen reaches the flame only by slow diffusion. The flame spreads equally in all directions and burns cooler, with little glowing soot.",
+  "hints": [
+   "Why does hot gas rise on Earth?",
+   "Does buoyancy work when everything is in free fall?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-072",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 2,
+  "type": "reasoning",
+  "q": "In 2014 the Philae lander bounced high off the surface of a comet instead of settling down. Why was landing so difficult?",
+  "options": [
+   "Comets have no surface.",
+   "The Sun pushed it away.",
+   "The comet’s gravity is stronger than Earth’s.",
+   "The comet’s gravity is extremely weak, so even a gentle touchdown can send the lander back into space."
+  ],
+  "answer": 3,
+  "explanation": "Comet 67P is only about 4 km across, so its surface gravity is roughly 100,000 times weaker than Earth’s and its escape velocity is under 1 m/s. Philae’s anchoring harpoons failed to fire, and it bounced for nearly two hours before stopping in a shadowed spot.",
+  "hints": [
+   "How does a small mass affect surface gravity?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-073",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 2,
+  "type": "numerical",
+  "q": "At the cloud tops of Jupiter, the acceleration due to gravity is about 24.8 m/s². What would a 40 kg instrument weigh there?",
+  "options": [
+   "992 N",
+   "40 N",
+   "392 N",
+   "1.6 N"
+  ],
+  "answer": 0,
+  "explanation": "W = mg = 40 × 24.8 = 992 N, about 2.5 times its weight on Earth (392 N). Its mass is still 40 kg.",
+  "misconception": "392 N is the weight on Earth.",
+  "hints": [
+   "W = m × g."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-074",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 2,
+  "type": "experiment",
+  "q": "On the Apollo 15 mission, astronaut David Scott dropped a hammer and a feather together on the Moon. What happened, and why?",
+  "options": [
+   "The feather floated away.",
+   "Neither fell, because there is no gravity on the Moon.",
+   "They hit the ground together, because there is no air on the Moon and all objects fall with the same acceleration.",
+   "The hammer landed first, because it is heavier."
+  ],
+  "answer": 2,
+  "explanation": "Without air resistance, gravitational acceleration does not depend on mass — confirming Galileo’s idea. They fell more slowly than on Earth because lunar gravity is about one-sixth as strong.",
+  "misconception": "The Moon does have gravity — about 1.6 m/s².",
+  "hints": [
+   "What slows a feather on Earth?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-075",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Some mission plans suggest building fuel depots or launching deep-space missions from the Moon. What is one physical advantage?",
+  "options": [
+   "There is no gravity on the Moon.",
+   "The Moon is closer to Mars than Earth is.",
+   "The Moon has a thicker atmosphere to support rockets.",
+   "The Moon’s escape velocity (about 2.4 km/s) is much lower than Earth’s (11.2 km/s), so far less energy is needed to leave it."
+  ],
+  "answer": 3,
+  "explanation": "Kinetic energy needed ∝ v². Escaping the Moon needs (2.4/11.2)² ≈ 5% of the energy per kilogram needed to escape Earth. If water ice at the lunar poles can be turned into rocket fuel, the Moon could become a launch base.",
+  "hints": [
+   "Compare the escape velocities."
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-076",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 3,
+  "type": "numerical",
+  "q": "An athlete can jump 0.5 m high on Earth. On the Moon, where gravity is one-sixth as strong, how high could she jump with the same take-off speed (ignore her spacesuit)?",
+  "options": [
+   "1.2 m",
+   "0.08 m",
+   "3 m",
+   "0.5 m"
+  ],
+  "answer": 2,
+  "explanation": "Jump height h = u²/(2g). With the same take-off speed u and g six times smaller, h is six times larger: 0.5 × 6 = 3 m. Her flight would also last six times longer.",
+  "misconception": "1.2 m uses √6 instead of 6; height is inversely proportional to g, not to √g.",
+  "hints": [
+   "How does maximum height depend on g for a fixed launch speed?",
+   "Use h = u²/2g."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-077",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Spacecraft such as Voyager used “gravity assists”, swinging close past planets to gain speed without using fuel. Where does the extra speed come from?",
+  "options": [
+   "From the planet’s atmosphere pushing it.",
+   "Gravity creates new energy.",
+   "From the spacecraft’s engines secretly firing.",
+   "From the planet’s orbital motion around the Sun — the spacecraft gains a tiny share of the planet’s momentum and energy."
+  ],
+  "answer": 3,
+  "explanation": "Relative to the planet, the spacecraft leaves at the same speed it arrived. But the planet is moving around the Sun, so in the Sun’s frame the spacecraft can come away much faster, much like a ball bouncing off the front of a moving train. The planet slows by an immeasurably small amount, conserving energy and momentum.",
+  "misconception": "Energy is not created; it is borrowed from the planet’s orbital motion.",
+  "hints": [
+   "Is the planet moving?",
+   "Think of a ball bouncing off the front of a moving train."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-078",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 2,
+  "type": "mcq",
+  "q": "The James Webb Space Telescope orbits near the second Lagrange point (L2), about 1.5 million km from Earth on the side away from the Sun. What is special about this location?",
+  "options": [
+   "Gravity is zero at L2.",
+   "It is inside Earth’s shadow forever with no need of a sunshield.",
+   "It is closer to the stars.",
+   "There the combined gravity of the Sun and Earth lets it keep pace with Earth’s orbit, with the Sun, Earth and Moon all on one side so they can be shielded."
+  ],
+  "answer": 3,
+  "explanation": "At L2 a spacecraft orbits the Sun once a year in step with Earth. Since the Sun, Earth and Moon are all in roughly the same direction, Webb’s sunshield blocks their heat and light, keeping its instruments extremely cold. (India’s Aditya-L1 is at L1, on the sunward side.)",
+  "misconception": "Gravity is not zero at Lagrange points; the forces combine to give the right orbital period.",
+  "hints": [
+   "Why would an infrared telescope want the Sun, Earth and Moon all on one side?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-079",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 1,
+  "type": "mcq",
+  "q": "What keeps the planets in orbit around the Sun?",
+  "options": [
+   "The planets’ own engines",
+   "Magnetic attraction from the Sun",
+   "The Sun’s gravitational pull",
+   "Air pressure in space"
+  ],
+  "answer": 2,
+  "explanation": "The Sun’s gravity provides the centripetal force that bends each planet’s path into an orbit. Without it, planets would move off in straight lines (Newton’s first law).",
+  "hints": [
+   "Which force acts between all masses?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-080",
+  "subject": "Space Science",
+  "topic": "Gravity in Space",
+  "level": 3,
+  "type": "numerical",
+  "q": "A pendulum clock that keeps perfect time on Earth (g = 9.8 m/s²) is taken to the Moon (g = 1.6 m/s²). How does its swing period change?",
+  "options": [
+   "It stays the same",
+   "It becomes about 2.47 times longer",
+   "It becomes about 6 times longer",
+   "It becomes about 2.47 times shorter"
+  ],
+  "answer": 1,
+  "explanation": "T = 2π√(L/g), so T ∝ 1/√g. T_Moon/T_Earth = √(9.8/1.6) ≈ 2.47. The pendulum swings more slowly, so the clock would run slow — losing almost 15 hours every day.",
+  "misconception": "6 times assumes T ∝ 1/g; the period depends on the square root.",
+  "hints": [
+   "How does a pendulum’s period depend on g?",
+   "Weaker gravity — faster or slower swing?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-081",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 1,
+  "type": "mcq",
+  "q": "Who is regarded as the father of the Indian space programme?",
+  "options": [
+   "Satish Dhawan",
+   "Vikram Sarabhai",
+   "Homi J. Bhabha",
+   "C. V. Raman"
+  ],
+  "answer": 1,
+  "explanation": "Dr Vikram Sarabhai founded the Indian space programme in the 1960s and led the setting up of the Thumba rocket-launching station (1963) and ISRO (1969). Homi Bhabha led India’s nuclear programme; Satish Dhawan later led ISRO, and the Sriharikota launch centre is named after him.",
+  "hints": [
+   "The Vikram lander of Chandrayaan is named after him."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-082",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 2,
+  "type": "mcq",
+  "q": "India’s first satellite, Aryabhata (1975), was launched using:",
+  "options": [
+   "India’s GSLV",
+   "A Soviet rocket",
+   "India’s PSLV",
+   "A NASA Space Shuttle"
+  ],
+  "answer": 1,
+  "explanation": "Aryabhata, named after the 5th-century Indian astronomer, was designed and built in India and launched on 19 April 1975 by a Soviet Kosmos-3M rocket. India’s own rockets (SLV, then PSLV and GSLV) came later.",
+  "hints": [
+   "India did not yet have its own satellite launcher in 1975."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-083",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 2,
+  "type": "mcq",
+  "q": "In February 2017, ISRO’s PSLV-C37 set a world record for the most satellites launched on a single rocket. How many did it carry?",
+  "options": [
+   "1000",
+   "10",
+   "50",
+   "104"
+  ],
+  "answer": 3,
+  "explanation": "PSLV-C37 placed 104 satellites in orbit, including India’s Cartosat-2D and 101 small foreign satellites, showing the PSLV’s reliability and precision.",
+  "hints": [
+   "It was more than one hundred."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-084",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 2,
+  "type": "mcq",
+  "q": "Chandrayaan-3’s Pragyan rover carried a laser instrument (LIBS) near the Moon’s south pole. Which element did ISRO announce it had confirmed in the lunar soil there in August 2023?",
+  "options": [
+   "Sulphur",
+   "Uranium",
+   "Neon",
+   "Gold"
+  ],
+  "answer": 0,
+  "explanation": "The Laser-Induced Breakdown Spectroscope fires laser pulses at the soil and analyses the light from the hot plasma produced. It confirmed sulphur, along with aluminium, calcium, iron, chromium, titanium, manganese, silicon and oxygen — the first in-situ measurements of their kind near the south pole.",
+  "hints": [
+   "It is a yellow non-metal on Earth."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-085",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 3,
+  "type": "reasoning",
+  "q": "India’s heavier GSLV rockets use a cryogenic upper stage burning liquid hydrogen and liquid oxygen. Why is mastering this technology important?",
+  "options": [
+   "Cryogenic engines need no fuel.",
+   "Cryogenic stages make rockets lighter by freezing them.",
+   "They are only used for small satellites.",
+   "Cryogenic fuels give much more thrust per kilogram, allowing heavy satellites to be placed in high geostationary transfer orbits."
+  ],
+  "answer": 3,
+  "explanation": "Liquid hydrogen and oxygen give the highest efficiency of common rocket propellants, but must be stored at about −253 °C and −183 °C. Developing this technology (India flew its indigenous cryogenic stage successfully in 2014) let ISRO launch heavy communication satellites itself instead of buying launches abroad.",
+  "hints": [
+   "What is special about the energy released per kilogram of hydrogen–oxygen fuel?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-086",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Why are scientists especially interested in exploring the region near the Moon’s south pole, where Chandrayaan-3 landed?",
+  "options": [
+   "Some craters there are in permanent shadow and very cold, so they may hold water ice — useful for science and future explorers.",
+   "It is the hottest part of the Moon.",
+   "It has the Moon’s thickest atmosphere.",
+   "It always faces Earth directly."
+  ],
+  "answer": 0,
+  "explanation": "Because the Moon’s axis is only slightly tilted, the floors of some polar craters never receive sunlight and stay below about −200 °C. Water ice delivered by comets could have survived there for billions of years. Ice could provide drinking water, oxygen and rocket fuel.",
+  "hints": [
+   "Could some crater floors never see the Sun?",
+   "What could survive in such cold traps?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-087",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is Gaganyaan?",
+  "options": [
+   "India’s Mars lander",
+   "India’s first Moon orbiter",
+   "A weather satellite",
+   "ISRO’s human spaceflight programme to send Indian astronauts into low Earth orbit on an Indian rocket"
+  ],
+  "answer": 3,
+  "explanation": "Gaganyaan aims to launch a crew of Indian astronauts (“gaganyatris”) into orbit about 400 km above Earth aboard a human-rated LVM3 rocket and return them safely, after a series of uncrewed test flights.",
+  "hints": [
+   "“Gagan” means sky and “yaan” means vehicle."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-088",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 2,
+  "type": "mcq",
+  "q": "XPoSat, launched by ISRO on 1 January 2024, is India’s first dedicated mission to study:",
+  "options": [
+   "the weather over India",
+   "the surface of Mars",
+   "ocean currents",
+   "the polarisation of X-rays from bright cosmic sources such as pulsars and black holes"
+  ],
+  "answer": 3,
+  "explanation": "The X-ray Polarimeter Satellite measures how X-rays from extreme objects are polarised, revealing information about magnetic fields and the geometry of matter near neutron stars and black holes. Only one other such mission (NASA’s IXPE) was operating at the time.",
+  "hints": [
+   "“X-Po” refers to X-ray polarimetry."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-089",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 1,
+  "type": "mcq",
+  "q": "From where does ISRO launch its PSLV and GSLV rockets?",
+  "options": [
+   "Satish Dhawan Space Centre, Sriharikota (Andhra Pradesh)",
+   "Ahmedabad, Gujarat",
+   "Thumba, Kerala",
+   "Bengaluru, Karnataka"
+  ],
+  "answer": 0,
+  "explanation": "Sriharikota is an island on the east coast. Thumba was India’s first sounding-rocket station (1963); ISRO’s headquarters is in Bengaluru; the Space Applications Centre is in Ahmedabad.",
+  "hints": [
+   "It is named after a former ISRO chairman."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-090",
+  "subject": "Space Science",
+  "topic": "Indian Space Missions",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which statement about Chandrayaan-2 (launched 2019) is correct?",
+  "options": [
+   "It landed successfully near the south pole.",
+   "Its lander lost contact and crash-landed, but its orbiter continued studying the Moon for years and later helped relay data for Chandrayaan-3.",
+   "It went to Mars instead of the Moon.",
+   "It was a crewed mission."
+  ],
+  "answer": 1,
+  "explanation": "Chandrayaan-2’s Vikram lander lost contact during its final descent in September 2019. Its orbiter, carrying high-resolution cameras and other instruments, kept working and served as a communication backup for Chandrayaan-3’s lander in 2023.",
+  "hints": [
+   "Which part of the mission succeeded?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-091",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 1,
+  "type": "mcq",
+  "q": "A solar eclipse can occur only at which phase of the Moon?",
+  "options": [
+   "First quarter",
+   "Any phase",
+   "New moon",
+   "Full moon"
+  ],
+  "answer": 2,
+  "explanation": "In a solar eclipse the Moon passes between the Sun and Earth, casting its shadow on Earth. That alignment happens at new moon. Lunar eclipses happen at full moon, when Earth is between the Sun and the Moon.",
+  "hints": [
+   "Where must the Moon be to block the Sun?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-092",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "There is a new moon every month, so why don’t we have a solar eclipse every month?",
+  "options": [
+   "The Moon is too small to cause eclipses.",
+   "The Sun moves out of the way.",
+   "The Moon’s orbit is tilted about 5° to Earth’s orbit, so usually its shadow passes above or below Earth.",
+   "Eclipses happen only in summer."
+  ],
+  "answer": 2,
+  "explanation": "Eclipses happen only when new (or full) moon occurs close to the points where the Moon’s tilted orbit crosses the plane of Earth’s orbit. This happens during “eclipse seasons” about twice a year, giving 2–5 solar eclipses annually, each visible from only part of Earth.",
+  "hints": [
+   "Are the orbits of the Moon and Earth in exactly the same plane?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-093",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Total solar eclipses are possible because the Sun and Moon look almost the same size in our sky. What is the reason?",
+  "options": [
+   "The Sun and Moon are the same physical size.",
+   "The Sun shrinks during an eclipse.",
+   "The Sun is about 400 times wider than the Moon but also about 400 times farther away.",
+   "The Moon is closer to the Sun than to Earth."
+  ],
+  "answer": 2,
+  "explanation": "Apparent (angular) size ≈ diameter ÷ distance. Sun: about 1.39 million km wide, 150 million km away; Moon: about 3474 km wide, 384,000 km away. Both ratios are close to 1/108, so the Moon can just cover the Sun’s bright disc and reveal the corona. Because the Moon slowly recedes from Earth, total eclipses will eventually stop.",
+  "hints": [
+   "What decides how big something looks — its size or its distance or both?",
+   "Compare diameter ÷ distance for each."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-094",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 1,
+  "type": "mcq",
+  "q": "What causes day and night on Earth?",
+  "options": [
+   "Earth’s rotation on its axis",
+   "The Moon blocking the Sun",
+   "Earth’s revolution around the Sun",
+   "The Sun switching off at night"
+  ],
+  "answer": 0,
+  "explanation": "Earth spins once on its axis about every 24 hours. The side facing the Sun has day; the side facing away has night. Revolution around the Sun (one year) together with axial tilt causes the seasons.",
+  "misconception": "Revolution causes the year and seasons, not day and night.",
+  "hints": [
+   "Which motion takes 24 hours?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-095",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 2,
+  "type": "numerical",
+  "q": "Earth rotates through 360° in 24 hours. Two towns are 30° of longitude apart. What is the difference in their local (solar) time?",
+  "options": [
+   "30 minutes",
+   "12 hours",
+   "4 hours",
+   "2 hours"
+  ],
+  "answer": 3,
+  "explanation": "360° in 24 h → 15° per hour. 30° ÷ 15° per hour = 2 hours. The town farther east sees the Sun rise 2 hours earlier.",
+  "hints": [
+   "How many degrees does Earth turn each hour?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-096",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why do we add an extra day (29 February) to the calendar about every four years?",
+  "options": [
+   "Earth slows down every four years.",
+   "February is a short month.",
+   "Earth takes about 365¼ days to orbit the Sun, so four years accumulate an extra day.",
+   "The Moon’s orbit takes four years."
+  ],
+  "answer": 2,
+  "explanation": "A year is about 365.2422 days. Adding a day every four years corrects most of the drift; skipping leap years in century years not divisible by 400 (like 1900) corrects the remainder. Without this, the calendar would drift away from the seasons.",
+  "hints": [
+   "How long is one orbit of the Sun, exactly?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-097",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Orion is easy to see on winter evenings in India but not on summer evenings. Why?",
+  "options": [
+   "Stars are switched off in summer.",
+   "As Earth orbits the Sun, the night side of Earth faces different directions in space at different times of year.",
+   "Clouds always hide Orion in summer.",
+   "Orion moves to the other side of the galaxy in summer."
+  ],
+  "answer": 1,
+  "explanation": "At night we look away from the Sun. Over the year, Earth’s position in its orbit changes, so the part of the sky opposite the Sun changes too. In summer Orion is in the same direction as the Sun and lost in daylight.",
+  "hints": [
+   "At night, which way are we looking relative to the Sun?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-098",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 3,
+  "type": "what-if",
+  "q": "Suppose Earth’s axis were not tilted at all (perpendicular to its orbit). What would happen?",
+  "options": [
+   "Earth would stop orbiting the Sun.",
+   "Seasons would be much stronger.",
+   "There would be no day and night.",
+   "There would be no seasons, and day and night would be about 12 hours each everywhere all year."
+  ],
+  "answer": 3,
+  "explanation": "Seasons arise because each hemisphere tilts towards the Sun for half the year. With no tilt, the Sun would always be overhead at the equator, every place would get the same sunlight all year (no summer or winter), and the day–night boundary would always pass through the poles, giving equal day and night everywhere.",
+  "hints": [
+   "What causes seasons?",
+   "Where would the Sun be overhead at noon all year?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "SPA-099",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 3,
+  "type": "numerical",
+  "q": "Indian Standard Time (IST) is based on the 82.5° E line of longitude (near Mirzapur). By how many hours is IST ahead of Greenwich Mean Time (0°)?",
+  "options": [
+   "5.5 hours",
+   "4.5 hours",
+   "6 hours",
+   "8.25 hours"
+  ],
+  "answer": 0,
+  "explanation": "Earth turns 15° per hour, so 82.5° ÷ 15° per hour = 5.5 hours. That is why IST = GMT + 5:30.",
+  "hints": [
+   "How many degrees does Earth turn per hour?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "SPA-100",
+  "subject": "Space Science",
+  "topic": "Astronomy",
+  "level": 1,
+  "type": "mcq",
+  "q": "In 1610, which astronomer used a telescope to discover four large moons orbiting Jupiter?",
+  "options": [
+   "Galileo Galilei",
+   "Aryabhata",
+   "Isaac Newton",
+   "Edwin Hubble"
+  ],
+  "answer": 0,
+  "explanation": "Galileo’s discovery of Io, Europa, Ganymede and Callisto showed that not everything orbits Earth, supporting the Sun-centred model. Newton later explained orbits with gravity; Hubble discovered the expansion of the universe in the 1920s.",
+  "hints": [
+   "These moons are named after him."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
   "id": "SPA-001",
   "subject": "Space Science",
   "topic": "Solar System",
