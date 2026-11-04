@@ -1,5 +1,1464 @@
 [
  {
+  "id": "BIO-059",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Who first used the word “cell”, after observing thin slices of cork under a simple microscope in 1665?",
+  "options": [
+   "Matthias Schleiden",
+   "Robert Brown",
+   "Robert Hooke",
+   "Antonie van Leeuwenhoek"
+  ],
+  "answer": 2,
+  "explanation": "Robert Hooke saw tiny box-like compartments in cork (actually the walls of dead cells) and called them “cells”, like small rooms. Leeuwenhoek later saw living cells; Brown discovered the nucleus (1831); Schleiden and Schwann proposed cell theory (1838–39).",
+  "hints": [
+   "He described what he saw in his book “Micrographia”."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-060",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Lysosomes are sometimes called the “suicide bags” of the cell. Why?",
+  "options": [
+   "They make the cell divide uncontrollably.",
+   "They produce poisons that kill other cells.",
+   "They contain powerful digestive enzymes that can break down the cell itself if they burst.",
+   "They store all the cell’s water."
+  ],
+  "answer": 2,
+  "explanation": "Lysosomes are membrane-bound sacs of digestive enzymes that break down worn-out organelles and engulfed material. When a cell is badly damaged, lysosomes may burst and digest the cell — hence the nickname.",
+  "hints": [
+   "What do lysosomes contain?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-061",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Cells of the pancreas that secrete large amounts of digestive enzymes have an especially well-developed Golgi apparatus. Why?",
+  "options": [
+   "The Golgi apparatus modifies, packages and dispatches proteins for secretion.",
+   "The Golgi apparatus stores fat.",
+   "The Golgi apparatus makes DNA.",
+   "The Golgi apparatus releases energy from food."
+  ],
+  "answer": 0,
+  "explanation": "Proteins made on the rough ER are sent to the Golgi apparatus, which modifies them and packs them into vesicles that carry them to the cell membrane for release. Secretory cells therefore have a large Golgi apparatus (and plenty of rough ER).",
+  "misconception": "Energy release is the job of mitochondria.",
+  "hints": [
+   "Which organelle acts as the cell’s “packaging and dispatch centre”?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-062",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 3,
+  "type": "what-if",
+  "q": "Red blood cells are placed in pure distilled water, while plant leaf cells are placed in the same water. What happens?",
+  "options": [
+   "The plant cells burst; the red blood cells shrink.",
+   "The red blood cells swell and burst; the plant cells swell but do not burst because of their cell walls.",
+   "Both shrink.",
+   "Both burst."
+  ],
+  "answer": 1,
+  "explanation": "Pure water has a higher water concentration than cell contents, so water enters both by osmosis. Animal cells have only a thin membrane and burst (haemolysis). Plant cells swell until their rigid cellulose wall pushes back (turgor), preventing bursting — which is how turgid cells keep leaves firm.",
+  "hints": [
+   "Which way does water move by osmosis in each case?",
+   "What structure do plant cells have that animal cells lack?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-063",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 2,
+  "type": "mcq",
+  "q": "How does rough endoplasmic reticulum differ from smooth endoplasmic reticulum?",
+  "options": [
+   "Rough ER has ribosomes on its surface and makes proteins; smooth ER makes lipids and helps detoxify drugs and poisons.",
+   "Rough ER is found only in plants.",
+   "Rough ER stores starch; smooth ER makes DNA.",
+   "Smooth ER has ribosomes; rough ER does not."
+  ],
+  "answer": 0,
+  "explanation": "The ER is a network of membranes. Ribosomes attached to rough ER give it a “rough” look and synthesise proteins. Smooth ER lacks ribosomes and makes lipids such as membrane phospholipids and steroid hormones; in liver cells it detoxifies many poisons.",
+  "hints": [
+   "What gives rough ER its rough appearance?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-064",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 3,
+  "type": "numerical",
+  "q": "Under a microscope magnifying 500 times, the image of a cell measures 5 mm across. What is the real size of the cell? (1 mm = 1000 μm)",
+  "options": [
+   "10 μm",
+   "100 μm",
+   "1 μm",
+   "2.5 mm"
+  ],
+  "answer": 0,
+  "explanation": "Real size = image size ÷ magnification = 5 mm ÷ 500 = 0.01 mm = 10 μm — typical of many animal cells.",
+  "misconception": "2.5 mm multiplies instead of dividing.",
+  "hints": [
+   "Actual size = image size ÷ magnification.",
+   "Convert mm to μm by multiplying by 1000."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-065",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 2,
+  "type": "mcq",
+  "q": "How does oxygen enter a cell from the surrounding fluid?",
+  "options": [
+   "Only by active transport using energy",
+   "By osmosis",
+   "By diffusion, from higher to lower oxygen concentration, through the membrane",
+   "Through the cell wall only"
+  ],
+  "answer": 2,
+  "explanation": "Small molecules such as O₂ and CO₂ diffuse through the membrane down their concentration gradient. Cells use oxygen continuously, keeping its concentration inside lower. Osmosis refers specifically to the movement of WATER through a selectively permeable membrane.",
+  "misconception": "Osmosis is only for water, not for gases.",
+  "hints": [
+   "Osmosis is the special case of which molecule?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-066",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Chromosomes, which carry the genes, are found mainly in which part of a eukaryotic cell?",
+  "options": [
+   "The cell membrane",
+   "The cytoplasm",
+   "The vacuole",
+   "The nucleus"
+  ],
+  "answer": 3,
+  "explanation": "Chromosomes are long DNA molecules wrapped around proteins, housed in the nucleus. They become visible as compact structures when a cell divides. (Mitochondria and chloroplasts also carry a little DNA of their own.)",
+  "hints": [
+   "Which organelle is the cell’s control centre?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-067",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Consider two cube-shaped cells: one 1 μm on each side and one 10 μm on each side. What is the surface-area-to-volume ratio of the SMALLER cell (in μm⁻¹), and why does this matter?",
+  "options": [
+   "0.06 — small cells cannot exchange enough materials",
+   "6 — a high ratio lets substances diffuse in and out fast enough to supply the whole cell",
+   "0.6 — small cells receive less oxygen per volume",
+   "60 — a ratio that makes small cells burst"
+  ],
+  "answer": 1,
+  "explanation": "Small cube: area 6 × 1² = 6 μm², volume 1 μm³, ratio 6. Large cube: area 600 μm², volume 1000 μm³, ratio 0.6. As a cell grows, its volume (needs) rises faster than its surface (supply route), so diffusion becomes too slow. This is a key reason cells stay small and large organisms are multicellular.",
+  "misconception": "0.6 is the ratio for the LARGER cell.",
+  "hints": [
+   "Area of a cube = 6s²; volume = s³.",
+   "Which grows faster as s increases: area or volume?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-068",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 2,
+  "type": "mcq",
+  "q": "The red colour of a ripe tomato and the storage of starch in potato tubers are due to two kinds of plastids. Which?",
+  "options": [
+   "Chloroplasts and mitochondria",
+   "Chromoplasts (colour) and leucoplasts (storage)",
+   "Leucoplasts (colour) and chromoplasts (storage)",
+   "Lysosomes and vacuoles"
+  ],
+  "answer": 1,
+  "explanation": "Plastids are plant organelles. Chloroplasts contain chlorophyll; chromoplasts contain other pigments (red, orange, yellow) in fruits and flowers; leucoplasts are colourless and store starch, oils or proteins.",
+  "hints": [
+   "“Chromo” means colour; “leuco” means white."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-069",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 1,
+  "type": "mcq",
+  "q": "Stomata are small pores in the epidermis of leaves. What controls their opening and closing?",
+  "options": [
+   "Phloem sieve tubes",
+   "A pair of guard cells around each pore",
+   "Root hairs",
+   "Xylem vessels"
+  ],
+  "answer": 1,
+  "explanation": "Each stoma is surrounded by two kidney-shaped guard cells. When they take in water and become turgid they curve apart, opening the pore; when they lose water they close it — controlling gas exchange and water loss.",
+  "hints": [
+   "The cells around the pore change shape."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-070",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 2,
+  "type": "mcq",
+  "q": "The leaf stalks and young stems of many plants bend in the wind without breaking. Which tissue provides this flexibility?",
+  "options": [
+   "Meristem",
+   "Xylem",
+   "Collenchyma",
+   "Sclerenchyma"
+  ],
+  "answer": 2,
+  "explanation": "Collenchyma cells are living, elongated and thickened at their corners, giving mechanical support with flexibility. Sclerenchyma is rigid (dead, lignified cells), giving strength but not bendiness.",
+  "hints": [
+   "Which supporting tissue is living and thickened only at the corners?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-071",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 2,
+  "type": "reasoning",
+  "q": "The hard husk of a coconut and the strings in jute are made of sclerenchyma. What feature of these cells gives such strength?",
+  "options": [
+   "Many chloroplasts",
+   "Large vacuoles full of water",
+   "Thick walls deposited with lignin; the cells are dead when mature",
+   "Thin, flexible cellulose walls"
+  ],
+  "answer": 2,
+  "explanation": "Sclerenchyma cells have very thick walls impregnated with lignin, a tough polymer, and often no living contents at maturity. They give hardness and tensile strength (fibres used in jute and coir ropes).",
+  "hints": [
+   "Which substance makes wood hard?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-072",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 2,
+  "type": "reasoning",
+  "q": "The walls of lung alveoli and blood capillaries are lined by a single layer of very thin, flat cells. Why?",
+  "options": [
+   "It stops all substances passing through.",
+   "Thin cells are stronger.",
+   "Thin cells produce more mucus.",
+   "A thin squamous epithelium gives the shortest distance for rapid diffusion of gases and nutrients."
+  ],
+  "answer": 3,
+  "explanation": "Simple squamous epithelium is just one flattened cell thick, so oxygen, carbon dioxide and nutrients have very little distance to diffuse. Skin, which must resist wear, has many layers (stratified epithelium) instead.",
+  "hints": [
+   "What process happens across these walls?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-073",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 2,
+  "type": "mcq",
+  "q": "In a neuron, which part carries the nerve impulse AWAY from the cell body towards the next cell?",
+  "options": [
+   "The nucleus",
+   "The axon",
+   "The dendrites",
+   "The cell membrane of the cell body only"
+  ],
+  "answer": 1,
+  "explanation": "Dendrites receive signals and carry them towards the cell body; the long axon conducts the impulse away to its terminals, which pass it to another neuron, muscle or gland. Some axons in the human body are about a metre long.",
+  "misconception": "Dendrites carry impulses towards the cell body, not away.",
+  "hints": [
+   "Which part is the long “cable” of a neuron?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-074",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 3,
+  "type": "what-if",
+  "q": "Your ear and the tip of your nose can be bent but spring back, whereas the bones of your arm cannot bend. What is the key difference between these tissues?",
+  "options": [
+   "Cartilage has a flexible protein matrix; bone’s matrix is hardened with calcium and phosphate minerals.",
+   "Bone is not a living tissue.",
+   "Cartilage contains no cells.",
+   "Cartilage is a type of muscle."
+  ],
+  "answer": 0,
+  "explanation": "Both are connective tissues with cells in a matrix. Cartilage’s matrix is rich in flexible proteins and polysaccharides, so it is firm but bendable. Bone’s matrix is mineralised with calcium phosphate, making it hard and rigid. Bone also has blood vessels; cartilage has very few.",
+  "misconception": "Bone is living tissue — it grows, repairs fractures and makes blood cells in its marrow.",
+  "hints": [
+   "Both are connective tissues — what is in their matrix?",
+   "Which mineral makes bones hard?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-075",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which connective tissue stores fat below the skin and helps insulate the body?",
+  "options": [
+   "Tendon",
+   "Adipose tissue",
+   "Cartilage",
+   "Blood"
+  ],
+  "answer": 1,
+  "explanation": "Adipose tissue is made of cells filled with fat droplets. It stores energy, cushions organs and reduces heat loss. Whales and seals rely on thick adipose layers (blubber).",
+  "hints": [
+   "“Adipose” means fatty."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-076",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Phloem sieve tubes have no nucleus when mature but are accompanied by companion cells. Why are companion cells important?",
+  "options": [
+   "They make the stem hard.",
+   "They produce pollen.",
+   "They carry out the metabolic work (and supply energy) that keeps the sieve tubes functioning.",
+   "They store water for the xylem."
+  ],
+  "answer": 2,
+  "explanation": "Mature sieve-tube elements lose their nucleus and most organelles, leaving an open channel for transporting sugars. Each is linked to a companion cell with a nucleus and many mitochondria, which supplies proteins and energy needed for loading and transporting food.",
+  "hints": [
+   "What has a sieve tube lost that a living cell normally needs?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-077",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 1,
+  "type": "mcq",
+  "q": "The bark of old trees contains cork cells. What is true of them?",
+  "options": [
+   "They are dead, tightly packed and coated with suberin, which makes them waterproof.",
+   "They are living and photosynthetic.",
+   "They carry water up the tree.",
+   "They divide continuously."
+  ],
+  "answer": 0,
+  "explanation": "Cork cells are dead at maturity and have walls impregnated with suberin, a waxy substance. The layer protects the tree against water loss, infection and injury. Bottle corks are made from the bark of the cork oak.",
+  "hints": [
+   "Bottle corks come from this tissue."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-078",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 2,
+  "type": "reasoning",
+  "q": "The lining of your windpipe (trachea) is covered with ciliated epithelium and mucus-secreting cells. How does this protect the lungs?",
+  "options": [
+   "Mucus traps dust and microbes, and beating cilia sweep it upward to the throat to be swallowed or coughed out.",
+   "Mucus dissolves all germs.",
+   "Cilia absorb oxygen.",
+   "Cilia pump air into the lungs."
+  ],
+  "answer": 0,
+  "explanation": "The coordinated beating of cilia moves the mucus “escalator” away from the lungs. Smoking paralyses and damages cilia, so mucus builds up — one cause of “smoker’s cough” and frequent chest infections.",
+  "hints": [
+   "What do sticky mucus and moving hairs do together?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-079",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which kingdom contains organisms whose cells have no membrane-bound nucleus?",
+  "options": [
+   "Plantae",
+   "Protista",
+   "Fungi",
+   "Monera"
+  ],
+  "answer": 3,
+  "explanation": "Monera are prokaryotes — bacteria and cyanobacteria (blue-green algae). Their DNA lies free in the cytoplasm. All the other four kingdoms are eukaryotes.",
+  "hints": [
+   "Which kingdom contains bacteria?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-080",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "mcq",
+  "q": "Amoeba, Paramecium and Euglena belong to which kingdom?",
+  "options": [
+   "Protista",
+   "Fungi",
+   "Monera",
+   "Animalia"
+  ],
+  "answer": 0,
+  "explanation": "They are unicellular eukaryotes (they have a nucleus), so they belong to Protista. Amoeba moves by pseudopodia, Paramecium by cilia and Euglena by a flagellum.",
+  "misconception": "Being single-celled does not make them Monera — they have a true nucleus.",
+  "hints": [
+   "They are single-celled but have a nucleus."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-081",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Mosses and liverworts (bryophytes) are called the “amphibians of the plant kingdom”. Why?",
+  "options": [
+   "They live on land but need water for their male gametes to swim to the eggs.",
+   "They lay eggs in water.",
+   "They can breathe both in water and on land.",
+   "They change from fish-like to frog-like forms."
+  ],
+  "answer": 0,
+  "explanation": "Bryophytes have no true vascular tissue and their sperm must swim through a film of water to fertilise eggs. So, like amphibians, they live on land but depend on water to reproduce, and they grow in damp, shady places.",
+  "hints": [
+   "How do their sperm reach the eggs?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-082",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "mcq",
+  "q": "Ferns have roots, stems, leaves and vascular tissue, but they belong to a different group from flowering plants. What is the key difference?",
+  "options": [
+   "Ferns are fungi.",
+   "Ferns have no chlorophyll.",
+   "Ferns reproduce by spores and do not produce seeds.",
+   "Ferns have no xylem or phloem."
+  ],
+  "answer": 2,
+  "explanation": "Ferns are pteridophytes: vascular plants that reproduce by spores (seen as brown dots under the leaves). Gymnosperms and angiosperms produce seeds. Bryophytes have neither true vascular tissue nor seeds.",
+  "hints": [
+   "Look under a fern leaf. What are the brown dots?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-083",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Euglena has chloroplasts and can photosynthesise, but it can also swim using a flagellum and absorb food in the dark. Why is it classified in Protista rather than as a plant or an animal?",
+  "options": [
+   "It has no nucleus.",
+   "It is a single-celled eukaryote with features of both plants and animals, which fits the broad kingdom of unicellular eukaryotes.",
+   "It is a type of bacterium.",
+   "It is a multicellular fungus."
+  ],
+  "answer": 1,
+  "explanation": "Euglena shows why the old two-kingdom (plant/animal) system failed. It photosynthesises like a plant but moves and can feed heterotrophically like an animal. Whittaker’s five-kingdom system placed such unicellular eukaryotes together in Protista.",
+  "hints": [
+   "Does Euglena fit neatly into “plant” or “animal”?",
+   "What kingdom groups single-celled organisms with a nucleus?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-084",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 1,
+  "type": "mcq",
+  "q": "Insects, spiders, crabs and centipedes belong to the largest animal phylum. Which feature do they share?",
+  "options": [
+   "Feathers",
+   "A backbone",
+   "Jointed legs and a hard exoskeleton",
+   "A body with no symmetry"
+  ],
+  "answer": 2,
+  "explanation": "Arthropoda (“jointed feet”) have jointed appendages, a segmented body and a chitinous exoskeleton. Over three-quarters of all known animal species are arthropods, most of them insects.",
+  "hints": [
+   "“Arthro” means joint and “poda” means feet."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-085",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which pairing of an animal with its phylum is correct?",
+  "options": [
+   "Earthworm — Platyhelminthes",
+   "Hydra — Cnidaria (Coelenterata)",
+   "Starfish — Mollusca",
+   "Tapeworm — Annelida"
+  ],
+  "answer": 1,
+  "explanation": "Hydra and jellyfish are cnidarians with stinging cells and a single body opening. Tapeworms are flatworms (Platyhelminthes); earthworms are segmented worms (Annelida); starfish are Echinodermata.",
+  "hints": [
+   "Which phylum has stinging cells and tentacles?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-086",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "statement",
+  "q": "Consider:\nI. Birds and mammals are warm-blooded.\nII. All reptiles and amphibians are warm-blooded.\nIII. All mammals give birth to live young.\nIV. All birds lay eggs.\nWhich are correct?",
+  "options": [
+   "I and III only",
+   "I, II and IV only",
+   "All four",
+   "I and IV only"
+  ],
+  "answer": 3,
+  "explanation": "Only birds and mammals maintain a constant body temperature (I true; II false). A few mammals, the monotremes such as the platypus and echidna, lay eggs (III false). All birds lay eggs (IV true).",
+  "hints": [
+   "Think of the platypus."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-087",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which set of features best describes amphibians such as frogs?",
+  "options": [
+   "Feathers and hollow bones",
+   "Moist skin that helps in breathing, eggs laid in water, and a larval stage (tadpole) that changes form",
+   "Hair and mammary glands",
+   "Dry scaly skin and eggs with shells laid on land"
+  ],
+  "answer": 1,
+  "explanation": "Amphibians have moist, permeable skin used partly for gas exchange, lay jelly-coated eggs in water, and undergo metamorphosis from gilled tadpoles to air-breathing adults. Reptiles have dry scales and shelled eggs.",
+  "hints": [
+   "Think of the frog’s life cycle."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-088",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A whale lives in the sea and has a streamlined, fish-like shape. Which evidence shows it is a mammal and not a fish?",
+  "options": [
+   "It swims very fast.",
+   "It has fins.",
+   "It breathes air with lungs, is warm-blooded and feeds its young on milk.",
+   "It lives in the ocean."
+  ],
+  "answer": 2,
+  "explanation": "Whales must surface to breathe through blowholes, maintain a constant body temperature, have a few hairs (especially as calves) and suckle their young with milk. Their fish-like shape is convergent evolution — similar solutions to the same environment.",
+  "misconception": "Shape and habitat are not reliable bases for classification.",
+  "hints": [
+   "How does a whale breathe?",
+   "How does a whale feed its young?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-089",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Which order correctly lists the levels of classification from the broadest to the most specific?",
+  "options": [
+   "Kingdom → Class → Phylum → Family → Order → Genus → Species",
+   "Phylum → Kingdom → Order → Class → Genus → Family → Species",
+   "Species → Genus → Family → Order → Class → Phylum → Kingdom",
+   "Kingdom → Phylum → Class → Order → Family → Genus → Species"
+  ],
+  "answer": 3,
+  "explanation": "Each level contains one or more groups from the level below. A kingdom contains many phyla; a genus contains closely related species. (A memory aid: “King Philip Came Over For Good Soup”.)",
+  "hints": [
+   "Species is the most specific level."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-090",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A plant has leaves with parallel veins, a fibrous root system, and flower parts in multiples of three. Its seed has one cotyledon. Which plant could it be?",
+  "options": [
+   "Mango (a dicot)",
+   "Pea (a dicot)",
+   "Maize (a monocot)",
+   "Pine (a gymnosperm)"
+  ],
+  "answer": 2,
+  "explanation": "All these features — one cotyledon, parallel venation, fibrous roots, flower parts in threes — are typical of monocotyledons such as maize, wheat, rice and grasses. Dicots like pea and mango have two cotyledons, net venation and a taproot.",
+  "hints": [
+   "How many cotyledons does it have?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-091",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which is the largest gland in the human body?",
+  "options": [
+   "Liver",
+   "Thyroid",
+   "Pancreas",
+   "Pituitary"
+  ],
+  "answer": 0,
+  "explanation": "The liver (about 1.5 kg in adults) produces bile, stores glycogen, detoxifies substances and makes many blood proteins. The pituitary, though tiny, is called the master gland because it controls other endocrine glands.",
+  "hints": [
+   "It produces bile."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-092",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which gland–hormone pairing is correct?",
+  "options": [
+   "Adrenal — oestrogen",
+   "Pancreas — thyroxine",
+   "Thyroid — insulin",
+   "Pituitary — growth hormone"
+  ],
+  "answer": 3,
+  "explanation": "The pituitary secretes growth hormone (and hormones controlling other glands). The thyroid makes thyroxine; the pancreas makes insulin (and glucagon); the adrenal glands make adrenaline; the ovaries make oestrogen.",
+  "hints": [
+   "Which gland is called the master gland?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-093",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Just before a big race, an athlete’s heart pounds and breathing speeds up. Which hormone is mainly responsible, and why is the response useful?",
+  "options": [
+   "Adrenaline — it delivers more oxygen and glucose to muscles in preparation for action",
+   "Growth hormone — it lengthens bones",
+   "Thyroxine — it slows metabolism",
+   "Insulin — it lowers blood sugar"
+  ],
+  "answer": 0,
+  "explanation": "Adrenaline from the adrenal glands prepares the body for “fight or flight”: it increases heart rate and breathing, diverts blood to muscles and raises blood glucose, so muscles can work hard immediately.",
+  "hints": [
+   "Which hormone is released in fear or excitement?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-094",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Nerve impulses always travel in one direction across a synapse (the gap between two neurons). Why?",
+  "options": [
+   "Gravity pulls the impulse one way.",
+   "Dendrites cannot conduct impulses.",
+   "Chemical messengers (neurotransmitters) are released only from the axon ending and detected only by receptors on the next cell.",
+   "The gap is too wide for electricity in the other direction."
+  ],
+  "answer": 2,
+  "explanation": "At a synapse, the electrical impulse causes the axon terminal to release neurotransmitter molecules. These diffuse across the gap and bind to receptors on the next neuron’s dendrite, starting a new impulse. Only the axon end stores neurotransmitter and only the receiving side has receptors, so transmission is one-way.",
+  "hints": [
+   "What crosses the synaptic gap — electricity or chemicals?",
+   "Which side releases them and which side detects them?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-095",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "application",
+  "q": "A person whose kidneys have failed is treated with dialysis. What does the dialysis machine do?",
+  "options": [
+   "Removes urea and excess salts and water from the blood by passing it along a selectively permeable membrane",
+   "Digests food for the patient",
+   "Adds oxygen to the blood",
+   "Pumps blood in place of the heart"
+  ],
+  "answer": 0,
+  "explanation": "In haemodialysis, blood flows past a selectively permeable membrane bathed in dialysis fluid. Small waste molecules such as urea diffuse out into the fluid, while blood cells and proteins stay in the blood — doing the kidney’s filtering job.",
+  "hints": [
+   "Which waste product do kidneys mainly remove?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-096",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 3,
+  "type": "numerical",
+  "q": "The kidneys filter about 180 litres of fluid from the blood each day, yet only about 1.5 litres of urine is produced. What percentage of the filtered fluid is reabsorbed?",
+  "options": [
+   "0.8%",
+   "99.2%",
+   "83%",
+   "120%"
+  ],
+  "answer": 1,
+  "explanation": "Reabsorbed = 180 − 1.5 = 178.5 L; 178.5/180 × 100 ≈ 99.2%. Nephron tubules reabsorb nearly all the water, glucose and useful salts, leaving a small volume of concentrated waste.",
+  "misconception": "0.8% is the fraction that is NOT reabsorbed (excreted).",
+  "hints": [
+   "How much of the 180 L is not lost as urine?",
+   "Divide the reabsorbed volume by the filtered volume."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-097",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why does a doctor not prescribe antibiotics for a common cold?",
+  "options": [
+   "Antibiotics are too strong for colds.",
+   "Antibiotics only work on adults.",
+   "Colds are caused by fungi.",
+   "Colds are caused by viruses, and antibiotics act on bacterial structures that viruses do not have."
+  ],
+  "answer": 3,
+  "explanation": "Antibiotics such as penicillin work by attacking bacterial cell walls, ribosomes or enzymes. Viruses lack these and reproduce inside our own cells, so antibiotics have no effect on them. Unnecessary use also helps bacteria evolve resistance.",
+  "hints": [
+   "What kind of microbe causes the common cold?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-098",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In the ABO blood group system, why can a person with blood group O usually donate red cells to people of any ABO group?",
+  "options": [
+   "Group O blood has no plasma.",
+   "Group O red cells carry neither A nor B antigens, so the recipient’s antibodies have nothing to attack.",
+   "Group O blood contains no red cells.",
+   "Group O blood contains both A and B antigens."
+  ],
+  "answer": 1,
+  "explanation": "A recipient’s plasma contains antibodies against the antigens their own cells lack (e.g. group A has anti-B). Donated red cells clump if they carry an antigen the recipient has antibodies against. Group O cells have no A or B antigens, so they are not attacked — the “universal donor” (Rh factor must also be matched).",
+  "misconception": "It is the absence of antigens on the RED CELLS that matters.",
+  "hints": [
+   "What do antibodies in the recipient’s plasma react with?",
+   "Which antigens are on group O red cells?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-099",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which of these is NOT a function of the human skeleton?",
+  "options": [
+   "Protecting organs such as the brain and heart",
+   "Making blood cells in the bone marrow",
+   "Digesting food",
+   "Providing attachment points for muscles"
+  ],
+  "answer": 2,
+  "explanation": "The skeleton supports the body, protects organs (skull, ribcage), allows movement with muscles, stores calcium and makes blood cells in red bone marrow. Digestion is done by the digestive system.",
+  "hints": [
+   "Which option belongs to a different organ system?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-100",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "experiment",
+  "q": "Look at a friend’s eyes in dim light, then shine a torch near them. The pupils get smaller. Which part of the eye causes this, and why?",
+  "options": [
+   "The iris contracts around the pupil to reduce the light entering and protect the retina.",
+   "The lens shrinks to block light.",
+   "The retina closes.",
+   "The cornea darkens."
+  ],
+  "answer": 0,
+  "explanation": "The iris is a ring of muscle that controls the size of the pupil reflexively. In bright light it makes the pupil smaller to prevent damage and glare; in dim light it widens the pupil to let in more light.",
+  "hints": [
+   "Which coloured part of the eye surrounds the pupil?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-101",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Malaria is caused by which type of organism, and how does it spread?",
+  "options": [
+   "A virus, spread by contaminated water",
+   "A fungus, spread by touching",
+   "A protozoan (Plasmodium), spread by the bite of infected female Anopheles mosquitoes",
+   "A bacterium, spread by coughing"
+  ],
+  "answer": 2,
+  "explanation": "Plasmodium is a single-celled protozoan that multiplies in the liver and red blood cells. Female Anopheles mosquitoes carry it from person to person when they feed on blood. Nets, repellents and removing stagnant water help prevent it.",
+  "hints": [
+   "Which insect carries malaria?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-102",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which nutrient is the body’s main and quickest source of energy?",
+  "options": [
+   "Carbohydrates",
+   "Vitamins",
+   "Minerals",
+   "Proteins"
+  ],
+  "answer": 0,
+  "explanation": "Carbohydrates (starch and sugars from cereals, potatoes and fruit) are broken down into glucose, which cells respire to release energy. Fats store more energy per gram but release it more slowly; vitamins and minerals provide no energy.",
+  "hints": [
+   "Rice, wheat and potatoes are rich in this nutrient."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-103",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 2,
+  "type": "mcq",
+  "q": "A child with a swollen belly, thin limbs and stunted growth is diagnosed with kwashiorkor. Which nutrient is deficient?",
+  "options": [
+   "Fibre",
+   "Iodine",
+   "Vitamin C",
+   "Protein"
+  ],
+  "answer": 3,
+  "explanation": "Kwashiorkor is caused by severe protein deficiency even when some energy is available. Proteins provide amino acids for growth and for blood proteins that keep fluid in the blood vessels; without them fluid leaks into tissues, causing swelling. Lack of both energy and protein causes marasmus.",
+  "hints": [
+   "Which nutrient is needed for growth and repair?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-104",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is vitamin D sometimes called the “sunshine vitamin”, and what does its deficiency cause in children?",
+  "options": [
+   "The skin makes it when exposed to sunlight; deficiency causes rickets (soft, bent bones).",
+   "It absorbs sunlight; deficiency causes night blindness.",
+   "It is found only in sunlight-ripened fruit; deficiency causes scurvy.",
+   "It is made by the eyes; deficiency causes goitre."
+  ],
+  "answer": 0,
+  "explanation": "Ultraviolet light allows skin to make vitamin D, which is needed to absorb calcium and phosphate for strong bones. Without it, children’s bones stay soft and bend (rickets). Night blindness is vitamin A deficiency; scurvy is vitamin C.",
+  "hints": [
+   "Which mineral’s absorption depends on vitamin D?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-105",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Why does a diet poor in iron make a person tired and breathless?",
+  "options": [
+   "Iron makes muscles stronger.",
+   "Iron is needed to make haemoglobin; with too little, the blood carries less oxygen (anaemia).",
+   "Iron is needed for the lungs to expand.",
+   "Iron provides energy directly."
+  ],
+  "answer": 1,
+  "explanation": "Each haemoglobin molecule contains four iron atoms that bind oxygen. Too little iron means less haemoglobin and fewer red cells, so tissues get less oxygen — causing fatigue and breathlessness. Green leafy vegetables, jaggery, pulses and meat supply iron.",
+  "hints": [
+   "Which molecule carries oxygen in red blood cells?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-106",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 3,
+  "type": "numerical",
+  "q": "Fat provides about 37 kJ per gram and carbohydrate about 17 kJ per gram. How much energy does a snack containing 20 g of fat and 50 g of carbohydrate provide?",
+  "options": [
+   "3700 kJ",
+   "850 kJ",
+   "1590 kJ",
+   "1190 kJ"
+  ],
+  "answer": 2,
+  "explanation": "Fat: 20 × 37 = 740 kJ. Carbohydrate: 50 × 17 = 850 kJ. Total = 1590 kJ (about 380 kcal). Fat gives more than twice the energy per gram of carbohydrate.",
+  "misconception": "850 kJ counts only the carbohydrate.",
+  "hints": [
+   "Calculate each nutrient’s energy and add."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-107",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 1,
+  "type": "mcq",
+  "q": "Dietary fibre (roughage) is not digested by humans. Why is it still important?",
+  "options": [
+   "It builds muscles.",
+   "It is absorbed into the blood as glucose.",
+   "It adds bulk to food, helping it move through the intestines and preventing constipation.",
+   "It provides most of our energy."
+  ],
+  "answer": 2,
+  "explanation": "Fibre, mainly cellulose from plant cell walls, holds water and adds bulk so the intestine muscles can push food along (peristalsis). Whole grains, fruit, vegetables and pulses are good sources.",
+  "hints": [
+   "What helps food move through the gut?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-108",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 3,
+  "type": "experiment",
+  "q": "A student tests a food sample. Iodine stays brown, biuret reagent turns violet, and a translucent spot appears when it is rubbed on paper. Which nutrients does the sample contain?",
+  "options": [
+   "Protein and fat, but not starch",
+   "Starch only",
+   "Protein only",
+   "Starch and fat, but not protein"
+  ],
+  "answer": 0,
+  "explanation": "Iodine turns blue-black with starch — no change means no starch. Biuret turns violet with protein. A translucent “grease spot” shows fat. So the sample has protein and fat; it could be, for example, a nut or egg yolk.",
+  "hints": [
+   "Match each test to the nutrient it detects."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-109",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Pepsin digests protein in the stomach, where conditions are strongly acidic (pH ≈ 2). If pepsin is placed in a test tube with protein at pH 8, what would you expect?",
+  "options": [
+   "The protein would digest the enzyme.",
+   "The same rate, because pH does not affect enzymes.",
+   "Faster digestion, because pH 8 is neutral.",
+   "Little or no protein digestion, because each enzyme works best at its own optimum pH."
+  ],
+  "answer": 3,
+  "explanation": "Enzymes are proteins whose shape depends on pH. Pepsin’s active site works best in acid; at pH 8 its shape changes and it becomes inactive. In the small intestine, where conditions are slightly alkaline, trypsin takes over protein digestion.",
+  "misconception": "pH 8 is slightly alkaline, not neutral, and “neutral” is not best for every enzyme.",
+  "hints": [
+   "What is the optimum pH of pepsin?",
+   "How does pH affect an enzyme’s shape?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-110",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 3,
+  "type": "what-if",
+  "q": "In the 19th century, sailors and prisoners who ate mainly polished white rice often developed beriberi (weakness and nerve damage), while those eating unpolished rice did not. Which explanation fits?",
+  "options": [
+   "Polishing removes the husk and bran layers that contain vitamin B1 (thiamine).",
+   "Beriberi is caused by a virus in white rice.",
+   "Unpolished rice contains more starch.",
+   "Polished rice contains a poison."
+  ],
+  "answer": 0,
+  "explanation": "The outer bran layers of rice are rich in thiamine, needed for releasing energy from carbohydrates and for nerve function. Polishing removes them. Studies of this disease (by Eijkman and others) led to the discovery of vitamins.",
+  "hints": [
+   "What is removed when rice is polished?",
+   "Which vitamin deficiency causes beriberi?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-111",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which correctly gives the end products of digestion?",
+  "options": [
+   "Starch → fatty acids; proteins → glycerol; fats → glucose",
+   "Starch → amino acids; proteins → glucose; fats → starch",
+   "All are digested into glucose",
+   "Starch → glucose; proteins → amino acids; fats → fatty acids and glycerol"
+  ],
+  "answer": 3,
+  "explanation": "Digestion breaks large molecules into small soluble ones that can be absorbed through the villi: carbohydrates into simple sugars (glucose), proteins into amino acids, and fats into fatty acids and glycerol.",
+  "hints": [
+   "Proteins are made of which building blocks?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-112",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which teeth are mainly used for grinding and chewing food?",
+  "options": [
+   "Molars",
+   "Canines",
+   "Milk teeth only",
+   "Incisors"
+  ],
+  "answer": 0,
+  "explanation": "Incisors (front) cut and bite, canines (pointed) tear, and premolars and molars (broad, ridged) crush and grind. Chewing increases the surface area of food for enzymes.",
+  "hints": [
+   "Which teeth are at the back of the mouth?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
   "id": "BIO-001",
   "subject": "Biology",
   "topic": "Cell Biology",
