@@ -1459,6 +1459,1450 @@
   "verified": true
  },
  {
+  "id": "BIO-113",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is the difference between breathing and respiration?",
+  "options": [
+   "Breathing happens in cells; respiration happens in the lungs.",
+   "They are the same process.",
+   "Breathing moves air in and out of the lungs; respiration releases energy from food inside cells.",
+   "Respiration happens only in plants."
+  ],
+  "answer": 2,
+  "explanation": "Breathing (ventilation) is a mechanical process that exchanges air. Cellular respiration is a chemical process in every living cell, especially in mitochondria: glucose is broken down to release energy. Plants respire too, even though they do not “breathe” with lungs.",
+  "hints": [
+   "Which one happens inside every cell?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-114",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "experiment",
+  "q": "A student blows through a straw into limewater, which turns milky much faster than when ordinary air is bubbled through it. What does this show?",
+  "options": [
+   "Exhaled air contains more carbon dioxide than inhaled air.",
+   "Exhaled air contains more oxygen.",
+   "Exhaled air contains no nitrogen.",
+   "Limewater reacts with water vapour."
+  ],
+  "answer": 0,
+  "explanation": "Limewater (calcium hydroxide solution) turns milky as insoluble calcium carbonate forms with CO₂. Inhaled air has about 0.04% CO₂; exhaled air about 4%, produced by respiration in body cells.",
+  "hints": [
+   "Which gas turns limewater milky?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-115",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "reasoning",
+  "q": "What happens during inhalation (breathing in)?",
+  "options": [
+   "The diaphragm contracts and flattens and the ribs move up and out, increasing chest volume and lowering pressure, so air flows in.",
+   "The lungs pull air in by their own muscles.",
+   "The diaphragm relaxes and domes upward, squeezing air in.",
+   "Chest volume decreases, raising pressure."
+  ],
+  "answer": 0,
+  "explanation": "Lungs have no muscles of their own. When the diaphragm and intercostal muscles contract, the chest cavity enlarges, the pressure inside falls below atmospheric pressure, and air rushes in. Relaxation reverses this for exhalation.",
+  "misconception": "The lungs are passive; the diaphragm and rib muscles do the work.",
+  "hints": [
+   "Air moves from high pressure to low pressure."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-116",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "numerical",
+  "q": "At rest, a person breathes 15 times a minute, taking in 0.5 litres of air with each breath. How much air do they breathe per minute?",
+  "options": [
+   "30 L",
+   "0.03 L",
+   "7.5 L",
+   "15.5 L"
+  ],
+  "answer": 2,
+  "explanation": "Volume per minute = breaths per minute × volume per breath = 15 × 0.5 = 7.5 litres. During hard exercise this can rise more than tenfold.",
+  "misconception": "30 L divides 15 by 0.5 instead of multiplying.",
+  "hints": [
+   "Multiply breaths per minute by litres per breath."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-117",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "application",
+  "q": "Why does bread dough rise when yeast is added and the dough is left in a warm place?",
+  "options": [
+   "Warmth makes flour expand on its own.",
+   "Yeast respires anaerobically, producing carbon dioxide bubbles that expand the dough.",
+   "Yeast turns starch into air.",
+   "Yeast produces oxygen gas."
+  ],
+  "answer": 1,
+  "explanation": "Yeast is a fungus that ferments sugars: glucose → ethanol + carbon dioxide + energy. The CO₂ is trapped by the stretchy gluten in the dough, making it rise; the ethanol evaporates during baking. Warmth speeds up the yeast’s enzymes.",
+  "hints": [
+   "Which gas does fermentation release?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-118",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 3,
+  "type": "experiment",
+  "q": "Germinating seeds are placed in a sealed flask containing potassium hydroxide solution (which absorbs CO₂). A bent glass tube from the flask dips into a beaker of coloured water. After some hours, the water rises up the tube. What does this show?",
+  "options": [
+   "The seeds released oxygen.",
+   "The seeds took in oxygen during respiration; the CO₂ they released was absorbed, so the gas volume in the flask fell.",
+   "The seeds produced water.",
+   "The potassium hydroxide produced gas."
+  ],
+  "answer": 1,
+  "explanation": "Respiring seeds use O₂ and give out an equal volume of CO₂. The KOH removes the CO₂, so the total volume of gas in the flask decreases and the outside air pressure pushes water up the tube. A control flask with boiled (dead) seeds would show no rise.",
+  "misconception": "Without KOH, the CO₂ produced would replace the O₂ used and the water level would barely move.",
+  "hints": [
+   "What does KOH remove from the air in the flask?",
+   "If oxygen is used up and CO₂ removed, what happens to the gas volume?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-119",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why does a fish suffocate when taken out of water, even though air contains far more oxygen than water?",
+  "options": [
+   "Its delicate gill filaments collapse and stick together in air, leaving too small a surface for gas exchange.",
+   "Fish gills only absorb carbon dioxide.",
+   "Air is too cold for fish.",
+   "Fish cannot use oxygen from air because it is a different gas."
+  ],
+  "answer": 0,
+  "explanation": "Gills have many thin filaments and lamellae held apart by water, giving a huge surface area. Out of water they collapse, the surface area shrinks drastically and the gills dry out, so the fish cannot absorb enough oxygen.",
+  "hints": [
+   "What holds the thin gill filaments apart?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-120",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "statement",
+  "q": "Consider:\nI. Plants respire only at night.\nII. Plants respire all the time, day and night.\nIII. Plants photosynthesise only in light.\nIV. In bright light, a plant gives out more oxygen than it uses.\nWhich are correct?",
+  "options": [
+   "II, III and IV only",
+   "II and III only",
+   "I, III and IV only",
+   "I and III only"
+  ],
+  "answer": 0,
+  "explanation": "Every living cell respires continuously (II true, I false). Photosynthesis needs light (III). In bright light the rate of photosynthesis exceeds respiration, so there is a net release of oxygen (IV). At night only respiration occurs, so plants release CO₂.",
+  "misconception": "The idea that plants respire only at night is a common misconception.",
+  "hints": [
+   "Do plant cells need energy during the day?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-121",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 3,
+  "type": "what-if",
+  "q": "Many endurance athletes train for several weeks at high altitude, where the air contains less oxygen per breath. What benefit do they gain when they return to sea level?",
+  "options": [
+   "Their lungs become larger permanently.",
+   "Their muscles stop needing oxygen.",
+   "Their bodies have made more red blood cells and haemoglobin, so their blood carries more oxygen.",
+   "Their hearts beat more slowly forever."
+  ],
+  "answer": 2,
+  "explanation": "Low oxygen at altitude triggers the kidneys to release the hormone erythropoietin (EPO), which stimulates red blood cell production. Back at sea level, the extra red cells and haemoglobin deliver more oxygen to the muscles, improving endurance for a while.",
+  "hints": [
+   "What carries oxygen in the blood?",
+   "How might the body respond to less oxygen over several weeks?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-122",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which word equation summarises aerobic respiration?",
+  "options": [
+   "Glucose → lactic acid + energy",
+   "Glucose → ethanol + carbon dioxide + energy",
+   "Carbon dioxide + water → glucose + oxygen",
+   "Glucose + oxygen → carbon dioxide + water + energy"
+  ],
+  "answer": 3,
+  "explanation": "Aerobic respiration oxidises glucose completely using oxygen: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy. The second equation is photosynthesis; the last two are anaerobic respiration in muscle and yeast.",
+  "misconception": "Photosynthesis is roughly the reverse of aerobic respiration.",
+  "hints": [
+   "Aerobic means “with oxygen”."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-123",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "mcq",
+  "q": "How do insects such as grasshoppers get oxygen to their body cells?",
+  "options": [
+   "Only through their moist skin",
+   "Through gills",
+   "Through lungs",
+   "Through tiny openings called spiracles that lead into a network of air tubes (tracheae)"
+  ],
+  "answer": 3,
+  "explanation": "Insects have spiracles along the sides of the body. Air passes along branching tracheae directly to the tissues; their blood plays little part in carrying oxygen. This system limits how large insects can grow.",
+  "hints": [
+   "Look for small holes along an insect’s abdomen."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-124",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 3,
+  "type": "reasoning",
+  "q": "During hard exercise, breathing becomes faster and deeper. What is the main signal the brain responds to?",
+  "options": [
+   "A fall in body temperature",
+   "A rise in carbon dioxide (and acidity) in the blood",
+   "A rise in blood glucose",
+   "A fall in nitrogen in the blood"
+  ],
+  "answer": 1,
+  "explanation": "Working muscles respire faster and produce more CO₂, which makes the blood slightly more acidic. Chemoreceptors detect this, and the respiratory centre in the medulla increases the rate and depth of breathing — removing CO₂ and bringing in more O₂.",
+  "misconception": "The main trigger is excess CO₂, not lack of O₂.",
+  "hints": [
+   "Which waste gas builds up when muscles work hard?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-125",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 1,
+  "type": "mcq",
+  "q": "How many chambers does the human heart have?",
+  "options": [
+   "Two — one atrium and one ventricle",
+   "Six",
+   "Four — two atria and two ventricles",
+   "Three — two atria and one ventricle"
+  ],
+  "answer": 2,
+  "explanation": "The human heart has two upper atria that receive blood and two lower, more muscular ventricles that pump it out. Fish have two chambers; amphibians and most reptiles have three.",
+  "hints": [
+   "Atria receive; ventricles pump."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-126",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Humans have a “double circulation”, in which blood passes through the heart twice in each complete circuit. What is the main advantage?",
+  "options": [
+   "It makes the heart beat twice as fast.",
+   "It lets blood skip the lungs.",
+   "It doubles the amount of blood.",
+   "Oxygenated and deoxygenated blood stay separate, and blood can be pumped to the body at high pressure after returning from the lungs."
+  ],
+  "answer": 3,
+  "explanation": "One circuit (pulmonary) sends blood to the lungs at low pressure; the other (systemic) sends oxygen-rich blood to the body at high pressure. Keeping them separate delivers fully oxygenated blood efficiently — important for warm-blooded animals with high energy needs.",
+  "hints": [
+   "What would happen if blood went straight from the lungs to the body without returning to the heart?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-127",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is the function of the valves in the heart and in veins?",
+  "options": [
+   "To make blood thicker",
+   "To add oxygen to blood",
+   "To prevent blood flowing backwards",
+   "To produce red blood cells"
+  ],
+  "answer": 2,
+  "explanation": "Valves are flaps that open in one direction only. Heart valves stop blood flowing back into the atria or ventricles when they contract; vein valves stop blood pooling as it travels back to the heart at low pressure, especially from the legs.",
+  "hints": [
+   "Think of a one-way door."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-128",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "numerical",
+  "q": "A heart beats at an average of 72 beats per minute. About how many times does it beat in one day?",
+  "options": [
+   "1.04 × 10⁴",
+   "4320",
+   "1.04 × 10⁵",
+   "1.04 × 10⁶"
+  ],
+  "answer": 2,
+  "explanation": "72 × 60 × 24 = 103,680 ≈ 1.04 × 10⁵ beats per day — about 38 million beats a year.",
+  "misconception": "4320 is the number of beats per hour.",
+  "hints": [
+   "Beats per minute × minutes per hour × hours per day."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-129",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why do arteries have thick, muscular, elastic walls, while veins have thinner walls and valves?",
+  "options": [
+   "Arteries carry blood at high pressure from the heart; veins carry blood at low pressure back to the heart.",
+   "Veins carry more blood.",
+   "Arteries carry deoxygenated blood.",
+   "Veins are closer to the heart."
+  ],
+  "answer": 0,
+  "explanation": "Each heartbeat pushes blood into the arteries at high pressure; their thick elastic walls withstand it and smooth out the flow. By the time blood reaches the veins its pressure is low, so thin walls suffice, but valves are needed to keep it moving towards the heart.",
+  "hints": [
+   "Where is blood pressure highest?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-130",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "mcq",
+  "q": "In which blood vessels does the exchange of oxygen, nutrients and wastes with body cells take place?",
+  "options": [
+   "Veins",
+   "The aorta",
+   "Arteries",
+   "Capillaries"
+  ],
+  "answer": 3,
+  "explanation": "Capillaries are microscopic vessels with walls only one cell thick, running close to every cell. Substances diffuse across their walls. Arteries and veins have walls too thick for exchange.",
+  "hints": [
+   "Which vessels are only one cell thick?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-131",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "mcq",
+  "q": "A normal adult blood pressure reading is often given as 120/80 mmHg. What do the two numbers represent?",
+  "options": [
+   "Pulse rate and breathing rate",
+   "Pressure when the ventricles contract (systolic) and when they relax (diastolic)",
+   "Oxygen and carbon dioxide levels",
+   "Pressure in arteries and in veins"
+  ],
+  "answer": 1,
+  "explanation": "The higher (systolic) value is the arterial pressure as the ventricles contract; the lower (diastolic) value is the pressure while the heart relaxes between beats. It is measured with a sphygmomanometer.",
+  "hints": [
+   "The heart alternately contracts and relaxes."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-132",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which is a function of lymph?",
+  "options": [
+   "Carrying absorbed fats from the intestine and returning leaked tissue fluid to the blood",
+   "Carrying oxygen to the brain",
+   "Pumping blood",
+   "Producing bile"
+  ],
+  "answer": 0,
+  "explanation": "Lymph is the fluid that leaks out of capillaries into tissues and is collected by lymph vessels. Lacteals in the villi absorb digested fats into the lymph. Lymph nodes along the vessels contain white cells that filter out microbes.",
+  "hints": [
+   "Fats are absorbed into the lacteals of the villi."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-133",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Mature human red blood cells have no nucleus. What advantage does this give?",
+  "options": [
+   "More space for haemoglobin, so each cell can carry more oxygen",
+   "They can divide faster.",
+   "They live for many years.",
+   "They can make their own proteins."
+  ],
+  "answer": 0,
+  "explanation": "Losing the nucleus (and mitochondria) leaves the cell packed with haemoglobin and gives it a flexible biconcave shape with a large surface area for gas exchange. The cost is a short life of about 120 days, as the cell cannot repair itself.",
+  "hints": [
+   "What fills the inside of a red blood cell?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-134",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "mcq",
+  "q": "How do white blood cells protect the body?",
+  "options": [
+   "They make hormones",
+   "Some engulf microbes (phagocytosis) and others produce antibodies",
+   "They carry oxygen to the immune system",
+   "They clot the blood"
+  ],
+  "answer": 1,
+  "explanation": "Phagocytes surround and digest bacteria; lymphocytes produce antibodies that attack specific pathogens and form memory cells. Platelets, not white cells, help with clotting.",
+  "hints": [
+   "Two main types: one engulfs, one makes antibodies."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-135",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 3,
+  "type": "what-if",
+  "q": "A fish has a two-chambered heart, and its blood passes through the heart only once per circuit (heart → gills → body → heart). What is a consequence of this single circulation?",
+  "options": [
+   "Blood loses much of its pressure in the gill capillaries, so it flows to the body at low pressure.",
+   "Fish blood carries no oxygen.",
+   "Fish blood moves faster than human blood.",
+   "Fish need no capillaries."
+  ],
+  "answer": 0,
+  "explanation": "In a single circulation, blood pumped through the fine capillaries of the gills loses most of its pressure before reaching the body. This is enough for cold-blooded fish supported by water, but would be too slow to supply the high oxygen demand of a warm-blooded animal — one reason mammals and birds evolved double circulation.",
+  "hints": [
+   "What happens to blood pressure when blood is forced through narrow capillaries?",
+   "Is there a second pump after the gills?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-136",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "Plants have no heart, yet water rises over 100 m to the top of the tallest trees. What mainly pulls it up?",
+  "options": [
+   "Transpiration from the leaves, creating a tension that pulls a continuous column of water up the xylem",
+   "Phloem pumping water upward",
+   "Gravity pulling water upward",
+   "Root pressure alone pushing the water up"
+  ],
+  "answer": 0,
+  "explanation": "Water evaporating from leaf cells and leaving through stomata (transpiration) pulls on the water in the xylem. Water molecules stick to each other (cohesion) and to the xylem walls (adhesion), so the whole column is drawn up from the roots. Root pressure helps a little in small plants.",
+  "misconception": "Root pressure can push water only a few metres; it cannot explain tall trees.",
+  "hints": [
+   "What happens to water at the leaves?",
+   "Water molecules attract each other strongly."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-137",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 1,
+  "type": "mcq",
+  "q": "How does an Amoeba usually reproduce?",
+  "options": [
+   "Binary fission — splitting into two",
+   "Sexual reproduction with gametes",
+   "Budding",
+   "Spore formation"
+  ],
+  "answer": 0,
+  "explanation": "Amoeba divides its nucleus and then its cytoplasm, forming two identical daughter cells — binary fission. It is a quick, asexual method common among unicellular organisms.",
+  "hints": [
+   "“Binary” means two."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-138",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 2,
+  "type": "mcq",
+  "q": "In Hydra and yeast, a small outgrowth develops on the parent, grows and eventually detaches as a new individual. What is this method called?",
+  "options": [
+   "Binary fission",
+   "Pollination",
+   "Fragmentation",
+   "Budding"
+  ],
+  "answer": 3,
+  "explanation": "In budding, a bud forms through repeated cell division at one place on the parent and grows into a new organism, which may separate. It is a form of asexual reproduction producing genetically identical offspring.",
+  "hints": [
+   "The new organism grows from a small outgrowth."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-139",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 2,
+  "type": "experiment",
+  "q": "A slice of moist bread left in a warm place develops fuzzy grey-black growth after a few days. How did the bread mould (Rhizopus) reach it?",
+  "options": [
+   "Through tiny spores carried in the air, which germinate on moist food",
+   "From seeds in the flour",
+   "It formed spontaneously from the bread",
+   "By budding from yeast in the bread"
+  ],
+  "answer": 0,
+  "explanation": "Rhizopus produces huge numbers of microscopic spores in sporangia (the black dots). Spores float in the air and grow into new hyphae wherever they land on moist food. Living things arise only from other living things, not spontaneously.",
+  "misconception": "Mould does not arise spontaneously — Pasteur’s experiments disproved that idea.",
+  "hints": [
+   "What are the black dots on the mould?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-140",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 2,
+  "type": "mcq",
+  "q": "If a flatworm (Planaria) is cut into several pieces, each piece can grow into a complete worm. This ability is called:",
+  "options": [
+   "binary fission",
+   "regeneration",
+   "pollination",
+   "metamorphosis"
+  ],
+  "answer": 1,
+  "explanation": "Planaria contain many undifferentiated cells that can divide and specialise to rebuild the missing parts. Regeneration differs from ordinary reproduction because it usually follows injury rather than being the normal way of producing offspring.",
+  "hints": [
+   "The worm re-grows lost parts."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-141",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Asexual reproduction is faster and needs only one parent. Why, then, do most plants and animals reproduce sexually?",
+  "options": [
+   "Sexual reproduction produces identical offspring.",
+   "Asexual reproduction cannot happen in multicellular organisms.",
+   "Sexual reproduction needs less energy.",
+   "Sexual reproduction mixes genes from two parents, producing variation that helps a population survive changes and diseases."
+  ],
+  "answer": 3,
+  "explanation": "Meiosis and fertilisation shuffle and combine genes, so offspring differ from their parents and each other. In a changing environment or when a new disease appears, some individuals are likely to survive. Variation is also the raw material for evolution.",
+  "misconception": "Many multicellular organisms (plants, Hydra, Planaria) do reproduce asexually.",
+  "hints": [
+   "How do offspring of sexual reproduction compare with each other?",
+   "Why might variation help when the environment changes?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-142",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which parts of a flower make up the stamen (the male part)?",
+  "options": [
+   "Stigma, style and ovary",
+   "Ovule and ovary",
+   "Anther and filament",
+   "Sepals and petals"
+  ],
+  "answer": 2,
+  "explanation": "The stamen has a filament (stalk) topped by an anther, where pollen grains (containing male gametes) are made. The pistil (carpel) — stigma, style and ovary — is the female part.",
+  "hints": [
+   "Pollen is made in the …?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-143",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is the difference between self-pollination and cross-pollination?",
+  "options": [
+   "They are the same process.",
+   "Self: pollen reaches the stigma of the same flower or plant; cross: pollen comes from another plant of the same species.",
+   "Self: done by insects; cross: done by wind.",
+   "Self: happens after fertilisation; cross: before."
+  ],
+  "answer": 1,
+  "explanation": "Cross-pollination, carried by wind, water, insects or birds, mixes genes from two plants and increases variation. Many plants have adaptations (separate male and female flowers, different maturity times) to encourage it.",
+  "misconception": "The agent (wind, insect) does not define self- or cross-pollination; the source of pollen does.",
+  "hints": [
+   "Where does the pollen come from in each case?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-144",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 3,
+  "type": "what-if",
+  "q": "Cultivated bananas are seedless. How are new banana plants produced, and what is one risk of this method?",
+  "options": [
+   "By pollination by bats; plants become too varied.",
+   "By grafting onto mango trees; fruits become sour.",
+   "From seeds hidden in the peel; there is no risk.",
+   "By vegetative propagation from suckers or tissue culture; all plants are genetically identical and equally vulnerable to the same disease."
+  ],
+  "answer": 3,
+  "explanation": "Without seeds, bananas are grown from suckers (shoots from the underground stem) or tissue culture, so they are clones. The Gros Michel variety was largely wiped out by Panama disease in the 20th century, and today’s Cavendish faces similar threats.",
+  "hints": [
+   "Without seeds, which kind of reproduction is left?",
+   "What does cloning do to genetic variation?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-145",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 2,
+  "type": "mcq",
+  "q": "In human reproduction, where does fertilisation of the egg usually take place?",
+  "options": [
+   "In the uterus",
+   "In the ovary",
+   "In the oviduct (fallopian tube)",
+   "In the vagina"
+  ],
+  "answer": 2,
+  "explanation": "An egg released from the ovary travels along the oviduct, where it may meet sperm and be fertilised. The zygote divides as it moves to the uterus, where it implants in the thickened uterine lining.",
+  "misconception": "The embryo implants and develops in the uterus, but fertilisation happens earlier, in the oviduct.",
+  "hints": [
+   "The egg is fertilised on its journey from the ovary."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-146",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is the main role of the placenta during pregnancy?",
+  "options": [
+   "To carry sperm to the egg",
+   "To pump blood for the foetus",
+   "To produce milk",
+   "To exchange nutrients, oxygen and wastes between the mother’s blood and the foetus’s blood without the two bloods mixing"
+  ],
+  "answer": 3,
+  "explanation": "The placenta has a huge surface of villi close to the mother’s blood. Glucose, amino acids and oxygen diffuse to the foetus; CO₂ and urea pass back. It also produces hormones that maintain pregnancy. Harmful substances like alcohol and nicotine can also cross it.",
+  "hints": [
+   "How does the foetus get oxygen and food?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-147",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why does menstruation occur roughly once a month in women of reproductive age?",
+  "options": [
+   "The uterus shrinks permanently each month.",
+   "The ovaries release blood every month.",
+   "Menstruation is caused by an infection.",
+   "If the egg is not fertilised, the thickened lining of the uterus breaks down and is shed with blood."
+  ],
+  "answer": 3,
+  "explanation": "Each cycle the uterus lining thickens with blood vessels to receive a fertilised egg. If fertilisation does not occur, hormone levels fall and the lining breaks down, leaving the body as menstrual flow. The cycle is controlled by hormones such as oestrogen and progesterone.",
+  "hints": [
+   "Why does the uterus lining thicken in the first place?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-148",
+  "subject": "Biology",
+  "topic": "Reproduction",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Before a cell divides, its DNA is copied. The copying is extremely accurate but not perfect. Why is this slight inaccuracy important in biology?",
+  "options": [
+   "Occasional copying errors (mutations) create variation, the raw material on which natural selection acts.",
+   "It prevents any change in species over time.",
+   "It allows cells to make more energy.",
+   "It makes all offspring identical."
+  ],
+  "answer": 0,
+  "explanation": "Mutations are mostly harmless or harmful, but a few produce useful traits. Over many generations, natural selection favours individuals with helpful variations, so species change. Perfectly accurate copying would leave no variation to select from.",
+  "hints": [
+   "What would happen to evolution if every copy were perfect?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-149",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 1,
+  "type": "mcq",
+  "q": "Gregor Mendel discovered the basic laws of inheritance through experiments on which organism?",
+  "options": [
+   "Bread mould",
+   "The mouse",
+   "The fruit fly",
+   "The garden pea"
+  ],
+  "answer": 3,
+  "explanation": "In the 1850s–60s Mendel crossed thousands of pea plants with clearly contrasting traits (tall/dwarf, round/wrinkled seeds). Peas were ideal: easy to grow, quick generations and controllable pollination. Fruit flies were used later by T. H. Morgan.",
+  "hints": [
+   "He worked in a monastery garden."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-150",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A pure-breeding tall pea plant (TT) is crossed with a pure-breeding dwarf plant (tt). All the offspring (F1) are tall. What is their genotype?",
+  "options": [
+   "TT",
+   "A mixture of TT and tt",
+   "Tt",
+   "tt"
+  ],
+  "answer": 2,
+  "explanation": "Each offspring receives one T from the tall parent and one t from the dwarf parent, so all are Tt. They look tall because T is dominant; the recessive t is hidden but still present, and dwarf plants reappear when F1 plants are crossed together.",
+  "hints": [
+   "What can each parent pass on?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-151",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 2,
+  "type": "mcq",
+  "q": "A normal human body cell has 46 chromosomes. How are they organised?",
+  "options": [
+   "23 pairs: 22 pairs of autosomes and 1 pair of sex chromosomes",
+   "22 pairs of sex chromosomes and 1 pair of autosomes",
+   "23 single chromosomes",
+   "46 pairs"
+  ],
+  "answer": 0,
+  "explanation": "Each pair has one chromosome from the mother and one from the father. Pairs 1–22 are autosomes; the 23rd pair is the sex chromosomes (XX in females, XY in males).",
+  "hints": [
+   "How many pairs make 46?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-152",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A couple’s first two children are both boys. What is the probability that their third child will be a girl?",
+  "options": [
+   "1/2",
+   "1/4",
+   "3/4",
+   "1/8"
+  ],
+  "answer": 0,
+  "explanation": "Each pregnancy is an independent event: the father’s sperm carries X or Y with equal probability, regardless of previous children. So the chance of a girl is still 1/2. (1/8 would be the probability, before any child is born, that all three are boys.)",
+  "misconception": "Earlier outcomes do not change the probability of the next — this is the “gambler’s fallacy”.",
+  "hints": [
+   "Does the sex of earlier children affect which sperm fertilises the next egg?",
+   "Is each birth independent?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-153",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 2,
+  "type": "mcq",
+  "q": "When does a recessive trait appear in the phenotype of an individual?",
+  "options": [
+   "Only when the individual has two copies of the recessive allele",
+   "Never",
+   "Only in males",
+   "Whenever one copy of the recessive allele is present"
+  ],
+  "answer": 0,
+  "explanation": "A dominant allele masks a recessive one. The recessive trait shows only in homozygous recessive individuals (e.g. tt). Heterozygotes (Tt) are carriers: they show the dominant trait but can pass on the recessive allele.",
+  "hints": [
+   "What does a dominant allele do to a recessive one?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-154",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Free earlobes (E) are dominant over attached earlobes (e). Two parents with free earlobes have a child with attached earlobes. What are the parents’ genotypes?",
+  "options": [
+   "One is EE and one is Ee",
+   "Both are Ee",
+   "Both are ee",
+   "Both are EE"
+  ],
+  "answer": 1,
+  "explanation": "The child with attached earlobes must be ee, receiving one e from each parent. Both parents show free earlobes, so each must also carry an E: both are Ee. Each further child has a 1/4 chance of attached earlobes.",
+  "misconception": "If either parent were EE, every child would receive at least one E.",
+  "hints": [
+   "What genotype must the child have?",
+   "Where did each of the child’s alleles come from?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-155",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 2,
+  "type": "mcq",
+  "q": "Who proposed the double-helix structure of DNA in 1953, using X-ray diffraction images produced in Rosalind Franklin’s laboratory?",
+  "options": [
+   "Louis Pasteur and Robert Koch",
+   "Gregor Mendel and Charles Darwin",
+   "Har Gobind Khorana and Marshall Nirenberg",
+   "James Watson and Francis Crick"
+  ],
+  "answer": 3,
+  "explanation": "Watson and Crick built their double-helix model in 1953, relying on X-ray photographs (notably “Photo 51”) from Rosalind Franklin and Raymond Gosling and data from Maurice Wilkins. Khorana and Nirenberg later helped crack the genetic code (Nobel Prize 1968).",
+  "hints": [
+   "The model was announced in 1953 at Cambridge."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-156",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is a mutation?",
+  "options": [
+   "An organism moving to a new habitat",
+   "A type of cell division",
+   "A change in diet",
+   "A change in the sequence of DNA"
+  ],
+  "answer": 3,
+  "explanation": "A mutation is a change in the DNA base sequence of a gene or chromosome. It can occur by copying errors or be caused by radiation and some chemicals. Mutations in gametes can be inherited.",
+  "hints": [
+   "It happens in the genetic material."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-157",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 3,
+  "type": "numerical",
+  "q": "In peas, round seeds (R) are dominant over wrinkled (r) and yellow (Y) over green (y). Two plants heterozygous for both traits (RrYy × RrYy) produce 160 seeds. About how many are expected to be round and yellow?",
+  "options": [
+   "90",
+   "120",
+   "30",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "The dihybrid cross gives round-yellow : round-green : wrinkled-yellow : wrinkled-green = 9 : 3 : 3 : 1. Round and yellow = 9/16 × 160 = 90. (Each 3/16 class gives 30; the 1/16 class gives 10.)",
+  "misconception": "30 is the number for one of the 3/16 classes.",
+  "hints": [
+   "Recall the 9 : 3 : 3 : 1 ratio.",
+   "Which class shows both dominant traits?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-158",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 1,
+  "type": "mcq",
+  "q": "Why do identical twins have the same genes?",
+  "options": [
+   "They develop from a single fertilised egg that splits into two embryos.",
+   "They develop from two eggs fertilised by two sperm.",
+   "They share the same placenta only.",
+   "They are born on the same day."
+  ],
+  "answer": 0,
+  "explanation": "Identical (monozygotic) twins come from one zygote that splits early in development, so their DNA is the same. Non-identical (fraternal) twins come from two different eggs and two sperm and are no more alike genetically than other siblings.",
+  "hints": [
+   "How many zygotes are involved?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-159",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 1,
+  "type": "mcq",
+  "q": "Charles Darwin’s observations of finches with differently shaped beaks on the Galápagos Islands supported which idea?",
+  "options": [
+   "Evolution by natural selection",
+   "Spontaneous generation",
+   "The cell theory",
+   "Inheritance of acquired characteristics"
+  ],
+  "answer": 0,
+  "explanation": "Darwin noticed that finches on different islands had beaks suited to different foods (seeds, insects, cactus). He proposed that individuals better suited to their environment survive and reproduce more, so populations change over time — natural selection (On the Origin of Species, 1859).",
+  "hints": [
+   "Different beaks suited different foods."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-160",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 2,
+  "type": "reasoning",
+  "q": "In undisturbed layers of sedimentary rock, fossils in the deeper layers are generally older than those near the surface. Why?",
+  "options": [
+   "Heavier fossils sink deeper.",
+   "Fossils move downward over time.",
+   "Sediment is deposited layer upon layer over time, so lower layers formed first.",
+   "Deeper layers are warmer and preserve fossils better."
+  ],
+  "answer": 2,
+  "explanation": "Sediments settle in sequence, with newer layers on top of older ones (the principle of superposition). This gives the relative age of fossils; radioactive dating of rocks gives their absolute age. The sequence shows simpler life forms in older layers.",
+  "hints": [
+   "Which layer was laid down first?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-161",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 2,
+  "type": "mcq",
+  "q": "The wings of a butterfly and the wings of a bird both allow flight but have completely different structures and origins. They are examples of:",
+  "options": [
+   "fossils",
+   "analogous organs",
+   "vestigial organs",
+   "homologous organs"
+  ],
+  "answer": 1,
+  "explanation": "Analogous organs perform similar functions but evolved independently, with different structures (insect wings are thin cuticle; bird wings are modified forelimbs with bones and feathers). They show convergent evolution, not common ancestry.",
+  "misconception": "Homologous organs share structure and origin; analogous organs share only function.",
+  "hints": [
+   "Similar job, different build."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-162",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Lamarck suggested that giraffes got long necks because each generation stretched to reach high leaves and passed the stretched necks to their offspring. Why is this explanation rejected?",
+  "options": [
+   "Neck length is not affected by genes.",
+   "Giraffes never eat high leaves.",
+   "Characteristics acquired during an animal’s lifetime do not change the DNA in its gametes, so they are not inherited.",
+   "Giraffes evolved from fish recently."
+  ],
+  "answer": 2,
+  "explanation": "Stretching, exercise or injury changes body cells, not the genes passed on through eggs and sperm. Darwin’s explanation fits the evidence: giraffes varied in neck length; those with slightly longer necks fed better in droughts, survived and reproduced more, so the trait spread.",
+  "misconception": "A bodybuilder’s children are not born with bigger muscles.",
+  "hints": [
+   "Do changes to body cells reach the gametes?",
+   "How would natural selection explain long necks?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-163",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 2,
+  "type": "mcq",
+  "q": "The human appendix and wisdom teeth have little or no function today. What are such structures called, and what do they suggest?",
+  "options": [
+   "Fossils",
+   "Acquired characteristics",
+   "Vestigial organs — evidence that our ancestors used them",
+   "Analogous organs — evidence of convergent evolution"
+  ],
+  "answer": 2,
+  "explanation": "Vestigial organs are reduced remnants of structures that were functional in ancestors. The appendix is linked to the larger caecum of plant-eating mammals; wisdom teeth to ancestors with larger jaws for tougher food. (The appendix may still have a minor role in immunity.)",
+  "hints": [
+   "“Vestige” means a trace of something that once existed."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-164",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 3,
+  "type": "what-if",
+  "q": "A population of lizards is split when a section of land becomes an island. After thousands of generations, the island lizards can no longer breed with the mainland lizards. What process has occurred?",
+  "options": [
+   "Hybridisation of the two populations",
+   "Spontaneous generation",
+   "Speciation through geographical isolation and different natural selection",
+   "Lamarckian inheritance"
+  ],
+  "answer": 2,
+  "explanation": "Separated populations no longer exchange genes. Different mutations arise and different environments favour different traits, so the populations drift apart genetically. Eventually they can no longer interbreed — they have become separate species.",
+  "hints": [
+   "What stops genes flowing between the two groups?",
+   "What makes them change differently?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-165",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 2,
+  "type": "application",
+  "q": "Cabbage, cauliflower, broccoli and kale were all bred from the same wild mustard plant. What process produced such different vegetables?",
+  "options": [
+   "Natural selection in the wild",
+   "Spontaneous mutation in one season",
+   "Artificial selection — humans chose and bred plants with the features they wanted",
+   "Mixing of different species"
+  ],
+  "answer": 2,
+  "explanation": "Over centuries, farmers repeatedly bred plants with larger leaves (kale, cabbage), larger flower clusters (broccoli, cauliflower) or swollen stems (kohlrabi). This artificial selection shows how strongly selection can change a species — Darwin used it as an analogy.",
+  "hints": [
+   "Who chose which plants to breed?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-166",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Fossils of Archaeopteryx show feathers and wings like a bird, but also teeth, clawed fingers and a long bony tail like a reptile. Why is it important for the study of evolution?",
+  "options": [
+   "It is a living bird found today.",
+   "It proves birds came before reptiles.",
+   "It shows that feathers evolved in fish.",
+   "It is a transitional form, supporting the idea that birds evolved from reptile-like ancestors (dinosaurs)."
+  ],
+  "answer": 3,
+  "explanation": "Archaeopteryx (about 150 million years old) combines features of two groups, as evolution predicts for intermediate forms. Many more feathered dinosaur fossils have since been found, strongly supporting the dinosaur origin of birds.",
+  "hints": [
+   "It has features of which two groups?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
   "id": "BIO-001",
   "subject": "Biology",
   "topic": "Cell Biology",
