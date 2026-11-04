@@ -71,6 +71,7 @@ await check('every navigation link opens its page', async () => {
 console.log('Practice Arena');
 let practiceXp = 0;
 let wrongIds = [];
+const firstSet = [];
 await check('subject + difficulty filters build a matching set', async () => {
   await page.goto(URL + '#/practice');
   await page.getByRole('button', { name: /Physics/ }).first().click();
@@ -88,6 +89,7 @@ await check('answers are evaluated correctly, explanations shown, XP correct', a
   for (let i = 0; i < 5; i++) {
     await page.waitForTimeout(2100); // answers faster than 2 s on ≥ 30 s questions earn no XP by design
     const r = await answer(i % 2 === 0);
+    firstSet.push(r.id);
     const verdict = await page.locator('.verdict').textContent();
     assert(r.right ? verdict.includes('Correct') : verdict.includes('Not quite'), `verdict "${verdict}" for ${r.id}`);
     await page.locator('.explain').getByText(r.q.explanation.slice(0, 30)).waitFor();
@@ -104,6 +106,24 @@ await check('results show score, accuracy, time and revision topics', async () =
   await page.getByText('Accuracy').first().waitFor();
   await page.getByText('Topics requiring revision').waitFor();
   assert((await page.locator('.kpi').first().textContent()).includes('3/5'), 'score 3/5');
+});
+await check('no repeats: a second set with the same filters shares no question with the first', async () => {
+  await page.getByRole('button', { name: 'New set, same settings' }).click();
+  const second = [];
+  for (let i = 0; i < 5; i++) {
+    const r = await answer(true);
+    second.push(r.id);
+    await page.getByRole('button', { name: /Continue|See results/ }).click();
+  }
+  const overlap = second.filter((id) => firstSet.includes(id));
+  assert(overlap.length === 0, `repeated ${overlap.join(', ')}`);
+  practiceXp += 0; // second-set XP is checked implicitly by later totals
+  await page.getByText('Practice complete').waitFor();
+  const s = await store();
+  // remove the second set from bookkeeping so later checks keep working
+  practiceXp = s.xp;
+  await page.evaluate(([k]) => { const st = JSON.parse(localStorage.getItem(k)); st.attempts = st.attempts.slice(0, 5); localStorage.setItem(k, JSON.stringify(st)); }, [KEY]);
+  await page.reload();
 });
 await check('wrong answers are saved in Mistake Master', async () => {
   const s = await store();

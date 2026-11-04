@@ -29,10 +29,14 @@ Open the app once while online (or from `npm run preview`). The service worker t
 | **My Learning** | 20 concise lessons (principle, definitions, formulas, everyday examples, misconceptions, step-by-step worked examples). Each ends with a 3-question knowledge check and a button to practise that topic |
 | **Practice Arena** | Choose subject, topic, difficulty, 5–20 questions, timed or untimed. Immediate feedback, progressive hints and full explanations. Also **Survival** (3 lives, rising difficulty, streak multiplier) and **Speed** (60 s / 120 s, +10 / −5) |
 | **Olympiad Challenge** | MVPP, VVM and General Olympiad tests: countdown, question palette, mark for review, autosave and resume, auto-submit at time-out, no hints or explanations until you submit, detailed report |
-| **Science IQ** | 61 unfamiliar-situation problems (what-if, numerical, experimental, interdisciplinary), each with 2+ progressive hints and an explanation of the underlying principle |
+| **Science IQ** | 222 unfamiliar-situation problems (what-if, numerical, experimental, interdisciplinary), each with 2+ progressive hints and an explanation of the underlying principle |
 | **Mistake Master** | Every wrong answer is saved automatically. Retry mistakes, or get *new* questions from the same topics. A mistake clears only after two correct answers ≥ 10 minutes apart; a topic counts as mastered only with ≥ 6 of the last 8 correct across ≥ 4 different questions, including an Advanced/Olympiad one |
 | **Daily Mission** | 10 questions across all six areas (3 Foundation, 4 Advanced, 3 Olympiad), the same all day, never repeating the last 7 missions; +50 XP; resumes if interrupted |
 | **My Progress** | Totals, accuracy, XP, level, streak, personal bests, subject accuracy bars, 14-day activity chart, first-30 vs latest-30 improvement, topic weaknesses, recent tests, three recommendations, export / import / reset |
+
+### No repeats
+
+On each device, a question you have already seen is not shown again until you have seen every other question that matches your filters. After that, the questions you saw longest ago come back first. Practice shows how many matching questions are still unseen. Mistake Master's **Retry my mistakes** repeats questions on purpose.
 
 ### XP and levels
 
@@ -57,7 +61,7 @@ There are ten levels, from **Science Explorer** (0 XP) to **Science Champion** (
 
 ## The question bank
 
-- **277 questions**, all validated. By subject: Physics 69, Chemistry 60, Biology 58, Space Science 26, Environment & Technology 24, Scientific Reasoning 40. By level: Foundation 66, Advanced 125, Olympiad 86.
+- **1,000 questions**, all validated. By subject: Physics 200, Chemistry 180, Biology 220, Space Science 100, Environment & Technology 100, Scientific Reasoning 200. By level: Foundation 193, Advanced 446, Olympiad 361. 222 are Science IQ problems.
 - **Question types:** concept MCQs, numerical, assertion–reason, statement-based, scientific reasoning, experimental situations, application, data interpretation (with tables), interdisciplinary and what-if questions.
 - Every question has:
   - ID, subject, topic, level, type and competition tracks
@@ -72,8 +76,8 @@ There are ten levels, from **Science Explorer** (0 XP) to **Science Champion** (
 - There are exactly four distinct options, and the answer index is valid.
 - The explanation is at least 40 characters, there is at least one hint, and the time is 15–300 s.
 - Science IQ problems have at least two hints.
-- **Answers are recomputed independently.** Every numerical question carries a formula (`v`) that is evaluated separately. The keyed option must match it within 0.6%, and no other option may match it. 77 answers are checked this way, and the check already caught several real errors while the bank was being written.
-- **Answer positions are balanced.** Options are shuffled in a fixed order based on each question's ID, so the correct answer is not always A (current split A/B/C/D: 78 / 59 / 66 / 74). Assertion–reason questions keep their standard option order.
+- **Answers are recomputed independently.** Every numerical question carries a formula (`v`) that is evaluated separately. The keyed option must match it within 0.6%, and no other option may match it. 235 answers are checked this way, and the check already caught several real errors while the bank was being written.
+- **Answer positions are balanced.** Options are shuffled in a fixed order based on each question's ID, so the correct answer is not always A (current split A/B/C/D: 259 / 229 / 255 / 257). Assertion–reason questions keep their standard option order.
 - **Near-duplicate detection.** Question texts are normalised, with numbers replaced by `#`, then compared by word-trigram similarity. Anything at 0.6 or above is rejected, so a question with only its numbers changed cannot get in.
 
 ### Adding questions
