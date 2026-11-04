@@ -1,5 +1,2240 @@
 [
  {
+  "id": "REA-041",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 1,
+  "type": "reasoning",
+  "q": "A bacterial colony is counted every hour: 5, 10, 20, 40 thousand cells. If the pattern continues, what will the next count be (in thousands)?",
+  "options": [
+   "50",
+   "60",
+   "45",
+   "80"
+  ],
+  "answer": 3,
+  "explanation": "Each term is double the one before (a geometric sequence with ratio 2), so the next is 40 × 2 = 80.",
+  "misconception": "60 assumes a constant difference; the differences are 5, 10, 20, which are themselves doubling.",
+  "hints": [
+   "Divide each term by the one before it."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-042",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 1,
+  "type": "reasoning",
+  "q": "Which letter continues the series Z, X, V, T, …?",
+  "options": [
+   "R",
+   "P",
+   "S",
+   "Q"
+  ],
+  "answer": 0,
+  "explanation": "The series goes backwards through the alphabet, skipping one letter each time: Z (26), X (24), V (22), T (20), R (18).",
+  "hints": [
+   "Convert the letters to their alphabet positions."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-043",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Each number in 1, 1, 2, 3, 5, 8, … is formed from the two before it. What is the next number?",
+  "options": [
+   "16",
+   "11",
+   "12",
+   "13"
+  ],
+  "answer": 3,
+  "explanation": "This is the Fibonacci sequence: each term is the sum of the previous two (5 + 8 = 13). It appears in nature in the spirals of sunflower seeds, pine cones and the arrangement of leaves.",
+  "hints": [
+   "Add the last two terms."
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-044",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In the series 3, 4, 8, 17, 33, …, look carefully at the differences between terms. What is the next term?",
+  "options": [
+   "50",
+   "58",
+   "49",
+   "65"
+  ],
+  "answer": 1,
+  "explanation": "Differences are 1, 4, 9, 16 — the perfect squares 1², 2², 3², 4². The next difference is 5² = 25, so the next term is 33 + 25 = 58.",
+  "misconception": "49 adds 16 again; 65 doubles 33 and subtracts 1 (a different pattern that does not fit the earlier terms).",
+  "hints": [
+   "List the differences between consecutive terms.",
+   "What kind of numbers are 1, 4, 9, 16?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-045",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Find the next term: 2, 6, 30, 210, …",
+  "options": [
+   "840",
+   "1470",
+   "2310",
+   "630"
+  ],
+  "answer": 2,
+  "explanation": "The ratios are ×3, ×5, ×7 — successive prime numbers. Each term is the product of the first few primes: 2, 2×3, 2×3×5, 2×3×5×7. Next: × 11 = 2310.",
+  "misconception": "1470 multiplies by 7 again; the multipliers are successive primes, not a constant.",
+  "hints": [
+   "Divide each term by the one before.",
+   "What do 3, 5 and 7 have in common?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-046",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Cubes are built from small blocks: a 1-block cube, then 8 blocks, 27 blocks, 64 blocks. How many blocks does the next cube need?",
+  "options": [
+   "125",
+   "81",
+   "216",
+   "100"
+  ],
+  "answer": 0,
+  "explanation": "These are the cubes 1³, 2³, 3³, 4³, so the next is 5³ = 125.",
+  "hints": [
+   "Try writing each term as a power of a whole number."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-047",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Which letter comes next: B, E, J, Q, …?",
+  "options": [
+   "W",
+   "X",
+   "Y",
+   "Z"
+  ],
+  "answer": 3,
+  "explanation": "Positions: B = 2, E = 5, J = 10, Q = 17. These are n² + 1 for n = 1, 2, 3, 4. Next: 5² + 1 = 26 = Z. (Equivalently, the gaps 3, 5, 7 grow by 2, so the next gap is 9.)",
+  "hints": [
+   "Write the alphabet positions.",
+   "Look at the gaps between them."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-048",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "What comes next: AZ, BY, CX, …?",
+  "options": [
+   "DV",
+   "CW",
+   "EW",
+   "DW"
+  ],
+  "answer": 3,
+  "explanation": "The first letter moves forward from A; the second moves backward from Z. Each pair’s positions add to 27 (A1 + Z26). Next: D (4) and W (23).",
+  "hints": [
+   "Track the first letters and the second letters separately."
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-049",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Which number is the odd one out?",
+  "options": [
+   "255",
+   "196",
+   "169",
+   "144"
+  ],
+  "answer": 0,
+  "explanation": "144 = 12², 169 = 13² and 196 = 14² are perfect squares. 255 is not (15² = 225, 16² = 256).",
+  "hints": [
+   "Can each number be written as a whole number squared?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-050",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 1,
+  "type": "reasoning",
+  "q": "Which number is the odd one out?",
+  "options": [
+   "5",
+   "3",
+   "9",
+   "11"
+  ],
+  "answer": 2,
+  "explanation": "3, 5 and 11 are prime numbers (divisible only by 1 and themselves). 9 = 3 × 3 is not prime.",
+  "misconception": "All four are odd, so “odd or even” is not the rule.",
+  "hints": [
+   "Which number has a factor other than 1 and itself?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-051",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In each group, the third number is obtained from the first two by the same rule: (1, 2, 5), (2, 3, 13), (3, 4, ?). What is the missing number?",
+  "options": [
+   "7",
+   "12",
+   "19",
+   "25"
+  ],
+  "answer": 3,
+  "explanation": "Test the rule: 1² + 2² = 5 ✓, 2² + 3² = 13 ✓. So 3² + 4² = 9 + 16 = 25. (Not multiplication: 1 × 2 = 2, not 5.)",
+  "misconception": "12 (3 × 4) does not fit the first two groups; always check a rule against every example.",
+  "hints": [
+   "Try adding, multiplying and squaring the first two numbers.",
+   "Check your rule on both given groups."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-052",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "3 : 27 :: 4 : ?",
+  "options": [
+   "81",
+   "64",
+   "16",
+   "36"
+  ],
+  "answer": 1,
+  "explanation": "27 = 3³, so the relationship is “cube”: 4³ = 64.",
+  "misconception": "36 assumes “× 9”; check whether a rule is about the numbers themselves.",
+  "hints": [
+   "How is 27 related to 3?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-053",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Mitochondrion : Respiration :: Chloroplast : ?",
+  "options": [
+   "Excretion",
+   "Photosynthesis",
+   "Protein synthesis",
+   "Digestion"
+  ],
+  "answer": 1,
+  "explanation": "The pairs link an organelle to the process it carries out: mitochondria carry out aerobic respiration; chloroplasts carry out photosynthesis.",
+  "hints": [
+   "What process happens in chloroplasts?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-054",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Find the next number: 1, 4, 9, 61, 52, 63, …",
+  "options": [
+   "81",
+   "49",
+   "94",
+   "64"
+  ],
+  "answer": 2,
+  "explanation": "These are the square numbers with their digits reversed: 1, 4, 9, 16 → 61, 25 → 52, 36 → 63. The next square is 49, written reversed: 94.",
+  "misconception": "49 is the next square, but the pattern writes each square backwards.",
+  "hints": [
+   "Look at 61, 52, 63 — do they remind you of any familiar numbers when read backwards?",
+   "Which square number comes after 36?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-055",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "The sum of the first n odd numbers follows a pattern: 1 = 1, 1 + 3 = 4, 1 + 3 + 5 = 9. What is the sum of the first 20 odd numbers?",
+  "options": [
+   "400",
+   "441",
+   "380",
+   "210"
+  ],
+  "answer": 0,
+  "explanation": "The sums are 1, 4, 9, 16 … = n². So the first 20 odd numbers sum to 20² = 400. Geometrically, each odd number adds an L-shaped border that turns an n×n square into an (n+1)×(n+1) square.",
+  "misconception": "441 = 21², one too many terms.",
+  "hints": [
+   "Look at the sums 1, 4, 9 — what kind of numbers are they?",
+   "How does the sum relate to how many odd numbers were added?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-056",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Snooker-style triangles of balls contain 1, 3, 6, 10 and 15 balls. How many balls are in the next larger triangle?",
+  "options": [
+   "20",
+   "18",
+   "25",
+   "21"
+  ],
+  "answer": 3,
+  "explanation": "These are triangular numbers: the differences are 2, 3, 4, 5, so the next difference is 6: 15 + 6 = 21. They count dots arranged in triangles.",
+  "hints": [
+   "Look at the differences between terms."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-057",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 1,
+  "type": "reasoning",
+  "q": "What comes next: A1, C3, E5, G7, …?",
+  "options": [
+   "H8",
+   "J9",
+   "I9",
+   "I8"
+  ],
+  "answer": 2,
+  "explanation": "Each letter skips one (A, C, E, G, I) and each number equals the letter’s position (A = 1, C = 3 …). Next: I9.",
+  "hints": [
+   "What is the alphabet position of each letter?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-058",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "numerical",
+  "q": "A legend says a king agreed to place 1 grain of rice on the first square of a chessboard, 2 on the second, 4 on the third, doubling each time. How many grains go on the 10th square?",
+  "options": [
+   "512",
+   "1024",
+   "20",
+   "100"
+  ],
+  "answer": 0,
+  "explanation": "The nth square holds 2ⁿ⁻¹ grains: square 1 → 2⁰ = 1, square 10 → 2⁹ = 512. By the 64th square it would be 2⁶³ ≈ 9.2 × 10¹⁸ grains — far more rice than the world has ever produced. Doubling grows astonishingly fast.",
+  "misconception": "1024 = 2¹⁰, an off-by-one error: the first square is 2⁰.",
+  "hints": [
+   "Square 1 has 2⁰ grains. What power does square 10 have?",
+   "Count the doublings carefully."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-059",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A sequence of square numbers deliberately leaves out 16, 36, 64, 81, 100 and 144, giving 4, 9, 25, 49, 121, … Which number comes next?",
+  "options": [
+   "225",
+   "169",
+   "196",
+   "144"
+  ],
+  "answer": 1,
+  "explanation": "These are squares of prime numbers: 2², 3², 5², 7², 11². The next prime is 13, so the next term is 169. 144 = 12² is skipped because 12 is not prime.",
+  "hints": [
+   "Take the square root of each term.",
+   "What is special about 2, 3, 5, 7, 11?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-060",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Look at the gaps in 7, 12, 19, 28, 39. Which term follows 39?",
+  "options": [
+   "48",
+   "52",
+   "50",
+   "51"
+  ],
+  "answer": 1,
+  "explanation": "Differences: 5, 7, 9, 11 — consecutive odd numbers. Next difference 13: 39 + 13 = 52.",
+  "hints": [
+   "Find the differences, then the pattern in the differences."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-061",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 2,
+  "type": "reasoning",
+  "q": "What comes next: ACE, BDF, CEG, …?",
+  "options": [
+   "DEF",
+   "CDE",
+   "EGI",
+   "DFH"
+  ],
+  "answer": 3,
+  "explanation": "Each group takes three letters with one-letter gaps, and the starting letter moves forward by one: A→B→C→D. So D, F, H.",
+  "hints": [
+   "Look at the first letter of each group."
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-062",
+  "subject": "Scientific Reasoning",
+  "topic": "Patterns",
+  "level": 3,
+  "type": "reasoning",
+  "q": "How many squares of all sizes are there on a standard 8 × 8 chessboard?",
+  "options": [
+   "64",
+   "204",
+   "65",
+   "128"
+  ],
+  "answer": 1,
+  "explanation": "Count by size: 1×1: 64, 2×2: 49, 3×3: 36, 4×4: 25, 5×5: 16, 6×6: 9, 7×7: 4, 8×8: 1. Total = 1² + 2² + … + 8² = 204.",
+  "misconception": "64 counts only the smallest squares.",
+  "hints": [
+   "How many 2×2 squares fit on the board? 3×3?",
+   "Look for a pattern in your counts."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-063",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 1,
+  "type": "reasoning",
+  "q": "All mammals are warm-blooded. Bats are mammals. Which conclusion follows?",
+  "options": [
+   "No conclusion can be drawn.",
+   "All warm-blooded animals are bats.",
+   "Bats are birds.",
+   "Bats are warm-blooded."
+  ],
+  "answer": 3,
+  "explanation": "If every member of a group has a property, then any member of the group has it. This is valid deductive reasoning. The reverse (“all warm-blooded animals are bats”) does not follow.",
+  "hints": [
+   "Bats belong to a group. What is true of every member of that group?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-064",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "You face north, turn 90° clockwise, then turn 180°. Which direction do you now face?",
+  "options": [
+   "North",
+   "East",
+   "South",
+   "West"
+  ],
+  "answer": 3,
+  "explanation": "North → 90° clockwise → east. A 180° turn from east faces west.",
+  "hints": [
+   "Which direction is 90° clockwise from north?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-065",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Ravi walks 10 m south, turns left and walks 20 m, turns left again and walks 10 m, then turns right and walks 5 m. Where is he now relative to his starting point?",
+  "options": [
+   "25 m east",
+   "25 m west",
+   "15 m east",
+   "35 m north"
+  ],
+  "answer": 0,
+  "explanation": "South 10 → left (facing east) 20 → left (facing north) 10, which cancels the first 10 m south → right (facing east) 5. Net: 0 m north–south and 20 + 5 = 25 m east.",
+  "misconception": "Turning left while facing south means facing east, not west.",
+  "hints": [
+   "When you face south, which way is your left?",
+   "Add up north–south and east–west separately."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-066",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In a class ranking, Asha is 7th from the top and 26th from the bottom. How many students are in the class?",
+  "options": [
+   "33",
+   "32",
+   "31",
+   "19"
+  ],
+  "answer": 1,
+  "explanation": "Asha is counted in both rankings, so total = 7 + 26 − 1 = 32. Check: 6 students above her, 25 below her, plus Asha = 32.",
+  "misconception": "33 counts Asha twice.",
+  "hints": [
+   "How many students are above her? Below her?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-067",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A is B’s sister. C is B’s mother. D is C’s father. E is D’s mother. How is A related to D?",
+  "options": [
+   "Daughter",
+   "Grandmother",
+   "Granddaughter",
+   "Niece"
+  ],
+  "answer": 2,
+  "explanation": "C is the mother of B and therefore also of A (A is B’s sister). D is C’s father, so D is A’s grandfather and A is D’s granddaughter. (E is A’s great-grandmother.)",
+  "hints": [
+   "Draw a family tree starting from B.",
+   "Who are A’s parents?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-068",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "In a code, each word is given the sum of its letters’ positions in the alphabet. CAT = 3 + 1 + 20 = 24. What number is DOG?",
+  "options": [
+   "28",
+   "26",
+   "24",
+   "25"
+  ],
+  "answer": 1,
+  "explanation": "Using the same rule: D = 4, O = 15, G = 7, so DOG = 4 + 15 + 7 = 26. Always confirm the rule on the given example first.",
+  "hints": [
+   "O is the 15th letter."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-069",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Five friends P, Q, R, S and T sit in a row facing north. T is at the left end. P sits next to T. Q sits between P and R. S sits immediately to the right of R. Who sits in the middle?",
+  "options": [
+   "R",
+   "P",
+   "S",
+   "Q"
+  ],
+  "answer": 3,
+  "explanation": "T is first (left end). P is next to T, so second. Q is between P and R, so Q is third and R fourth. S is immediately right of R, fifth. Order: T P Q R S — Q is in the middle.",
+  "hints": [
+   "Start from the fixed position: T at the left end.",
+   "Place one friend at a time using each clue."
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-070",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Statements: Some scientists are writers. All writers are readers.\nConclusions: I. Some scientists are readers. II. All readers are scientists.\nWhich conclusion(s) follow?",
+  "options": [
+   "Neither I nor II",
+   "Only I",
+   "Both I and II",
+   "Only II"
+  ],
+  "answer": 1,
+  "explanation": "The scientists who are writers must also be readers (since all writers are readers), so some scientists are readers — I follows. Nothing says every reader is a scientist; there could be readers who are not scientists — II does not follow.",
+  "hints": [
+   "Draw circles for scientists, writers and readers.",
+   "Is there any way to draw them so II is false but the statements are true?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-071",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "15 August 1947, India’s Independence Day, was a Friday. On which day of the week did 15 August 1948 fall?",
+  "options": [
+   "Saturday",
+   "Sunday",
+   "Monday",
+   "Friday"
+  ],
+  "answer": 1,
+  "explanation": "The year from 15 Aug 1947 to 15 Aug 1948 includes 29 February 1948 (1948 is a leap year), so it has 366 days = 52 weeks + 2 days. The weekday moves forward by 2: Friday → Sunday.",
+  "misconception": "Saturday forgets the leap day.",
+  "hints": [
+   "Does this period include 29 February?",
+   "366 days = how many weeks and extra days?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-072",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "How many times do the hour and minute hands of a clock exactly overlap in 12 hours?",
+  "options": [
+   "11",
+   "10",
+   "24",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "The minute hand gains 360° on the hour hand every 12/11 hours (about 65 minutes 27 seconds), not every hour. In 12 hours that happens 12 ÷ (12/11) = 11 times. There is no overlap between 11 and 1 except at 12:00 itself.",
+  "misconception": "12 assumes one overlap every hour, but the overlap between 11:00 and 1:00 happens only once, at 12:00.",
+  "hints": [
+   "How long does the minute hand take to “lap” the hour hand?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-073",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "At what time between 3 o’clock and 4 o’clock are the hour and minute hands exactly together?",
+  "options": [
+   "≈ 16 minutes past 3",
+   "≈ 16.36 minutes past 3",
+   "15 minutes past 3",
+   "≈ 17.5 minutes past 3"
+  ],
+  "answer": 1,
+  "explanation": "At 3:00 the hour hand is 90° ahead. The minute hand moves 6°/min and the hour hand 0.5°/min, so the gap closes at 5.5°/min. Time = 90/5.5 = 16 4/11 ≈ 16.36 minutes, i.e. about 3:16:22.",
+  "misconception": "15 minutes ignores that the hour hand keeps moving.",
+  "hints": [
+   "How far apart are the hands at 3:00?",
+   "How fast does the minute hand catch up?"
+  ],
+  "time": 100,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-074",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In a school of 100 students, 60 play cricket, 50 play football and 20 play both. How many play ONLY football?",
+  "options": [
+   "20",
+   "40",
+   "50",
+   "30"
+  ],
+  "answer": 3,
+  "explanation": "Of the 50 football players, 20 also play cricket, so only football = 50 − 20 = 30. (Only cricket = 40; at least one = 90; neither = 10.)",
+  "misconception": "50 includes those who play both.",
+  "hints": [
+   "Draw a Venn diagram. Fill in the overlap first."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-075",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Is x greater than y?\nStatement 1: x = 2y\nStatement 2: y > 0\nWhich is true?",
+  "options": [
+   "Even both together are not sufficient.",
+   "Both statements together are needed, and they are sufficient.",
+   "Statement 1 alone is sufficient.",
+   "Statement 2 alone is sufficient."
+  ],
+  "answer": 1,
+  "explanation": "Statement 1 alone fails: if y = −1, x = −2 < y; if y = 1, x = 2 > y. Statement 2 alone says nothing about x. Together: x = 2y with y positive gives x − y = y > 0, so x > y. This is a data-sufficiency question: check whether each piece of information settles the answer for every possible case.",
+  "misconception": "“x = 2y” seems to make x bigger, but not when y is negative.",
+  "hints": [
+   "Try a negative value of y with statement 1.",
+   "What extra fact removes that case?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-076",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A says, “B is lying.” B says, “C is lying.” C says, “A and B are both lying.” Each person either always tells the truth or always lies. Who is telling the truth?",
+  "options": [
+   "Only A",
+   "Only B",
+   "Only C",
+   "A and C"
+  ],
+  "answer": 1,
+  "explanation": "Suppose C tells the truth: then A and B both lie. But if A lies, B is truthful — a contradiction. So C lies. Then B’s statement “C is lying” is true, so B is truthful. A says B is lying, which is false, so A lies. Check C: “A and B both lie” is false because B tells the truth ✓.",
+  "hints": [
+   "Assume C is truthful and see whether it leads to a contradiction.",
+   "Then work through B and A."
+  ],
+  "time": 100,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-077",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "If 2 ★ 3 = 13 and 1 ★ 4 = 17, what is 4 ★ 5?",
+  "options": [
+   "20",
+   "45",
+   "41",
+   "9"
+  ],
+  "answer": 2,
+  "explanation": "The rule is a ★ b = a² + b²: 4 + 9 = 13 ✓, 1 + 16 = 17 ✓. So 4 ★ 5 = 16 + 25 = 41.",
+  "hints": [
+   "Test simple rules (sum, product, squares) on both examples."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-078",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Follow this algorithm: start with 6. If the number is even, halve it; if it is odd, multiply by 3 and add 1. Repeat until you reach 1. How many steps does it take?",
+  "options": [
+   "10",
+   "6",
+   "8",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1: that is 8 steps. (Mathematicians conjecture that every starting number eventually reaches 1 — the Collatz conjecture — but nobody has proved it.)",
+  "hints": [
+   "Write down every number in turn.",
+   "Count the arrows, not the numbers."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-079",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A 3 × 3 × 3 cube is painted red on all faces and then cut into 27 small cubes. How many small cubes have exactly two red faces?",
+  "options": [
+   "8",
+   "1",
+   "6",
+   "12"
+  ],
+  "answer": 3,
+  "explanation": "Cubes with two painted faces lie along the edges, but not at the corners. A cube has 12 edges, each with 3 − 2 = 1 such middle cube: 12 cubes. (Corners, with 3 faces: 8; face centres, with 1 face: 6; the very centre, none: 1. Total 27 ✓.)",
+  "misconception": "8 is the number of corner cubes, which have three painted faces.",
+  "hints": [
+   "Where on the big cube are the small cubes with two painted faces?",
+   "How many edges does a cube have?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-080",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A 4 × 4 × 4 cube is painted on all faces and cut into 64 small cubes. How many small cubes have NO paint at all?",
+  "options": [
+   "27",
+   "8",
+   "4",
+   "16"
+  ],
+  "answer": 1,
+  "explanation": "Unpainted cubes form the hidden inner block, which is (4 − 2) × (4 − 2) × (4 − 2) = 2 × 2 × 2 = 8 cubes.",
+  "misconception": "27 is for a 5 × 5 × 5 cube.",
+  "hints": [
+   "Remove the outer layer from every side."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-081",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 2,
+  "type": "reasoning",
+  "q": "On a standard die, opposite faces always add up to 7. If the top face shows 2, what does the bottom face show?",
+  "options": [
+   "5",
+   "6",
+   "3",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "Opposite pairs are 1–6, 2–5 and 3–4. So with 2 on top, 5 is on the bottom.",
+  "hints": [
+   "7 − 2 = ?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-082",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In a knockout tournament, every match eliminates one team. If 8 teams start, how many matches are needed to find the champion?",
+  "options": [
+   "4",
+   "16",
+   "7",
+   "8"
+  ],
+  "answer": 2,
+  "explanation": "Each match knocks out exactly one team, and 7 teams must be knocked out to leave one champion: 7 matches (4 quarter-finals + 2 semi-finals + 1 final). The same argument works for any number of teams, even if there are byes: n teams need n − 1 matches.",
+  "hints": [
+   "How many teams must lose?",
+   "How many teams does each match eliminate?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-083",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In a league, each of 6 teams plays every other team exactly once. How many matches are played in total?",
+  "options": [
+   "30",
+   "36",
+   "12",
+   "15"
+  ],
+  "answer": 3,
+  "explanation": "Each team plays 5 matches: 6 × 5 = 30, but every match is counted twice (once for each team), so 30/2 = 15.",
+  "misconception": "30 counts each match twice.",
+  "hints": [
+   "How many opponents does each team have?",
+   "Has any match been counted twice?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-084",
+  "subject": "Scientific Reasoning",
+  "topic": "Logical Reasoning",
+  "level": 3,
+  "type": "reasoning",
+  "q": "“If it rains, the match is cancelled.” The match was NOT cancelled. Which conclusion is logically valid?",
+  "options": [
+   "It did not rain.",
+   "Nothing can be concluded.",
+   "It rained.",
+   "The match was played in the rain."
+  ],
+  "answer": 0,
+  "explanation": "If rain always leads to cancellation, then no cancellation means no rain (the contrapositive). Note that the reverse is not valid: if the match had been cancelled, we could not be sure it rained — it might have been cancelled for another reason.",
+  "hints": [
+   "If rain always causes cancellation, could it have rained without a cancellation?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-085",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 1,
+  "type": "numerical",
+  "q": "In a sample of 250 seeds, 30% failed to germinate. How many seeds failed?",
+  "options": [
+   "30",
+   "175",
+   "83",
+   "75"
+  ],
+  "answer": 3,
+  "explanation": "30% of 250 = 0.30 × 250 = 75 seeds. (175 germinated.)",
+  "hints": [
+   "30% = 0.30."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-086",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "The ratio of boys to girls in a class of 40 is 2 : 3. How many boys are there?",
+  "options": [
+   "26",
+   "20",
+   "16",
+   "24"
+  ],
+  "answer": 2,
+  "explanation": "There are 2 + 3 = 5 parts. Each part = 40/5 = 8 students. Boys = 2 × 8 = 16; girls = 24.",
+  "misconception": "24 is the number of girls.",
+  "hints": [
+   "How many parts in total?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-087",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "Two cyclists start 60 km apart and ride towards each other at 12 km/h and 18 km/h. After how long do they meet?",
+  "options": [
+   "3.3 h",
+   "5 h",
+   "2 h",
+   "1.5 h"
+  ],
+  "answer": 2,
+  "explanation": "Approaching each other, they close the gap at 12 + 18 = 30 km/h. Time = 60/30 = 2 hours.",
+  "hints": [
+   "How fast does the distance between them shrink?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-088",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "The average of five numbers is 20. When one number is removed, the average of the remaining four is 18. What number was removed?",
+  "options": [
+   "20",
+   "2",
+   "19",
+   "28"
+  ],
+  "answer": 3,
+  "explanation": "Sum of five = 5 × 20 = 100. Sum of four = 4 × 18 = 72. Removed number = 100 − 72 = 28.",
+  "misconception": "2 is just the difference of the averages.",
+  "hints": [
+   "Convert each average back into a total."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-089",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A shop raises the price of a book by 20%, then later reduces the new price by 20%. What is the overall change from the original price?",
+  "options": [
+   "+4% (a 4% increase)",
+   "−20% (a 20% decrease)",
+   "−4% (a 4% decrease)",
+   "0% (no change)"
+  ],
+  "answer": 2,
+  "explanation": "Let the price be ₹100. After +20%: ₹120. After −20% of 120 (= ₹24): ₹96. Overall a 4% decrease. The 20% reduction is taken from a larger amount than the 20% increase.",
+  "misconception": "“No change” assumes percentages simply cancel; they apply to different base amounts.",
+  "hints": [
+   "Try an original price of ₹100.",
+   "Is the 20% reduction calculated on 100 or on 120?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-090",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A father is three times as old as his son. In 10 years, he will be twice as old as his son. How old is the son now?",
+  "options": [
+   "10 years",
+   "5 years",
+   "20 years",
+   "15 years"
+  ],
+  "answer": 0,
+  "explanation": "Let the son be s: father = 3s. In 10 years: 3s + 10 = 2(s + 10) → 3s + 10 = 2s + 20 → s = 10. Check: son 10, father 30; in 10 years 20 and 40 ✓.",
+  "hints": [
+   "Write an equation for “in 10 years”.",
+   "Check your answer in the original statement."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-091",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A radioactive sample of 80 g has a half-life of 5 years. How much of the original substance remains after 20 years?",
+  "options": [
+   "20 g",
+   "10 g",
+   "5 g",
+   "0 g"
+  ],
+  "answer": 2,
+  "explanation": "20 years = 4 half-lives. 80 → 40 → 20 → 10 → 5 g. Radioactive decay never quite reaches zero; it halves each half-life.",
+  "misconception": "0 g assumes it all decays in 4 × 5 years; 20 g subtracts a quarter each time.",
+  "hints": [
+   "How many half-lives fit in 20 years?",
+   "Halve the amount once for each."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-092",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "A water tank measures 2 m × 1.5 m × 1 m. How many litres can it hold? (1 m³ = 1000 L)",
+  "options": [
+   "30,000 L",
+   "4.5 L",
+   "3000 L",
+   "300 L"
+  ],
+  "answer": 2,
+  "explanation": "Volume = 2 × 1.5 × 1 = 3 m³ = 3 × 1000 = 3000 litres.",
+  "hints": [
+   "Calculate the volume in m³ first."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-093",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "Earth’s mass is about 6 × 10²⁴ kg and the Moon’s about 7.3 × 10²² kg. Roughly how many times more massive is Earth?",
+  "options": [
+   "≈ 820",
+   "≈ 6",
+   "≈ 82",
+   "≈ 8.2"
+  ],
+  "answer": 2,
+  "explanation": "(6/7.3) × 10²⁴⁻²² ≈ 0.82 × 100 ≈ 82. Handling powers of ten correctly: subtract exponents when dividing.",
+  "misconception": "8.2 forgets that 10²⁴ ÷ 10²² = 100.",
+  "hints": [
+   "Divide the numbers and subtract the powers of ten separately."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-094",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "Approximately how many seconds are there in a (non-leap) year?",
+  "options": [
+   "3.15 × 10⁵",
+   "5.26 × 10⁵",
+   "8.76 × 10³",
+   "3.15 × 10⁷"
+  ],
+  "answer": 3,
+  "explanation": "365 × 24 × 3600 = 31,536,000 ≈ 3.15 × 10⁷ s. (8760 is the number of hours; 525,600 the number of minutes.) A handy memory aid: a year is about π × 10⁷ seconds.",
+  "misconception": "8.76 × 10³ is the number of hours in a year.",
+  "hints": [
+   "Days × hours × minutes × seconds."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-095",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "A car uses 6 litres of petrol per 100 km. How much petrol is needed for a 350 km trip?",
+  "options": [
+   "35 L",
+   "58 L",
+   "21 L",
+   "6 L"
+  ],
+  "answer": 2,
+  "explanation": "350 km is 3.5 × 100 km, so fuel = 3.5 × 6 = 21 litres.",
+  "misconception": "58 L divides 350 by 6.",
+  "hints": [
+   "How many hundreds of kilometres is 350 km?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-096",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A town of 10,000 people grows by 10% each year. What will its population be after 2 years?",
+  "options": [
+   "12,000",
+   "11,000",
+   "20,000",
+   "12,100"
+  ],
+  "answer": 3,
+  "explanation": "Year 1: 10,000 × 1.1 = 11,000. Year 2: 11,000 × 1.1 = 12,100. Growth compounds: the second year’s 10% is taken on the larger population.",
+  "misconception": "12,000 adds 10% of the original twice (simple, not compound, growth).",
+  "hints": [
+   "Is the second year’s growth based on 10,000 or 11,000?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-097",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "10 L of a 20% salt solution is mixed with 30 L of a 40% salt solution. What is the concentration of the mixture?",
+  "options": [
+   "60%",
+   "30%",
+   "35%",
+   "25%"
+  ],
+  "answer": 2,
+  "explanation": "Salt: 10 × 0.20 = 2 L-equivalent + 30 × 0.40 = 12 → 14 units of salt in 40 L. Concentration = 14/40 = 35%. It is a weighted average, closer to 40% because there is more of that solution.",
+  "misconception": "30% is the simple average, which applies only to equal volumes.",
+  "hints": [
+   "Work out the amount of salt in each solution.",
+   "Divide total salt by total volume."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-098",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "Two fair dice are rolled. What is the probability that the total is 7?",
+  "options": [
+   "1/12",
+   "1/6",
+   "7/36",
+   "1/36"
+  ],
+  "answer": 1,
+  "explanation": "There are 6 × 6 = 36 equally likely outcomes. Totals of 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — six outcomes. Probability = 6/36 = 1/6, the most likely total.",
+  "misconception": "1/12 forgets that (1,6) and (6,1) are different outcomes.",
+  "hints": [
+   "List all the pairs that add to 7.",
+   "How many outcomes are possible in total?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-099",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A bag holds 3 red and 2 blue marbles. Two marbles are drawn one after the other WITHOUT putting the first back. What is the probability that both are red?",
+  "options": [
+   "9/25",
+   "3/10",
+   "1/2",
+   "2/5"
+  ],
+  "answer": 1,
+  "explanation": "P(first red) = 3/5. Then 2 red remain among 4 marbles: P(second red) = 2/4. P(both) = 3/5 × 2/4 = 6/20 = 3/10.",
+  "misconception": "9/25 assumes the first marble is put back (3/5 × 3/5).",
+  "hints": [
+   "After one red is removed, how many marbles and how many red ones are left?",
+   "Multiply the two probabilities."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-100",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "Three consecutive whole numbers add up to 72. What is the largest of them?",
+  "options": [
+   "24",
+   "25",
+   "23",
+   "26"
+  ],
+  "answer": 1,
+  "explanation": "The middle number is the average: 72/3 = 24. The numbers are 23, 24, 25, so the largest is 25.",
+  "misconception": "24 is the middle number.",
+  "hints": [
+   "The middle number equals the average."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-101",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A train moving at 72 km/h passes a signal pole in 9 seconds. How long is the train?",
+  "options": [
+   "360 m",
+   "648 m",
+   "180 m",
+   "8 m"
+  ],
+  "answer": 2,
+  "explanation": "72 km/h = 20 m/s. To pass a pole, the train travels its own length: 20 × 9 = 180 m.",
+  "misconception": "648 uses 72 without converting to m/s.",
+  "hints": [
+   "Convert km/h to m/s.",
+   "Passing a pole means covering the train’s own length."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-102",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "A block has a mass of 200 g and a volume of 80 cm³. What is its density?",
+  "options": [
+   "0.4 g/cm³",
+   "120 g/cm³",
+   "2.5 g/cm³",
+   "16,000 g/cm³"
+  ],
+  "answer": 2,
+  "explanation": "Density = mass ÷ volume = 200/80 = 2.5 g/cm³, similar to glass or aluminium (2.7). It would sink in water (1 g/cm³).",
+  "misconception": "0.4 g/cm³ divides volume by mass.",
+  "hints": [
+   "Density = mass ÷ volume."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-103",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 2,
+  "type": "numerical",
+  "q": "A straight-line graph passes through the points (2, 5) and (6, 13). What is its slope?",
+  "options": [
+   "4",
+   "2",
+   "0.5",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "Slope = change in y ÷ change in x = (13 − 5)/(6 − 2) = 8/4 = 2. On a distance–time graph, this would be a speed of 2 units per unit time.",
+  "misconception": "0.5 divides the change in x by the change in y.",
+  "hints": [
+   "Slope = rise ÷ run."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-104",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A sheet of paper is 0.1 mm thick. If it could be folded in half 10 times, how thick would the stack be?",
+  "options": [
+   "102.4 mm",
+   "20 mm",
+   "10.24 mm",
+   "1 mm"
+  ],
+  "answer": 0,
+  "explanation": "Each fold doubles the thickness: 0.1 × 2¹⁰ = 0.1 × 1024 = 102.4 mm, about 10 cm. After 42 folds it would, in principle, reach beyond the Moon — exponential growth again.",
+  "misconception": "1 mm multiplies by 10 instead of doubling 10 times.",
+  "hints": [
+   "What happens to the thickness with each fold?",
+   "2¹⁰ = ?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-105",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "A student’s pendulum experiment gives g = 9.6 m/s², while the accepted value is 9.8 m/s². What is the percentage error?",
+  "options": [
+   "20.4%",
+   "9.8%",
+   "2.04%",
+   "0.2%"
+  ],
+  "answer": 2,
+  "explanation": "Percentage error = |measured − accepted| ÷ accepted × 100 = 0.2/9.8 × 100 ≈ 2.04%.",
+  "misconception": "0.2% forgets to divide by the accepted value before multiplying by 100.",
+  "hints": [
+   "Divide the error by the accepted value."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-106",
+  "subject": "Scientific Reasoning",
+  "topic": "Numerical Reasoning",
+  "level": 3,
+  "type": "numerical",
+  "q": "Three warning lights flash every 4 s, 6 s and 10 s. They all flash together at 12:00:00. After how many seconds will they next flash together?",
+  "options": [
+   "240 s",
+   "20 s",
+   "60 s",
+   "30 s"
+  ],
+  "answer": 2,
+  "explanation": "They flash together at times that are multiples of all three periods: the least common multiple of 4, 6 and 10. 4 = 2², 6 = 2 × 3, 10 = 2 × 5, so LCM = 2² × 3 × 5 = 60 s.",
+  "misconception": "240 s multiplies all three periods; 30 s is not a multiple of 4.",
+  "hints": [
+   "They flash together at times that are multiples of every period.",
+   "Find the smallest number divisible by 4, 6 and 10."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-107",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 1,
+  "type": "reasoning",
+  "q": "Which statement is an observation?",
+  "options": [
+   "The leaves on the plant are yellow.",
+   "The plant will die soon.",
+   "Someone forgot to water the plant.",
+   "The plant is short of nitrogen."
+  ],
+  "answer": 0,
+  "explanation": "Yellow leaves can be seen directly — that is an observation. The others are inferences or predictions that might explain it and would need testing.",
+  "hints": [
+   "Which statement could you check just by looking?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-108",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Which of these is a testable scientific hypothesis?",
+  "options": [
+   "Bean plants given more light grow taller in four weeks.",
+   "Plants have feelings that cannot be detected.",
+   "Blue is the most beautiful colour.",
+   "Plants were created to make people happy."
+  ],
+  "answer": 0,
+  "explanation": "A scientific hypothesis must make a prediction that an experiment could show to be wrong. Light versus height can be measured. Undetectable feelings, beauty and purpose cannot be tested.",
+  "hints": [
+   "Which statement could an experiment prove false?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-109",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A student notices that bread kept in a warm, dark cupboard grows mould faster than bread in a cold refrigerator. Which inference is best supported?",
+  "options": [
+   "Darkness is what makes mould grow faster.",
+   "Warmth, darkness or both may speed up mould growth; this comparison cannot tell which, since two factors differ.",
+   "Cold kills mould spores completely.",
+   "Mould needs no moisture."
+  ],
+  "answer": 1,
+  "explanation": "The cupboard and fridge differ in temperature AND light (and probably humidity). Any of these could explain the result. To identify the cause, change only one factor: e.g. compare warm-dark with warm-light, and warm-dark with cold-dark. A careful scientist does not claim more than the evidence shows.",
+  "hints": [
+   "How many conditions differ between the cupboard and the fridge?",
+   "What experiment would separate them?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-110",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "experiment",
+  "q": "A burning candle stands in a dish of water. When a jar is placed over it, the flame goes out and the water rises inside the jar. A student concludes, “The water rose because the candle used up the oxygen.” What is a more careful conclusion?",
+  "options": [
+   "The candle created a vacuum.",
+   "Oxygen was used, but the hot air inside also contracted as it cooled after the flame died; both effects may contribute to the rise.",
+   "The water was attracted by the flame.",
+   "The student’s conclusion is the only explanation."
+  ],
+  "answer": 1,
+  "explanation": "Burning wax uses oxygen but also produces CO₂ and water vapour, so the gas volume does not simply drop by the oxygen used. Much of the rise happens just after the flame goes out, as the heated air cools and contracts. Testing this would need, for example, measuring how the rise depends on the jar’s temperature.",
+  "hints": [
+   "Does burning produce any gases?",
+   "What happens to hot air when it cools?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-111",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "reasoning",
+  "q": "“My grandfather smoked every day and lived to 95, so smoking is not harmful.” What is wrong with this reasoning?",
+  "options": [
+   "One case cannot overturn evidence from studies of millions of people; risk describes populations, not every individual.",
+   "Nothing — one example proves the rule.",
+   "Smoking is harmful only to young people.",
+   "Grandfathers never smoke."
+  ],
+  "answer": 0,
+  "explanation": "Large studies show smokers are far more likely to develop lung cancer and heart disease. A few smokers live long lives, just as some non-smokers die young. Anecdotes are vivid but statistically meaningless compared with large, controlled data sets.",
+  "hints": [
+   "How many people does the claim rely on?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-112",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A company asks 5 customers about its new toothpaste; 4 like it. It advertises: “80% of people prefer our toothpaste!” What is the main flaw?",
+  "options": [
+   "Toothpaste cannot be tested.",
+   "The sample is far too small (and probably not random) to represent all people.",
+   "80% is calculated wrongly.",
+   "Customers always lie."
+  ],
+  "answer": 1,
+  "explanation": "4/5 is indeed 80%, but with only 5 people chance plays a huge role, and the customers may not be representative of the population. Reliable surveys need large, random samples.",
+  "misconception": "The arithmetic is correct; the problem is the sample.",
+  "hints": [
+   "How many people were asked?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-113",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "experiment",
+  "q": "In a trial, patients given a new pain-relief tablet reported feeling better. Why must scientists also give a similar group an identical-looking tablet with no active ingredient (a placebo)?",
+  "options": [
+   "People often feel better simply because they expect to; comparing with a placebo group shows whether the drug itself has an effect.",
+   "Because the drug might be too strong.",
+   "To make the trial take longer.",
+   "Placebos are cheaper to make."
+  ],
+  "answer": 0,
+  "explanation": "The placebo effect is real: belief can reduce reported pain. A control group receiving a placebo, ideally in a double-blind trial (neither patients nor doctors know who gets what), isolates the effect of the drug.",
+  "hints": [
+   "Could believing you have taken medicine make you feel better?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-114",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Data show that people who carry cigarette lighters are much more likely to develop lung cancer. Should lighters be banned to reduce cancer?",
+  "options": [
+   "No — the data must be fake.",
+   "Yes — the flame produces radiation.",
+   "No — smoking is a confounding variable: smokers both carry lighters and get lung cancer; lighters themselves do not cause it.",
+   "Yes — lighters clearly cause cancer."
+  ],
+  "answer": 2,
+  "explanation": "A correlation between two things can arise because both are caused by a third. Here, smoking explains both. To test whether lighters matter, compare smokers who carry lighters with smokers who use matches, or non-smokers who carry lighters.",
+  "hints": [
+   "Who mostly carries lighters?",
+   "Could a third factor cause both observations?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "REA-115",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 2,
+  "type": "mcq",
+  "q": "In science, what is meant by a “theory”, such as the theory of evolution or atomic theory?",
+  "options": [
+   "A guess with no evidence",
+   "A well-tested explanation supported by a large body of evidence from many observations and experiments",
+   "An idea that has been proved false",
+   "A rule that can never be changed"
+  ],
+  "answer": 1,
+  "explanation": "In everyday speech “theory” can mean a hunch, but in science a theory is a powerful, widely tested explanation that makes successful predictions. Theories can still be refined if new evidence demands it.",
+  "misconception": "A scientific theory is not “just a guess”.",
+  "hints": [
+   "How is the scientific meaning different from everyday use?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-116",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Why do scientists publish detailed descriptions of their methods along with their results?",
+  "options": [
+   "So that nobody can copy the idea",
+   "To make papers longer",
+   "So that other scientists can repeat the experiment and check whether the results are reproducible",
+   "Because results alone are always wrong"
+  ],
+  "answer": 2,
+  "explanation": "Reproducibility is central to science: a result is trusted when independent teams following the same method get the same outcome. Peer review and replication help catch errors, bias and occasionally fraud.",
+  "hints": [
+   "How can someone else check your result?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-117",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Four darts all land tightly together but far from the bullseye. In measurement terms, how would you describe this?",
+  "options": [
+   "Neither accurate nor precise",
+   "Both accurate and precise",
+   "Accurate but not precise",
+   "Precise but not accurate"
+  ],
+  "answer": 3,
+  "explanation": "Precision is how close repeated measurements are to each other; accuracy is how close they are to the true value. A tight cluster away from the target suggests a systematic error — for instance a balance that always reads 5 g high.",
+  "hints": [
+   "Are the darts close to each other? Are they close to the target?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-118",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Fossils of sea shells and fish are found in rocks high in the Himalayas. What is the most reasonable inference?",
+  "options": [
+   "Birds carried the fossils there.",
+   "Fish once lived on mountain tops.",
+   "The rocks formed under the sea and were later pushed up by movements of the Earth’s crust.",
+   "The fossils formed in mountain snow."
+  ],
+  "answer": 2,
+  "explanation": "Marine fossils show the rocks were laid down as sediment on a sea floor (the ancient Tethys Sea). The collision of the Indian plate with the Eurasian plate folded and lifted these rocks to great heights — and is still raising the Himalayas today.",
+  "hints": [
+   "Where do sea shells normally form?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-119",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Two explanations fit all the evidence for why a garden’s lettuces were eaten overnight: (A) snails, which were seen in the garden; (B) an unknown invisible animal that leaves no trace. Which principle suggests preferring A?",
+  "options": [
+   "Newton’s third law",
+   "The law of conservation of mass",
+   "Occam’s razor — prefer the simplest explanation that fits the evidence, without unnecessary assumptions",
+   "Archimedes’ principle"
+  ],
+  "answer": 2,
+  "explanation": "Occam’s razor recommends not multiplying assumptions beyond necessity. Snails are known to exist, were observed and eat lettuce; an undetectable animal adds untestable assumptions. The simpler explanation should be tested first — though simplicity is a guide, not a proof.",
+  "hints": [
+   "Which explanation needs fewer extra assumptions?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "REA-120",
+  "subject": "Scientific Reasoning",
+  "topic": "Observation & Inference",
+  "level": 3,
+  "type": "experiment",
+  "q": "Two ice cubes are placed at the same time on a metal block and on a wooden block, both at room temperature. The metal block feels colder to touch, yet the ice on it melts MUCH faster. What is the correct inference?",
+  "options": [
+   "The metal block is actually warmer than the wood.",
+   "Wood produces cold.",
+   "Ice melts faster on cold surfaces.",
+   "Metal conducts heat quickly — from your hand (so it feels cold) and from the block and room into the ice (so the ice melts fast)."
+  ],
+  "answer": 3,
+  "explanation": "Both blocks are at the same temperature. The sensation of “cold” measures how fast heat leaves your skin, not the block’s temperature. A good conductor moves heat quickly in whichever direction it flows: from your hand into the metal, and from the metal into the ice. Wood, an insulator, delivers heat to the ice slowly.",
+  "misconception": "Feeling cold does not mean being colder; this experiment surprises most people.",
+  "hints": [
+   "Are the two blocks at different temperatures?",
+   "What does “feeling cold” actually detect?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
   "id": "REA-001",
   "subject": "Scientific Reasoning",
   "topic": "Patterns",
