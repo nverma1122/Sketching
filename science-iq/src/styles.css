@@ -241,3 +241,5 @@ table.data th { background: var(--card2); }
   .barrow { grid-template-columns: 1fr 1fr 60px; }
   .quizbar.sticky { top: 0; }
 }
+.transfer { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--line); display: grid; gap: 0.5rem; }
+.transfer textarea { font: 0.8rem ui-monospace, Menlo, monospace; color: var(--text); background: var(--bg2); border: 1px solid var(--line); border-radius: 10px; padding: 0.5rem; width: 100%; resize: vertical; }

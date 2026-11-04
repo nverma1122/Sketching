@@ -3,7 +3,7 @@ import type { Go } from '../App';
 import { Bar, Kpi } from '../components/Results';
 import { BY_ID } from '../lib/bank';
 import { recommend } from '../lib/recommend';
-import { BADGES, dayKey, exportJson, importJson, levelOf, resetAll, streakOf, topicStats, useStore } from '../lib/store';
+import { BADGES, dayKey, exportJson, getState, importJson, levelOf, resetAll, streakOf, topicStats, useStore } from '../lib/store';
 import { SUBJECTS, SUBJECT_ICON } from '../lib/types';
 
 export function Progress({ go }: { go: Go }) {
@@ -147,6 +147,7 @@ export function Progress({ go }: { go: Go }) {
           <button className="btn danger" onClick={() => setConfirmReset('ask')}>Reset all progress</button>
         </div>
         {msg && <p className="small">{msg}</p>}
+        <TransferBox onDone={setMsg} />
         {confirmReset && (
           <div className="warnbox">
             <p><b>This permanently deletes all XP, badges, answers, mistakes and test results on this device.</b> Type RESET to confirm.</p>
@@ -157,6 +158,39 @@ export function Progress({ go }: { go: Go }) {
             </div>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Move progress between devices without files: copy a text code on one device, paste it on the
+ * other. Works where downloads are blocked (e.g. inside a claude.ai page).
+ */
+function TransferBox({ onDone }: { onDone: (m: string) => void }) {
+  const [code, setCode] = useState('');
+  const [paste, setPaste] = useState('');
+  const copy = async () => {
+    const text = JSON.stringify({ app: 'SCIENCE IQ', exportedAt: new Date().toISOString(), progress: getState() });
+    setCode(text);
+    try {
+      await navigator.clipboard.writeText(text);
+      onDone('Progress code copied. Paste it on the other device: My Progress → Move to another device → Paste.');
+    } catch {
+      onDone('Select all the text in the box below and copy it.');
+    }
+  };
+  return (
+    <div className="transfer">
+      <h4>Move to another device</h4>
+      <p className="small dim">Copy your progress as text, send it to yourself (for example by email or WhatsApp), and paste it here on the other device. Pasting replaces the progress on that device.</p>
+      <div className="actions left">
+        <button className="btn ghost" onClick={copy}>📋 Copy progress code</button>
+      </div>
+      {code && <textarea id="progress-code" readOnly value={code} rows={3} onFocus={(e) => e.target.select()} aria-label="Progress code" />}
+      <textarea id="progress-paste" value={paste} onChange={(e) => setPaste(e.target.value)} rows={3} placeholder="Paste a progress code here" aria-label="Paste a progress code" />
+      <div className="actions left">
+        <button className="btn" disabled={!paste.trim()} onClick={() => { const err = importJson(paste.trim()); onDone(err ?? 'Progress imported from the code.'); if (!err) setPaste(''); }}>Import pasted code</button>
       </div>
     </div>
   );

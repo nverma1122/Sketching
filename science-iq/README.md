@@ -15,6 +15,12 @@ npm run e2e        # end-to-end test in Chromium (needs Playwright; run after bu
 
 Open the app once while online (or from `npm run preview`). The service worker then caches everything, and the app works with no connection. On a phone or tablet, use the browser's **Add to Home screen** option to install it.
 
+## Use it on a laptop or tablet without installing anything
+
+`download/science-iq-offline.html` is the whole app in one file (`npm run build` regenerates it). Copy it to the laptop by USB, email or Google Drive and double-click it. It opens in the browser and works with no internet and no server.
+
+**Moving progress between devices:** open **My Progress → Move to another device → Copy progress code** on the first device. Send the code to yourself, then paste it in the same box on the other device and tap **Import pasted code**. Importing replaces the progress on that device. The JSON export and import buttons also work in the offline file.
+
 ## What is inside
 
 | Section | What it does |

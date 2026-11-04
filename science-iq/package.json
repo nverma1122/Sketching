@@ -2,14 +2,15 @@
   "name": "science-iq",
   "private": true,
   "version": "1.0.0",
-  "description": "SCIENCE IQ — Think Beyond the Textbook. Offline Grade 9 science olympiad trainer.",
+  "description": "SCIENCE IQ \u2014 Think Beyond the Textbook. Offline Grade 9 science olympiad trainer.",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "bank": "node scripts/build-bank.mjs",
-    "build": "node scripts/build-bank.mjs && tsc -b && vite build",
+    "build": "node scripts/build-bank.mjs && tsc -b && vite build && node scripts/standalone.mjs",
     "preview": "vite preview",
-    "e2e": "node scripts/e2e.mjs"
+    "e2e": "node scripts/e2e.mjs",
+    "standalone": "node scripts/standalone.mjs"
   },
   "dependencies": {
     "react": "^19.3.1",
