@@ -1,5 +1,1974 @@
 [
  {
+  "id": "ENV-025",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 3,
+  "type": "data",
+  "q": "The table gives approximate global average surface temperature anomalies (difference from a 1951–1980 baseline). How does the rate of warming from 2000 to 2020 compare with the rate from 1950 to 2000?",
+  "options": [
+   "About half as fast",
+   "About 3 times faster",
+   "About 10 times faster",
+   "About the same"
+  ],
+  "answer": 1,
+  "explanation": "1950–2000: rise of 0.5 °C in 50 years = 0.01 °C per year. 2000–2020: rise of 0.6 °C in 20 years = 0.03 °C per year. So recent warming is about three times faster — consistent with accelerating greenhouse-gas emissions.",
+  "misconception": "Comparing total changes (0.5 vs 0.6 °C) ignores the very different time spans.",
+  "hints": [
+   "Work out °C per year for each period.",
+   "Divide the two rates."
+  ],
+  "time": 90,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "table": {
+   "head": [
+    "Year",
+    "1950",
+    "2000",
+    "2020"
+   ],
+   "rows": [
+    [
+     "Anomaly (°C, approx.)",
+     -0.1,
+     0.4,
+     1
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "ENV-026",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 2,
+  "type": "reasoning",
+  "q": "What are the two main causes of rising global sea level?",
+  "options": [
+   "Expansion of seawater as it warms, and melting of glaciers and ice sheets on land",
+   "Rivers carrying more sand into the sea",
+   "Underwater volcanoes and earthquakes",
+   "Melting of floating sea ice and more rainfall"
+  ],
+  "answer": 0,
+  "explanation": "Water expands when heated, so a warmer ocean takes up more volume. Ice on land (mountain glaciers, Greenland, Antarctica) adds new water to the ocean when it melts. Floating sea ice barely affects sea level because it already displaces its own weight of water.",
+  "misconception": "Melting floating sea ice is not a major cause of sea-level rise.",
+  "hints": [
+   "Does water expand when heated?",
+   "Which ice adds new water to the oceans?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-027",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Melting of the Greenland and Antarctic ice SHEETS raises sea level, but melting of Arctic SEA ICE barely does. Which principle explains the difference?",
+  "options": [
+   "Sea ice evaporates instead of melting.",
+   "Floating sea ice already displaces its own weight of water (Archimedes’ principle); ice on land does not, so its meltwater adds to the ocean.",
+   "Arctic ice is made of salt.",
+   "Antarctica is warmer than the Arctic."
+  ],
+  "answer": 1,
+  "explanation": "A floating body displaces water equal to its own weight. When floating ice melts, it fills almost exactly the volume it was displacing (like an ice cube in a glass). Land ice is supported by rock; when it melts or slides into the sea, the ocean gains water it did not hold before. (Melting sea ice still matters: it lowers Earth’s albedo.)",
+  "hints": [
+   "How much water does a floating object displace?",
+   "Is ice on land floating?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-028",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "The oceans absorb about a quarter of the CO₂ released by humans. Why is this harmful to corals and shellfish?",
+  "options": [
+   "CO₂ freezes the water around corals.",
+   "CO₂ makes the sea too salty.",
+   "Dissolved CO₂ forms carbonic acid, lowering seawater pH and making it harder for organisms to build calcium carbonate shells and skeletons.",
+   "CO₂ increases oxygen levels too much."
+  ],
+  "answer": 2,
+  "explanation": "CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. The extra H⁺ ions react with carbonate ions, reducing the carbonate available for building CaCO₃. Ocean surface pH has already fallen from about 8.2 to 8.1 — roughly a 26% increase in H⁺ concentration — threatening coral reefs, oysters and plankton.",
+  "hints": [
+   "What does CO₂ form when it dissolves in water?",
+   "What are shells made of?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-029",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is the main temperature goal of the Paris Agreement (2015) on climate change?",
+  "options": [
+   "To stop all use of electricity",
+   "To ban cars worldwide by 2020",
+   "To cool the planet by 5 °C",
+   "To keep global warming well below 2 °C above pre-industrial levels and try to limit it to 1.5 °C"
+  ],
+  "answer": 3,
+  "explanation": "Nearly every country agreed to set national targets for reducing greenhouse-gas emissions, aiming to hold warming well below 2 °C and pursue 1.5 °C, with regular reviews to increase ambition. India’s pledges include expanding non-fossil electricity capacity.",
+  "hints": [
+   "Two temperature figures are mentioned in the agreement."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-030",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 3,
+  "type": "what-if",
+  "q": "Large areas of Arctic soil are permanently frozen (permafrost) and contain huge amounts of dead plant matter. What could happen as the Arctic warms?",
+  "options": [
+   "More ice would form, cooling the planet.",
+   "The soil would absorb all the CO₂ in the air.",
+   "Thawing soil lets microbes decompose the matter, releasing CO₂ and methane, which cause further warming — a positive feedback.",
+   "Nothing, because frozen soil contains no carbon."
+  ],
+  "answer": 2,
+  "explanation": "Permafrost is estimated to hold roughly twice as much carbon as the atmosphere does today. As it thaws, decomposition releases CO₂ (and methane in waterlogged areas), adding greenhouse gases that warm the Arctic further and thaw more permafrost.",
+  "hints": [
+   "What happens to dead plant matter when it is no longer frozen?",
+   "Would the released gases cause more or less warming?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-031",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is the difference between weather and climate?",
+  "options": [
+   "Climate changes every day; weather stays the same.",
+   "Weather applies only to rain.",
+   "Weather is the day-to-day state of the atmosphere; climate is the average weather of a region over a long period (usually 30 years or more).",
+   "They mean exactly the same thing."
+  ],
+  "answer": 2,
+  "explanation": "One cold week is weather; a trend in average temperatures over decades is climate. That is why a single cold winter does not disprove global warming.",
+  "hints": [
+   "Which one describes a long-term average?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-032",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Nitrogen (N₂) and oxygen (O₂) make up 99% of dry air but are not greenhouse gases, while CO₂, CH₄ and H₂O are. What is the key difference?",
+  "options": [
+   "CO₂ is coloured, so it absorbs light.",
+   "N₂ and O₂ are too heavy to absorb heat.",
+   "Molecules with three or more atoms (or with unevenly shared electrons) can vibrate in ways that absorb infrared; simple two-atom molecules of the same element cannot.",
+   "N₂ and O₂ are found only high in the atmosphere."
+  ],
+  "answer": 2,
+  "explanation": "A molecule absorbs infrared when a vibration changes how its electric charge is distributed. In N₂ and O₂, two identical atoms share electrons equally, and stretching them causes no such change. CO₂, CH₄ and H₂O have bending and asymmetric vibrations that do, so they absorb and re-emit infrared radiation from Earth’s surface.",
+  "hints": [
+   "How many atoms do greenhouse-gas molecules have?",
+   "What must a vibration change to interact with infrared?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-033",
+  "subject": "Environment & Technology",
+  "topic": "Climate Science",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which set lists important human-related sources of methane?",
+  "options": [
+   "Photosynthesis and planting trees",
+   "Flooded rice paddies, cattle digestion, landfill sites and leaks from natural gas systems",
+   "Nuclear power stations only",
+   "Solar panels, wind turbines and batteries"
+  ],
+  "answer": 1,
+  "explanation": "Methane forms when microbes break down organic matter without oxygen — in flooded fields, the stomachs of cattle, buffaloes and sheep, and buried rubbish — and leaks during coal mining and gas production. It is a powerful but shorter-lived greenhouse gas.",
+  "hints": [
+   "Methane forms where organic matter decays without oxygen."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-034",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which region of India is recognised as a global biodiversity hotspot?",
+  "options": [
+   "The Deccan Plateau as a whole",
+   "The Indo-Gangetic plain",
+   "The Western Ghats",
+   "The Thar Desert"
+  ],
+  "answer": 2,
+  "explanation": "Biodiversity hotspots are regions with exceptionally many endemic species that have lost much of their original habitat. India includes parts of four: the Western Ghats (with Sri Lanka), the Himalaya, Indo-Burma and Sundaland (the Nicobar Islands).",
+  "hints": [
+   "It is a mountain range along India’s western coast."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-035",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 2,
+  "type": "mcq",
+  "q": "In which year did India launch Project Tiger to protect tigers and their habitats?",
+  "options": [
+   "1992",
+   "1947",
+   "2010",
+   "1973"
+  ],
+  "answer": 3,
+  "explanation": "Project Tiger began in 1973 with nine reserves. It protects whole ecosystems, because saving a top predator requires protecting its prey and habitat. India now holds most of the world’s wild tigers.",
+  "hints": [
+   "It began in the early 1970s."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-036",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 2,
+  "type": "mcq",
+  "q": "The Nilgiri tahr is found naturally only in the southern Western Ghats. Such a species is described as:",
+  "options": [
+   "extinct",
+   "migratory",
+   "endemic",
+   "invasive"
+  ],
+  "answer": 2,
+  "explanation": "An endemic species occurs naturally in only one geographic area. Endemic species are especially vulnerable: if their habitat is destroyed, they have nowhere else to survive.",
+  "hints": [
+   "It is native to one region only."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-037",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Elephants in tropical forests swallow large fruits and disperse their seeds over long distances. Ecologists call such species “keystone species”. Why would losing elephants affect a forest far more than their numbers suggest?",
+  "options": [
+   "Many tree species depend on them to spread seeds and maintain open clearings, so the forest’s whole composition would change.",
+   "Elephants produce oxygen for the forest.",
+   "Elephants are the only animals that eat leaves.",
+   "Losing any species always has exactly the same effect."
+  ],
+  "answer": 0,
+  "explanation": "A keystone species has an effect on its ecosystem out of proportion to its abundance. Some large-seeded trees are dispersed almost only by elephants; elephants also open clearings, create water holes and recycle nutrients. Without them, those trees decline and many other species dependent on them follow.",
+  "hints": [
+   "What roles do elephants play besides eating?",
+   "Which plants depend on them?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-038",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which pair correctly gives one example each of in-situ and ex-situ conservation?",
+  "options": [
+   "In-situ: a national park; ex-situ: a seed bank",
+   "Both: zoos",
+   "In-situ: a zoo; ex-situ: a wildlife sanctuary",
+   "In-situ: a botanical garden; ex-situ: a biosphere reserve"
+  ],
+  "answer": 0,
+  "explanation": "In-situ conservation protects species in their natural habitats (national parks, sanctuaries, biosphere reserves, sacred groves). Ex-situ conservation keeps them outside their habitats (zoos, botanical gardens, seed and gene banks), often as a backup or for breeding programmes.",
+  "hints": [
+   "“In situ” means “in its original place”."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-039",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Water hyacinth, introduced to India as an ornamental plant, now covers many lakes and rivers in thick mats. Why has it become such a problem?",
+  "options": [
+   "It removes all salt from water.",
+   "It is a native plant that suddenly mutated.",
+   "As an invasive species it grows extremely fast and has few natural enemies here, blocking light and reducing oxygen for native life.",
+   "It is poisonous to all fish."
+  ],
+  "answer": 2,
+  "explanation": "Invasive species outcompete native ones when freed from the predators, diseases and competitors that kept them in check in their original range. Water hyacinth can double its area in a couple of weeks; mats block sunlight, clog waterways and, when they decay, use up dissolved oxygen.",
+  "hints": [
+   "What usually controls a species’ population in its native habitat?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-040",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 3,
+  "type": "what-if",
+  "q": "A new highway splits a large forest into two smaller patches that animals cannot cross. Over many generations, what is a likely genetic consequence for a species such as leopards in each patch?",
+  "options": [
+   "Genetic diversity would increase.",
+   "Each small, isolated population loses genetic diversity and suffers more inbreeding, making it more vulnerable to disease and change.",
+   "The leopards would immediately evolve into new species.",
+   "There would be no effect, because both patches are still forest."
+  ],
+  "answer": 1,
+  "explanation": "Small, isolated populations exchange no genes. Over time, random loss of alleles (genetic drift) and inbreeding reduce diversity and fitness. Wildlife corridors and underpasses that reconnect habitats help maintain gene flow.",
+  "hints": [
+   "Can genes still move between the two groups?",
+   "What happens to genetic diversity in a small, closed population?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-041",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is the IUCN Red List?",
+  "options": [
+   "A list of polluted rivers",
+   "A list of the world’s most dangerous animals",
+   "A list of plants with red flowers",
+   "A global assessment of species’ risk of extinction, using categories such as Vulnerable, Endangered and Critically Endangered"
+  ],
+  "answer": 3,
+  "explanation": "The International Union for Conservation of Nature assesses species against criteria such as population size and decline. The Great Indian Bustard, for example, is listed as Critically Endangered.",
+  "hints": [
+   "It measures risk of extinction."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-042",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 1,
+  "type": "mcq",
+  "q": "The dodo, a flightless bird of Mauritius, became extinct in the 17th century. What were the main causes?",
+  "options": [
+   "Hunting by humans and animals such as rats and pigs introduced by them",
+   "Too many predators of its own species",
+   "A volcanic eruption",
+   "An ice age"
+  ],
+  "answer": 0,
+  "explanation": "The dodo had evolved with no ground predators, so it was unafraid and nested on the ground. Sailors hunted it, and introduced rats, pigs and monkeys ate its eggs. It vanished within about a century of human arrival — a classic example of human-caused extinction.",
+  "hints": [
+   "What arrived on Mauritius with the sailors?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-043",
+  "subject": "Environment & Technology",
+  "topic": "Biodiversity",
+  "level": 3,
+  "type": "data",
+  "q": "Scientists counted plant species on several islands of similar climate. What pattern do the data show?",
+  "options": [
+   "Smaller islands have more species.",
+   "Species number is directly proportional to area.",
+   "Each tenfold increase in area doubles the number of species: larger areas support more species, but not in direct proportion.",
+   "There is no relationship."
+  ],
+  "answer": 2,
+  "explanation": "Area rises 10× each step while species only double, so the relationship is not proportional (that would give 300, 3000…). Larger areas hold more habitats and larger populations less likely to die out. The same species–area pattern warns that shrinking habitats lose species.",
+  "misconception": "Direct proportionality would mean ten times the area gives ten times the species.",
+  "hints": [
+   "How much does area change between columns?",
+   "How much does the number of species change for each tenfold increase in area?"
+  ],
+  "time": 80,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "table": {
+   "head": [
+    "Island area (km²)",
+    "1",
+    "10",
+    "100",
+    "1000"
+   ],
+   "rows": [
+    [
+     "Number of plant species",
+     30,
+     60,
+     120,
+     240
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "ENV-044",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 1,
+  "type": "mcq",
+  "q": "What does a solar (photovoltaic) cell do?",
+  "options": [
+   "Converts light directly into electricity",
+   "Converts heat into light",
+   "Burns fuel using sunlight",
+   "Stores electricity like a battery"
+  ],
+  "answer": 0,
+  "explanation": "In a photovoltaic cell, usually made of silicon, light knocks electrons free and the cell’s internal electric field drives them round a circuit as current. No fuel is burnt and there are no moving parts.",
+  "hints": [
+   "“Photo” means light; “voltaic” refers to electricity."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-045",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "In a village biogas plant, cow dung and kitchen waste are fed into a sealed tank. Why is the tank sealed, and what is the main gas produced?",
+  "options": [
+   "To stop light; the gas is mainly hydrogen.",
+   "To keep the gas cold; the gas is mainly oxygen.",
+   "To trap heat; the gas is mainly nitrogen.",
+   "To keep oxygen out so that anaerobic bacteria can decompose the waste; the gas is mainly methane."
+  ],
+  "answer": 3,
+  "explanation": "Biogas (about 55–75% methane, plus CO₂) forms when anaerobic microbes digest organic matter. It burns cleanly for cooking and lighting, reducing indoor smoke from wood. The leftover slurry is a good fertiliser.",
+  "hints": [
+   "Which bacteria work without oxygen?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-046",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 3,
+  "type": "numerical",
+  "q": "A wind turbine rated at 2 MW produces, on average over a year, 30% of its maximum output (its “capacity factor”). How much electrical energy does it generate in a year? (1 year = 8760 hours)",
+  "options": [
+   "8760 MWh",
+   "17,520 MWh",
+   "5256 MWh",
+   "600 MWh"
+  ],
+  "answer": 2,
+  "explanation": "Average power = 0.3 × 2 MW = 0.6 MW. Energy = 0.6 MW × 8760 h = 5256 MWh — enough for well over a thousand Indian homes. 17,520 MWh assumes the turbine runs at full power all year, which wind never allows.",
+  "misconception": "17,520 MWh ignores the capacity factor.",
+  "hints": [
+   "Average power = rated power × capacity factor.",
+   "Energy = power × time."
+  ],
+  "time": 80,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-047",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 2,
+  "type": "mcq",
+  "q": "Tidal power stations generate electricity from the rise and fall of the sea. What ultimately causes the tides they use?",
+  "options": [
+   "Heat from the Earth’s core",
+   "River water flowing into the sea",
+   "Mainly the gravitational pull of the Moon (and to a lesser extent the Sun)",
+   "Wind blowing over the sea"
+  ],
+  "answer": 2,
+  "explanation": "Tides are driven mainly by the Moon’s gravity, so tidal energy is highly predictable. India’s Gulfs of Khambhat and Kutch and the Sundarbans have large tidal ranges suitable for such schemes.",
+  "hints": [
+   "What causes high and low tides?"
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-048",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 2,
+  "type": "mcq",
+  "q": "Where is geothermal energy most easily used to generate electricity?",
+  "options": [
+   "In very cold polar regions",
+   "In volcanic regions where hot rock and steam are close to the surface, such as Iceland",
+   "In deserts with strong sunshine",
+   "On windy coastlines"
+  ],
+  "answer": 1,
+  "explanation": "Geothermal energy comes from heat inside the Earth (largely from radioactive decay). In volcanic areas, hot water and steam can be piped to turbines. Iceland gets about a quarter of its electricity and most of its heating this way.",
+  "hints": [
+   "Where is the Earth’s heat closest to the surface?"
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-049",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 3,
+  "type": "statement",
+  "q": "Consider these statements about large hydroelectric dams:\nI. They produce electricity without burning fuel.\nII. Their output depends on rainfall, so droughts reduce it.\nIII. Reservoirs can flood forests and villages and block fish migration.\nIV. Rotting vegetation in some tropical reservoirs releases methane.\nWhich are correct?",
+  "options": [
+   "I, II and III only",
+   "I and II only",
+   "II and IV only",
+   "All four"
+  ],
+  "answer": 3,
+  "explanation": "Hydropower is renewable and low-carbon in operation (I), but depends on the water cycle (II), has major social and ecological impacts (III), and flooded organic matter decaying without oxygen in warm reservoirs can emit methane (IV). “Renewable” does not mean free of environmental cost.",
+  "hints": [
+   "Is a renewable source automatically free of environmental cost?",
+   "Think about water supply, flooded land and decaying vegetation."
+  ],
+  "time": 80,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-050",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 3,
+  "type": "numerical",
+  "q": "Sunlight delivers about 1000 W per square metre. What area of 20%-efficient solar panels is needed to produce 1 kW of electrical power in full sunshine?",
+  "options": [
+   "5 m²",
+   "20 m²",
+   "0.2 m²",
+   "1 m²"
+  ],
+  "answer": 0,
+  "explanation": "Each square metre produces 20% of 1000 W = 200 W. For 1000 W: 1000/200 = 5 m². Real systems need more, because sunlight is weaker in the morning, evening and on cloudy days.",
+  "misconception": "1 m² would require 100% efficiency.",
+  "hints": [
+   "How much power does 1 m² produce at 20% efficiency?",
+   "How many such square metres make 1000 W?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-051",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A hydrogen fuel cell car emits only water. Why do scientists say its environmental benefit depends on how the hydrogen is made?",
+  "options": [
+   "Most hydrogen today is made from natural gas, releasing CO₂; only hydrogen made by electrolysis using renewable electricity (“green hydrogen”) is truly low-carbon.",
+   "Water from the car causes acid rain.",
+   "Hydrogen is found pure in large underground lakes.",
+   "Fuel cells use coal directly."
+  ],
+  "answer": 0,
+  "explanation": "Hydrogen is an energy carrier, not a primary source — it must be produced. Steam reforming of methane releases CO₂, while electrolysis of water is clean only if the electricity is clean. India’s National Green Hydrogen Mission aims to scale up the renewable route.",
+  "hints": [
+   "Where does hydrogen fuel come from?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-052",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Nuclear power produces very little CO₂ during operation. Why is it nevertheless classed as a non-renewable energy source?",
+  "options": [
+   "It produces a lot of smoke.",
+   "Its fuel, uranium, is mined from limited deposits in the Earth and is not replenished.",
+   "It needs coal to run.",
+   "It depends on sunlight."
+  ],
+  "answer": 1,
+  "explanation": "“Renewable” refers to whether the source is naturally replenished, not to its emissions. Uranium ore is finite. Nuclear power is low-carbon but non-renewable, and its radioactive waste must be stored safely for thousands of years.",
+  "misconception": "Low-carbon and renewable are different ideas.",
+  "hints": [
+   "Is uranium replaced naturally as we use it?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-053",
+  "subject": "Environment & Technology",
+  "topic": "Renewable Energy",
+  "level": 3,
+  "type": "application",
+  "q": "How does a pumped-storage hydropower plant help a grid with lots of solar power?",
+  "options": [
+   "It converts water into fuel.",
+   "It stores sunlight in water.",
+   "It cools the solar panels.",
+   "Surplus electricity at midday pumps water to an upper reservoir; in the evening the water flows back down through turbines to generate power."
+  ],
+  "answer": 3,
+  "explanation": "The plant acts like a giant rechargeable battery: electrical energy is stored as gravitational potential energy of water, then recovered (about 75–80% efficiency) when demand is high or the Sun has set.",
+  "hints": [
+   "Electrical energy → which form of stored energy → electrical energy?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-054",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 1,
+  "type": "mcq",
+  "q": "Air-quality reports in Indian cities often mention PM2.5. What is it, and why is it dangerous?",
+  "options": [
+   "Large dust particles that settle quickly",
+   "The amount of oxygen in the air",
+   "A gas that smells of rotten eggs",
+   "Particles smaller than 2.5 micrometres, which can travel deep into the lungs and even enter the bloodstream"
+  ],
+  "answer": 3,
+  "explanation": "PM2.5 particles (about 30 times thinner than a human hair) come from vehicle exhaust, burning of crops and waste, industry and dust. They bypass the nose’s defences, causing lung and heart disease.",
+  "hints": [
+   "“PM” stands for particulate matter."
+  ],
+  "time": 30,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-055",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Delhi’s air pollution is often worst on calm winter mornings. Which atmospheric condition traps pollutants near the ground?",
+  "options": [
+   "A temperature inversion — a layer of warmer air above cooler ground-level air stops the polluted air from rising.",
+   "High temperatures causing convection.",
+   "Strong winds blowing pollution in from the sea.",
+   "Heavy rainfall."
+  ],
+  "answer": 0,
+  "explanation": "Normally air cools with height, so warm polluted air near the ground rises and disperses. On clear, calm winter nights the ground cools fast, leaving cold dense air under warmer air. This stable “lid” traps smoke from vehicles, industry and crop-residue burning. Sunlight and wind later in the day break it up.",
+  "hints": [
+   "Why does warm air usually rise?",
+   "What happens if the air above is warmer than the air below?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-056",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which international agreement phased out ozone-destroying chemicals such as CFCs (chlorofluorocarbons)?",
+  "options": [
+   "The Montreal Protocol (1987)",
+   "The Kyoto Protocol (1997)",
+   "The Paris Agreement (2015)",
+   "The Ramsar Convention (1971)"
+  ],
+  "answer": 0,
+  "explanation": "CFCs used in refrigerators and sprays release chlorine in the stratosphere, which destroys ozone. The Montreal Protocol, ratified by every country, has been very effective: the ozone layer is expected to recover by around the middle of this century. Kyoto and Paris concern greenhouse gases; Ramsar protects wetlands.",
+  "hints": [
+   "It was signed in a Canadian city in the 1980s."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-057",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "In Minamata, Japan, in the 1950s, a factory released mercury waste into the bay. People who ate fish from the bay suffered severe nerve damage, though the water itself held only low mercury levels. Why?",
+  "options": [
+   "Mercury compounds accumulated in organisms and became more concentrated at each step of the food chain, reaching high levels in fish eaten by people.",
+   "Fish produce mercury naturally.",
+   "Mercury evaporated and was breathed in by everyone.",
+   "People drank the sea water."
+  ],
+  "answer": 0,
+  "explanation": "Microorganisms convert mercury into methylmercury, which is absorbed easily and not readily excreted. Each predator eats many prey, so concentrations rise up the food chain (biomagnification). Large fish and people at the top received toxic doses.",
+  "hints": [
+   "What happens to persistent toxins as they pass up a food chain?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-058",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why are microplastics (pieces smaller than 5 mm) a growing concern?",
+  "options": [
+   "They only affect deep-sea volcanoes.",
+   "They do not biodegrade, spread throughout oceans and soils, are eaten by animals and enter the food chain.",
+   "They dissolve quickly in water.",
+   "They are absorbed by plants as fertiliser."
+  ],
+  "answer": 1,
+  "explanation": "Plastic breaks into ever-smaller fragments rather than decomposing. Microplastics have been found in fish, salt, drinking water and human blood. They can carry toxic chemicals and harm the organisms that eat them.",
+  "hints": [
+   "Do plastics break down biologically?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-059",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 3,
+  "type": "numerical",
+  "q": "On the decibel scale, each increase of 10 dB means the sound intensity is multiplied by 10. Heavy traffic is about 90 dB and normal conversation about 60 dB. How many times more intense is the traffic noise?",
+  "options": [
+   "1.5 times",
+   "1000 times",
+   "100 times",
+   "30 times"
+  ],
+  "answer": 1,
+  "explanation": "90 − 60 = 30 dB = three steps of 10 dB, so the intensity ratio is 10 × 10 × 10 = 1000. Long exposure above about 85 dB can permanently damage hearing.",
+  "misconception": "30 treats the scale as linear; 1.5 just divides 90 by 60.",
+  "hints": [
+   "How many 10 dB steps are there between 60 and 90?",
+   "Each step multiplies intensity by 10."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-060",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 2,
+  "type": "application",
+  "q": "What does a catalytic converter in a car’s exhaust system do?",
+  "options": [
+   "Turns petrol into diesel",
+   "Makes the engine more powerful",
+   "Converts harmful gases — carbon monoxide, nitrogen oxides and unburnt hydrocarbons — into carbon dioxide, nitrogen and water",
+   "Removes all carbon dioxide from the exhaust"
+  ],
+  "answer": 2,
+  "explanation": "Catalysts such as platinum, palladium and rhodium coat a honeycomb, providing a large surface on which CO is oxidised to CO₂, hydrocarbons to CO₂ and H₂O, and NOₓ reduced to N₂. CO₂ is still emitted, so it does not solve climate change.",
+  "misconception": "A catalytic converter does not remove CO₂ — it produces it.",
+  "hints": [
+   "Which toxic gases come out of an engine?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-061",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 2,
+  "type": "mcq",
+  "q": "A sample of river water downstream of a sewage outlet has a very high biological oxygen demand (BOD). What does this indicate?",
+  "options": [
+   "The water contains a lot of dissolved oxygen.",
+   "The water is too cold for microbes.",
+   "The water contains a lot of organic waste, which microbes will use oxygen to decompose — leaving less oxygen for fish.",
+   "The water is very clean."
+  ],
+  "answer": 2,
+  "explanation": "BOD measures how much oxygen microbes consume while breaking down organic matter in a water sample. Clean river water has a low BOD; untreated sewage has a very high BOD, so polluted water quickly becomes oxygen-depleted.",
+  "hints": [
+   "What do microbes need to decompose organic waste?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-062",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 1,
+  "type": "mcq",
+  "q": "Of the “3 Rs” of waste management — Reduce, Reuse and Recycle — which is generally the most effective?",
+  "options": [
+   "Recycle",
+   "Reuse",
+   "Reduce",
+   "They are all equally effective"
+  ],
+  "answer": 2,
+  "explanation": "Waste that is never created needs no energy, transport or processing. Reusing comes next; recycling still uses energy and some material is lost. Recycling is useful but should be the last of the three.",
+  "hints": [
+   "Which option avoids making waste at all?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-063",
+  "subject": "Environment & Technology",
+  "topic": "Pollution",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Thick white foam is sometimes seen floating on stretches of the Yamuna river. What is a major cause?",
+  "options": [
+   "Natural salt deposits",
+   "Excess oxygen from fish",
+   "Snow from the Himalayas",
+   "Detergents (surfactants and phosphates) and other pollutants in untreated sewage and industrial waste"
+  ],
+  "answer": 3,
+  "explanation": "Surfactants from detergents lower the surface tension of water so that turbulence at weirs whips it into foam. Phosphates also cause algal blooms. Treating sewage before it enters rivers is the main solution.",
+  "hints": [
+   "Which household products make foam?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-064",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which of these is an example of traditional biotechnology?",
+  "options": [
+   "Distilling sea water",
+   "Using a magnet to separate iron",
+   "Using yeast to make bread and idli batter ferment",
+   "Building a solar panel"
+  ],
+  "answer": 2,
+  "explanation": "Biotechnology means using living organisms or their enzymes to make products. Fermentation with yeast and bacteria (bread, curd, idli, vinegar) is one of its oldest forms; modern biotechnology adds tools such as genetic engineering.",
+  "hints": [
+   "Which option uses a living organism?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-065",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 2,
+  "type": "mcq",
+  "q": "In making recombinant DNA, which enzymes act as “molecular scissors” and “molecular glue”?",
+  "options": [
+   "DNA ligase cuts DNA; restriction enzymes join it",
+   "Pepsin cuts DNA; trypsin joins it",
+   "Amylase cuts DNA; lipase joins it",
+   "Restriction enzymes cut DNA at specific sequences; DNA ligase joins the pieces"
+  ],
+  "answer": 3,
+  "explanation": "Restriction enzymes recognise particular short base sequences and cut DNA there, often leaving “sticky ends”. A gene cut with the same enzyme can be inserted into a plasmid, and DNA ligase seals the joins. The plasmid is then put into bacteria, which copy the gene.",
+  "hints": [
+   "Which enzyme name sounds like “joining”?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-066",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "Golden Rice has been genetically engineered to produce beta-carotene in its grain, giving it a yellow colour. Which health problem was it designed to reduce?",
+  "options": [
+   "Diabetes",
+   "Vitamin A deficiency, which causes night blindness and weakens immunity, especially in children",
+   "Scurvy",
+   "Iron-deficiency anaemia"
+  ],
+  "answer": 1,
+  "explanation": "The body converts beta-carotene into vitamin A. Ordinary rice grain contains almost none, so in regions where rice is the staple food, vitamin A deficiency is common. Genes from maize and a soil bacterium were added to switch on beta-carotene production in the grain.",
+  "hints": [
+   "Which vitamin does the body make from beta-carotene?",
+   "What are the symptoms of lacking it?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-067",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 2,
+  "type": "mcq",
+  "q": "RT-PCR tests were used to detect the COVID-19 virus. What does the PCR technique do?",
+  "options": [
+   "Grows the virus into a visible colony",
+   "Measures body temperature",
+   "Makes millions of copies of a specific DNA sequence so that even tiny amounts can be detected",
+   "Kills viruses in the sample"
+  ],
+  "answer": 2,
+  "explanation": "The polymerase chain reaction repeatedly heats and cools DNA with primers and a heat-stable polymerase enzyme, doubling the target sequence each cycle — about a billion copies after 30 cycles. For RNA viruses, the RNA is first converted to DNA (reverse transcription, the “RT”).",
+  "hints": [
+   "What does a chain reaction do to the number of copies?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-068",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "DNA fingerprinting can identify individuals from tiny samples of blood or hair. Why can it NOT distinguish between identical twins?",
+  "options": [
+   "Identical twins develop from one zygote and have essentially identical DNA sequences.",
+   "Twins have no DNA in their hair.",
+   "Twins’ DNA changes every day.",
+   "The technique only works on adults."
+  ],
+  "answer": 0,
+  "explanation": "DNA fingerprinting compares regions of repeated DNA sequences whose lengths vary enormously between people. Because identical twins share the same genome from a single fertilised egg, their patterns match. (Fingerprints on fingers, formed partly by conditions in the womb, do differ.)",
+  "hints": [
+   "How do identical twins form?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-069",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 3,
+  "type": "what-if",
+  "q": "Gene therapy aims to treat inherited diseases by supplying a working copy of a faulty gene. Why would therapy targeted at a patient’s blood or lung cells NOT be passed on to their children?",
+  "options": [
+   "Only body (somatic) cells are changed; the egg or sperm cells still carry the faulty gene.",
+   "Blood cells form the sperm and eggs.",
+   "Children never inherit genes from parents.",
+   "The new gene disappears after one day."
+  ],
+  "answer": 0,
+  "explanation": "Inheritance happens through gametes. Somatic gene therapy changes only the treated tissues. Editing eggs, sperm or embryos (germline editing) would be inherited and raises serious ethical and safety concerns, so it is banned or strictly limited in most countries.",
+  "hints": [
+   "Which cells were changed by the therapy?",
+   "Which cells pass genes to the next generation?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-070",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Dolly the sheep (born 1996) was the first mammal cloned from an adult cell. How was she produced?",
+  "options": [
+   "Two sheep were crossed normally.",
+   "A sheep egg was fertilised by two sperm.",
+   "The nucleus of an adult udder cell was placed into an egg cell whose own nucleus had been removed.",
+   "An embryo was split into two."
+  ],
+  "answer": 2,
+  "explanation": "In somatic cell nuclear transfer, the donor nucleus (carrying the adult’s full DNA) is fused with an enucleated egg, which is stimulated to divide and implanted in a surrogate mother. Dolly was genetically identical to the udder-cell donor.",
+  "hints": [
+   "Where did Dolly’s DNA come from?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-071",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 2,
+  "type": "application",
+  "q": "Thousands of disease-free banana or orchid plants can be grown from tiny pieces of one plant in sterile jars of nutrient jelly. What is this technique called?",
+  "options": [
+   "Tissue culture (micropropagation)",
+   "Cross-pollination",
+   "Grafting",
+   "Hydroponics"
+  ],
+  "answer": 0,
+  "explanation": "In tissue culture, small pieces of plant tissue grow on a sterile medium with nutrients and hormones into many genetically identical plantlets. It is fast, needs little space and can produce disease-free stock.",
+  "hints": [
+   "Plants are grown from small pieces of tissue."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-072",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which of these is used as a biofertiliser?",
+  "options": [
+   "Urea",
+   "Potassium chloride",
+   "Ammonium sulphate",
+   "Rhizobium bacteria or blue-green algae (cyanobacteria)"
+  ],
+  "answer": 3,
+  "explanation": "Biofertilisers are living microbes that enrich soil nutrients, for example nitrogen-fixing Rhizobium (with legumes), Azotobacter and cyanobacteria in paddy fields. Urea and the salts listed are chemical fertilisers.",
+  "hints": [
+   "A biofertiliser must be living."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-073",
+  "subject": "Environment & Technology",
+  "topic": "Biotechnology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Biopesticides, such as spores of the fungus Trichoderma or Bt bacteria, are increasingly used instead of broad-spectrum chemical sprays. What is their main ecological advantage?",
+  "options": [
+   "They target specific pests and break down naturally, causing less harm to beneficial insects, soil life and people.",
+   "They are permanent and never break down.",
+   "They kill every insect in the field.",
+   "They make crops grow without water."
+  ],
+  "answer": 0,
+  "explanation": "Many biopesticides act only on particular pests or pathogens and do not persist or biomagnify. Broad-spectrum chemicals also kill pollinators and natural predators of pests, and residues can accumulate in food chains.",
+  "hints": [
+   "Which option is more selective?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-074",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is the key idea of machine learning?",
+  "options": [
+   "A computer that never makes mistakes",
+   "A computer learns by reading books aloud",
+   "A machine grows new parts as it learns",
+   "A computer improves at a task by finding patterns in example data, instead of following only rules written by a programmer"
+  ],
+  "answer": 3,
+  "explanation": "In machine learning, a model is trained on many examples (for instance, labelled photos), adjusting its internal settings to make better predictions. It can then handle new examples it has never seen — but only as well as its training data allows.",
+  "hints": [
+   "Does it learn from rules or from examples?"
+  ],
+  "time": 30,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-075",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 2,
+  "type": "experiment",
+  "q": "A student trains a program to tell ripe from unripe mangoes using 1000 photos. Why should she test it on a separate set of photos it was never trained on?",
+  "options": [
+   "Because the program forgets the training photos",
+   "Testing on training photos is impossible",
+   "To make it run faster",
+   "To check whether it has learnt general features of ripeness rather than just memorising the training photos"
+  ],
+  "answer": 3,
+  "explanation": "A model can score perfectly on images it has seen and still fail on new ones. Testing on unseen data is like an exam with new questions: it measures real understanding. This is a basic principle of fair testing in science applied to AI.",
+  "hints": [
+   "Is getting old questions right proof of understanding?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-076",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 3,
+  "type": "reasoning",
+  "q": "An AI model gets 99% of its training examples right but only 60% of new examples. What is the most likely problem?",
+  "options": [
+   "It has learnt too little from the training data.",
+   "The new examples are all wrong.",
+   "It needs a faster processor.",
+   "Overfitting — it has memorised details and noise in the training data instead of learning patterns that generalise."
+  ],
+  "answer": 3,
+  "explanation": "A big gap between training and test accuracy is the signature of overfitting, like a student who memorised last year’s answers. Remedies include more varied data, simpler models and checking performance on held-out data during training.",
+  "misconception": "Learning too little (underfitting) would show poor accuracy on the training data as well.",
+  "hints": [
+   "Compare performance on seen and unseen data.",
+   "Think of memorising answers versus understanding."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-077",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 3,
+  "type": "numerical",
+  "q": "A self-driving car’s LiDAR sends a laser pulse, which reflects off a cyclist and returns after 200 nanoseconds (200 × 10⁻⁹ s). How far away is the cyclist? (speed of light = 3 × 10⁸ m/s)",
+  "options": [
+   "300 m",
+   "3 m",
+   "30 m",
+   "60 m"
+  ],
+  "answer": 2,
+  "explanation": "Total path = c × t = 3 × 10⁸ × 200 × 10⁻⁹ = 60 m, out and back. Distance = 60/2 = 30 m. LiDAR builds a 3-D map by firing many such pulses each second — the same echo principle as SONAR, but with light.",
+  "misconception": "60 m forgets that the pulse travels to the cyclist and back.",
+  "hints": [
+   "Distance travelled = speed × time.",
+   "Is that the one-way distance?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-078",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 2,
+  "type": "mcq",
+  "q": "Alan Turing proposed a test in 1950 to judge whether a machine can “think”. What does the Turing test check?",
+  "options": [
+   "Whether a person conversing by text cannot reliably tell if they are talking to a machine or a human",
+   "How fast a computer can calculate",
+   "Whether a machine can lift heavy weights",
+   "Whether a robot can walk"
+  ],
+  "answer": 0,
+  "explanation": "In Turing’s “imitation game”, a judge exchanges text messages with a hidden human and a hidden machine. If the judge cannot reliably tell which is which, the machine passes. Critics note that imitating conversation is not the same as understanding.",
+  "hints": [
+   "It is based on conversation."
+  ],
+  "time": 35,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-079",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 3,
+  "type": "reasoning",
+  "q": "AI chatbots can produce fluent, confident answers that are sometimes completely false. What is the most sensible way for a student to use one for science homework?",
+  "options": [
+   "Copy its answers directly because computers are always correct.",
+   "Believe it if the answer sounds confident.",
+   "Treat its answers as suggestions and check facts and calculations against reliable sources and their own reasoning.",
+   "Never use any computer for study."
+  ],
+  "answer": 2,
+  "explanation": "Language models generate likely-sounding text from patterns in data and can “hallucinate” facts. Confidence is not evidence. Checking against textbooks, trusted references and your own working is the scientific habit that keeps you safe — whatever the source.",
+  "hints": [
+   "Does sounding confident make a statement true?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-080",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 2,
+  "type": "mcq",
+  "q": "Many modern image-recognition systems use “artificial neural networks”. What are these loosely modelled on?",
+  "options": [
+   "The circuits in a light bulb",
+   "Networks of neurons in the brain, with connections whose strengths are adjusted during learning",
+   "The structure of DNA",
+   "The layers of the Earth"
+  ],
+  "answer": 1,
+  "explanation": "An artificial neural network has layers of simple units (“neurons”) connected by weighted links. During training, the weights are adjusted so that the network’s outputs become more accurate — loosely similar to how synaptic connections strengthen with learning.",
+  "hints": [
+   "Which organ inspired the name?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-081",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 3,
+  "type": "what-if",
+  "q": "A delivery drone must hover steadily in gusty wind. Its gyroscope and accelerometer sensors measure tilt many times a second and adjust motor speeds. What would happen if this feedback loop were switched off?",
+  "options": [
+   "Small disturbances would grow uncorrected, so the drone would tilt, drift and probably crash.",
+   "It would hover more steadily.",
+   "Nothing, because wind has no effect on drones.",
+   "It would automatically land safely."
+  ],
+  "answer": 0,
+  "explanation": "Hovering is unstable: a slight tilt directs some thrust sideways, increasing the tilt. A feedback controller compares measured tilt with the desired value and corrects it continuously. Feedback control is central to robots, aircraft autopilots and even body temperature regulation.",
+  "hints": [
+   "What corrects the drone’s tilt?",
+   "What happens to an uncorrected tilt?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-082",
+  "subject": "Environment & Technology",
+  "topic": "AI & Robotics",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why do many scientists and governments call for rules on the use of facial-recognition AI in public places?",
+  "options": [
+   "It only works in the dark.",
+   "It uses too little electricity.",
+   "It can invade privacy and may be less accurate for some groups of people, leading to wrongful identification.",
+   "It is impossible to build."
+  ],
+  "answer": 2,
+  "explanation": "Facial recognition can track people without consent, and systems trained on unbalanced data have shown higher error rates for some skin tones and genders. Responsible use needs testing, transparency, consent and limits on surveillance.",
+  "hints": [
+   "Think about privacy and fairness."
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-083",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 1,
+  "type": "mcq",
+  "q": "How long is one nanometre?",
+  "options": [
+   "10⁻¹² m",
+   "10⁻³ m",
+   "10⁻⁹ m (one-billionth of a metre)",
+   "10⁻⁶ m"
+  ],
+  "answer": 2,
+  "explanation": "A nanometre is a billionth of a metre — about the length of 10 hydrogen atoms in a row. A human hair is roughly 80,000–100,000 nm wide. Nanotechnology works with materials from about 1 to 100 nm.",
+  "misconception": "10⁻⁶ m is a micrometre.",
+  "hints": [
+   "“Nano” means one-billionth."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-084",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 2,
+  "type": "application",
+  "q": "Silver nanoparticles are added to some bandages and fabrics. Why?",
+  "options": [
+   "They absorb all moisture permanently.",
+   "They make the fabric shiny.",
+   "They make the bandage heavier.",
+   "They release silver ions that kill bacteria, and their huge surface area makes them very effective."
+  ],
+  "answer": 3,
+  "explanation": "Silver ions damage bacterial cell membranes and enzymes. Nanoparticles have a very large surface area per gram, so a small amount releases ions effectively. Concerns remain about silver nanoparticles washing into rivers and harming useful microbes.",
+  "hints": [
+   "Silver has long been known to have which property?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-085",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 3,
+  "type": "numerical",
+  "q": "For a sphere, surface area ÷ volume = 3/r. By what factor is this ratio larger for a nanoparticle of radius 10 nm than for a particle of radius 1 μm (1000 nm)?",
+  "options": [
+   "10",
+   "3",
+   "1000",
+   "100"
+  ],
+  "answer": 3,
+  "explanation": "The ratio is proportional to 1/r: (3/10)/(3/1000) = 1000/10 = 100. Shrinking a particle 100 times makes its surface-to-volume ratio 100 times larger, which is why nanoparticles are much more reactive per gram.",
+  "misconception": "1000 confuses the radius of the larger particle with the ratio.",
+  "hints": [
+   "The ratio depends on 1/r.",
+   "Divide the radii."
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-086",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Water droplets roll off a lotus leaf as beads, carrying dirt with them. Scientists copy this “lotus effect” for self-cleaning surfaces. What causes it?",
+  "options": [
+   "The leaf absorbs all water instantly.",
+   "The leaf is coated with oil.",
+   "The leaf is electrically charged.",
+   "Tiny bumps covered with wax nanostructures trap air, so water touches very little of the surface and rolls off."
+  ],
+  "answer": 3,
+  "explanation": "The lotus leaf surface is rough on the micro- and nanoscale and waxy. Water rests on the tips of the bumps with air pockets beneath, so it forms nearly spherical beads that roll and pick up dirt. Similar engineered surfaces are used on glass, fabrics and paints.",
+  "hints": [
+   "How much of the surface does a water drop actually touch?"
+  ],
+  "time": 50,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-087",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "Medieval stained-glass makers coloured glass ruby red by adding tiny amounts of gold. Why does gold appear red, not gold-coloured, at this scale?",
+  "options": [
+   "Gold nanoparticles interact with light differently from bulk gold, absorbing green light strongly so the glass looks red.",
+   "Gold melts into red liquid.",
+   "The glass itself is red.",
+   "The gold reacted to form a red rust."
+  ],
+  "answer": 0,
+  "explanation": "In nanoparticles a few tens of nanometres across, the free electrons oscillate together when struck by light of particular wavelengths (surface plasmon resonance), absorbing strongly around green. The transmitted light appears red. This shows that properties change with size at the nanoscale.",
+  "hints": [
+   "Can the colour of a material depend on particle size?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-088",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Carbon nanotubes are rolled-up sheets of carbon atoms. Which property makes them attractive for future materials?",
+  "options": [
+   "They are soft like rubber.",
+   "They are extremely strong yet very light, and can conduct electricity.",
+   "They dissolve easily in water.",
+   "They are heavier than steel."
+  ],
+  "answer": 1,
+  "explanation": "Their strong carbon–carbon bonds give a tensile strength many times that of steel at a fraction of the density. Some nanotubes conduct electricity better than copper. Uses include sports equipment, sensors and potential next-generation electronics.",
+  "hints": [
+   "Carbon–carbon bonds are very strong."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-089",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 2,
+  "type": "application",
+  "q": "Older zinc oxide sunscreens left a white layer on the skin; newer ones using zinc oxide nanoparticles look clear but still block UV. Why?",
+  "options": [
+   "The nano version contains no zinc oxide.",
+   "Nanoparticles are too small to scatter visible light much, but still absorb and block ultraviolet radiation.",
+   "Nanoparticles block nothing.",
+   "Nanoparticles reflect all colours equally."
+  ],
+  "answer": 1,
+  "explanation": "Larger particles scatter visible light strongly and look white. Particles much smaller than visible wavelengths scatter little visible light, so the cream looks transparent, while zinc oxide still absorbs UV-A and UV-B.",
+  "hints": [
+   "How does particle size affect scattering of visible light?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-090",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 3,
+  "type": "what-if",
+  "q": "Why do scientists study the health and environmental safety of nanoparticles carefully, even when the same material in bulk form is harmless?",
+  "options": [
+   "Bulk materials are always more dangerous.",
+   "Nanoparticles cannot be detected at all.",
+   "Their tiny size can let them penetrate deep into the lungs, cross cell membranes and behave chemically differently from the bulk material.",
+   "Nanoparticles are always radioactive."
+  ],
+  "answer": 2,
+  "explanation": "Particles of a few nanometres can reach the deepest parts of the lungs, enter cells and even pass into the bloodstream. Their large surface area makes them more reactive. Safety therefore has to be tested for each nanomaterial, not assumed from the bulk form.",
+  "hints": [
+   "Where can very tiny particles go that larger ones cannot?",
+   "How does reactivity change with surface area?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-091",
+  "subject": "Environment & Technology",
+  "topic": "Nanotechnology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Graphene, isolated in 2004 by Andre Geim and Konstantin Novoselov (Nobel Prize 2010), is:",
+  "options": [
+   "a type of plastic",
+   "a new metal element",
+   "a single layer of carbon atoms arranged in a honeycomb pattern",
+   "a form of glass"
+  ],
+  "answer": 2,
+  "explanation": "Graphene is one atom thick — the individual layers that stack to make graphite. It is extremely strong, flexible, transparent and an excellent conductor. The first samples were peeled off graphite using sticky tape.",
+  "hints": [
+   "It is related to the material in pencil “lead”."
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-092",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 2,
+  "type": "mcq",
+  "q": "How does a qubit in a quantum computer differ from an ordinary computer bit?",
+  "options": [
+   "There is no difference.",
+   "A qubit stores only the number 2.",
+   "A qubit is a larger, slower bit.",
+   "A bit is either 0 or 1; a qubit can be in a superposition of 0 and 1 until it is measured."
+  ],
+  "answer": 3,
+  "explanation": "Using quantum effects such as superposition and entanglement, groups of qubits can represent many combinations at once. For some problems (simulating molecules, certain codes) quantum computers could be far faster, though building stable qubits is very hard.",
+  "hints": [
+   "Can a qubit be “partly” 0 and 1?"
+  ],
+  "time": 40,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-093",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 3,
+  "type": "data",
+  "q": "A telescope records that a star’s brightness dips by exactly 1% for a few hours, every 12 days, very regularly. What is the most likely explanation?",
+  "options": [
+   "Clouds on Earth block the star every 12 days.",
+   "The telescope is faulty.",
+   "The star is about to explode.",
+   "A planet orbits the star with a 12-day period and passes in front of it, blocking a little of its light (the transit method)."
+  ],
+  "answer": 3,
+  "explanation": "A regular, repeated small dip suggests an orbiting body crossing the star’s face. The period gives the orbit time; the depth of the dip (here 1%) gives the planet’s size relative to the star: area ratio 0.01, so the planet’s radius is about one-tenth of the star’s. NASA’s Kepler and TESS missions found thousands of exoplanets this way.",
+  "hints": [
+   "What could block a little light regularly?",
+   "What does the regularity tell you?"
+  ],
+  "time": 80,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-094",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 3,
+  "type": "reasoning",
+  "q": "In 2012, scientists at CERN’s Large Hadron Collider announced the discovery of the Higgs boson. Why was it important?",
+  "options": [
+   "It proved that atoms do not exist.",
+   "It confirmed the existence of the Higgs field, which explains how fundamental particles acquire mass.",
+   "It disproved gravity.",
+   "It is a new kind of virus."
+  ],
+  "answer": 1,
+  "explanation": "The Standard Model of particle physics predicted a field that gives mass to particles such as electrons and quarks, with an associated particle. Finding the Higgs boson completed the model. Peter Higgs and François Englert received the 2013 Nobel Prize. (The name “boson” honours S. N. Bose.)",
+  "hints": [
+   "What property of particles does it help explain?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-095",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Why is silicon, rather than copper, the basic material for computer chips?",
+  "options": [
+   "Silicon is magnetic.",
+   "Silicon does not conduct at all, so it is safe.",
+   "Silicon conducts electricity better than copper.",
+   "Silicon is a semiconductor whose conductivity can be precisely controlled by adding tiny amounts of other elements (doping), allowing transistors to act as switches."
+  ],
+  "answer": 3,
+  "explanation": "Doping silicon with phosphorus (extra electrons) or boron (holes) creates n-type and p-type regions. Combining them makes transistors whose current can be switched on and off by a small voltage. Copper always conducts and cannot switch; it is used for the wiring between transistors.",
+  "hints": [
+   "A switch needs something that can be both conducting and non-conducting."
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-096",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is lithium used in the rechargeable batteries of phones and electric cars?",
+  "options": [
+   "Lithium is a gas.",
+   "Lithium is the lightest metal and gives up electrons very readily, so batteries store a lot of energy for their mass.",
+   "Lithium is the heaviest metal.",
+   "Lithium never reacts with anything."
+  ],
+  "answer": 1,
+  "explanation": "Lithium has a very low atomic mass and high reactivity, giving high voltage and high energy per kilogram. Lithium ions move between electrodes as the battery charges and discharges. The 2019 Nobel Prize in Chemistry recognised their development.",
+  "hints": [
+   "Where is lithium in the periodic table?"
+  ],
+  "time": 45,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-097",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 1,
+  "type": "mcq",
+  "q": "How does a 3D printer build an object?",
+  "options": [
+   "By taking a photograph of the object",
+   "By pouring liquid into a mould",
+   "By carving a block of material",
+   "By depositing material layer by layer according to a digital design"
+  ],
+  "answer": 3,
+  "explanation": "3D printing (additive manufacturing) builds objects from thin layers of plastic, metal, concrete or even living cells. It is used for prototypes, custom medical implants and rocket parts.",
+  "hints": [
+   "It adds material rather than removing it."
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-098",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 3,
+  "type": "what-if",
+  "q": "Fusion reactors such as ITER (with India as a partner) aim to fuse hydrogen isotopes as the Sun does. Why must the fuel be heated to over 100 million °C — hotter than the Sun’s core?",
+  "options": [
+   "Nuclei are positively charged and repel each other; only extremely fast-moving nuclei can get close enough to fuse, and reactors cannot use the Sun’s enormous gravitational pressure.",
+   "Fusion only works on red-hot metal.",
+   "Higher temperature reduces the amount of fuel needed to zero.",
+   "The fuel must be melted."
+  ],
+  "answer": 0,
+  "explanation": "To fuse, two nuclei must overcome their electrostatic repulsion. The Sun’s core manages at about 15 million °C because of immense pressure and density. On Earth, without that pressure, the plasma must be much hotter, held away from the walls by powerful magnetic fields.",
+  "hints": [
+   "What force pushes two positive nuclei apart?",
+   "What does the Sun have that a reactor lacks?"
+  ],
+  "time": 70,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "ENV-099",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Electric cars produce no exhaust. Why do scientists say their overall climate benefit depends on the electricity grid?",
+  "options": [
+   "Electric motors emit more CO₂ than engines.",
+   "If the electricity comes mainly from coal, CO₂ is still emitted at the power station; with renewable electricity, total emissions are far lower.",
+   "The grid has no effect on emissions.",
+   "Electric cars run on petrol at night."
+  ],
+  "answer": 1,
+  "explanation": "Electric vehicles move emissions from the tailpipe to the power plant. They remove local air pollution in cities and are generally more efficient, but their climate benefit grows as the grid shifts to solar, wind, hydro and nuclear. Battery manufacturing also has emissions.",
+  "hints": [
+   "Where does the electricity come from?"
+  ],
+  "time": 60,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "ENV-100",
+  "subject": "Environment & Technology",
+  "topic": "Emerging Discoveries",
+  "level": 1,
+  "type": "mcq",
+  "q": "What does the “Internet of Things” (IoT) refer to?",
+  "options": [
+   "A new type of computer virus",
+   "Everyday devices with sensors connected to the internet to share data and be controlled remotely",
+   "A list of websites",
+   "Books about the internet"
+  ],
+  "answer": 1,
+  "explanation": "Examples include smart meters, fitness bands, soil-moisture sensors that switch on irrigation, and traffic sensors. IoT devices produce huge amounts of data, which raises benefits for efficiency and concerns for security and privacy.",
+  "hints": [
+   "Which “things” get connected?"
+  ],
+  "time": 25,
+  "tracks": [
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
   "id": "ENV-001",
   "subject": "Environment & Technology",
   "topic": "Climate Science",
