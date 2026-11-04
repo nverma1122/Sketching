@@ -2903,6 +2903,1487 @@
   "verified": true
  },
  {
+  "id": "BIO-167",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 1,
+  "type": "mcq",
+  "q": "In a pond ecosystem, which organisms are the main producers?",
+  "options": [
+   "Bacteria that decompose dead matter",
+   "Frogs",
+   "Algae and water plants (including phytoplankton)",
+   "Fish"
+  ],
+  "answer": 2,
+  "explanation": "Producers make their own food by photosynthesis and form the base of the food chain. In ponds, these are microscopic phytoplankton, larger algae and water plants. Fish and frogs are consumers; bacteria and fungi are decomposers.",
+  "hints": [
+   "Which organisms photosynthesise?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-168",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is a food web more stable than a single food chain?",
+  "options": [
+   "Food webs have no producers.",
+   "Consumers have several food sources, so the loss of one species does not necessarily collapse the system.",
+   "Food chains have more species.",
+   "Food webs contain more energy."
+  ],
+  "answer": 1,
+  "explanation": "In a food web, many chains interconnect. If one prey species declines, predators can switch to another, and populations adjust. In a single chain, removing one link starves everything above it.",
+  "hints": [
+   "What happens to a predator in a single chain if its only prey disappears?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-169",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "In a single large banyan tree supporting thousands of insects, which in turn feed hundreds of birds, the pyramid of NUMBERS is inverted at the base. Why?",
+  "options": [
+   "One producer (the tree) is huge, supporting many smaller consumers, so producer numbers are fewer than primary consumers.",
+   "Insects are producers.",
+   "Energy increases up the chain.",
+   "Birds eat the tree directly."
+  ],
+  "answer": 0,
+  "explanation": "A pyramid of numbers counts individuals, not their size. A single tree can feed thousands of insects. The pyramid of ENERGY, however, is never inverted: energy always decreases at each level.",
+  "misconception": "Only the number of individuals is inverted; energy still decreases upward.",
+  "hints": [
+   "Is the pyramid counting individuals or energy?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-170",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 3,
+  "type": "numerical",
+  "q": "In the food chain plants → caterpillars → small birds → hawk, the hawk receives 50 kJ of energy. Using the 10% law, how much energy must the plants have captured?",
+  "options": [
+   "5000 kJ",
+   "50,000 kJ",
+   "500 kJ",
+   "150 kJ"
+  ],
+  "answer": 1,
+  "explanation": "Working backwards, each level must hold about 10 times the energy of the level above: small birds 500 kJ, caterpillars 5000 kJ, plants 50,000 kJ. Only about 0.1% of the plants’ energy reaches the hawk — why top predators are rare.",
+  "misconception": "5000 kJ stops one level short; there are three transfers.",
+  "hints": [
+   "Each level down needs about 10 times more energy.",
+   "Count the transfers from plants to hawk."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-171",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which process REMOVES carbon dioxide from the atmosphere in the carbon cycle?",
+  "options": [
+   "Photosynthesis",
+   "Respiration",
+   "Burning fossil fuels",
+   "Decomposition"
+  ],
+  "answer": 0,
+  "explanation": "Plants, algae and some bacteria take in CO₂ and turn it into sugars by photosynthesis. Respiration, combustion and decomposition all return CO₂ to the air. Oceans also dissolve large amounts of CO₂.",
+  "hints": [
+   "Which process uses CO₂ as a raw material?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-172",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "mcq",
+  "q": "In the nitrogen cycle, which bacteria convert nitrates in the soil back into nitrogen gas?",
+  "options": [
+   "Nitrogen-fixing bacteria",
+   "Nitrifying bacteria",
+   "Decomposing fungi",
+   "Denitrifying bacteria"
+  ],
+  "answer": 3,
+  "explanation": "Denitrifying bacteria, mostly in waterlogged, oxygen-poor soils, break down nitrates and release N₂ to the atmosphere, completing the cycle. Nitrogen-fixing bacteria do the opposite; nitrifying bacteria convert ammonia to nitrites and nitrates.",
+  "hints": [
+   "“De-nitrify” means removing nitrogen compounds from soil."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-173",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Besides bacteria, which natural physical event fixes some atmospheric nitrogen into compounds plants can use?",
+  "options": [
+   "Earthquakes",
+   "Wind",
+   "Lightning",
+   "Moonlight"
+  ],
+  "answer": 2,
+  "explanation": "The enormous energy of a lightning flash splits N₂ and O₂ molecules, forming nitrogen oxides. These dissolve in rain to form dilute nitric acid, which reaches the soil as nitrates. Industrially, the Haber process fixes nitrogen to make fertiliser.",
+  "hints": [
+   "N₂ has a very strong triple bond — what can break it?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-174",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Apart from evaporation from oceans and lakes, what is the major way in which water from land returns to the atmosphere?",
+  "options": [
+   "Photosynthesis",
+   "Transpiration from plants",
+   "Infiltration into soil",
+   "Condensation"
+  ],
+  "answer": 1,
+  "explanation": "Plants draw water from the soil and lose most of it as vapour through their leaves. Large forests release so much water vapour that they influence rainfall — removing forests can make a region drier.",
+  "hints": [
+   "Plants lose water through their stomata."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-175",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 3,
+  "type": "what-if",
+  "q": "Frogs in a rice field are collected in large numbers for sale. What changes would you most expect in the field over the next few seasons?",
+  "options": [
+   "No change, because frogs do not eat insects.",
+   "Rice plants grow faster because frogs compete with them.",
+   "Insect pests decrease and snakes increase.",
+   "Insect pests increase and crop damage rises, while snakes that eat frogs decline."
+  ],
+  "answer": 3,
+  "explanation": "Frogs eat many insect pests. Removing them releases the insects from predation, so pest numbers and crop damage rise, often leading to more pesticide use. Snakes and birds that depend on frogs lose a food source. Indian frog exports were restricted partly for this reason.",
+  "hints": [
+   "What do frogs eat?",
+   "What eats frogs?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-176",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "mcq",
+  "q": "A lichen is formed by a fungus and an alga living closely together. The fungus provides shelter and absorbs water; the alga makes food. What type of relationship is this?",
+  "options": [
+   "Predation",
+   "Competition",
+   "Parasitism — one harms the other",
+   "Mutualism — both partners benefit"
+  ],
+  "answer": 3,
+  "explanation": "In mutualism both organisms gain. Lichens can live on bare rock where neither partner could survive alone, and they help start soil formation. Root nodules (legume + Rhizobium) are another example.",
+  "hints": [
+   "Does each partner gain something?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-177",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Cuscuta (amarbel), a yellow leafless plant, twines around other plants and draws food from them through special roots. It is an example of:",
+  "options": [
+   "a parasite",
+   "a mutualistic partner",
+   "a decomposer",
+   "a producer"
+  ],
+  "answer": 0,
+  "explanation": "Cuscuta has no chlorophyll. It inserts haustoria (sucking roots) into the host’s phloem and takes its nutrients, harming the host — parasitism. It can seriously damage crops.",
+  "hints": [
+   "It has no green colour — how does it feed?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-178",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 3,
+  "type": "data",
+  "q": "The table shows estimated numbers of hares and lynx (a predator of hares) in a forest. Which statement is best supported?",
+  "options": [
+   "Lynx cause hare numbers to rise.",
+   "The two populations are unrelated.",
+   "Hares eat lynx.",
+   "Lynx numbers rise after hare numbers rise and fall after hares decline, so predator numbers lag behind prey numbers."
+  ],
+  "answer": 3,
+  "explanation": "Hares peak in year 3; lynx peak in year 4. More food lets predators breed more, but then predation (and food shortage) cuts hare numbers, after which lynx decline. Predator–prey cycles with a time lag are a classic ecological pattern.",
+  "hints": [
+   "In which year does each population peak?",
+   "Which peaks first?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "table": {
+   "head": [
+    "Year",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "rows": [
+    [
+     "Hares (thousands)",
+     20,
+     60,
+     90,
+     40,
+     15,
+     35
+    ],
+    [
+     "Lynx (hundreds)",
+     5,
+     10,
+     25,
+     40,
+     20,
+     8
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "BIO-179",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which of these is an ABIOTIC component of an ecosystem?",
+  "options": [
+   "Earthworms",
+   "Grass",
+   "Fungi",
+   "Sunlight"
+  ],
+  "answer": 3,
+  "explanation": "Abiotic factors are non-living: sunlight, temperature, water, soil minerals, air. Biotic factors are living organisms — producers, consumers and decomposers.",
+  "hints": [
+   "“A-biotic” means not living."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-180",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Why do most leaves look green?",
+  "options": [
+   "Chlorophyll absorbs mainly red and blue light and reflects green light.",
+   "Leaves produce green light.",
+   "Chlorophyll absorbs green light.",
+   "Green light is the brightest part of sunlight."
+  ],
+  "answer": 0,
+  "explanation": "Chlorophyll absorbs strongly in the blue and red parts of the spectrum and uses that energy for photosynthesis. Green light is mostly reflected or transmitted, so leaves appear green.",
+  "misconception": "The colour we see is the light that is NOT absorbed.",
+  "hints": [
+   "Is the colour we see absorbed or reflected?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-181",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 2,
+  "type": "experiment",
+  "q": "A variegated leaf (with green and white patches) from a plant kept in sunlight is tested with iodine. Only the parts that were green turn blue-black. What does this show?",
+  "options": [
+   "Iodine reacts only with green cells.",
+   "Light is not needed for photosynthesis.",
+   "Chlorophyll is needed for photosynthesis (starch formation).",
+   "White parts store more starch."
+  ],
+  "answer": 2,
+  "explanation": "Both green and white parts received the same light, carbon dioxide and water; only the green parts contain chlorophyll. Starch formed only there, so chlorophyll is necessary. (The plant is first destarched so that any starch found was made during the experiment.)",
+  "hints": [
+   "What is the only difference between green and white parts?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-182",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 2,
+  "type": "experiment",
+  "q": "A destarched plant has one leaf enclosed in a sealed bag containing potassium hydroxide (which absorbs CO₂). After a day in sunlight, this leaf gives a negative starch test while other leaves are positive. What does this show?",
+  "options": [
+   "Potassium hydroxide makes starch.",
+   "Oxygen is needed for photosynthesis.",
+   "Leaves do not need light.",
+   "Carbon dioxide is needed for photosynthesis."
+  ],
+  "answer": 3,
+  "explanation": "The bagged leaf had light, water and chlorophyll but no CO₂, and made no starch. Other leaves with normal air did. So CO₂ is a necessary raw material for photosynthesis.",
+  "hints": [
+   "What did the potassium hydroxide remove?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-183",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 3,
+  "type": "what-if",
+  "q": "A greenhouse grower raises the CO₂ concentration inside from 0.04% to 0.1%. The tomato plants grow faster at first, but raising CO₂ further has no extra effect. Why?",
+  "options": [
+   "Plants cannot use more than 0.1% CO₂ because it is poisonous.",
+   "CO₂ stops working after one day.",
+   "The plants start respiring instead.",
+   "At first CO₂ was the limiting factor; once it is plentiful, another factor such as light or temperature limits the rate."
+  ],
+  "answer": 3,
+  "explanation": "The rate of photosynthesis is limited by whichever factor is in shortest supply. Adding CO₂ helps until another factor — light intensity, temperature or chlorophyll — becomes limiting. Growers often raise light and temperature together with CO₂.",
+  "hints": [
+   "Can a rate be limited by more than one factor at once?",
+   "What else does photosynthesis need?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-184",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Root hairs are long, thin outgrowths of root epidermal cells. How do they help the plant?",
+  "options": [
+   "They store food.",
+   "They greatly increase the surface area for absorbing water and minerals from the soil.",
+   "They carry out photosynthesis.",
+   "They anchor the plant by gripping stones."
+  ],
+  "answer": 1,
+  "explanation": "Millions of root hairs reach between soil particles and multiply the absorbing surface many times. Water enters by osmosis and minerals by diffusion and active transport. They are delicate, which is why transplanted seedlings often wilt.",
+  "hints": [
+   "What does a larger surface area allow?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-185",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 2,
+  "type": "experiment",
+  "q": "A potted seedling is laid on its side in the dark. After a few days, its root curves downward and its shoot curves upward. What do these responses show?",
+  "options": [
+   "Roots are positively geotropic and shoots negatively geotropic.",
+   "The plant is wilting.",
+   "Roots grow towards light.",
+   "Both respond only to light."
+  ],
+  "answer": 0,
+  "explanation": "Geotropism (gravitropism) is growth in response to gravity. In the dark, light cannot be the cause. Roots grow towards gravity (into the soil, finding water and anchorage); shoots grow away from it (towards where light usually is). Auxin redistribution causes the bending.",
+  "hints": [
+   "The plant was in the dark — so what stimulus remains?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-186",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "When touched, the leaflets of Mimosa pudica (touch-me-not) fold within seconds. How does this movement differ from a shoot bending towards light?",
+  "options": [
+   "It is caused by muscles in the leaf.",
+   "It is caused by faster growth on one side.",
+   "It is controlled by a nervous system.",
+   "It is caused by a rapid loss of water (turgor) from special cells, not by growth."
+  ],
+  "answer": 3,
+  "explanation": "Phototropism is a slow growth response driven by auxin. Mimosa’s folding is a fast nastic movement: touch triggers cells at the base of each leaflet (the pulvinus) to lose water, so they go limp and the leaflets fold. Plants have no nerves or muscles, though electrical signals pass along cells.",
+  "misconception": "Plants have no nervous system or muscles.",
+  "hints": [
+   "Can growth happen in a few seconds?",
+   "What makes plant cells firm or limp?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-187",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 1,
+  "type": "mcq",
+  "q": "In a bean seed, what is the role of the two large cotyledons?",
+  "options": [
+   "They form the roots.",
+   "They protect the seed from water.",
+   "They are the flower of the plant.",
+   "They store food for the growing seedling until it can photosynthesise."
+  ],
+  "answer": 3,
+  "explanation": "Cotyledons (seed leaves) store starch, protein and oil, which are broken down and used for energy and growth during germination. In some seeds they come above ground and turn green briefly.",
+  "hints": [
+   "What does a seedling use before its leaves grow?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-188",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 2,
+  "type": "experiment",
+  "q": "Bubbles are seen rising from a cut stem of the water plant Hydrilla placed in sunlight. When the plant is moved into a dim corner, fewer bubbles appear. What are the bubbles, and what does the change show?",
+  "options": [
+   "Mainly oxygen from photosynthesis; the rate of photosynthesis depends on light intensity.",
+   "Water vapour; plants sweat in light.",
+   "Nitrogen; plants fix nitrogen in light.",
+   "Carbon dioxide from respiration; respiration needs light."
+  ],
+  "answer": 0,
+  "explanation": "Photosynthesis releases oxygen, which escapes as bubbles. Counting bubbles per minute is a simple way to compare rates: in dimmer light, photosynthesis slows and fewer bubbles form.",
+  "hints": [
+   "Which gas does photosynthesis release?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-189",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 3,
+  "type": "numerical",
+  "q": "A lamp 10 cm from a Hydrilla plant produces 40 bubbles per minute. Light intensity falls with the square of the distance. If light is the only limiting factor and bubble rate is proportional to light intensity, how many bubbles per minute would you predict with the lamp at 20 cm?",
+  "options": [
+   "40",
+   "5",
+   "20",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "Doubling the distance reduces light intensity to (1/2)² = 1/4. If the rate is proportional to intensity, 40 × 1/4 = 10 bubbles per minute. Real results often differ a little because other factors start to limit or because the lamp also heats the water.",
+  "misconception": "20 assumes intensity falls in proportion to distance, not distance squared.",
+  "hints": [
+   "Intensity ∝ 1/d². What is the intensity at twice the distance?",
+   "Rate ∝ intensity."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-190",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Unlike water in the xylem, which only moves upward, food in the phloem can move both up and down the plant. Why is this useful?",
+  "options": [
+   "It makes the plant heavier.",
+   "It lets the plant lose sugar faster.",
+   "Sugar can be sent from leaves to wherever it is needed — down to roots and storage organs or up to growing buds and fruits.",
+   "It stops photosynthesis at night."
+  ],
+  "answer": 2,
+  "explanation": "This transport of food (translocation) moves sugars from “sources” (mature leaves, storage organs in spring) to “sinks” (roots, tubers, buds, fruits). Its direction changes with the season and the plant’s needs.",
+  "hints": [
+   "Where is food made, and where is it needed?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-191",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 2,
+  "type": "application",
+  "q": "Fruit sellers sometimes keep unripe bananas with a ripe one in a closed box to speed up ripening. Which plant hormone, given off by the ripe fruit, is responsible?",
+  "options": [
+   "Gibberellin",
+   "Auxin",
+   "Ethylene",
+   "Insulin"
+  ],
+  "answer": 2,
+  "explanation": "Ethylene is a gaseous plant hormone that triggers ripening. Ripe fruit releases it, and in an enclosed space it hastens ripening of nearby fruit. Auxin controls growth towards light; gibberellins promote stem elongation and seed germination.",
+  "hints": [
+   "This hormone is a gas."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-192",
+  "subject": "Biology",
+  "topic": "Plant Biology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Pitcher plants and sundews trap and digest insects, even though they are green and photosynthesise. Why do they do this?",
+  "options": [
+   "They grow in nutrient-poor (especially nitrogen-poor) soils and get extra nitrogen and minerals from the insects.",
+   "They cannot photosynthesise at all.",
+   "They need insects for energy because they have no chlorophyll.",
+   "They use insects to pollinate the trap."
+  ],
+  "answer": 0,
+  "explanation": "Insectivorous plants live in bogs and wet places where soil lacks nitrogen. They still make their own sugars by photosynthesis, but digesting insects supplies nitrogen (for proteins) and other minerals.",
+  "misconception": "They do photosynthesise; the insects supply nutrients, not mainly energy.",
+  "hints": [
+   "Which essential element is often scarce in boggy soils?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-193",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which part of the brain controls involuntary actions such as heartbeat, breathing and swallowing?",
+  "options": [
+   "Cerebrum",
+   "Olfactory lobe",
+   "Cerebellum",
+   "Medulla oblongata"
+  ],
+  "answer": 3,
+  "explanation": "The medulla, in the hindbrain connecting to the spinal cord, regulates vital involuntary functions. Damage to it is life-threatening.",
+  "hints": [
+   "It joins the brain to the spinal cord."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-194",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "mcq",
+  "q": "A person with an underactive thyroid gland may feel tired, gain weight and feel cold. Which hormone is deficient?",
+  "options": [
+   "Insulin",
+   "Adrenaline",
+   "Thyroxine",
+   "Testosterone"
+  ],
+  "answer": 2,
+  "explanation": "Thyroxine regulates metabolic rate — how fast cells use energy. Too little slows metabolism, causing fatigue, weight gain and cold intolerance. Its production requires iodine.",
+  "hints": [
+   "Which gland is in the neck?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-195",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "After a sugary meal, blood glucose rises and the pancreas releases insulin. Several hours later, when glucose falls, it releases glucagon. What principle does this illustrate?",
+  "options": [
+   "Positive feedback — the change is amplified",
+   "Negative feedback — a change triggers a response that reverses it, keeping blood glucose steady",
+   "Digestion of glucose by the pancreas",
+   "Reflex action through the spinal cord"
+  ],
+  "answer": 1,
+  "explanation": "Insulin makes cells take up glucose and the liver store it as glycogen, lowering blood glucose. Glucagon makes the liver break down glycogen, raising it. Opposing hormones correct changes in either direction — homeostasis by negative feedback. Body temperature and water balance are controlled similarly.",
+  "hints": [
+   "Do insulin and glucagon push glucose the same way?",
+   "What does each response do to the original change?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-196",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 2,
+  "type": "reasoning",
+  "q": "On a hot day your skin looks flushed and you sweat. How do these responses cool the body?",
+  "options": [
+   "Blood vessels close to keep heat in.",
+   "Flushing produces cooling chemicals.",
+   "Sweat is colder than the body.",
+   "Blood vessels near the skin widen so more heat is lost from the blood, and evaporating sweat removes latent heat."
+  ],
+  "answer": 3,
+  "explanation": "Vasodilation brings more warm blood close to the surface, where heat is lost by radiation and convection. Sweat glands release water that evaporates, taking latent heat from the skin. In cold weather the opposite happens: vessels narrow and shivering generates heat.",
+  "hints": [
+   "Why does evaporation cool a surface?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-197",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 3,
+  "type": "what-if",
+  "q": "After a long, hot game with little to drink, a player passes only a small amount of dark yellow urine. What is happening in the body?",
+  "options": [
+   "The brain releases more antidiuretic hormone (ADH), so the kidneys reabsorb more water and produce concentrated urine.",
+   "The player has drunk too much water.",
+   "The kidneys have stopped working.",
+   "The bladder is storing urine for later."
+  ],
+  "answer": 0,
+  "explanation": "Water loss by sweating raises the concentration of the blood. The pituitary gland releases ADH, which makes the kidney tubules more permeable, so more water is reabsorbed into the blood. Urine becomes smaller in volume and more concentrated. Drinking water reverses this.",
+  "hints": [
+   "The body has lost water — what should the kidneys do?",
+   "Which hormone controls water reabsorption?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-198",
+  "subject": "Biology",
+  "topic": "Human Physiology",
+  "level": 1,
+  "type": "mcq",
+  "q": "Tuberculosis (TB) is caused by which kind of microbe, and how does it usually spread?",
+  "options": [
+   "A virus, spread by mosquitoes",
+   "A bacterium, spread through the air by coughing and sneezing",
+   "A fungus, spread by touching skin",
+   "A protozoan, spread by contaminated food"
+  ],
+  "answer": 1,
+  "explanation": "TB is caused by the bacterium Mycobacterium tuberculosis, mainly affecting the lungs. It spreads in droplets when infected people cough. It is curable with a long course of antibiotics; the BCG vaccine gives some protection.",
+  "hints": [
+   "It is treated with antibiotics."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-199",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 2,
+  "type": "mcq",
+  "q": "How does a gene usually control a characteristic such as flower colour?",
+  "options": [
+   "It is a type of carbohydrate.",
+   "It carries the instructions for making a particular protein, such as an enzyme that produces a pigment.",
+   "It changes the soil around the plant.",
+   "It is a pigment itself."
+  ],
+  "answer": 1,
+  "explanation": "A gene’s DNA sequence codes for the order of amino acids in a protein. If the gene codes for a working enzyme in a pigment pathway, the flower is coloured; a mutant allele may make a non-working enzyme, giving white flowers.",
+  "hints": [
+   "What molecules do genes code for?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-200",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Red–green colour blindness is caused by a recessive allele on the X chromosome. Why is it much more common in men than in women?",
+  "options": [
+   "Men have only one X chromosome, so a single recessive allele shows; women need two copies.",
+   "Women cannot inherit X chromosomes from their fathers.",
+   "The Y chromosome causes colour blindness.",
+   "Men have two X chromosomes."
+  ],
+  "answer": 0,
+  "explanation": "Males are XY: whatever allele is on their single X is expressed, as the Y carries no matching gene. Females are XX: a normal allele on one X masks the recessive one, so they are usually carriers. About 8% of men but under 1% of women have red–green colour blindness.",
+  "hints": [
+   "How many X chromosomes does a male have?",
+   "Is there a matching allele on the Y chromosome?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-201",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "level": 2,
+  "type": "mcq",
+  "q": "Human height varies smoothly across a wide range, while ABO blood group falls into a few distinct categories. These are examples of:",
+  "options": [
+   "discontinuous and continuous variation respectively",
+   "mutations only",
+   "acquired characteristics",
+   "continuous and discontinuous variation respectively"
+  ],
+  "answer": 3,
+  "explanation": "Continuous variation (height, weight) shows a range of values, usually controlled by many genes plus the environment, and forms a bell-shaped graph. Discontinuous variation (blood group, tongue rolling) falls into clear categories and is usually controlled by one or a few genes.",
+  "hints": [
+   "Can height take any value? Can blood group?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-202",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 2,
+  "type": "mcq",
+  "q": "Early embryos of fish, chickens and humans look remarkably similar, all with gill slit-like structures and tails. What does this suggest?",
+  "options": [
+   "Embryos choose their species later.",
+   "These vertebrates share a common ancestor.",
+   "Humans breathe with gills as adults.",
+   "Chickens evolved from humans."
+  ],
+  "answer": 1,
+  "explanation": "Comparative embryology reveals shared developmental patterns inherited from a common ancestor. In humans, the pharyngeal (gill) arches develop into parts of the jaw, ear and throat rather than gills.",
+  "hints": [
+   "Why would unrelated organisms share embryonic features?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-203",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 3,
+  "type": "experiment",
+  "q": "In 1953, Miller and Urey passed electric sparks through a sealed mixture of methane, ammonia, hydrogen and water vapour, imitating the early Earth. After a week, amino acids had formed. What did this suggest?",
+  "options": [
+   "Simple organic molecules needed for life could form from non-living chemicals under early-Earth conditions.",
+   "Life arrived from another planet.",
+   "Living cells can form in a week.",
+   "Amino acids are not needed for life."
+  ],
+  "answer": 0,
+  "explanation": "The experiment showed that building blocks of proteins can form spontaneously from inorganic gases with an energy source (like lightning). It did not create life, but supported the idea of chemical evolution as the first step towards the origin of life.",
+  "misconception": "It produced molecules, not living organisms.",
+  "hints": [
+   "What did the sparks imitate?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-204",
+  "subject": "Biology",
+  "topic": "Evolution",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Someone says, “If humans evolved from chimpanzees, why are there still chimpanzees?” What is wrong with this reasoning?",
+  "options": [
+   "Humans did not evolve from chimpanzees; both evolved from a common ancestor and are separate branches of the evolutionary tree.",
+   "All chimpanzees are evolving into humans now.",
+   "Evolution only happens in plants.",
+   "Chimpanzees are actually humans."
+  ],
+  "answer": 0,
+  "explanation": "Evolution branches like a tree. Humans and chimpanzees share a common ancestor that lived roughly 6–7 million years ago; each lineage has evolved separately since. Similarly, you and your cousin share grandparents — your cousin did not have to disappear for you to exist.",
+  "misconception": "Evolution is a branching tree, not a ladder from “lower” to “higher” forms.",
+  "hints": [
+   "Is evolution a ladder or a branching tree?",
+   "Think about cousins sharing grandparents."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-205",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Mitochondria and chloroplasts contain their own small circular DNA and ribosomes resembling those of bacteria. What idea does this support?",
+  "options": [
+   "They were formed by the Golgi apparatus.",
+   "They descended from free-living bacteria that were taken into ancient cells and became partners (endosymbiosis).",
+   "They make all the cell’s proteins.",
+   "They are viruses."
+  ],
+  "answer": 1,
+  "explanation": "The endosymbiotic theory proposes that mitochondria came from aerobic bacteria and chloroplasts from photosynthetic cyanobacteria engulfed by an ancestral cell. Supporting evidence includes their own DNA, bacteria-like ribosomes, double membranes and division by binary fission.",
+  "hints": [
+   "Which organisms have circular DNA and similar small ribosomes?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-206",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Root hair cells contain a higher concentration of nitrate ions than the surrounding soil water, yet they keep absorbing nitrate. How?",
+  "options": [
+   "By evaporation",
+   "By osmosis",
+   "By diffusion from low to high concentration",
+   "By active transport, using energy from respiration to move ions against their concentration gradient"
+  ],
+  "answer": 3,
+  "explanation": "Diffusion moves substances only from higher to lower concentration. Moving ions “uphill” needs carrier proteins in the membrane and energy (ATP) from respiration — active transport. If roots are deprived of oxygen (waterlogging), respiration and mineral uptake fall.",
+  "misconception": "Osmosis moves water, not ions.",
+  "hints": [
+   "Can diffusion move substances against a concentration gradient?",
+   "Where does the energy come from?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-207",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 1,
+  "type": "mcq",
+  "q": "What is the plasma (cell) membrane mainly made of?",
+  "options": [
+   "Cellulose",
+   "Starch",
+   "DNA",
+   "Lipids and proteins"
+  ],
+  "answer": 3,
+  "explanation": "The membrane is a flexible double layer of phospholipid molecules with proteins embedded in it. Proteins act as channels, carriers and receptors, giving selective permeability. Cellulose forms plant cell walls, not membranes.",
+  "hints": [
+   "Cell walls are cellulose; membranes are different."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-208",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which structure, found in animal cells but usually absent in plant cells, helps organise the spindle during cell division?",
+  "options": [
+   "Large central vacuole",
+   "Chloroplast",
+   "Cell wall",
+   "Centrosome (with centrioles)"
+  ],
+  "answer": 3,
+  "explanation": "The centrosome contains a pair of centrioles and organises the spindle fibres that separate chromosomes in animal cells. Most plant cells form spindles without centrioles.",
+  "hints": [
+   "It is near the nucleus in animal cells."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-209",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 1,
+  "type": "mcq",
+  "q": "Blood plasma is about 90% water. Which of these does it NOT normally carry?",
+  "options": [
+   "Dissolved glucose and amino acids",
+   "Carbon dioxide and urea",
+   "Hormones",
+   "Red blood cells’ haemoglobin dissolved freely"
+  ],
+  "answer": 3,
+  "explanation": "Plasma transports dissolved nutrients, wastes such as CO₂ and urea, hormones, salts and proteins. Haemoglobin is kept inside red blood cells; free haemoglobin in plasma is a sign of damaged red cells.",
+  "hints": [
+   "Where is haemoglobin normally found?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-210",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 3,
+  "type": "reasoning",
+  "q": "To bend your arm, the biceps contracts; to straighten it, the triceps contracts. Why are skeletal muscles arranged in such antagonistic pairs?",
+  "options": [
+   "Two muscles make the arm lighter.",
+   "One muscle is always resting forever.",
+   "Muscles can only pull (contract), not push, so a second muscle is needed to move the bone back.",
+   "Muscles push bones apart."
+  ],
+  "answer": 2,
+  "explanation": "Muscle fibres shorten when they contract and relax passively; they cannot actively lengthen. So for movement in two directions, pairs of muscles pull in opposite directions across a joint, attached to bones by tendons.",
+  "hints": [
+   "Can a muscle push?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-211",
+  "subject": "Biology",
+  "topic": "Tissues",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Apart from transporting water, how do xylem vessels and tracheids help a tree?",
+  "options": [
+   "They carry out photosynthesis.",
+   "They store water as ice.",
+   "Their thick, lignified walls give mechanical strength and support (wood).",
+   "They produce seeds."
+  ],
+  "answer": 2,
+  "explanation": "Xylem cells are dead at maturity with walls thickened by lignin. Together they form wood, which supports tall trees against gravity and wind, while also conducting water.",
+  "hints": [
+   "What is wood mostly made of?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-212",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Ecologists sometimes use lichens growing on tree trunks to judge air quality. Why?",
+  "options": [
+   "Lichens grow faster in polluted air.",
+   "Many lichens are very sensitive to sulphur dioxide and disappear where air is polluted.",
+   "Lichens change colour with temperature.",
+   "Lichens absorb all pollution."
+  ],
+  "answer": 1,
+  "explanation": "Lichens absorb water and minerals directly from rain and air, so pollutants such as SO₂ accumulate in them and kill sensitive species. A wide variety of lichens indicates clean air — they are bio-indicators.",
+  "hints": [
+   "How do lichens get their water and minerals?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-213",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 1,
+  "type": "application",
+  "q": "Which microorganism turns milk into curd (dahi)?",
+  "options": [
+   "Rhizopus",
+   "Lactobacillus bacteria",
+   "Plasmodium",
+   "Yeast"
+  ],
+  "answer": 1,
+  "explanation": "Lactobacillus ferments lactose (milk sugar) into lactic acid. The acid makes milk proteins coagulate, forming curd. A spoonful of old curd provides the bacteria for a new batch.",
+  "hints": [
+   "Curd is sour because of which acid?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-214",
+  "subject": "Biology",
+  "topic": "Diversity of Organisms",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Mushrooms grow in soil like plants. Why are they not classified as plants?",
+  "options": [
+   "They are animals.",
+   "They are bacteria.",
+   "They have no cells.",
+   "They lack chlorophyll, cannot photosynthesise and absorb food from dead matter; their walls contain chitin."
+  ],
+  "answer": 3,
+  "explanation": "Mushrooms are the fruiting bodies of fungi. They are heterotrophs: their hyphae secrete enzymes onto decaying matter and absorb the products. Their cell walls are made of chitin, not cellulose.",
+  "hints": [
+   "How do mushrooms obtain food?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-215",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 2,
+  "type": "application",
+  "q": "Oral rehydration solution (ORS) — water with a little salt and sugar — has saved millions of children with diarrhoea. Why does it work better than plain water?",
+  "options": [
+   "It provides protein for growth.",
+   "Sugar kills the bacteria causing diarrhoea.",
+   "Salt stops the diarrhoea immediately.",
+   "Glucose helps the intestine absorb sodium, and water follows by osmosis, replacing lost fluid and salts."
+  ],
+  "answer": 3,
+  "explanation": "Diarrhoea causes heavy loss of water and salts. In the intestine, glucose and sodium are absorbed together; water follows by osmosis. So ORS rehydrates far better than plain water, which cannot replace lost salts.",
+  "hints": [
+   "What does the body lose in diarrhoea besides water?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-216",
+  "subject": "Biology",
+  "topic": "Nutrition",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Food leaving the stomach is strongly acidic. Why must it be neutralised in the small intestine?",
+  "options": [
+   "Acid would be absorbed into the blood.",
+   "Enzymes from the pancreas and intestine work best in slightly alkaline conditions; bile and pancreatic juice neutralise the acid.",
+   "The small intestine digests acid for energy.",
+   "Neutralisation adds vitamins."
+  ],
+  "answer": 1,
+  "explanation": "Pancreatic enzymes (amylase, trypsin, lipase) have optimum activity at about pH 7–8. Alkaline bile and pancreatic juice (containing hydrogencarbonate) neutralise stomach acid. Bile also emulsifies fats.",
+  "hints": [
+   "Which pH do intestinal enzymes prefer?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-217",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Long-term smoking can cause emphysema, in which the walls between alveoli break down. Why does this make the patient breathless?",
+  "options": [
+   "The lungs become too large.",
+   "The diaphragm stops moving.",
+   "More oxygen reaches the blood.",
+   "The lungs’ surface area for gas exchange is greatly reduced, so less oxygen enters the blood."
+  ],
+  "answer": 3,
+  "explanation": "Millions of tiny alveoli merge into fewer, larger spaces, sharply reducing surface area and elasticity. Less oxygen diffuses into the blood, so even mild activity causes breathlessness. Smoking also paralyses cilia and causes cancer.",
+  "hints": [
+   "What happens to surface area when many small sacs become a few big ones?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-218",
+  "subject": "Biology",
+  "topic": "Respiration",
+  "level": 3,
+  "type": "numerical",
+  "q": "Inhaled air contains about 21% oxygen and exhaled air about 16%. Roughly what fraction of the oxygen breathed in is absorbed by the body?",
+  "options": [
+   "About 23.8%",
+   "About 100%",
+   "About 76%",
+   "About 5%"
+  ],
+  "answer": 0,
+  "explanation": "The oxygen absorbed is 21 − 16 = 5 percentage points out of 21: 5/21 × 100 ≈ 23.8% — roughly a quarter. Most oxygen is breathed out again, which is why exhaled air in mouth-to-mouth resuscitation can still keep someone alive.",
+  "misconception": "5% is the change in percentage points, not the fraction of oxygen absorbed.",
+  "hints": [
+   "How much of the oxygen percentage is used up?",
+   "Divide by the oxygen originally present."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "BIO-219",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 2,
+  "type": "mcq",
+  "q": "In haemophilia, even small cuts bleed for a long time. What is the cause?",
+  "options": [
+   "An inherited lack of a blood-clotting factor",
+   "A blocked artery",
+   "A shortage of red blood cells",
+   "Too many white blood cells"
+  ],
+  "answer": 0,
+  "explanation": "Haemophilia is an inherited (X-linked recessive) disorder in which a protein needed for the clotting cascade is missing or defective, so fibrin forms slowly. It is treated by injecting the missing clotting factor.",
+  "hints": [
+   "Bleeding stops when blood clots."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "BIO-220",
+  "subject": "Biology",
+  "topic": "Circulation",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A heart attack often happens when a coronary artery becomes blocked, even though the heart is full of blood. Why does the blockage damage the heart?",
+  "options": [
+   "Coronary arteries carry blood to the lungs.",
+   "The heart does not need oxygen.",
+   "Heart muscle receives its own oxygen and nutrients through the coronary arteries, not from the blood inside its chambers.",
+   "Blood inside the chambers is poisonous to the heart."
+  ],
+  "answer": 2,
+  "explanation": "The thick heart wall cannot absorb enough oxygen from the blood passing through its chambers. Coronary arteries branching from the aorta supply it. If one is blocked (often by fatty deposits and a clot), the muscle beyond it is starved of oxygen and begins to die.",
+  "hints": [
+   "How does the heart muscle itself get oxygen?",
+   "Can oxygen diffuse through the whole thickness of the heart wall?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
   "id": "BIO-001",
   "subject": "Biology",
   "topic": "Cell Biology",
