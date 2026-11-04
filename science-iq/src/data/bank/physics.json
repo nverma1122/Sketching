@@ -2535,6 +2535,1115 @@
   "verified": true
  },
  {
+  "id": "PHY-161",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "application",
+  "q": "Why do shaving and make-up mirrors use a concave mirror, held close to the face?",
+  "options": [
+   "Concave mirrors form real images on the face.",
+   "Concave mirrors reflect less light, reducing glare.",
+   "Concave mirrors always form smaller images.",
+   "With the face inside the focal length, a concave mirror forms an enlarged, upright, virtual image."
+  ],
+  "answer": 3,
+  "explanation": "When the object is between the pole and the focus of a concave mirror, the reflected rays diverge and appear to come from a point behind the mirror: the image is virtual, erect and magnified — ideal for seeing fine detail.",
+  "misconception": "A concave mirror forms an inverted real image only when the object is beyond the focus.",
+  "hints": [
+   "Where is the face compared with the focal point?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-162",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 1,
+  "type": "experiment",
+  "q": "A coin at the bottom of an empty bowl is just hidden from your view by the rim. Without moving your head, someone slowly fills the bowl with water and the coin comes into view. Why?",
+  "options": [
+   "Light from the coin bends away from the normal as it leaves the water, so it reaches your eye over the rim.",
+   "Water magnifies the coin.",
+   "The coin floats up.",
+   "Water reflects light from the coin upward."
+  ],
+  "answer": 0,
+  "explanation": "Light passing from water into air bends away from the normal. Rays from the coin that would have been blocked by the rim are bent towards your eye, so the coin appears raised and becomes visible.",
+  "hints": [
+   "What happens to light when it passes from water into air?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-163",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "numerical",
+  "q": "A convex lens of focal length 5 cm is used as a magnifying glass, with a postage stamp 4 cm from it. What is the magnification?",
+  "options": [
+   "5",
+   "20",
+   "0.8",
+   "1.25"
+  ],
+  "answer": 0,
+  "explanation": "Lens formula 1/v − 1/u = 1/f with u = −4 cm, f = +5 cm: 1/v = 1/5 − 1/4 = −1/20, so v = −20 cm (a virtual image on the same side as the stamp). Magnification m = v/u = (−20)/(−4) = +5: upright and five times larger.",
+  "misconception": "1.25 is f/u; magnification is v/u.",
+  "hints": [
+   "Use 1/v − 1/u = 1/f with u negative.",
+   "Then m = v/u."
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-164",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Where must the Sun be for you to see a rainbow?",
+  "options": [
+   "In front of you, shining through the raindrops",
+   "Behind you, with raindrops in front of you",
+   "Directly overhead",
+   "Below the horizon"
+  ],
+  "answer": 1,
+  "explanation": "A rainbow forms when sunlight enters raindrops, is dispersed, reflects off the back of each drop and comes back out towards the side the light entered. So you see it with the Sun behind you, usually in the morning or late afternoon when the Sun is low.",
+  "hints": [
+   "Does the light come back towards the Sun or continue away from it?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-165",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "what-if",
+  "q": "Orange light of wavelength 600 nm in air enters glass of refractive index 1.5. What is its wavelength inside the glass?",
+  "options": [
+   "200 nm",
+   "400 nm",
+   "600 nm",
+   "900 nm"
+  ],
+  "answer": 1,
+  "explanation": "The frequency stays the same at the boundary, while the speed falls by a factor of n. Since v = fλ, the wavelength also falls by n: 600/1.5 = 400 nm. The light is still orange — colour is set by frequency.",
+  "misconception": "Frequency never changes when light crosses into a new medium; wavelength does.",
+  "hints": [
+   "Which property stays fixed when light enters glass?",
+   "v = fλ — if v falls by 1.5, what happens to λ?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-166",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "mcq",
+  "q": "How does the human eye focus on both near and distant objects?",
+  "options": [
+   "Ciliary muscles change the curvature, and so the focal length, of the eye lens.",
+   "The retina moves backwards and forwards.",
+   "The pupil changes the lens’s position.",
+   "The cornea changes colour."
+  ],
+  "answer": 0,
+  "explanation": "This is accommodation. To see near objects, the ciliary muscles contract, the lens becomes thicker and its focal length shorter; for distant objects they relax and the lens flattens. A young eye can focus from about 25 cm (near point) to infinity.",
+  "misconception": "The pupil controls the amount of light, not the focus.",
+  "hints": [
+   "Which part of the eye can change shape?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-167",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is an ammeter connected in series and a voltmeter connected in parallel with a component?",
+  "options": [
+   "Voltmeters would melt in series.",
+   "Ammeters are larger than voltmeters.",
+   "It does not matter how they are connected.",
+   "An ammeter must carry the same current as the component; a voltmeter must have the same potential difference across it."
+  ],
+  "answer": 3,
+  "explanation": "Current is the same everywhere in a series loop, so the ammeter must be in series; it has very low resistance so it barely changes the current. Potential difference is the same across parallel branches, so the voltmeter goes in parallel; it has very high resistance so it draws almost no current.",
+  "hints": [
+   "Which quantity is shared in series, and which in parallel?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-168",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "numerical",
+  "q": "A 6 Ω resistor and a 3 Ω resistor are connected in series across a 9 V battery. What is the potential difference across the 6 Ω resistor?",
+  "options": [
+   "6 V",
+   "3 V",
+   "4.5 V",
+   "9 V"
+  ],
+  "answer": 0,
+  "explanation": "Total resistance 9 Ω, so I = 9/9 = 1 A. V across 6 Ω = IR = 1 × 6 = 6 V (and 3 V across the 3 Ω). In series the voltage divides in proportion to the resistances — the idea behind a potential divider.",
+  "misconception": "4.5 V splits the voltage equally, which only happens for equal resistors.",
+  "hints": [
+   "Find the current first.",
+   "Voltage divides in proportion to resistance in series."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-169",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "application",
+  "q": "Why are the heating elements of toasters and electric irons made of nichrome rather than copper?",
+  "options": [
+   "Nichrome is magnetic.",
+   "Nichrome is cheaper than copper.",
+   "Nichrome has high resistivity and a high melting point, and does not oxidise easily when red-hot.",
+   "Nichrome is a better conductor than copper."
+  ],
+  "answer": 2,
+  "explanation": "Heat produced is I²R, so a high-resistance element gets hot. Nichrome (nickel–chromium alloy) has about 60 times the resistivity of copper, survives red heat without melting and resists oxidation. Copper would need an impossibly long wire and would oxidise.",
+  "hints": [
+   "Which property makes a wire get hot when current flows?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-170",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "numerical",
+  "q": "Wires A and B are made of the same metal. A is twice as long as B and has twice B’s diameter. What is the ratio of their resistances, R_A : R_B?",
+  "options": [
+   "1",
+   "0.5",
+   "2",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "R = ρL/A, and area A ∝ diameter². Doubling the length doubles R; doubling the diameter makes the area 4 times larger and R one-quarter. Overall R_A/R_B = 2 × ¼ = 0.5.",
+  "misconception": "1 assumes doubling the diameter halves the resistance; area depends on the SQUARE of the diameter.",
+  "hints": [
+   "How does cross-sectional area depend on diameter?",
+   "Combine the effects of length and area."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-171",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 1,
+  "type": "mcq",
+  "q": "Electricians wear rubber gloves when working. Which property of rubber protects them?",
+  "options": [
+   "It absorbs heat.",
+   "It is magnetic.",
+   "It is a good conductor.",
+   "It is an electrical insulator."
+  ],
+  "answer": 3,
+  "explanation": "Rubber has very few free charges, so it has extremely high resistance and allows almost no current to flow through it — it is an insulator. Metals, which have many free electrons, are conductors.",
+  "hints": [
+   "Does current pass easily through rubber?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-172",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "mcq",
+  "q": "Which device works on the principle of electromagnetic induction?",
+  "options": [
+   "A bicycle dynamo",
+   "A fuse",
+   "An electric bell",
+   "A filament bulb"
+  ],
+  "answer": 0,
+  "explanation": "A dynamo turns a magnet near a coil (or a coil near a magnet); the changing magnetic field induces a current that lights the lamp. The bell uses an electromagnet, the bulb uses the heating effect, and the fuse uses the heating effect to melt.",
+  "hints": [
+   "Which device produces electricity from motion?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-173",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Two long parallel wires carry currents in the SAME direction. What happens to the wires?",
+  "options": [
+   "They rotate to point in opposite directions.",
+   "Nothing — currents do not exert forces.",
+   "They attract each other.",
+   "They repel each other."
+  ],
+  "answer": 2,
+  "explanation": "Each wire sits in the circular magnetic field of the other, so each feels a force (as in a motor). Applying the right-hand thumb rule and Fleming’s left-hand rule shows the forces point towards each other for parallel currents — attraction. Opposite currents repel.",
+  "misconception": "For currents, “like” attracts — the opposite of electric charges and magnetic poles.",
+  "hints": [
+   "Each wire is a current in the other wire’s magnetic field.",
+   "Use Fleming’s left-hand rule on one wire."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-174",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 2,
+  "type": "numerical",
+  "q": "How much energy is needed to turn 200 g of boiling water at 100 °C completely into steam? (latent heat of vaporisation = 2260 kJ/kg)",
+  "options": [
+   "452 kJ",
+   "45.2 kJ",
+   "84 kJ",
+   "2260 kJ"
+  ],
+  "answer": 0,
+  "explanation": "Q = mL = 0.2 kg × 2260 kJ/kg = 452 kJ. That is more than five times the 84 kJ needed to heat the same water from 0 °C to 100 °C.",
+  "misconception": "84 kJ is the energy to heat 200 g from 0 to 100 °C, not to boil it away.",
+  "hints": [
+   "Convert 200 g to kg and use Q = mL."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-175",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 2,
+  "type": "application",
+  "q": "A metal lid stuck tightly on a glass jar often loosens after it is held under hot water. Why?",
+  "options": [
+   "The metal lid expands more than the glass when heated.",
+   "The glass shrinks when heated.",
+   "Hot water dissolves the glue.",
+   "Water lubricates the thread."
+  ],
+  "answer": 0,
+  "explanation": "Metals expand more than glass for the same temperature rise. Heating both makes the lid grow slightly more than the jar’s neck, loosening its grip.",
+  "hints": [
+   "Which expands more when heated: metal or glass?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-176",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Room heaters are usually placed near the floor, while air conditioners are mounted high on the wall. Why?",
+  "options": [
+   "Warm air rises and cool air sinks, so these positions set up convection currents that mix the room’s air.",
+   "Cool air is less dense than warm air.",
+   "Heaters are heavy and air conditioners are light.",
+   "Heat travels downward by radiation."
+  ],
+  "answer": 0,
+  "explanation": "Air warmed near the floor expands, becomes less dense and rises, drawing cooler air in behind it. Cold air from a high air conditioner is denser and sinks. Both placements drive convection currents through the whole room.",
+  "misconception": "Cool air is DENSER than warm air, which is why it sinks.",
+  "hints": [
+   "Which way does warm air move?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-177",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 3,
+  "type": "numerical",
+  "q": "A 10 m steel rail warms by 40 °C on a summer day. Steel expands by 1.2 × 10⁻⁵ of its length for each 1 °C rise. By how much does the rail lengthen?",
+  "options": [
+   "48 mm",
+   "4.8 mm",
+   "0.48 mm",
+   "4.8 cm"
+  ],
+  "answer": 1,
+  "explanation": "ΔL = L × α × ΔT = 10 m × 1.2 × 10⁻⁵ × 40 = 4.8 × 10⁻³ m = 4.8 mm. Small, but over many rails it adds up — hence expansion gaps and pre-stressed welded track.",
+  "misconception": "4.8 cm is ten times too large — check the conversion from metres to millimetres.",
+  "hints": [
+   "ΔL = L α ΔT.",
+   "1 m = 1000 mm."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-178",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 1,
+  "type": "mcq",
+  "q": "Bats fly and catch insects in complete darkness. How?",
+  "options": [
+   "They follow the insects’ smell only.",
+   "They see infrared light.",
+   "They emit ultrasound and detect the echoes from objects.",
+   "They sense the insects’ magnetic fields."
+  ],
+  "answer": 2,
+  "explanation": "Bats emit short ultrasonic pulses (often 20–100 kHz) and listen for the echoes. The delay tells them the distance and the echo pattern the size and movement of the object — echolocation, the natural version of SONAR.",
+  "hints": [
+   "What sound frequencies can bats produce?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-179",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 2,
+  "type": "numerical",
+  "q": "A tuning fork vibrates at 250 Hz. What is the time period of one vibration?",
+  "options": [
+   "25 ms",
+   "0.4 ms",
+   "250 ms",
+   "4 ms"
+  ],
+  "answer": 3,
+  "explanation": "T = 1/f = 1/250 s = 0.004 s = 4 milliseconds.",
+  "hints": [
+   "Time period = 1 ÷ frequency."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-180",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "You can hear someone talking in the next room through an open door, even though you cannot see them. Why can sound “go round corners” so much better than light?",
+  "options": [
+   "Sound reflects but light does not.",
+   "Sound wavelengths (centimetres to metres) are similar in size to the doorway, so sound diffracts (spreads) strongly; light’s wavelength is far too small.",
+   "Sound is faster than light.",
+   "Light cannot pass through doorways."
+  ],
+  "answer": 1,
+  "explanation": "Waves spread out noticeably after passing through a gap when the gap is comparable to their wavelength. Speech has wavelengths of roughly 0.3–3 m, about the size of a doorway, so it bends around the edges. Visible light has a wavelength of about 0.0000005 m, so its diffraction at a doorway is negligible.",
+  "misconception": "Light is about a million times faster than sound; speed is not the reason.",
+  "hints": [
+   "Compare the wavelength of speech with the width of a doorway.",
+   "Which waves spread out more after passing through a gap?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-181",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 3,
+  "type": "data",
+  "q": "A driver brakes and the car’s speed is recorded every 2 s. How far does the car travel from the moment braking starts until it stops?",
+  "options": [
+   "80 m",
+   "50 m",
+   "160 m",
+   "40 m"
+  ],
+  "answer": 0,
+  "explanation": "The speed falls by 2.5 m/s every second — uniform deceleration — so the v–t graph is a straight line from 20 m/s to 0 in 8 s. Distance = area of the triangle = ½ × 8 × 20 = 80 m. (Average speed 10 m/s × 8 s gives the same.)",
+  "misconception": "160 m assumes the car kept its initial speed throughout.",
+  "hints": [
+   "Is the deceleration uniform?",
+   "Distance = area under the speed–time graph."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "table": {
+   "head": [
+    "Time (s)",
+    "0",
+    "2",
+    "4",
+    "6",
+    "8"
+   ],
+   "rows": [
+    [
+     "Speed (m/s)",
+     20,
+     15,
+     10,
+     5,
+     0
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "PHY-182",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 1,
+  "type": "mcq",
+  "q": "What does a car’s speedometer show?",
+  "options": [
+   "Average speed for the journey",
+   "Total distance travelled",
+   "Instantaneous speed",
+   "Acceleration"
+  ],
+  "answer": 2,
+  "explanation": "The speedometer shows the speed at each instant. The odometer shows total distance travelled. Average speed = total distance ÷ total time.",
+  "hints": [
+   "Does the reading change from moment to moment?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-183",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 3,
+  "type": "what-if",
+  "q": "In the “tablecloth trick”, a cloth is pulled sharply from under plates and glasses, which stay almost where they are. Which explanation is best?",
+  "options": [
+   "Gravity becomes stronger during the pull.",
+   "The plates’ inertia resists change, and the very short pull gives friction too little time to transfer much momentum to them.",
+   "The plates have no friction with the cloth.",
+   "The cloth pushes the plates downward."
+  ],
+  "answer": 1,
+  "explanation": "Friction from the moving cloth does act on the plates, but momentum gained = friction × time. A fast pull makes the time tiny, so the plates gain very little velocity and stay put (inertia). A slow pull gives friction plenty of time — and the dishes go with the cloth.",
+  "misconception": "There is friction; the trick works because it acts for only a very short time.",
+  "hints": [
+   "Friction acts — so what limits its effect?",
+   "Impulse = force × time."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-184",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why should a rifle be held firmly against the shoulder when fired?",
+  "options": [
+   "The rifle and body then recoil together as a much larger mass, so the recoil speed is much smaller.",
+   "It stops the rifle having any recoil momentum.",
+   "It reduces the force of gravity on the rifle.",
+   "It increases the bullet’s mass."
+  ],
+  "answer": 0,
+  "explanation": "The recoil momentum equals the bullet’s momentum either way. Held firmly, the rifle and shooter act as one large mass, so for the same momentum the recoil velocity is far smaller and the rifle does not slam into the shoulder.",
+  "misconception": "The recoil momentum cannot be removed; it can only be shared with a larger mass.",
+  "hints": [
+   "Recoil momentum = bullet momentum. How can the recoil speed be reduced?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-185",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 1,
+  "type": "numerical",
+  "q": "An object weighs 98 N on Earth (g = 9.8 m/s²). What is its mass?",
+  "options": [
+   "98 kg",
+   "9.8 kg",
+   "10 kg",
+   "960 kg"
+  ],
+  "answer": 2,
+  "explanation": "W = mg, so m = W/g = 98/9.8 = 10 kg. Its mass would still be 10 kg anywhere in the universe; its weight would change.",
+  "hints": [
+   "Weight = mass × g."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-186",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A planet moves in an elliptical orbit around the Sun. Where does it move fastest?",
+  "options": [
+   "At the point closest to the Sun",
+   "Halfway between the closest and farthest points",
+   "At the point farthest from the Sun",
+   "Its speed is the same everywhere"
+  ],
+  "answer": 0,
+  "explanation": "Kepler’s second law: a line from the Sun to the planet sweeps out equal areas in equal times. Near the Sun the line is short, so the planet must move faster to sweep the same area. Earth moves fastest in early January, when it is nearest the Sun.",
+  "hints": [
+   "Think about the equal-areas law."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-187",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 2,
+  "type": "numerical",
+  "q": "A 60 W filament bulb gives out only 3 W as visible light. What is its efficiency?",
+  "options": [
+   "5%",
+   "20%",
+   "95%",
+   "3%"
+  ],
+  "answer": 0,
+  "explanation": "Efficiency = useful output ÷ input × 100 = 3/60 × 100 = 5%. The other 95% (57 W) becomes heat — why LEDs, at roughly 30–40% efficiency, save so much energy.",
+  "misconception": "95% is the fraction WASTED.",
+  "hints": [
+   "Efficiency = useful output ÷ total input."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-188",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "At a small hydroelectric plant, 1000 kg of water falls through 50 m every second. What is the maximum power available? (g = 10 m/s²)",
+  "options": [
+   "500 kW",
+   "50 kW",
+   "5 MW",
+   "500 W"
+  ],
+  "answer": 0,
+  "explanation": "Each second the water loses PE = mgh = 1000 × 10 × 50 = 500,000 J, so the maximum power is 500,000 W = 500 kW. Real turbines and generators convert perhaps 80–90% of this.",
+  "hints": [
+   "How much potential energy does the water lose each second?",
+   "Power = energy per second."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-189",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 1,
+  "type": "application",
+  "q": "Why do heavy trucks have many wide tyres?",
+  "options": [
+   "To spread the weight over a larger area, reducing pressure on the road",
+   "To reduce the truck’s weight",
+   "To increase the pressure on the road for better grip",
+   "To make the truck lighter"
+  ],
+  "answer": 0,
+  "explanation": "Pressure = force/area. More, wider tyres increase the contact area, so the same weight produces a lower pressure, protecting the road and the tyres.",
+  "hints": [
+   "Pressure = force ÷ area."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-190",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 3,
+  "type": "numerical",
+  "q": "In a mercury barometer at sea level, the mercury column stands 76 cm high. What atmospheric pressure does this show? (density of mercury = 13,600 kg/m³, g = 9.8 m/s²)",
+  "options": [
+   "1.36 × 10⁴ Pa",
+   "7.6 × 10⁴ Pa",
+   "1.01 × 10⁵ Pa",
+   "1.01 × 10³ Pa"
+  ],
+  "answer": 2,
+  "explanation": "The atmosphere supports the column, so P = hρg = 0.76 × 13,600 × 9.8 ≈ 1.01 × 10⁵ Pa. The same pressure would hold up a water column about 10 m tall, which is why mercury, being 13.6 times denser, is used.",
+  "misconception": "1.01 × 10³ Pa uses 76 cm without converting to metres.",
+  "hints": [
+   "The atmosphere balances the weight of the mercury column.",
+   "Use P = hρg with h in metres."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-191",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why do your ears “pop” when an aeroplane climbs?",
+  "options": [
+   "Air pressure outside falls with altitude, so the higher-pressure air trapped in the middle ear pushes the eardrum outward until it equalises.",
+   "The engines vibrate the eardrum.",
+   "Oxygen levels rise in the cabin.",
+   "Air pressure increases with altitude."
+  ],
+  "answer": 0,
+  "explanation": "Atmospheric pressure decreases with height (cabins are pressurised only to roughly the pressure at 2000 m). The middle ear still holds air at the earlier, higher pressure, which pushes on the eardrum. Swallowing opens the Eustachian tube, letting air out — the “pop”.",
+  "hints": [
+   "How does air pressure change as you go higher?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-192",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A person standing on a dry wooden stool touches a live wire and gets a much milder shock than someone standing barefoot on a wet floor. Why?",
+  "options": [
+   "Wet floors reduce the voltage.",
+   "Dry wood adds a very large resistance to the path to earth, so only a tiny current flows.",
+   "Wood stores the electricity.",
+   "Dry wood is a good conductor."
+  ],
+  "answer": 1,
+  "explanation": "The current through the body is I = V/R, where R includes everything between the wire and the earth. Dry wood is a good insulator, so R is huge and I is tiny. Wet skin and a wet floor have low resistance, allowing a dangerous current. (Live wires should never be touched in any case.)",
+  "hints": [
+   "Current = voltage ÷ resistance of the whole path to earth."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-193",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 1,
+  "type": "interdisciplinary",
+  "q": "What is the main advantage of having two forward-facing eyes, as humans and owls do?",
+  "options": [
+   "Each eye sees a slightly different view, letting the brain judge depth and distance.",
+   "It allows seeing behind the head.",
+   "It makes images twice as large.",
+   "It doubles the brightness of everything."
+  ],
+  "answer": 0,
+  "explanation": "Our eyes are about 6 cm apart, so each forms a slightly different image. The brain combines them (binocular or stereoscopic vision) to judge distance — important for predators and for catching a ball. Animals with eyes on the sides of the head, such as rabbits, see a wider field instead.",
+  "hints": [
+   "Close one eye and try touching two fingertips together."
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-194",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Auroras (northern and southern lights) are seen mostly near the poles. What does Earth’s magnetic field have to do with this?",
+  "options": [
+   "It is strongest at the equator, blocking auroras there.",
+   "It deflects charged particles from the solar wind and guides them down towards the polar regions, where they make air glow.",
+   "It reflects sunlight at the poles.",
+   "It produces light directly."
+  ],
+  "answer": 1,
+  "explanation": "Charged particles from the Sun are steered by Earth’s magnetic field, which shields most of the planet. Near the magnetic poles the field lines dip into the atmosphere, so particles can spiral down there and excite oxygen and nitrogen atoms, which emit green and red light.",
+  "hints": [
+   "What happens to moving charged particles in a magnetic field?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-195",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Which contains more thermal (internal) energy: a cup of boiling water at 100 °C, or a bathtub of warm water at 40 °C?",
+  "options": [
+   "Neither has any thermal energy",
+   "The bathtub, because it has far more water even though each particle has less energy on average",
+   "The cup, because it is at a higher temperature",
+   "Both are equal"
+  ],
+  "answer": 1,
+  "explanation": "Temperature measures the AVERAGE kinetic energy of the particles; thermal energy is the TOTAL energy of all of them. The bathtub (≈ 150 kg) has thousands of times more water than the cup (≈ 0.25 kg), so its total thermal energy is much greater, even though the cup is hotter.",
+  "misconception": "Temperature and heat energy are different quantities; a hot object is not necessarily the one with the most energy.",
+  "hints": [
+   "What does temperature measure — the total or the average energy?",
+   "Which has more particles?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-196",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 1,
+  "type": "reasoning",
+  "q": "In a string of old fairy lights, when one bulb fails the whole string goes dark. How are the bulbs connected?",
+  "options": [
+   "They are not connected",
+   "In series",
+   "In parallel",
+   "Each to its own battery"
+  ],
+  "answer": 1,
+  "explanation": "In a series circuit there is only one path; a broken filament breaks the whole loop, so no current flows anywhere. In parallel, each bulb has its own branch, so the others stay lit — which is how house lights are wired.",
+  "hints": [
+   "How many paths does the current have in a series circuit?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-197",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 1,
+  "type": "mcq",
+  "q": "In which unit is the loudness (sound intensity level) of a noise usually measured?",
+  "options": [
+   "Decibel (dB)",
+   "Metre per second (m/s)",
+   "Newton (N)",
+   "Hertz (Hz)"
+  ],
+  "answer": 0,
+  "explanation": "Sound intensity level is measured in decibels. Normal conversation is about 60 dB; prolonged exposure above about 85 dB can damage hearing. Hertz measures frequency (pitch).",
+  "misconception": "Hertz measures pitch, not loudness.",
+  "hints": [
+   "Noise limits near schools and hospitals are given in this unit."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-198",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 1,
+  "type": "numerical",
+  "q": "A train travels at 90 km/h. What is this speed in metres per second?",
+  "options": [
+   "25 m/s",
+   "15 m/s",
+   "324 m/s",
+   "9 m/s"
+  ],
+  "answer": 0,
+  "explanation": "1 km/h = 1000 m / 3600 s = 1/3.6 m/s. So 90 km/h = 90/3.6 = 25 m/s.",
+  "misconception": "324 multiplies by 3.6 instead of dividing.",
+  "hints": [
+   "Divide km/h by 3.6 to get m/s."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-199",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 1,
+  "type": "application",
+  "q": "When you jump from a small boat onto the bank, the boat moves away from the bank. Which law explains this?",
+  "options": [
+   "Newton’s third law — you push the boat backwards as it pushes you forwards",
+   "Archimedes’ principle",
+   "The law of gravitation",
+   "Newton’s first law only"
+  ],
+  "answer": 0,
+  "explanation": "To jump forward you push backward on the boat (action); the boat pushes you forward (reaction). The boat, free to move on the water, is pushed away from the bank. Momentum is conserved.",
+  "hints": [
+   "What do your feet push on as you jump?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-200",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 1,
+  "type": "mcq",
+  "q": "An archer draws back a bow and holds it. What kind of energy is stored in the bent bow?",
+  "options": [
+   "Elastic potential energy",
+   "Gravitational potential energy only",
+   "Sound energy",
+   "Kinetic energy"
+  ],
+  "answer": 0,
+  "explanation": "A deformed elastic object (stretched string, bent bow, compressed spring) stores elastic potential energy. When released, it is converted into the arrow’s kinetic energy.",
+  "hints": [
+   "The bow is not moving, but it has been deformed."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
   "id": "PHY-001",
   "subject": "Physics",
   "topic": "Motion",
