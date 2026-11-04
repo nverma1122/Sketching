@@ -3,7 +3,7 @@ import type { Go } from '../App';
 import { Quiz, type QuizItem } from '../components/Quiz';
 import { Results } from '../components/Results';
 import { BANK, filterBank, topicsOf } from '../lib/bank';
-import { pick } from '../lib/select';
+import { pick, unseenCount } from '../lib/select';
 import { getState, saveTest, update, useStore } from '../lib/store';
 import { LEVEL_NAME, SUBJECTS, SUBJECT_ICON, type Level, type Question, type Subject } from '../lib/types';
 
@@ -114,7 +114,7 @@ function CustomPractice({ go, preset }: { go: Go; preset: string }) {
           <button className={setup.timed ? 'on' : ''} onClick={() => setSetup({ ...setup, timed: true })}>Timed (1.5 × estimated time per question)</button>
         </div>
         <div className="actions">
-          <span className="dim">{pool.length} questions match{pool.length < setup.count ? ` — the set will have ${pool.length}` : ''}.</span>
+          <span className="dim">{pool.length} questions match · {unseenCount(pool, getState())} not yet seen on this device{pool.length < setup.count ? ` — the set will have ${pool.length}` : ''}.</span>
           <button className="btn" disabled={!pool.length} onClick={() => setRun(pick(pool, setup.count, getState()))}>Start practice →</button>
         </div>
       </div>

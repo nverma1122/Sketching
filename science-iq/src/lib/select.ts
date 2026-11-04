@@ -42,31 +42,25 @@ export function exposure(s: State) {
   return m;
 }
 
+/**
+ * No-repeat picker. Questions this device has never shown come first, in random order. Only when
+ * every matching question has been seen does it reuse any, starting with the one seen longest
+ * ago. (Mistake Master's "Retry my mistakes" repeats questions on purpose and does not use this.)
+ */
 export function pick(pool: Question[], count: number, s: State, opts: { exclude?: Set<string>; rand?: () => number } = {}): Question[] {
   const ex = exposure(s);
-  const now = Date.now();
   const r = opts.rand ?? Math.random;
-  let cands = pool.filter((q) => !opts.exclude?.has(q.id));
-  const w = (q: Question) => {
-    const e = ex[q.id];
-    if (!e) return 1;
-    let x = e.lastOk ? Math.pow(0.3, e.right) : 0.6;
-    const age = now - e.last;
-    if (age < 3600_000) x *= 0.05;
-    else if (age < 86_400_000) x *= 0.3;
-    return x;
-  };
-  const out: Question[] = [];
-  while (out.length < count && cands.length) {
-    const ws = cands.map(w);
-    let t = ws.reduce((a, b) => a + b, 0) * r();
-    let i = 0;
-    for (; i < cands.length - 1; i++) {
-      t -= ws[i];
-      if (t <= 0) break;
-    }
-    out.push(cands[i]);
-    cands = cands.filter((_, j) => j !== i);
-  }
-  return out;
+  const cands = pool.filter((q) => !opts.exclude?.has(q.id));
+  const unseen = shuffle(cands.filter((q) => !ex[q.id]), r);
+  const seen = cands
+    .filter((q) => ex[q.id])
+    .map((q) => ({ q, k: ex[q.id].last + r() * 1000 }))
+    .sort((a, b) => a.k - b.k)
+    .map((x) => x.q);
+  return [...unseen, ...seen].slice(0, count);
 }
+
+export const unseenCount = (pool: Question[], s: State) => {
+  const ex = exposure(s);
+  return pool.filter((q) => !ex[q.id]).length;
+};

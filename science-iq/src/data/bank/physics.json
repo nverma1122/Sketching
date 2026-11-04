@@ -1,5 +1,2540 @@
 [
  {
+  "id": "PHY-070",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 1,
+  "type": "numerical",
+  "q": "A ray strikes a plane mirror at an angle of incidence of 35°. What is the angle between the incident ray and the reflected ray?",
+  "options": [
+   "70°",
+   "35°",
+   "110°",
+   "55°"
+  ],
+  "answer": 0,
+  "explanation": "Angle of reflection = angle of incidence = 35°, both measured from the normal. The angle between the two rays is 35° + 35° = 70°.",
+  "misconception": "55° is the angle between the ray and the mirror surface, not between the two rays.",
+  "hints": [
+   "Both angles are measured from the normal, not from the mirror."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-071",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "numerical",
+  "q": "Two plane mirrors are placed at 60° to each other, with a candle between them. How many images of the candle are formed?",
+  "options": [
+   "5",
+   "6",
+   "3",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "For mirrors inclined at angle θ, the number of images n = 360°/θ − 1 (when 360/θ is even). 360/60 − 1 = 5. This is the principle of the kaleidoscope.",
+  "misconception": "6 forgets to subtract 1: one of the “images” would coincide with the object itself.",
+  "hints": [
+   "Use n = 360°/θ − 1."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-072",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A girl 160 cm tall wants to see her whole body in a vertical plane mirror. What is the minimum length of mirror she needs?",
+  "options": [
+   "80 cm",
+   "It depends on how far she stands from the mirror",
+   "160 cm",
+   "40 cm"
+  ],
+  "answer": 0,
+  "explanation": "Light from her feet must reflect into her eyes at the mirror point halfway between her eye level and her feet; likewise for the top of her head. So the mirror need only be half her height, 80 cm, placed correctly — and this does not depend on her distance from the mirror.",
+  "misconception": "Standing further back does not help: the image also moves further back by the same amount.",
+  "hints": [
+   "Draw the ray from her toes to the mirror and into her eye.",
+   "Where on the mirror does that ray reflect, compared with her eye height?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-073",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "what-if",
+  "q": "You walk straight towards a plane mirror at 2 m/s. At what speed does your image approach YOU?",
+  "options": [
+   "0 m/s",
+   "1 m/s",
+   "4 m/s",
+   "2 m/s"
+  ],
+  "answer": 2,
+  "explanation": "The image is always as far behind the mirror as you are in front. If you move 2 m closer to the mirror in a second, the image also moves 2 m closer to the mirror from the other side, so the gap between you and your image shrinks by 4 m each second.",
+  "misconception": "2 m/s is the image’s speed relative to the mirror, not relative to you.",
+  "hints": [
+   "How far is your image from you when you stand d metres from the mirror?",
+   "How fast does 2d change if d changes at 2 m/s?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-074",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 1,
+  "type": "application",
+  "q": "Where is the bulb placed in a torch that uses a concave mirror to produce a strong parallel beam?",
+  "options": [
+   "Between the focus and the mirror",
+   "At the principal focus of the mirror",
+   "At the centre of curvature",
+   "Far beyond the centre of curvature"
+  ],
+  "answer": 1,
+  "explanation": "Rays from a source at the focus of a concave mirror reflect parallel to the principal axis, producing a narrow, far-reaching beam. Car headlights and searchlights use the same arrangement.",
+  "hints": [
+   "Rays parallel to the axis meet at the focus — reverse their direction."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-075",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why are convex mirrors used as rear-view mirrors in vehicles?",
+  "options": [
+   "They are cheaper than plane mirrors.",
+   "They give a real image that can be focused.",
+   "They give a magnified image of following vehicles.",
+   "They always give an erect, diminished image and a wider field of view."
+  ],
+  "answer": 3,
+  "explanation": "A convex mirror always forms a virtual, erect, diminished image. Because the image is smaller, a much wider area behind the vehicle fits in the mirror. (Vehicles therefore carry the warning that objects are closer than they appear.)",
+  "misconception": "Convex mirrors never form real or magnified images.",
+  "hints": [
+   "What kind of image does a convex mirror always form?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-076",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "numerical",
+  "q": "An object is placed 30 cm in front of a concave mirror of focal length 10 cm. Where is the image formed?",
+  "options": [
+   "15 cm behind the mirror (virtual)",
+   "15 cm in front of the mirror (real)",
+   "7.5 cm in front of the mirror (real)",
+   "30 cm in front of the mirror (real)"
+  ],
+  "answer": 1,
+  "explanation": "Mirror formula 1/v + 1/u = 1/f with u = −30 cm, f = −10 cm: 1/v = −1/10 + 1/30 = −2/30, so v = −15 cm. Negative v means the image is in front of the mirror and real. Sense check: the object is beyond C (20 cm), so the image lies between F and C.",
+  "misconception": "7.5 cm comes from adding the reciprocals instead of using the sign convention.",
+  "hints": [
+   "Use 1/v + 1/u = 1/f with distances in front of the mirror negative.",
+   "The object is beyond the centre of curvature — where should the image lie?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-077",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "numerical",
+  "q": "For the same concave mirror (f = 10 cm) with the object 30 cm away, the image forms 15 cm in front of the mirror. What is the magnification?",
+  "options": [
+   "−0.5 (inverted, half the size)",
+   "+2 (erect, twice the size)",
+   "+0.5 (erect, half the size)",
+   "−2 (inverted, twice the size)"
+  ],
+  "answer": 0,
+  "explanation": "For mirrors m = −v/u = −(−15)/(−30) = −0.5. The negative sign means the image is inverted; |m| = 0.5 means half the object’s height — as expected for a real image of an object beyond C.",
+  "misconception": "Real images formed by a single mirror are always inverted, so m must be negative.",
+  "hints": [
+   "m = −v/u for mirrors.",
+   "Real images from a mirror are inverted — what sign does that give?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-078",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why does a well-cut diamond sparkle much more than a piece of glass of the same shape?",
+  "options": [
+   "Diamond has a lower refractive index than glass.",
+   "Diamond’s very high refractive index gives a small critical angle (about 24°), so light is totally internally reflected many times before leaving.",
+   "Diamond emits its own light.",
+   "Diamond absorbs all colours except white."
+  ],
+  "answer": 1,
+  "explanation": "Total internal reflection happens when light inside a denser medium meets the surface at more than the critical angle. Diamond (n ≈ 2.42) has a critical angle of about 24°, compared with about 42° for glass, so light entering a cut diamond bounces around inside and emerges from the top in bright flashes, also split into colours.",
+  "hints": [
+   "What condition is needed for total internal reflection?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-079",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "numerical",
+  "q": "What is the critical angle for light going from glass (refractive index 1.5) into air?",
+  "options": [
+   "48.2°",
+   "60°",
+   "33.7°",
+   "41.8°"
+  ],
+  "answer": 3,
+  "explanation": "At the critical angle the refracted ray grazes the surface (r = 90°): sin c = 1/n = 1/1.5 = 0.667, so c ≈ 41.8°. At incidence above 41.8°, light is totally internally reflected — the principle of optical fibres.",
+  "misconception": "48.2° is 90° − 41.8°, measured from the surface instead of the normal.",
+  "hints": [
+   "At the critical angle the angle of refraction is 90°.",
+   "sin c = 1/n."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-080",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "mcq",
+  "q": "A short-sighted (myopic) student cannot see the board clearly. Where is the image of the board formed in her eye, and which lens corrects it?",
+  "options": [
+   "In front of the retina; a concave (diverging) lens",
+   "On the retina; no lens is needed",
+   "In front of the retina; a convex lens",
+   "Behind the retina; a convex lens"
+  ],
+  "answer": 0,
+  "explanation": "In myopia the eyeball is too long or the lens too strong, so rays from distant objects focus in front of the retina. A diverging lens spreads the rays slightly so they focus on the retina.",
+  "misconception": "Convex lenses correct long-sightedness (hypermetropia), where the image falls behind the retina.",
+  "hints": [
+   "Is the eye’s focusing too strong or too weak in myopia?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-081",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "numerical",
+  "q": "A myopic person’s far point is 2 m away (they cannot see clearly beyond it). What power of spectacle lens do they need to see distant objects?",
+  "options": [
+   "−0.5 D",
+   "+0.5 D",
+   "+2 D",
+   "−2 D"
+  ],
+  "answer": 0,
+  "explanation": "The lens must make rays from infinity appear to come from the far point, 2 m in front. So it is a diverging lens with f = −2 m, and P = 1/f = −0.5 D.",
+  "misconception": "−2 D uses the far point in metres as the power instead of taking its reciprocal.",
+  "hints": [
+   "The lens should form an image of a distant object at the far point.",
+   "P = 1/f with f in metres."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-082",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 2,
+  "type": "reasoning",
+  "q": "We see the Sun about two minutes before it actually rises above the horizon, and for about two minutes after it has set. Why?",
+  "options": [
+   "Clouds reflect the light down.",
+   "The Sun is larger than the Earth.",
+   "Light takes about 8 minutes to reach us.",
+   "Atmospheric refraction bends sunlight towards us around the curve of the Earth."
+  ],
+  "answer": 3,
+  "explanation": "The atmosphere gets denser towards the ground, so its refractive index increases downwards and light from the Sun just below the horizon bends down towards an observer. This adds about 2 minutes to daylight at each end of the day and also flattens the setting Sun’s disc.",
+  "misconception": "The 8-minute travel time applies all day long; it does not make sunrise early.",
+  "hints": [
+   "How does the density of air change with height, and what does that do to light?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-083",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "experiment",
+  "q": "White light passes through a glass prism and spreads into a spectrum. A second, identical prism is placed upside down just after the first. What emerges from the second prism?",
+  "options": [
+   "No light — the colours cancel",
+   "Only red light",
+   "White light again",
+   "A wider spectrum"
+  ],
+  "answer": 2,
+  "explanation": "Each colour is bent by a slightly different amount (violet most, red least) because the refractive index depends on wavelength. The inverted prism bends each colour back by exactly the same amount in the opposite direction, so the colours recombine into white light. Newton used this experiment to show that the colours are already present in white light and are not made by the prism.",
+  "misconception": "Colours of light do not cancel to darkness; recombining them gives white.",
+  "hints": [
+   "Why does the first prism separate the colours?",
+   "What does an inverted identical prism do to each colour’s deviation?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-084",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 1,
+  "type": "experiment",
+  "q": "A pinhole camera forms an image of a candle flame on its screen. What is the image like, and why?",
+  "options": [
+   "Erect, because the pinhole acts as a lens",
+   "Inverted, because the pinhole reflects light",
+   "Erect and coloured, because of dispersion",
+   "Inverted, because light travels in straight lines through the pinhole"
+  ],
+  "answer": 3,
+  "explanation": "Rays from the top of the flame pass through the hole in straight lines and land low on the screen; rays from the bottom land high. So the image is inverted — evidence for the rectilinear propagation of light.",
+  "misconception": "There is no lens in a pinhole camera; the inversion comes purely from straight-line travel.",
+  "hints": [
+   "Trace a straight ray from the top of the flame through the hole."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-085",
+  "subject": "Physics",
+  "topic": "Light",
+  "level": 3,
+  "type": "numerical",
+  "q": "A swimming pool is 2 m deep. Looking straight down into it, how deep does it appear? (refractive index of water = 1.33)",
+  "options": [
+   "1.0 m",
+   "2 m",
+   "2.66 m",
+   "1.5 m"
+  ],
+  "answer": 3,
+  "explanation": "Apparent depth = real depth ÷ refractive index = 2/1.33 ≈ 1.5 m. Light from the bottom bends away from the normal as it leaves the water, so it appears to come from a shallower point. Pools therefore look shallower than they are — a real safety hazard.",
+  "misconception": "2.66 m multiplies instead of dividing; the pool looks shallower, not deeper.",
+  "hints": [
+   "When light leaves water, does it bend towards or away from the normal?",
+   "Apparent depth = real depth ÷ n."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-086",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 1,
+  "type": "numerical",
+  "q": "A current of 2 A flows through a bulb for 5 s. How much charge passes through it?",
+  "options": [
+   "7 C",
+   "2.5 C",
+   "10 C",
+   "0.4 C"
+  ],
+  "answer": 2,
+  "explanation": "Q = I × t = 2 A × 5 s = 10 C. One ampere is one coulomb per second.",
+  "hints": [
+   "Current is charge per second."
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-087",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "numerical",
+  "q": "The charge on one electron is 1.6 × 10⁻¹⁹ C. How many electrons make up a charge of 1 C?",
+  "options": [
+   "1.6 × 10⁻¹⁹",
+   "1.6 × 10¹⁹",
+   "6.25 × 10¹⁹",
+   "6.25 × 10¹⁸"
+  ],
+  "answer": 3,
+  "explanation": "n = Q/e = 1 / (1.6 × 10⁻¹⁹) = 6.25 × 10¹⁸ electrons. A current of 1 A means this many electrons pass a point every second.",
+  "hints": [
+   "Divide the total charge by the charge on one electron."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-088",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "numerical",
+  "q": "What current flows through a 60 W bulb working at its rated voltage of 220 V?",
+  "options": [
+   "13,200 A",
+   "0.0273 A",
+   "0.273 A",
+   "3.67 A"
+  ],
+  "answer": 2,
+  "explanation": "P = VI, so I = P/V = 60/220 ≈ 0.273 A. A higher-power bulb on the same supply draws proportionally more current.",
+  "misconception": "3.67 A divides the wrong way (V/P).",
+  "hints": [
+   "P = V × I."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-089",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "what-if",
+  "q": "A heater is rated 1000 W at 220 V. If it is connected to a 110 V supply (assume its resistance does not change), what power does it deliver?",
+  "options": [
+   "2000 W",
+   "500 W",
+   "1000 W",
+   "250 W"
+  ],
+  "answer": 3,
+  "explanation": "Resistance is fixed: R = V²/P = 220²/1000 = 48.4 Ω. At 110 V, P = V²/R = 110²/48.4 = 250 W. Halving the voltage halves the current too, so power falls to a quarter.",
+  "misconception": "500 W assumes power is proportional to voltage; with fixed resistance it is proportional to V².",
+  "hints": [
+   "What stays constant when the supply changes — power, current or resistance?",
+   "Use P = V²/R."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-090",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "numerical",
+  "q": "A wire 2 m long with a cross-sectional area of 1 mm² has a resistance of 0.034 Ω. What is the resistivity of its material?",
+  "options": [
+   "6.8 × 10⁻⁸ Ω m",
+   "1.7 × 10⁻⁸ Ω m",
+   "1.7 × 10⁻² Ω m",
+   "3.4 × 10⁻⁸ Ω m"
+  ],
+  "answer": 1,
+  "explanation": "ρ = RA/L. 1 mm² = 1 × 10⁻⁶ m². ρ = 0.034 × 10⁻⁶ / 2 = 1.7 × 10⁻⁸ Ω m — the resistivity of copper, which is why copper is used for wiring.",
+  "misconception": "1.7 × 10⁻² Ω m forgets to convert mm² to m².",
+  "hints": [
+   "Rearrange R = ρL/A.",
+   "1 mm² = 10⁻⁶ m²."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-091",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A bird can perch safely on a single bare high-voltage power line. Why does it not get a shock?",
+  "options": [
+   "Both its feet are at almost the same potential, so there is negligible potential difference across its body and almost no current flows through it.",
+   "High-voltage lines carry no current in the daytime.",
+   "The current in the wire is too small to hurt anything.",
+   "Birds’ feet are perfect insulators."
+  ],
+  "answer": 0,
+  "explanation": "Current flows through a body only if there is a potential difference across it. The bird’s feet touch the same wire a few centimetres apart; the wire’s resistance over that distance is tiny, so the potential difference — and the current through the bird — is negligible. If the bird touched a second wire or the pole, a large potential difference would exist and the result would be fatal.",
+  "misconception": "High voltage is dangerous only when there is a path between two very different potentials.",
+  "hints": [
+   "What drives current through any conductor?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-092",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "mcq",
+  "q": "In household wiring, where is the fuse connected, and why?",
+  "options": [
+   "In the neutral wire, because it carries no current",
+   "In series in the live wire, so that when it melts the appliance is disconnected from the high potential",
+   "In the earth wire, so excess current flows to the ground",
+   "In parallel with the appliance, to share the current"
+  ],
+  "answer": 1,
+  "explanation": "A fuse is a thin wire of low melting point placed in series with the live wire. Excess current heats it until it melts, breaking the circuit and cutting off the live supply. If it were in the neutral wire, the appliance would stay connected to the live wire even after the fuse blew.",
+  "misconception": "A fuse in parallel would not break the circuit at all.",
+  "hints": [
+   "Which wire is at a high potential?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-093",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 1,
+  "type": "mcq",
+  "q": "Why are appliances with metal bodies, such as electric irons and washing machines, connected to an earth wire?",
+  "options": [
+   "If a live wire touches the metal body, current flows safely to the ground instead of through the user.",
+   "To make the appliance use less electricity.",
+   "To make the appliance work faster.",
+   "To increase the voltage across the appliance."
+  ],
+  "answer": 0,
+  "explanation": "The earth wire connects the metal body to the ground through a low-resistance path. If a fault makes the body live, a large current flows to earth, usually blowing the fuse or tripping the circuit breaker, and the body stays near zero potential, protecting the user.",
+  "hints": [
+   "What would happen to someone touching a live metal body without an earth connection?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-094",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "numerical",
+  "q": "Four identical 8 Ω resistors are first connected all in series, then all in parallel. What is the ratio of the series resistance to the parallel resistance?",
+  "options": [
+   "16",
+   "8",
+   "64",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "Series: 4 × 8 = 32 Ω. Parallel: 8/4 = 2 Ω. Ratio = 32/2 = 16. In general, for n identical resistors the ratio is n².",
+  "misconception": "4 is the factor for one arrangement only; the effects multiply: ×4 in series and ÷4 in parallel.",
+  "hints": [
+   "n identical resistors R: series nR, parallel R/n.",
+   "Divide one by the other."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-095",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "data",
+  "q": "A student measures the current through a resistor at different voltages. What is its resistance?",
+  "options": [
+   "5 Ω",
+   "2 Ω",
+   "0.2 Ω",
+   "20 Ω"
+  ],
+  "answer": 0,
+  "explanation": "V/I = 1.0/0.2 = 2.0/0.4 = … = 5 Ω for every reading, so the resistor obeys Ohm’s law: a V–I graph is a straight line through the origin.",
+  "misconception": "0.2 Ω is I/V, the inverse.",
+  "hints": [
+   "R = V/I. Is it the same for every row?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "table": {
+   "head": [
+    "Voltage (V)",
+    "1.0",
+    "2.0",
+    "3.0",
+    "4.0"
+   ],
+   "rows": [
+    [
+     "Current (A)",
+     0.2,
+     0.4,
+     0.6,
+     0.8
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "PHY-096",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "data",
+  "q": "The current through a torch-bulb filament is measured as the voltage is increased. What do the data show?",
+  "options": [
+   "The bulb is faulty, because current should double when voltage doubles.",
+   "The filament obeys Ohm’s law exactly.",
+   "The resistance decreases with voltage.",
+   "The filament’s resistance increases as it gets hotter, so it does not obey Ohm’s law."
+  ],
+  "answer": 3,
+  "explanation": "R = V/I: 2/0.40 = 5 Ω, 4/0.60 ≈ 6.7 Ω, 6/0.70 ≈ 8.6 Ω, 8/0.75 ≈ 10.7 Ω. As the voltage rises, the filament gets hotter and its resistance increases, so the current rises less and less. Ohm’s law holds only at constant temperature.",
+  "misconception": "A non-linear V–I graph is not a fault; it shows resistance changing with temperature.",
+  "hints": [
+   "Work out V/I for each column.",
+   "What happens to a filament’s temperature as more current flows?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "table": {
+   "head": [
+    "Voltage (V)",
+    "2",
+    "4",
+    "6",
+    "8"
+   ],
+   "rows": [
+    [
+     "Current (A)",
+     0.4,
+     0.6,
+     0.7,
+     0.75
+    ]
+   ]
+  },
+  "verified": true
+ },
+ {
+  "id": "PHY-097",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "numerical",
+  "q": "Five 100 W bulbs are used for 6 hours every day for 30 days. If electricity costs ₹6 per unit (kWh), what is the cost?",
+  "options": [
+   "₹5400",
+   "₹90",
+   "₹540",
+   "₹54"
+  ],
+  "answer": 2,
+  "explanation": "Energy = 5 × 0.1 kW × 6 h × 30 = 90 kWh. Cost = 90 × ₹6 = ₹540. Replacing them with 9 W LEDs would cost under ₹50 for the same light.",
+  "misconception": "₹90 is the number of units, not the cost.",
+  "hints": [
+   "Total power in kW × hours = units (kWh)."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-098",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Why does switching on many high-power appliances at once in a home sometimes blow the main fuse?",
+  "options": [
+   "Appliances are in parallel, so each one adds its current; the total current exceeds the fuse rating.",
+   "Appliances are in series, so the total resistance becomes too large.",
+   "Each new appliance raises the mains voltage.",
+   "More appliances make the wires colder."
+  ],
+  "answer": 0,
+  "explanation": "In parallel, each appliance draws its own current (I = P/V) from the same supply, and the currents add up in the main wire. Too many at once can exceed the safe current, overheating the wiring; the fuse melts first to prevent a fire.",
+  "misconception": "Adding resistances in parallel DECREASES the total resistance and increases total current.",
+  "hints": [
+   "Are household appliances in series or parallel?",
+   "What happens to the total current when you add another branch?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-099",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 2,
+  "type": "numerical",
+  "q": "A 4 Ω resistor and a 12 Ω resistor are connected in parallel across a 6 V battery. What is the total current drawn from the battery?",
+  "options": [
+   "2 A",
+   "0.5 A",
+   "0.375 A",
+   "1.5 A"
+  ],
+  "answer": 0,
+  "explanation": "Each branch gets the full 6 V: I₁ = 6/4 = 1.5 A, I₂ = 6/12 = 0.5 A. Total = 2 A. (Check: combined resistance 4 × 12 / 16 = 3 Ω, and 6/3 = 2 A.) More current flows through the smaller resistor.",
+  "misconception": "0.375 A treats the resistors as in series (16 Ω).",
+  "hints": [
+   "In parallel, each branch has the same voltage.",
+   "Add the branch currents."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-100",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "level": 3,
+  "type": "numerical",
+  "q": "A current of 2 A flows through a 50 Ω heating element for 5 minutes. How much heat is produced?",
+  "options": [
+   "1 kJ",
+   "6 kJ",
+   "60 kJ",
+   "500 J"
+  ],
+  "answer": 2,
+  "explanation": "Joule’s law: H = I²Rt = 2² × 50 × 300 s = 60,000 J = 60 kJ. Remember to convert minutes to seconds.",
+  "misconception": "1 kJ uses 5 s instead of 300 s.",
+  "hints": [
+   "H = I²Rt with t in seconds."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-101",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 1,
+  "type": "mcq",
+  "q": "The north pole of a compass needle points towards the Earth’s geographic North. What kind of magnetic pole lies near the geographic North Pole?",
+  "options": [
+   "Both poles together",
+   "A magnetic north pole",
+   "No pole at all",
+   "A magnetic south pole"
+  ],
+  "answer": 3,
+  "explanation": "Opposite poles attract. Since the compass’s north pole is attracted northwards, the Earth’s magnetic pole near the geographic North Pole must behave as a magnetic SOUTH pole.",
+  "hints": [
+   "Do like poles or unlike poles attract?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-102",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "mcq",
+  "q": "What is the shape of the magnetic field around a long straight wire carrying a current?",
+  "options": [
+   "Straight lines parallel to the wire",
+   "There is no field around a straight wire",
+   "Straight lines pointing away from the wire",
+   "Concentric circles around the wire"
+  ],
+  "answer": 3,
+  "explanation": "The field lines form circles centred on the wire, in planes perpendicular to it (Oersted’s discovery). Their direction is given by the right-hand thumb rule: thumb along the current, fingers curl in the direction of the field. The field is stronger closer to the wire.",
+  "hints": [
+   "Imagine gripping the wire with your right hand."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-103",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is a current-carrying solenoid with a soft-iron core used in electric bells and cranes, rather than a permanent magnet?",
+  "options": [
+   "It is always stronger than every permanent magnet.",
+   "Its magnetism can be switched on and off and its strength controlled by the current.",
+   "It has no poles.",
+   "It does not need electricity."
+  ],
+  "answer": 1,
+  "explanation": "An electromagnet is magnetic only while current flows, so a crane can drop its load by switching off, and a bell’s hammer can be pulled and released repeatedly. Soft iron magnetises and demagnetises easily, so the magnetism disappears when the current stops.",
+  "hints": [
+   "What can you do with an electromagnet that you cannot do with a permanent magnet?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-104",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 3,
+  "type": "what-if",
+  "q": "A bar magnet is cut exactly in half across its middle. What do you get?",
+  "options": [
+   "Two pieces of non-magnetic iron",
+   "Two smaller magnets, each with its own north and south pole",
+   "One magnet and one non-magnetic piece",
+   "A separate north pole and a separate south pole"
+  ],
+  "answer": 1,
+  "explanation": "Magnetism comes from countless tiny aligned regions (domains) throughout the material, each itself a little magnet. Cutting the bar leaves aligned domains in both pieces, so new poles appear at the cut and each piece is a complete magnet. No isolated magnetic pole (monopole) has ever been observed.",
+  "misconception": "The poles are not “stored” at the ends; every part of the magnet is magnetised.",
+  "hints": [
+   "Where does a magnet’s magnetism come from — the ends or the whole bar?",
+   "What would you expect at the cut surfaces?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-105",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "application",
+  "q": "In a simple DC electric motor, what is the job of the split-ring commutator?",
+  "options": [
+   "To increase the voltage of the battery",
+   "To make the magnetic field stronger",
+   "To reverse the current in the coil every half turn so that it keeps rotating in the same direction",
+   "To convert DC into AC for the supply"
+  ],
+  "answer": 2,
+  "explanation": "After half a turn, the forces on the coil would start to push it back. The commutator reverses the coil’s current at that moment, reversing the forces, so the coil continues to turn the same way.",
+  "hints": [
+   "What would happen to the coil after half a turn if the current did not change direction?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-106",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "mcq",
+  "q": "In an AC generator, a coil rotates in a magnetic field. Why does the current it produces alternate in direction?",
+  "options": [
+   "The wire’s resistance changes direction.",
+   "The magnets reverse their poles.",
+   "Each side of the coil moves up through the field and then down through it in every rotation, so the induced current reverses each half turn.",
+   "The battery inside switches polarity."
+  ],
+  "answer": 2,
+  "explanation": "The direction of induced current depends on the direction of motion relative to the field (Fleming’s right-hand rule). Each half rotation, each side of the coil changes from moving up to moving down, so the current reverses. India’s mains supply alternates at 50 Hz.",
+  "hints": [
+   "Follow one side of the coil through a whole rotation."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-107",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Why does a transformer work with alternating current (AC) but not with steady direct current (DC)?",
+  "options": [
+   "A voltage is induced in the secondary coil only when the magnetic field through it changes, and only AC produces a continually changing field.",
+   "AC has a higher voltage than DC.",
+   "DC flows only in the secondary coil.",
+   "DC is too weak to magnetise iron."
+  ],
+  "answer": 0,
+  "explanation": "Electromagnetic induction needs a changing magnetic flux. AC in the primary coil makes the iron core’s magnetism grow, shrink and reverse continuously, inducing an AC voltage in the secondary. Steady DC gives a constant field, so (apart from a brief pulse when switched on) nothing is induced.",
+  "hints": [
+   "What must be happening to the magnetic field for induction to occur?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-108",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 3,
+  "type": "numerical",
+  "q": "An ideal transformer steps 220 V down to 11 V for a doorbell. If the primary coil has 2000 turns, how many turns does the secondary coil have?",
+  "options": [
+   "40,000",
+   "1000",
+   "200",
+   "100"
+  ],
+  "answer": 3,
+  "explanation": "For an ideal transformer Vs/Vp = Ns/Np, so Ns = 2000 × 11/220 = 100 turns. A step-down transformer has fewer secondary turns.",
+  "misconception": "40,000 assumes a step-up transformer.",
+  "hints": [
+   "Voltage ratio = turns ratio."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-109",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "experiment",
+  "q": "Iron filings sprinkled around a bar magnet are packed most densely near the ends of the magnet. What does this show?",
+  "options": [
+   "The magnet is weakest at its ends.",
+   "The magnetic field is strongest near the poles.",
+   "Iron filings are attracted only by north poles.",
+   "The magnet has no field in the middle."
+  ],
+  "answer": 1,
+  "explanation": "The density of field lines (and filings) represents field strength. Lines crowd together near the poles, where the field is strongest, and spread out further away. The field is weak — but not zero — around the middle.",
+  "hints": [
+   "What does the closeness of field lines represent?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-110",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 3,
+  "type": "what-if",
+  "q": "A strong magnet is dropped down a vertical copper pipe. It falls much more slowly than an identical non-magnetised piece of metal, even though copper is not attracted to magnets. Why?",
+  "options": [
+   "Air resistance is greater for magnets.",
+   "The moving magnet induces currents in the copper, and these currents produce a magnetic field that opposes the magnet’s motion.",
+   "The magnet becomes lighter inside the pipe.",
+   "Copper becomes magnetic and attracts the magnet."
+  ],
+  "answer": 1,
+  "explanation": "As the magnet falls, the magnetic flux through each ring of the pipe changes, inducing circulating (eddy) currents. By Lenz’s law, these currents create a field that opposes the change causing them — slowing the magnet. The magnet’s lost energy heats the pipe slightly. Magnetic braking in trains uses this effect.",
+  "misconception": "Copper is not attracted to a stationary magnet; the effect exists only because the magnet is moving.",
+  "hints": [
+   "What happens in a conductor when the magnetic field through it changes?",
+   "In which direction do induced effects act — helping or opposing the change?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-111",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which set contains only materials that are strongly attracted by a magnet?",
+  "options": [
+   "Steel, brass and plastic",
+   "Iron, copper and aluminium",
+   "Iron, nickel and cobalt",
+   "Gold, silver and nickel"
+  ],
+  "answer": 2,
+  "explanation": "Iron, nickel, cobalt and their alloys such as most steels are ferromagnetic: their domains line up with an external field, so they are strongly attracted. Copper, aluminium, gold, silver and brass are not.",
+  "misconception": "Not all metals are magnetic.",
+  "hints": [
+   "Coins and drink cans are metal — are they attracted?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-112",
+  "subject": "Physics",
+  "topic": "Magnetism",
+  "level": 2,
+  "type": "interdisciplinary",
+  "q": "Maglev trains float a few centimetres above the guideway using magnets. What is the main physical advantage?",
+  "options": [
+   "They make the Earth’s gravity weaker.",
+   "They need no energy at all to move.",
+   "They are unaffected by air resistance.",
+   "There is no contact friction with the track, so very high speeds are possible with less wear."
+  ],
+  "answer": 3,
+  "explanation": "Magnetic repulsion (or attraction) lifts the train, removing wheel–rail friction and rolling resistance, and changing magnetic fields push it along. Maglev trains have exceeded 600 km/h. Air resistance still acts, and energy is still needed for propulsion and to overcome drag.",
+  "hints": [
+   "Which force on a normal train is removed by levitation?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-113",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 1,
+  "type": "reasoning",
+  "q": "A steel spoon and a wooden spoon have been in the same drawer all night. The steel one feels colder to touch. Why?",
+  "options": [
+   "Steel absorbs cold from the air.",
+   "The steel spoon is at a lower temperature.",
+   "Steel conducts heat away from your hand faster, although both are at the same temperature.",
+   "Wood produces heat."
+  ],
+  "answer": 2,
+  "explanation": "Both spoons are at room temperature. Your skin senses the rate at which heat leaves it. Steel is a good conductor, so it draws heat rapidly from your warmer hand, which feels cold; wood is an insulator, so little heat flows.",
+  "misconception": "“Cold” is not a substance that flows; what you feel is heat leaving your skin.",
+  "hints": [
+   "Are the two spoons at different temperatures?"
+  ],
+  "time": 35,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-114",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why does a sea breeze blow from the sea towards the land on a sunny afternoon?",
+  "options": [
+   "Land heats up faster than water, so warm air rises over the land and cooler air from over the sea moves in to replace it.",
+   "Waves push the air towards the land.",
+   "The sea is warmer than the land in the afternoon.",
+   "Cold air always moves upward."
+  ],
+  "answer": 0,
+  "explanation": "Water has a much higher specific heat capacity than soil and rock, so in sunlight the land warms faster. Air above the land expands, becomes less dense and rises (convection); cooler, denser air from over the sea flows in. At night the land cools faster and a land breeze blows out to sea.",
+  "hints": [
+   "Which warms up faster in sunshine: land or water?",
+   "What does warm air do?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-115",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 3,
+  "type": "numerical",
+  "q": "A 500 g block of metal at 100 °C is dropped into 500 g of water at 20 °C in an insulated container. The final temperature is 24 °C. What is the specific heat capacity of the metal? (water: 4200 J kg⁻¹ °C⁻¹)",
+  "options": [
+   "840 J kg⁻¹ °C⁻¹",
+   "221 J kg⁻¹ °C⁻¹",
+   "105 J kg⁻¹ °C⁻¹",
+   "4200 J kg⁻¹ °C⁻¹"
+  ],
+  "answer": 1,
+  "explanation": "Heat gained by water = 0.5 × 4200 × (24 − 20) = 8400 J = heat lost by metal = 0.5 × c × (100 − 24). So c = 8400 / 38 ≈ 221 J kg⁻¹ °C⁻¹. The water’s temperature changes little because its specific heat is about 19 times larger.",
+  "misconception": "840 uses the metal’s temperature change as 20 °C; it fell by 76 °C.",
+  "hints": [
+   "Heat lost by the metal = heat gained by the water.",
+   "The metal cooled from 100 °C to 24 °C."
+  ],
+  "time": 100,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-116",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 1,
+  "type": "mcq",
+  "q": "Why are solar water heaters and solar cookers painted black?",
+  "options": [
+   "Black surfaces lose no heat at all.",
+   "Black surfaces absorb most of the radiation falling on them.",
+   "Black surfaces reflect heat back to the Sun.",
+   "Black paint conducts electricity."
+  ],
+  "answer": 1,
+  "explanation": "Dull black surfaces are the best absorbers of radiant energy (and also the best emitters). Shiny or white surfaces reflect most radiation. Solar cookers often add a glass cover to trap the heat (a mini greenhouse effect).",
+  "hints": [
+   "Which colour feels hottest to wear in summer sunshine?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-117",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 3,
+  "type": "what-if",
+  "q": "In winter, a lake freezes over, yet fish survive in liquid water at the bottom. What property of water makes this possible?",
+  "options": [
+   "Ice is denser than water and sinks, warming the surface.",
+   "Fish produce enough heat to keep the lake liquid.",
+   "Water at the bottom is under too much pressure to freeze at any temperature.",
+   "Water is densest at about 4 °C, so the coldest water and ice stay at the top while the bottom stays near 4 °C."
+  ],
+  "answer": 3,
+  "explanation": "Most liquids contract steadily on cooling, but water contracts only down to 4 °C and then expands as it cools further (anomalous expansion). Water below 4 °C is less dense, so it stays on top and freezes at the surface. Ice is lighter still and floats, insulating the water beneath, which remains liquid at about 4 °C.",
+  "misconception": "If ice sank, lakes would freeze solid from the bottom up.",
+  "hints": [
+   "At what temperature is water densest?",
+   "Where does less-dense water go?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-118",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 2,
+  "type": "application",
+  "q": "Double-glazed windows (two panes with a gap) keep rooms warmer in winter mainly because:",
+  "options": [
+   "the second pane absorbs the cold",
+   "glass is a very good insulator by itself",
+   "the trapped layer of air or gas between the panes is a poor conductor of heat",
+   "two panes of glass reflect all the heat back"
+  ],
+  "answer": 2,
+  "explanation": "Gases are very poor conductors. A thin sealed gap is too narrow for much convection, so heat flow by conduction through the window is greatly reduced. Woollen clothes and fur work the same way, by trapping air.",
+  "hints": [
+   "What is between the two panes?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-119",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 1,
+  "type": "mcq",
+  "q": "A clinical thermometer usually reads from about 35 °C to 42 °C. Why is its range so narrow?",
+  "options": [
+   "Human body temperature stays within this range, and a narrow range allows finer, more precise readings.",
+   "Glass melts above 42 °C.",
+   "Mercury freezes below 35 °C.",
+   "It is cheaper to print fewer numbers."
+  ],
+  "answer": 0,
+  "explanation": "Body temperature (normal about 37 °C) rarely goes outside 35–42 °C even in illness. Spreading this small range along the whole tube makes each tenth of a degree visible. A laboratory thermometer covers a wider range (e.g. −10 °C to 110 °C) with less precision.",
+  "misconception": "Mercury freezes at −39 °C, far below 35 °C.",
+  "hints": [
+   "What is the thermometer designed to measure?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-120",
+  "subject": "Physics",
+  "topic": "Heat",
+  "level": 2,
+  "type": "numerical",
+  "q": "Normal human body temperature is 37 °C. What is this on the Fahrenheit scale?",
+  "options": [
+   "66.6 °F",
+   "98.6 °F",
+   "99.6 °F",
+   "310 °F"
+  ],
+  "answer": 1,
+  "explanation": "°F = °C × 9/5 + 32 = 37 × 1.8 + 32 = 66.6 + 32 = 98.6 °F.",
+  "misconception": "66.6 °F forgets to add 32; 310 is the Kelvin value (≈ 310 K).",
+  "hints": [
+   "°F = (9/5) × °C + 32."
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-121",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 2,
+  "type": "numerical",
+  "q": "Rain falls vertically at 4 m/s. A man walks through it at 3 m/s. At what speed does the rain hit him, relative to himself?",
+  "options": [
+   "1 m/s",
+   "5 m/s",
+   "4 m/s",
+   "7 m/s"
+  ],
+  "answer": 1,
+  "explanation": "Relative to the man, the rain has his velocity subtracted: 4 m/s downward plus 3 m/s towards him (horizontally). These are perpendicular, so the relative speed is √(3² + 4²) = 5 m/s. That is why he tilts his umbrella forward.",
+  "misconception": "7 m/s simply adds the speeds; perpendicular velocities combine by Pythagoras.",
+  "hints": [
+   "Velocities at right angles combine like the sides of a right-angled triangle."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-122",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 3,
+  "type": "numerical",
+  "q": "A boat heads straight across a 100 m wide river at 5 m/s relative to the water. The river flows at 3 m/s. How far downstream of the starting point does it land on the opposite bank?",
+  "options": [
+   "0 m",
+   "100 m",
+   "60 m",
+   "33 m"
+  ],
+  "answer": 2,
+  "explanation": "The crossing motion and the drift are independent. Time to cross = 100 m ÷ 5 m/s = 20 s, during which the current carries the boat 3 × 20 = 60 m downstream. (Its speed relative to the bank is √(5² + 3²) ≈ 5.8 m/s, but that is not needed.)",
+  "misconception": "33 m divides 100 by 3. The time comes only from the across-river speed.",
+  "hints": [
+   "How long does it take to cross, using only the across-river velocity?",
+   "How far does the current carry it in that time?"
+  ],
+  "time": 90,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-123",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 2,
+  "type": "numerical",
+  "q": "A ball is thrown vertically upward at 20 m/s. What maximum height does it reach? (g = 10 m/s², no air resistance)",
+  "options": [
+   "40 m",
+   "2 m",
+   "10 m",
+   "20 m"
+  ],
+  "answer": 3,
+  "explanation": "At the top v = 0. v² = u² − 2gh → 0 = 400 − 20h → h = 20 m.",
+  "misconception": "40 m forgets the factor of 2 in 2gh.",
+  "hints": [
+   "At the highest point the velocity is zero.",
+   "Use v² = u² − 2gh."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-124",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 3,
+  "type": "numerical",
+  "q": "A ball thrown straight up returns to the thrower’s hand 6 s later. With what speed was it thrown? (g = 10 m/s²)",
+  "options": [
+   "30 m/s",
+   "45 m/s",
+   "15 m/s",
+   "60 m/s"
+  ],
+  "answer": 0,
+  "explanation": "Without air resistance the motion is symmetric: 3 s up and 3 s down. Going up, its speed falls by 10 m/s every second to zero after 3 s, so u = 10 × 3 = 30 m/s.",
+  "misconception": "60 m/s uses the whole 6 s for the upward journey.",
+  "hints": [
+   "How long does the upward part of the flight take?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-125",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 2,
+  "type": "statement",
+  "q": "A ball is thrown up and caught at the same height. For the whole flight:\nI. Its displacement is zero.\nII. The distance it travels is zero.\nIII. Its average velocity is zero.\nIV. Its acceleration is zero at the top.\nWhich are correct?",
+  "options": [
+   "I, II and III only",
+   "I and III only",
+   "I and IV only",
+   "All four"
+  ],
+  "answer": 1,
+  "explanation": "It ends where it started, so displacement and average velocity are zero (I, III). It certainly travelled a distance — up and down (II false). Acceleration is g downward throughout, including at the top where the velocity is momentarily zero (IV false).",
+  "hints": [
+   "Which quantities depend on direction and which only on path length?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-126",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 1,
+  "type": "mcq",
+  "q": "What does a straight, sloping line on a distance–time graph show?",
+  "options": [
+   "Motion at constant speed",
+   "Constant acceleration",
+   "Decreasing speed",
+   "The object at rest"
+  ],
+  "answer": 0,
+  "explanation": "A straight line has a constant slope, and the slope of a distance–time graph is speed. So the object covers equal distances in equal times — uniform motion. A horizontal line means rest; a curve means changing speed.",
+  "hints": [
+   "What does a constant slope mean on this graph?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-127",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 3,
+  "type": "reasoning",
+  "q": "A car travels for the first half of its journey TIME at 40 km/h and for the second half of the TIME at 60 km/h. What is its average speed?",
+  "options": [
+   "52 km/h",
+   "48 km/h",
+   "45 km/h",
+   "50 km/h"
+  ],
+  "answer": 3,
+  "explanation": "With equal times t at each speed: distance = 40t + 60t = 100t in time 2t, so the average is 50 km/h. (If instead each HALF THE DISTANCE were at 40 and 60 km/h, the answer would be 48 km/h, because more time is spent at the lower speed.)",
+  "misconception": "48 km/h is the answer for equal distances, not equal times.",
+  "hints": [
+   "Let each half of the time be t hours. How far does it go in each half?",
+   "Average speed = total distance ÷ total time."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-128",
+  "subject": "Physics",
+  "topic": "Motion",
+  "level": 2,
+  "type": "numerical",
+  "q": "A stone on a string is whirled in a horizontal circle of radius 2 m, completing one revolution every 4 s. What is its speed?",
+  "options": [
+   "0.5 m/s",
+   "3.14 m/s",
+   "12.6 m/s",
+   "8 m/s"
+  ],
+  "answer": 1,
+  "explanation": "Distance per revolution = circumference = 2πr = 2π × 2 ≈ 12.57 m. Speed = 12.57/4 ≈ 3.14 m/s.",
+  "misconception": "12.6 m/s forgets to divide by the 4 s period.",
+  "hints": [
+   "How far does the stone travel in one revolution?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-129",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A 10,000 kg truck moves at 1 m/s and a 1000 kg car moves at 10 m/s. Which has more momentum?",
+  "options": [
+   "They have equal momentum.",
+   "It cannot be decided without knowing the direction.",
+   "The car",
+   "The truck"
+  ],
+  "answer": 0,
+  "explanation": "Momentum p = mv: truck 10,000 × 1 = 10,000 kg m/s; car 1000 × 10 = 10,000 kg m/s. They are equal in size. (The car has ten times the kinetic energy, though: KE = ½mv².)",
+  "misconception": "A huge mass is not enough; momentum depends on mass AND velocity.",
+  "hints": [
+   "Calculate m × v for each."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-130",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 3,
+  "type": "numerical",
+  "q": "A 2 kg trolley moving at 3 m/s collides with a stationary 1 kg trolley, and they stick together. What is their common velocity just after the collision?",
+  "options": [
+   "3 m/s",
+   "6 m/s",
+   "2 m/s",
+   "1.5 m/s"
+  ],
+  "answer": 2,
+  "explanation": "Momentum is conserved: 2 × 3 + 1 × 0 = (2 + 1) × v → v = 6/3 = 2 m/s. Kinetic energy is NOT conserved here (9 J before, 6 J after); the rest becomes heat and sound.",
+  "misconception": "1.5 m/s divides the momentum by 4 instead of the combined mass of 3 kg.",
+  "hints": [
+   "What is the total momentum before the collision?",
+   "After sticking, what mass moves together?"
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-131",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 1,
+  "type": "application",
+  "q": "Why do seat belts reduce injuries when a car stops suddenly?",
+  "options": [
+   "They stop the passenger continuing forward because of inertia, and spread the stopping force over the body.",
+   "They reduce the passenger’s mass.",
+   "They make the car stop more slowly.",
+   "They push the passenger backwards with a reaction force."
+  ],
+  "answer": 0,
+  "explanation": "When the car stops, the passenger’s body tends to keep moving forward (Newton’s first law). The belt applies the stopping force across the strong chest and pelvis and stretches slightly, increasing the stopping time, instead of the body hitting the dashboard or windscreen.",
+  "hints": [
+   "What does an unrestrained body do when the car suddenly stops?"
+  ],
+  "time": 30,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-132",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 3,
+  "type": "what-if",
+  "q": "A girl stands on a weighing scale in a lift. The lift cable snaps and the lift falls freely. What does the scale read during the fall?",
+  "options": [
+   "Zero",
+   "Her normal weight",
+   "Twice her weight",
+   "Half her weight"
+  ],
+  "answer": 0,
+  "explanation": "In free fall she and the scale both accelerate downward at g. The scale does not need to push on her at all: N − mg = −mg gives N = 0. She is still pulled by gravity — she feels weightless because nothing supports her. Astronauts in orbit experience the same thing.",
+  "misconception": "Gravity has not disappeared; the scale reads the supporting force, which becomes zero.",
+  "hints": [
+   "What does a weighing scale actually measure?",
+   "Write F = ma for the girl with a = g downward."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-133",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 2,
+  "type": "numerical",
+  "q": "A 2 kg ball at rest is kicked with an average force of 50 N lasting 0.2 s. With what speed does it leave the foot?",
+  "options": [
+   "20 m/s",
+   "50 m/s",
+   "0.5 m/s",
+   "5 m/s"
+  ],
+  "answer": 3,
+  "explanation": "Impulse = F × t = 50 × 0.2 = 10 N s = change in momentum. v = 10/2 = 5 m/s.",
+  "hints": [
+   "Impulse = force × time = change in momentum."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-134",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 1,
+  "type": "mcq",
+  "q": "One newton is the force that:",
+  "options": [
+   "moves 1 kg at 1 m/s",
+   "balances the weight of 1 kg",
+   "lifts 1 kg by 1 m",
+   "gives a 1 kg mass an acceleration of 1 m/s²"
+  ],
+  "answer": 3,
+  "explanation": "From F = ma: 1 N = 1 kg × 1 m/s² = 1 kg m s⁻². The weight of 1 kg on Earth is about 9.8 N, not 1 N.",
+  "misconception": "Moving at constant velocity needs no net force at all.",
+  "hints": [
+   "Use F = ma."
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-135",
+  "subject": "Physics",
+  "topic": "Force & Newton's Laws",
+  "level": 3,
+  "type": "numerical",
+  "q": "A 10 kg crate is pushed across a floor at constant velocity by a horizontal force of 30 N. What is the coefficient of friction between the crate and the floor? (g = 10 m/s²)",
+  "options": [
+   "0.03",
+   "0.3",
+   "3",
+   "0.1"
+  ],
+  "answer": 1,
+  "explanation": "Constant velocity means zero net force, so friction = 30 N. Friction = μ × normal force = μ × mg, so μ = 30/(10 × 10) = 0.3.",
+  "misconception": "If the crate moves at constant velocity, the push does not exceed friction — it equals it.",
+  "hints": [
+   "At constant velocity, what is the net force?",
+   "Friction = μ × normal force."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-136",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 2,
+  "type": "reasoning",
+  "q": "A planet has one-quarter of Earth’s mass and half of Earth’s radius. How does the acceleration due to gravity on its surface compare with Earth’s?",
+  "options": [
+   "The same as on Earth",
+   "Half of Earth’s",
+   "Twice Earth’s",
+   "One-quarter of Earth’s"
+  ],
+  "answer": 0,
+  "explanation": "g = GM/R². Mass × ¼ multiplies g by ¼; radius × ½ multiplies g by 1/(½)² = 4. Together ¼ × 4 = 1, so g is unchanged.",
+  "misconception": "A smaller mass does not necessarily mean weaker surface gravity — being closer to the centre matters too.",
+  "hints": [
+   "Write g = GM/R² and apply both changes."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-137",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 3,
+  "type": "reasoning",
+  "q": "The Moon is pulled towards Earth by gravity. Why does it not crash into Earth?",
+  "options": [
+   "The Moon’s own gravity pushes Earth away.",
+   "The Sun’s gravity cancels Earth’s pull.",
+   "It is falling towards Earth all the time, but its sideways speed carries it forward so it keeps missing Earth.",
+   "The Moon is too far away for gravity to act."
+  ],
+  "answer": 2,
+  "explanation": "Gravity provides the centripetal force that bends the Moon’s path into a circle. Without gravity it would fly off in a straight line; with gravity but no sideways speed it would fall straight in. With both, it falls continuously around Earth — Newton’s insight that the apple and the Moon obey the same law.",
+  "misconception": "Gravity acts at any distance; it weakens but never switches off.",
+  "hints": [
+   "What would the Moon do if gravity suddenly vanished?",
+   "What would it do if its sideways motion stopped?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-138",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 2,
+  "type": "mcq",
+  "q": "What mainly causes ocean tides on Earth?",
+  "options": [
+   "Earth’s rotation alone",
+   "Heating of the oceans by the Sun",
+   "The difference in the Moon’s gravitational pull on the near and far sides of Earth",
+   "Winds blowing across the ocean"
+  ],
+  "answer": 2,
+  "explanation": "The Moon pulls the near side of Earth more strongly than its centre, and its centre more strongly than the far side. This stretching creates two bulges of water, and Earth rotates through them, giving about two high tides a day. The Sun has a smaller effect; when aligned with the Moon it produces larger spring tides.",
+  "hints": [
+   "Gravity weakens with distance — does it pull equally on all parts of Earth?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-139",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 3,
+  "type": "numerical",
+  "q": "What is the gravitational force between two 1000 kg lead spheres whose centres are 1 m apart? (G = 6.67 × 10⁻¹¹ N m² kg⁻²)",
+  "options": [
+   "6.67 × 10⁻⁵ N",
+   "6.67 × 10⁻⁸ N",
+   "6.67 × 10⁻¹¹ N",
+   "6.67 × 10³ N"
+  ],
+  "answer": 0,
+  "explanation": "F = Gm₁m₂/r² = 6.67 × 10⁻¹¹ × 10³ × 10³ / 1² = 6.67 × 10⁻⁵ N — about the weight of a grain of sand. Gravity between everyday objects is tiny, which is why Cavendish needed a delicate torsion balance to measure G.",
+  "hints": [
+   "Multiply the masses: 10³ × 10³ = 10⁶."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-140",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 1,
+  "type": "experiment",
+  "q": "A flat sheet of paper and a stone are dropped together; the stone lands first. The same paper crumpled into a tight ball falls almost as fast as the stone. What does this show?",
+  "options": [
+   "Crumpling the paper makes it heavier.",
+   "Heavier objects always fall faster.",
+   "Gravity pulls harder on crumpled paper.",
+   "The difference was caused by air resistance, which depends on shape and area, not by gravity."
+  ],
+  "answer": 3,
+  "explanation": "The paper’s mass is unchanged by crumpling, so its weight is unchanged. What changes is its area facing the air, and therefore the air resistance. Gravity accelerates both objects equally; air resistance is what slows the flat sheet.",
+  "hints": [
+   "What changed when the paper was crumpled — its mass or its shape?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-141",
+  "subject": "Physics",
+  "topic": "Gravitation",
+  "level": 3,
+  "type": "what-if",
+  "q": "Suppose Earth shrank to half its present radius while keeping the same mass. What would happen to your weight standing on its surface?",
+  "options": [
+   "It would halve.",
+   "It would not change, because the mass is the same.",
+   "It would become four times as large.",
+   "It would double."
+  ],
+  "answer": 2,
+  "explanation": "g = GM/R². With M unchanged and R halved, g becomes GM/(R/2)² = 4GM/R², four times larger. You would be twice as close to Earth’s centre, and gravity follows an inverse-square law.",
+  "misconception": "Surface gravity depends on the radius as well as the mass.",
+  "hints": [
+   "How does g depend on R?",
+   "What is 1/(½)²?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-142",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 2,
+  "type": "numerical",
+  "q": "A porter lifts a 5 kg box 2 m onto his head, then walks 10 m along a level platform at constant speed. How much work does he do on the box against gravity in total? (g = 10 m/s²)",
+  "options": [
+   "0 J",
+   "500 J",
+   "100 J",
+   "600 J"
+  ],
+  "answer": 2,
+  "explanation": "Lifting: W = mgh = 5 × 10 × 2 = 100 J. Walking horizontally at constant speed: the supporting force is vertical while the displacement is horizontal, so (ideally) no further work is done on the box against gravity. Total = 100 J.",
+  "misconception": "600 J adds 5 × 10 × 10 for the horizontal walk, but the force and displacement are perpendicular there.",
+  "hints": [
+   "Work = force × displacement in the direction of the force.",
+   "In which direction does the porter push on the box while walking?"
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-143",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 3,
+  "type": "numerical",
+  "q": "A roller-coaster car starts from rest at the top of a 45 m high track. Ignoring friction, how fast is it moving when it reaches a point 25 m above the ground? (g = 10 m/s²)",
+  "options": [
+   "22.4 m/s",
+   "20 m/s",
+   "30 m/s",
+   "10 m/s"
+  ],
+  "answer": 1,
+  "explanation": "Only the height DROPPED matters: 45 − 25 = 20 m. mgΔh = ½mv² → v = √(2 × 10 × 20) = √400 = 20 m/s. The shape of the track in between makes no difference.",
+  "misconception": "30 m/s uses the full 45 m drop; 22.4 m/s uses 25 m.",
+  "hints": [
+   "How much height has the car lost?",
+   "Lost PE = gained KE."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-144",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 2,
+  "type": "numerical",
+  "q": "A car’s engine provides a driving force of 2000 N while the car moves at a steady 25 m/s. What power is the engine delivering?",
+  "options": [
+   "500 kW",
+   "50 kW",
+   "80 kW",
+   "2.5 kW"
+  ],
+  "answer": 1,
+  "explanation": "P = W/t = F × s/t = F × v = 2000 × 25 = 50,000 W = 50 kW.",
+  "hints": [
+   "Power = force × velocity."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-145",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 3,
+  "type": "reasoning",
+  "q": "Two bodies of mass 1 kg and 4 kg have the same kinetic energy. What is the ratio of their momenta (1 kg : 4 kg)?",
+  "options": [
+   "1 : 4",
+   "1 : 1",
+   "1 : 2",
+   "2 : 1"
+  ],
+  "answer": 2,
+  "explanation": "KE = p²/2m, so p = √(2m × KE). With equal KE, p ∝ √m: √1 : √4 = 1 : 2. Check: if KE = 8 J, the 1 kg body moves at 4 m/s (p = 4) and the 4 kg body at 2 m/s (p = 8).",
+  "misconception": "1 : 4 assumes momentum is proportional to mass; with equal KE the heavier body moves more slowly.",
+  "hints": [
+   "Express kinetic energy in terms of momentum.",
+   "Try a number: pick a KE and find each speed."
+  ],
+  "time": 80,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-146",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 1,
+  "type": "mcq",
+  "q": "Which energy changes take place in a filament bulb that is switched on?",
+  "options": [
+   "Heat → electrical and light",
+   "Light → electrical",
+   "Electrical → light and heat",
+   "Chemical → electrical"
+  ],
+  "answer": 2,
+  "explanation": "Electric current heats the filament until it glows, so electrical energy becomes heat and light. Most of it becomes heat, which is why filament bulbs are inefficient.",
+  "hints": [
+   "What is supplied to the bulb, and what does it give out?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-147",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Loading a heavy drum onto a truck by rolling it up a long sloping plank, rather than lifting it straight up, mainly:",
+  "options": [
+   "increases the drum’s potential energy at the top",
+   "reduces the work needed to the same height",
+   "reduces the force needed, though (without friction) the work done is the same",
+   "removes the need to do any work"
+  ],
+  "answer": 2,
+  "explanation": "The gain in potential energy (mgh) is the same either way. On a ramp the force is applied over a longer distance, so a smaller force is needed: F × ramp length = mgh. Friction actually makes the ramp require slightly more total work.",
+  "misconception": "Simple machines trade force for distance; they cannot reduce the work below mgh.",
+  "hints": [
+   "Is the final height of the drum the same either way?"
+  ],
+  "time": 55,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-148",
+  "subject": "Physics",
+  "topic": "Work, Energy & Power",
+  "level": 3,
+  "type": "interdisciplinary",
+  "q": "A 50 kg student runs up a 3 m high staircase in 5 s; her friend of the same mass walks up in 15 s. What power does the runner develop, and how does the work done by each compare? (g = 10 m/s²)",
+  "options": [
+   "100 W; both do the same work",
+   "1500 W; the walker does more work",
+   "300 W; the runner does three times more work",
+   "300 W; both do the same work"
+  ],
+  "answer": 3,
+  "explanation": "Work = mgh = 50 × 10 × 3 = 1500 J for both. Power = work/time: runner 1500/5 = 300 W, walker 1500/15 = 100 W. Running feels harder because the body must deliver energy three times faster.",
+  "misconception": "Doing the same task faster needs more power, not more work.",
+  "hints": [
+   "Does the work depend on how fast they climb?",
+   "Power = work ÷ time."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-149",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 1,
+  "type": "mcq",
+  "q": "A girl’s voice usually has a higher pitch than a man’s. Which property of the sound wave decides pitch?",
+  "options": [
+   "Amplitude",
+   "Wavelength alone, independent of frequency",
+   "Speed",
+   "Frequency"
+  ],
+  "answer": 3,
+  "explanation": "Pitch is our perception of frequency: higher frequency, higher pitch. Amplitude decides loudness. In air all sounds travel at the same speed.",
+  "misconception": "A loud sound is not necessarily high-pitched; loudness and pitch are different properties.",
+  "hints": [
+   "Which property measures vibrations per second?"
+  ],
+  "time": 25,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-150",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 2,
+  "type": "numerical",
+  "q": "The highest frequency most young people can hear is about 20 kHz. What is the wavelength of this sound in air (speed 340 m/s)?",
+  "options": [
+   "17 m",
+   "1.7 cm",
+   "0.17 cm",
+   "1.7 m"
+  ],
+  "answer": 1,
+  "explanation": "λ = v/f = 340/20,000 = 0.017 m = 1.7 cm. At the lowest audible frequency, 20 Hz, λ = 17 m.",
+  "misconception": "17 m is the wavelength at 20 Hz, the LOWEST audible frequency.",
+  "hints": [
+   "λ = v/f with f = 20,000 Hz."
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-151",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 3,
+  "type": "what-if",
+  "q": "As an ambulance with its siren on drives towards you, the siren sounds higher-pitched; as it moves away, lower. Why?",
+  "options": [
+   "Its motion squashes the sound waves ahead of it (shorter wavelength, higher frequency) and stretches those behind.",
+   "Sound travels faster from a moving source.",
+   "The driver changes the siren’s pitch.",
+   "Wind from the ambulance changes the pitch."
+  ],
+  "answer": 0,
+  "explanation": "This is the Doppler effect. Each wave crest is emitted from a point slightly closer to you than the last, so the crests arrive closer together — a higher frequency. Behind the ambulance they are spread out. The speed of sound in the air is unchanged. Astronomers use the same effect with light (redshift).",
+  "misconception": "The speed of sound in air does not depend on the speed of the source.",
+  "hints": [
+   "Think about where each new wave crest is emitted from.",
+   "Crests closer together means what frequency?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
+  "id": "PHY-152",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 2,
+  "type": "application",
+  "q": "Why are the walls and ceilings of auditoriums often covered with soft, porous materials such as fibreboard and heavy curtains?",
+  "options": [
+   "To increase the speed of sound",
+   "To absorb sound and reduce reverberation (repeated echoes)",
+   "To reflect more sound towards the stage",
+   "To make the hall warmer"
+  ],
+  "answer": 1,
+  "explanation": "In a large hall with hard walls, sound reflects many times and persists (reverberation), making speech blurred. Soft porous materials absorb sound energy, cutting reverberation to a comfortable level. Curved ceilings may also be shaped to spread sound evenly.",
+  "hints": [
+   "What happens to sound that hits a hard wall compared with a soft curtain?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-153",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 2,
+  "type": "numerical",
+  "q": "You see a lightning flash and hear the thunder 3 seconds later. Roughly how far away was the lightning? (speed of sound = 340 m/s)",
+  "options": [
+   "3000 m",
+   "1020 m",
+   "340 m",
+   "113 m"
+  ],
+  "answer": 1,
+  "explanation": "Light arrives almost instantly, so the 3 s delay is the sound’s travel time: d = 340 × 3 = 1020 m, about 1 km. (A handy rule: about 3 seconds per kilometre.) There is no echo here, so no halving.",
+  "hints": [
+   "Light takes almost no time to arrive, so the delay is due to sound."
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-154",
+  "subject": "Physics",
+  "topic": "Sound",
+  "level": 2,
+  "type": "mcq",
+  "q": "How does the speed of sound in air change as the air temperature increases?",
+  "options": [
+   "It first increases, then decreases",
+   "It increases",
+   "It decreases",
+   "It stays the same"
+  ],
+  "answer": 1,
+  "explanation": "In warmer air the molecules move faster and pass on vibrations more quickly. Sound travels at about 331 m/s at 0 °C, rising by about 0.6 m/s for each 1 °C (≈ 343 m/s at 20 °C).",
+  "hints": [
+   "How fast do air molecules move in warmer air?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-155",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 2,
+  "type": "numerical",
+  "q": "In a hydraulic lift, a force of 50 N is applied to a small piston of area 2 cm². What force acts on the large piston of area 100 cm²?",
+  "options": [
+   "2500 N",
+   "100 N",
+   "1 N",
+   "5000 N"
+  ],
+  "answer": 0,
+  "explanation": "Pascal’s law: pressure is transmitted equally through the liquid. P = 50/2 = 25 N per cm². Force on the large piston = 25 × 100 = 2500 N. The small piston must move 50 times further, so no energy is gained.",
+  "misconception": "1 N inverts the area ratio.",
+  "hints": [
+   "The pressure is the same on both pistons."
+  ],
+  "time": 60,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-156",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 2,
+  "type": "reasoning",
+  "q": "Why is the wall of a dam built much thicker at the bottom than at the top?",
+  "options": [
+   "Because the top must let water overflow.",
+   "Water pressure increases with depth, so the force on the lower part of the wall is greatest.",
+   "To make it easier to build.",
+   "The water at the bottom is heavier."
+  ],
+  "answer": 1,
+  "explanation": "P = hρg grows with depth h, so the push on each square metre of wall is greatest near the bottom. A thicker base resists this larger force. The pressure depends on the depth, not on how much water is stored behind the dam.",
+  "hints": [
+   "How does liquid pressure depend on depth?"
+  ],
+  "time": 45,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-157",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 1,
+  "type": "reasoning",
+  "q": "When you suck on a straw, juice rises into your mouth. What actually pushes the juice up?",
+  "options": [
+   "Your mouth pulling the juice up",
+   "Atmospheric pressure on the juice surface, which is greater than the reduced pressure inside the straw",
+   "The straw squeezing the juice",
+   "Gravity acting upward"
+  ],
+  "answer": 1,
+  "explanation": "Sucking lowers the air pressure inside the straw. The atmosphere (about 1 × 10⁵ Pa) presses on the juice in the glass and pushes it up the straw. On the Moon, with no atmosphere, a straw would not work.",
+  "misconception": "Suction does not pull; the higher outside pressure pushes.",
+  "hints": [
+   "What is pressing on the surface of the juice in the glass?"
+  ],
+  "time": 40,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-158",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 3,
+  "type": "numerical",
+  "q": "A submarine is 200 m below the sea surface. What is the pressure due to the sea water alone? (density of sea water = 1030 kg/m³, g = 10 m/s²)",
+  "options": [
+   "2 × 10⁴ Pa",
+   "1.03 × 10⁶ Pa",
+   "2.06 × 10⁶ Pa",
+   "2.06 × 10⁵ Pa"
+  ],
+  "answer": 2,
+  "explanation": "P = hρg = 200 × 1030 × 10 = 2.06 × 10⁶ Pa — about 20 times atmospheric pressure, pushing on every square metre of the hull with over 2 million newtons.",
+  "hints": [
+   "P = hρg."
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-159",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 2,
+  "type": "what-if",
+  "q": "Why does a hot-air balloon rise when the burner heats the air inside it?",
+  "options": [
+   "Heat reduces the mass of the basket.",
+   "Hot air is pulled upward by the Sun.",
+   "Heated air expands and becomes less dense than the cooler outside air, so the buoyant force exceeds the balloon’s total weight.",
+   "The burner’s flame pushes the balloon up like a rocket."
+  ],
+  "answer": 2,
+  "explanation": "Archimedes’ principle applies in air: the upthrust equals the weight of the outside air displaced. Heating makes the air inside less dense, so the total weight of balloon, basket and hot air becomes less than the upthrust and the balloon rises.",
+  "hints": [
+   "What happens to the density of air when it is heated?"
+  ],
+  "time": 50,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": false,
+  "verified": true
+ },
+ {
+  "id": "PHY-160",
+  "subject": "Physics",
+  "topic": "Pressure & Buoyancy",
+  "level": 3,
+  "type": "numerical",
+  "q": "A wooden block of volume 0.002 m³ floats in water with 75% of its volume under the surface. What is the mass of the block? (density of water = 1000 kg/m³)",
+  "options": [
+   "2 kg",
+   "0.5 kg",
+   "0.75 kg",
+   "1.5 kg"
+  ],
+  "answer": 3,
+  "explanation": "A floating body displaces its own weight of water. Volume submerged = 0.75 × 0.002 = 0.0015 m³, which holds 0.0015 × 1000 = 1.5 kg of water. So the block’s mass is 1.5 kg (and its density 750 kg/m³).",
+  "misconception": "2 kg would be the mass if the block were fully submerged.",
+  "hints": [
+   "A floating object displaces water equal to its own weight.",
+   "How much water does the submerged part displace?"
+  ],
+  "time": 70,
+  "tracks": [
+   "MVPP",
+   "VVM",
+   "GEN"
+  ],
+  "iq": true,
+  "verified": true
+ },
+ {
   "id": "PHY-001",
   "subject": "Physics",
   "topic": "Motion",
